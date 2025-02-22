@@ -2,7 +2,8 @@ PROJECT=GAME
 IDIR=headers/
 CXX=g++
 CXXFLAGS =-I$(IDIR) -Wall -Wpedantic -Werror -std=c++17
-LDFLAGS=-lgtest 
+LDFLAGS=-lgtest -lgtest_main -lpthread
+
 
 TEST_DIR=tests
 SRC_DIR=src
@@ -12,7 +13,7 @@ TEST_FILES=$(wildcard $(TEST_DIR)/test*.cpp)
 
 OBJ_FILES=$(SRC_FILES:.cpp=.o)
 TEST_OBJ_FILES=$(TEST_FILES:.cpp=.o)
-
+OBJ_FILES_WITHOUT_MAIN = $(filter-out src/main.o, $(OBJ_FILES))
 TARGET = main
 TEST_TARGET = run_test
 
@@ -22,8 +23,8 @@ $(TARGET): $(OBJ_FILES)
 	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJ_FILES)
 
 
-$(TEST_TARGET): $(TEST_OBJ_FILES) $(OBJ_FILES)
-	$(CXX) $(CXXFLAGS) -o $(TEST_TARGET) $(TEST_OBJ_FILES) $(OBJ_FILES) $(LDFLAGS)
+$(TEST_TARGET): $(TEST_OBJ_FILES) $(OBJ_FILES_WITHOUT_MAIN)
+	$(CXX) $(CXXFLAGS) -o $(TEST_TARGET) $(TEST_OBJ_FILES) $(OBJ_FILES_WITHOUT_MAIN) $(LDFLAGS)
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
