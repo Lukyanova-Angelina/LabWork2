@@ -1,32 +1,32 @@
-#include <iostream>
-#include <string>
-class Character
-{
+#ifndef CHARACTERS_H
+#define CHARACTERS_H
+
+#include "Object.h"
+#include "Weapon.h"
+class Character: public Object {
 private:
 	std::string _Name;
-	int _HP, _X, _Y, _MANA;
-	bool _JUMP, _ALIVE;
+	int _HP;
+	int _MAX_HP;
+
 public:
 	Character();
-	Character(std::string name, int hp, int x, int y, int mana, bool jump, bool alive);
+	Character(int pos, std::string name, int hp, int maxhp);
 	~Character();
 
-
-	// getters
 	std::string getName() const;
 	int getHP() const;
-	int getX() const;
-	int getY() const;
-	int getMana() const;
-	bool getJump() const;
-	bool getAlive() const;
+	
+	int getMaxHP() const;
 
-	// setters
 	void setName(const std::string& name);
 	void setHP(int hp);
-	void setX(int x);
-	void setY(int y);
-	void setMana(int mana);
-	void setJump(bool jump);
-	void setAlive(bool alive);
+	
+	void setMaxHP(int maxhp);
+	
+	DisplayInfo print() const override;
+	virtual void takeDamage(Weapon* o);
+
 };
+
+#endif 
