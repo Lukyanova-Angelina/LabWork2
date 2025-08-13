@@ -23,6 +23,7 @@ public:
 	void setHP(int hp);
 	
 	void setMaxHP(int maxhp);
+	void takeHP(int hp);
 	
 	DisplayInfo print() const override;
 	virtual void takeDamage(Weapon* o);

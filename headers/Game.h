@@ -4,23 +4,27 @@
 #include "Player.h"
 #include "Weapon.h"
 #include "Enemy.h"
+#include "Status.h"
+#include "Gold.h"
+#include "Ruby.h"
+#include "Thorn.h"
 #include <memory>
 #include <array>
 #include <map>
 #include <set>
 
-extern const int CELL_WIDTH = 24;
-extern const int LINES_PER_CELL = 5;
+inline const int CELL_WIDTH = 24;
+inline const int LINES_PER_CELL = 5;
 
 class Game{
 private:
-	std::array<std::unique_ptr<Object>, 9> game;
+	std::array<std::unique_ptr<Object>, 9> game; // array of game objects
 	Player* player = nullptr;
-	int Steps=0;
+	Status _STATUS;
+	bool gameOver = false;
 public:
 	Game();
 	~Game() = default;
-	void moveorattack(int direction);
 	void generate_game();
 	void update();
 	void draw();
@@ -35,7 +39,10 @@ public:
 	void handleTRIGGER_ON_STAY(int pos1);
 	void handleCOMBAT_DEPENDENT(int pos1);
 	void drawANIMATION(int pos1, int pos2);
-	void drawcard(int pos1, int pos2, int col, int row);
+	void drawcard(int pos1, int col, int row);
+	bool isPlayerAlive() const;
+	bool isGameOver() const;
+
 
 };
 

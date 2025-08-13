@@ -53,3 +53,6 @@ void Character::takeDamage(Weapon* o){
 	setHP(getHP() - (o->getDamage()));
 }
 
+void Character::takeHP(int hp){
+	setHP(getHP() - hp);
+}

@@ -26,14 +26,21 @@ void Game::generate_game() {
 
 // Обновление игры
 void Game::update() {
-    Steps++;
+    _STATUS.StepsUp();
+    if (!isPlayerAlive()) {
+        gameOver = true;
+        return;
+    }
     for (auto& obj : game) {
         if (obj) {
             obj->update();
         }
     }
+    if (!isPlayerAlive()) {
+        gameOver = true;
+    }
 }
-
+bool Game::isGameOver() const { return gameOver; }
 // Отрисовка игры
 void Game::draw() {
     const std::string EMPTY_LINE = std::string(CELL_WIDTH, ' ');
@@ -56,9 +63,9 @@ void Game::draw() {
                 std::string content;
                 std::string gr = "┃";
                 switch(line) {
-                    case 0: content = centerText(cell.header, CELL_WIDTH); break;
+                    case 1: content = centerText(cell.header, CELL_WIDTH); break;
                     case 2: content = centerText(cell.status, CELL_WIDTH); break;
-                    case 4: content = centerText(cell.details, CELL_WIDTH); break;
+                    case 3: content = centerText(cell.details, CELL_WIDTH); break;
                     default: content = EMPTY_LINE; 
                 }
 
@@ -78,10 +85,10 @@ void Game::draw() {
         std::cout << "\n\n";
         
     }
-    std::cout<<Steps;
+    std::cout<<_STATUS.print();
     //std::cout << "\033[41H";
 }
-void Game::drawcard(int pos1, int pos2, int col, int row){
+void Game::drawcard(int pos1, int col, int row){
     const std::string HORIZONTAL_BORDER = "━━━━━━━━━━━━━━━━━━━━━━━━";
     DisplayInfo cell = game[pos1]->print();
     std::cout.flush();
@@ -93,9 +100,9 @@ void Game::drawcard(int pos1, int pos2, int col, int row){
         std::string content;
         std::string gr = "┃";
         switch(line) {
-            case 0: content = centerText(cell.header, CELL_WIDTH); break;
+            case 1: content = centerText(cell.header, CELL_WIDTH); break;
             case 2: content = centerText(cell.status, CELL_WIDTH); break;
-            case 4: content = centerText(cell.details, CELL_WIDTH); break;
+            case 3: content = centerText(cell.details, CELL_WIDTH); break;
             default: content = std::string(CELL_WIDTH,' '); 
         }
         std::cout << "\033["<<row+line*2+1<<";"<<col<<"H";
@@ -108,45 +115,34 @@ void Game::drawcard(int pos1, int pos2, int col, int row){
     std::cout << cell.color << "┗" << HORIZONTAL_BORDER << "┛" << Color::RESET << "   "<<std::flush;
     std::cout << "\033[41;1H" << std::flush;
 }
+
 void Game::drawANIMATION(int pos1, int pos2){
     const std::string HORIZONTAL_BORDER = "━━━━━━━━━━━━━━━━━━━━━━━━";
-    std::cout.flush();
+    bool IS_HORISONTAL = abs(pos1 - pos2) == 1;
     int col1 = (pos1%3)*29 + 1;
     int row1 = (pos1 / 3) * 13 + 1;
     int col2 = (pos2%3)*29 + 1;
     int row2 = (pos2 / 3) * 13 + 1;
-    if (abs(pos1 - pos2) == 1){
-        for (int movement = 0; movement < abs(col1 - col2) + 1; movement++){
-            for (int line = 0; line < 12;++line){
-                std::cout << "\033["<<row1 + line<<";"<<col1<<"H";
-                std::cout << std::string(CELL_WIDTH+2,' ')<<std::flush;
-                std::cout << "\033[41;1H" << std::flush;
-                std::cout << "\033["<<row2 + line<<";"<<col2 - 3<<"H";
-                std::cout << std::string(CELL_WIDTH+5, ' ')<<std::flush;
-                std::cout << "\033[41;1H" << std::flush;
-            }
-            drawcard(pos1, pos2, col1 - ((col1 > col2) - (col1 < col2)) * movement,row1);
+    std::cout.flush();
+    for (int movement = 0; movement < (IS_HORISONTAL ? abs(col1 - col2) + 1 : abs(row1 - row2) + 1); movement++){
+        for (int line = 0; line < (IS_HORISONTAL ? 12 : 13);++line){
+            std::cout << "\033["<<row1 + line<<";"<<col1<<"H";
+            std::cout << std::string(CELL_WIDTH+2,' ')<<std::flush;
             std::cout << "\033[41;1H" << std::flush;
-            std::this_thread::sleep_for(std::chrono::milliseconds(25));
-        }
-    }else{
-        for (int movement = 0; movement < abs(row1 - row2) + 1; movement++){
-            for (int line = 0; line < 13;++line){
-                std::cout << "\033["<<row1 + line<<";"<<col1<<"H";
-                std::cout << std::string(CELL_WIDTH+2,' ')<<std::flush;
-                std::cout << "\033[41;1H" << std::flush;
-                std::cout << "\033["<<row2 + line<<";"<<col2<<"H";
-                std::cout << std::string(CELL_WIDTH+2, ' ')<<std::flush;
-                std::cout << "\033[41;1H" << std::flush;
-            }
-            drawcard(pos1, pos2,col1,row1 - ((row1 > row2) - (row1 < row2)) * movement);
+            std::cout << "\033["<<row2 + line<<";"<<col2 - 3<<"H";
+            std::cout << std::string(CELL_WIDTH+5, ' ')<<std::flush;
             std::cout << "\033[41;1H" << std::flush;
-            std::this_thread::sleep_for(std::chrono::milliseconds(40));
         }
+        drawcard(pos1, (IS_HORISONTAL ? col1 - ((col1 > col2) - (col1 < col2)) * movement : col1),(IS_HORISONTAL ? row1: row1 - ((row1 > row2) - (row1 < row2)) * movement));
+        std::cout << "\033[41;1H" << std::flush;
+        std::this_thread::sleep_for(std::chrono::milliseconds((IS_HORISONTAL ? 20 : 40)));
     }
+    
     std::this_thread::sleep_for(std::chrono::milliseconds(100));
     std::cout << "\033[41;1H" << std::flush;
 }
+
+
 void Game::clean(){
     std::cout << "\033[2J\033[1;1H"; 
 }
@@ -192,9 +188,8 @@ void Game::switchcards(int pos1, int pos2){ // меняем местами ка�
 }
 
 void Game::movecard(int pos, int direction){ // изменяем позицию карточки
-    drawANIMATION(pos, game[pos]->getTargetPosition(direction));
+    //drawANIMATION(pos, game[pos]->getTargetPosition(direction)); // --------------------------------анимация запускается тут
     game[pos]->move(direction);
-
     game[game[pos]->getPosition()] = std::move(game[pos]);
 
 }
@@ -233,9 +228,9 @@ void Game::gotodir(int direction){ // перемещаем карточку (с 
 void Game::generatecard(int pos) { // пока что так, дальше придумать систему генерации
     int randomValue = rand() % 100;
     if (randomValue < 50) {
-        game[pos] = std::make_unique<ELmagic>(pos, 1);
+        game[pos] = std::make_unique<Thorn>(pos, 100, std::array<bool, 4>{false, true, true, true});
     } else if (randomValue < 70){
-        game[pos] = std::make_unique<Weapon>(pos);
+        game[pos] = std::make_unique<Ruby>(pos, 5);
     }else{
         game[pos] = std::make_unique<ELweapon>(pos, 0);
     }
@@ -244,7 +239,7 @@ void Game::handleIMMEDIATE_PASS(int pos1, int pos2) { // если это лов�
     if (pos1 != player->getPosition()) return;
     Object* obj = game[pos2].get();
     if (!obj) return;
-    switch (obj->returntype()) {
+    switch (obj->returntype()) { // check Object type
         case ObjectType::WEAPON:
             {
                 Weapon* weapon = dynamic_cast<Weapon*>(obj);
@@ -277,11 +272,38 @@ void Game::handleIMMEDIATE_PASS(int pos1, int pos2) { // если это лов�
                 break;
             }
         case ObjectType::GOLD:
+            {
+                Gold* gold = dynamic_cast<Gold*>(obj);
+                if (gold){
+                    _STATUS.addGold(gold->getAmount());
+                    gotodir(player->getTargetDirection(pos2));
+                }
+                
+
+                break;
+            }
         case ObjectType::RUBY:
-        case ObjectType::THORN:
+            {
+                Ruby* ruby = dynamic_cast<Ruby*>(obj);
+                if (ruby){
+                    _STATUS.addGold(ruby->getAmount() * 2);
+                    gotodir(player->getTargetDirection(pos2));
+                }
+                
+
+                break;
+            }
+        case ObjectType::THORN:{
+            Thorn* thorn = dynamic_cast<Thorn*>(obj);
+                if (thorn){
+                    if (thorn->getDirections()[thorn->getTargetDirection(pos1)]){
+                        player->takeHP(thorn->getAmount());
+                    }
+                    gotodir(player->getTargetDirection(pos2));
+                }
+                break;
+        }
         case ObjectType::GUN:
-        case ObjectType::BOMB:
-        case ObjectType::DYNAMITE:
         case ObjectType::POISON:
         case ObjectType::FASTHEAL:
         case ObjectType::TIMEHEAL: {
@@ -298,10 +320,17 @@ void Game::handleIMMEDIATE_PASS(int pos1, int pos2) { // если это лов�
 }
 void Game::handleSWAP_REQUIRED(int pos1, int pos2){ // если можно поменять карточки местами
     //switchcards(pos1, pos2);
+//         case ObjectType::BOMB:
+//         case ObjectType::DYNAMITE:
+// 
 }
 void Game::handleTRIGGER_ON_STAY(int pos1){ // если сундук, то стоим на месте
 
 }
 void Game::handleCOMBAT_DEPENDENT(int pos1){
 
+}
+
+bool Game::isPlayerAlive() const {
+    return player && player->getHP() > 0;
 }

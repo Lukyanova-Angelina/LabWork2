@@ -93,14 +93,24 @@ void Object::update(){
 }
 void Object::OnINTERACT(Object* obj){}
 
-
-std::string centerText(const std::string& text, long unsigned int width) {
-    if (text.length() >= width) return text.substr(0, width);
-    int padding = (width - text.length()) / 2;
-    return std::string(padding, ' ') + text + std::string(width - text.length() - padding, ' ');
+size_t utf8Len(const std::string& str) {
+    size_t len = 0;
+    for (char c : str) {
+        if ((c & 0xC0) != 0x80) len++;
+    }
+    return len;
 }
 
-std::string leftAlign(const std::string& text, long unsigned int width, char fill) {
-    if (text.length() >= width) return text.substr(0, width);
-    return text + std::string(width - text.length(), fill);
+std::string centerText(const std::string& text, size_t width) {
+    size_t textLen = utf8Len(text);
+    if (textLen >= width) return text.substr(0, width);
+    
+    size_t padding = (width - textLen) / 2;
+    return std::string(padding, ' ') + text + std::string(width - textLen - padding, ' ');
+}
+
+std::string leftAlign(const std::string& text, size_t width, char fill) {
+    size_t textLen = utf8Len(text);
+    if (textLen >= width) return text.substr(0, width);
+    return text + std::string(width - textLen, fill);
 }

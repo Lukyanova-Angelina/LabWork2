@@ -62,7 +62,7 @@ struct DisplayInfo {
     std::string details;
     std::string color;
 };
-
+size_t utf8Len(const std::string& str);
 std::string centerText(const std::string& text, long unsigned int width);
 std::string leftAlign(const std::string& text, long unsigned int width, char fill = ' ');
 
@@ -73,19 +73,21 @@ public:
 	Object(int pos);
 	virtual ~Object();
 	virtual DisplayInfo print()const;
-	// friend std::ostream& operator<<(std::ostream& os, const Object& n);
-	virtual std::unique_ptr<Object> clone() const;
-	int getPosition() const;
-	void setPosition(int pos);
 	virtual ObjectType returntype() const;
 	virtual InteractionType returnInteractionType() const;
+	virtual std::unique_ptr<Object> clone() const;
+	virtual void update();
+	virtual void OnINTERACT(Object* obj);
+	
+	int getPosition() const;
+	void setPosition(int pos);
+	
 	void move(int direction);
 	bool possibletomove(int direction);
 	int getTargetPosition(int direction) const;
 	int getTargetDirection(int pos2) const;
 
-	virtual void update();
-	virtual void OnINTERACT(Object* obj);
+	
 };
 
 #endif 
