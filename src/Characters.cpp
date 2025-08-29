@@ -42,12 +42,12 @@ void Character::setMaxHP(int maxhp)
 
 
 DisplayInfo Character::print() const {
-    return {
-        "Character",
-        "HP:" + std::to_string(getHP()) + "/" + std::to_string(getMaxHP()),
-        "",
-        Color::GREEN
-    };
+	return {
+		"Character",
+		"HP:" + std::to_string(getHP()) + "/" + std::to_string(getMaxHP()),
+		"",
+		Color::GREEN
+	};
 }
 void Character::takeDamage(Weapon* o){
 	setHP(getHP() - (o->getDamage()));
@@ -55,4 +55,17 @@ void Character::takeDamage(Weapon* o){
 
 void Character::takeHP(int hp){
 	setHP(getHP() - hp);
+}
+
+void Character::takeDamage(int dmg, DamageType type){
+	if (getHP() <= 0) return;
+	int finalDamage = calculateFinalDamage(dmg, type);
+	takeHP(finalDamage);
+	
+	if (OnDamageCallback) {
+		OnDamageCallback(getPosition(), type);
+	}
+}
+int Character::calculateFinalDamage(int dmg, DamageType type){
+	return dmg;
 }

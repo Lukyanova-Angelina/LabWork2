@@ -31,4 +31,12 @@ void Gold::takeAmount(int amount){
     setAmount(getAmount() - amount);
 }
 
-
+void Gold::takeDamage(int dmg, DamageType type){
+    if (getAmount() <= 0) return;
+    int finalDamage = dmg;
+    setAmount(getAmount() - finalDamage);
+    
+    if (OnDamageCallback) {
+        OnDamageCallback(getPosition(), type);
+    }
+}

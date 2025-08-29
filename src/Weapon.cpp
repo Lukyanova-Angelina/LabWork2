@@ -31,3 +31,14 @@ InteractionType Weapon::returnInteractionType() const{
 std::unique_ptr<Object> Weapon::clone() const {
         return std::make_unique<Weapon>(*this);
     }
+void Weapon::takeDamage(int dmg, DamageType type){
+    if (getDamage() <= 0) return;
+    int finalDamage = calculateFinalDamage(dmg, type);
+    setDamage(getDamage() - finalDamage);
+    if (OnDamageCallback) {
+        OnDamageCallback(getPosition(), type);
+    }
+}
+int Weapon::calculateFinalDamage(int dmg, DamageType type){
+    return dmg;
+}

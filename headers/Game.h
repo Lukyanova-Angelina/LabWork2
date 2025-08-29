@@ -8,6 +8,10 @@
 #include "Gold.h"
 #include "Ruby.h"
 #include "Thorn.h"
+#include "Gun.h"
+#include "Potion.h"
+#include "Bomb.h"
+#include "Dynamite.h"
 #include <memory>
 #include <array>
 #include <map>
@@ -22,6 +26,7 @@ private:
 	Player* player = nullptr;
 	Status _STATUS;
 	bool gameOver = false;
+	std::function<void(int, DamageType)> damageCallback;
 public:
 	Game();
 	~Game() = default;
@@ -42,8 +47,9 @@ public:
 	void drawcard(int pos1, int col, int row);
 	bool isPlayerAlive() const;
 	bool isGameOver() const;
-
-
+	void initializeDamageCallbacks();
+	void handleObjectDamage(int pos, DamageType type);
+	void handleObjectDeath(int pos, DamageType killType);
 };
 
 

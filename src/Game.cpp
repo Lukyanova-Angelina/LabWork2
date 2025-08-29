@@ -7,6 +7,7 @@
 
 Game::Game(){
     generate_game();
+    initializeDamageCallbacks();
 }
 
 // Генерация игры
@@ -34,6 +35,11 @@ void Game::update() {
     for (auto& obj : game) {
         if (obj) {
             obj->update();
+        }
+    }
+    for (int i = 0; i < 9; ++i) {
+        if (game[i]) {
+            game[i]->takeDamage(0, DamageType::NORMAL); // колбэк если объект должен быть уничтожен
         }
     }
     if (!isPlayerAlive()) {
@@ -227,18 +233,29 @@ void Game::gotodir(int direction){ // перемещаем карточку (с 
 }
 void Game::generatecard(int pos) { // пока что так, дальше придумать систему генерации
     int randomValue = rand() % 100;
-    if (randomValue < 50) {
-        game[pos] = std::make_unique<Thorn>(pos, 100, std::array<bool, 4>{false, true, true, true});
-    } else if (randomValue < 70){
-        game[pos] = std::make_unique<Ruby>(pos, 5);
+    std::unique_ptr<Object> newCard;
+    if (randomValue < 20) {
+        newCard = std::make_unique<Gun>(pos, 5, std::array<bool, 4>{false, true, true, true});
+    } else if (randomValue < 60){
+        newCard = std::make_unique<Dynamite>(pos, 2);
     }else{
-        game[pos] = std::make_unique<ELweapon>(pos, 0);
+        newCard = std::make_unique<Weapon>(pos, 5);
     }
+    if (newCard) {
+        newCard->setOnDamageCallback([this](int pos, DamageType type) {
+            this->handleObjectDamage(pos, type);
+        });
+    }
+    
+    game[pos] = std::move(newCard);
 }
 void Game::handleIMMEDIATE_PASS(int pos1, int pos2) { // если это ловушки, лут, зелья или оружие, просто ходим
     if (pos1 != player->getPosition()) return;
     Object* obj = game[pos2].get();
-    if (!obj) return;
+    if (!obj) {
+        std::cerr << "ERROR: Null object at position " << pos2 << std::endl;
+        return;
+    }
     switch (obj->returntype()) { // check Object type
         case ObjectType::WEAPON:
             {
@@ -276,6 +293,7 @@ void Game::handleIMMEDIATE_PASS(int pos1, int pos2) { // если это лов�
                 Gold* gold = dynamic_cast<Gold*>(obj);
                 if (gold){
                     _STATUS.addGold(gold->getAmount());
+                    game[pos2].reset();
                     gotodir(player->getTargetDirection(pos2));
                 }
                 
@@ -287,28 +305,87 @@ void Game::handleIMMEDIATE_PASS(int pos1, int pos2) { // если это лов�
                 Ruby* ruby = dynamic_cast<Ruby*>(obj);
                 if (ruby){
                     _STATUS.addGold(ruby->getAmount() * 2);
+                    game[pos2].reset();
                     gotodir(player->getTargetDirection(pos2));
                 }
                 
 
                 break;
             }
-        case ObjectType::THORN:{
+        case ObjectType::THORN:
+            {
             Thorn* thorn = dynamic_cast<Thorn*>(obj);
                 if (thorn){
                     if (thorn->getDirections()[thorn->getTargetDirection(pos1)]){
-                        player->takeHP(thorn->getAmount());
+                        player->takeDamage(thorn->getAmount(), DamageType::NORMAL);
                     }
+                    game[pos2].reset();
                     gotodir(player->getTargetDirection(pos2));
                 }
                 break;
-        }
+            }
         case ObjectType::GUN:
-        case ObjectType::POISON:
-        case ObjectType::FASTHEAL:
-        case ObjectType::TIMEHEAL: {
-            std::cout << "Данный тип пока не реализован" << std::endl;
+            {
+                Gun* gun = dynamic_cast<Gun*>(obj);
+                if (gun){
+                    auto directions = gun->getDirections();
+                    for (int i = 0; i < 4; i++){
+                        int targetpos = gun->getTargetPosition(i);
+                        if (directions[i]){
+                            if(0 <= targetpos && targetpos < 9 && game[targetpos]){
+                                game[targetpos]->takeDamage(gun->getAmount(), DamageType::FIRE);
+                            }
+                            
+                        }
+                    }
+                    game[pos2].reset();
+                    gotodir(player->getTargetDirection(pos2));
+                }
+                
+                break;
+            }
+        case ObjectType::OBJECT:
+            {
+                game[pos2].reset();
+                gotodir(player->getTargetDirection(pos2));
+                break;
+            }
+        case ObjectType::POTION:
+        {
+            Potion* pot = dynamic_cast<Potion*>(obj);
+            if (pot){
+                switch(pot->getPotionType()){
+                case PotionType::HEAL:
+                    {
+                        int hp = player->getHP() + pot->getPower();
+                        int maxhp = player-> getMaxHP();
+                        player->setHP(hp < maxhp ? hp : maxhp);
+                        game[pos2].reset();
+                        gotodir(player->getTargetDirection(pos2));
+                        break;
+                    }
+                case PotionType::POISON:
+                    {
+                        int hp = player->getHP() - pot->getPower();
+                        player->setHP(hp);
+                        game[pos2].reset();
+                        gotodir(player->getTargetDirection(pos2));
+                        break;
+                    }
+                default: 
+                    {
+                        game[pos2].reset();
+                        std::cerr << "Неполадки в ObjectType::POTION "
+                                  << static_cast<int>(obj->returntype())
+                                  << std::endl;
+                        break;
+                    }
+
+                }
+            }
+
             break;
+            
         }
         default: {
             std::cerr << "Неподдерживаемый тип объекта: "
@@ -319,10 +396,26 @@ void Game::handleIMMEDIATE_PASS(int pos1, int pos2) { // если это лов�
     }
 }
 void Game::handleSWAP_REQUIRED(int pos1, int pos2){ // если можно поменять карточки местами
-    //switchcards(pos1, pos2);
-//         case ObjectType::BOMB:
-//         case ObjectType::DYNAMITE:
-// 
+    if (pos1 != player->getPosition()) return;
+    Object* obj = game[pos2].get();
+    if (!obj) {
+        std::cerr << "ERROR: Null object at position " << pos2 << std::endl;
+        return;
+    }
+    switch (obj->returntype()){
+        case ObjectType::BOMB:
+        case ObjectType::DYNAMITE:
+            switchcards(pos1, pos2);
+            break;
+        default:
+            std::cerr << "Неподдерживаемый тип объекта: "
+                      << static_cast<int>(obj->returntype())
+                      << std::endl;
+            break;
+            
+
+    }
+    
 }
 void Game::handleTRIGGER_ON_STAY(int pos1){ // если сундук, то стоим на месте
 
@@ -333,4 +426,133 @@ void Game::handleCOMBAT_DEPENDENT(int pos1){
 
 bool Game::isPlayerAlive() const {
     return player && player->getHP() > 0;
+}
+void Game::initializeDamageCallbacks() {
+    for (auto& obj : game) {
+        if (obj) {
+            obj->setOnDamageCallback([this](int pos, DamageType type) {
+                this->handleObjectDamage(pos, type);
+            });
+        }
+    }
+    
+    if (player) {
+        player->setOnDamageCallback([this](int pos, DamageType type) {
+            this->handleObjectDamage(pos, type);
+        });
+    }
+}
+void Game::handleObjectDamage(int pos, DamageType type) {
+    if (pos < 0 || pos >= 9 || !game[pos]) {
+        return;
+    }
+    
+    Object* obj = game[pos].get();
+    
+    if (auto* character = dynamic_cast<Character*>(obj)) {
+        if (character->getHP() <= 0) {
+            handleObjectDeath(pos, type);
+        }
+        return;
+    }
+    if (auto* weapon = dynamic_cast<Weapon*>(obj)) {
+        if (weapon->getDamage() <= 0) {
+            handleObjectDeath(pos, type);
+        }
+        return;
+    }
+    if (auto* thornOrGun = dynamic_cast<Thorn*>(obj)) {
+        if (thornOrGun->getAmount() <= 0) {
+            handleObjectDeath(pos, type);
+        }
+        return;
+    }
+    if (auto* pot = dynamic_cast<Potion*>(obj)) {
+        if (pot->getPower() <= 0) {
+            handleObjectDeath(pos, type);
+        }
+        return;
+    }
+    if (auto* gold = dynamic_cast<Gold*>(obj)) {
+        if (gold->getAmount() <= 0) {
+            handleObjectDeath(pos, type);
+        }
+        return;
+    }
+    if (auto* bomb = dynamic_cast<Bomb*>(obj)) {
+        if (bomb->getDuration() <= 0 || bomb -> getAmount() <= 0) {
+            handleObjectDeath(pos, type);
+        }
+        return;
+    }
+    
+
+}
+void Game::handleObjectDeath(int pos, DamageType killType) {
+    if (game[pos].get() == player) {
+        gameOver = true;
+        return;
+    }
+    Object* deadObj = game[pos].get();
+    if (!deadObj) return;
+    
+    ObjectType type = deadObj->returntype();
+
+    switch (type) {
+        case ObjectType::BOMB:
+            {
+                Bomb* bomb = dynamic_cast<Bomb*>(deadObj);
+                if (bomb){
+                    for (int i = 0; i < 4; i++){
+                        int targetpos = bomb->getTargetPosition(i);
+                        if(0 <= targetpos && targetpos < 9 && game[targetpos]){
+                            game[targetpos]->takeDamage(bomb->getAmount(), DamageType::NORMAL);
+                        }
+                    }
+                }
+                game[pos] = std::make_unique<Gold>(pos, 100);
+                break;
+            }
+        case ObjectType::DYNAMITE:
+            {
+                Dynamite* dynamite = dynamic_cast<Dynamite*>(deadObj);
+                if (dynamite){
+                    for (int i = 0; i < 3; i++){
+                        int targetpos = (pos / 3) * 3 + i;
+                        if(0 <= targetpos && targetpos < 9 && game[targetpos] && pos != targetpos){
+                            game[targetpos]->takeDamage(dynamite->getAmount(), DamageType::NORMAL);
+                        }
+                    }
+                }
+                game[pos] = std::make_unique<Gold>(pos, 100);
+                break;
+            }
+        case ObjectType::GUN:
+        case ObjectType::THORN:
+            game[pos] = std::make_unique<Ruby>(pos, 100);
+            break;
+        case ObjectType::WEAPON:
+        case ObjectType::RUBY:
+        case ObjectType::ELWEAPON:
+        case ObjectType::ENEMY:
+        case ObjectType::ELEMENTAL:
+        case ObjectType::MAG:
+        case ObjectType::BURGLAR:
+        case ObjectType::BAT:
+            game[pos] = std::make_unique<Gold>(pos, 10 + rand() % 20);
+            break;
+        case ObjectType::GOLD:
+            game[pos] = std::make_unique<Object>(pos);
+            break;
+
+        default:
+            game[pos] = std::make_unique<Object>(pos);
+            break;
+    }
+    
+    if (game[pos]) {
+        game[pos]->setOnDamageCallback([this](int pos, DamageType type) {
+            this->handleObjectDamage(pos, type);
+        });
+    }
 }

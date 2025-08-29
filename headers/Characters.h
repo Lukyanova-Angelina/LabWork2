@@ -27,7 +27,8 @@ public:
 	
 	DisplayInfo print() const override;
 	virtual void takeDamage(Weapon* o);
-
+	void takeDamage(int dmg, DamageType type) override;
+	 virtual int calculateFinalDamage(int dmg, DamageType type);
 };
 
 #endif 

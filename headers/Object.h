@@ -7,6 +7,13 @@
 #include <iostream>
 #include <vector>
 #include <memory>
+#include <functional>
+
+enum class DamageType {
+	NORMAL,              // Обычный урон (меч)
+	FIRE,                 // Огненный урон (огонь, огненная палочка)
+	ICE                   // Ледяной урон
+};
 
 enum class InteractionType {
 	IMMEDIATE_PASS,    // перейти на карточку в любом случае
@@ -30,11 +37,8 @@ enum class ObjectType {
 	GUN,
 	BOMB,
 	DYNAMITE,
-	POISON,
-	FASTHEAL,
-	TIMEHEAL,
-	BADCHEST,
-	GOODCHEST,	
+	POTION,
+	CHEST,
 	PLAYER
 };
 
@@ -62,13 +66,17 @@ struct DisplayInfo {
     std::string details;
     std::string color;
 };
+std::string utf8Substr(const std::string& str, size_t maxChars);
 size_t utf8Len(const std::string& str);
-std::string centerText(const std::string& text, long unsigned int width);
-std::string leftAlign(const std::string& text, long unsigned int width, char fill = ' ');
-
+std::string centerText(const std::string& text, size_t width);
+std::string leftAlign(const std::string& text, size_t width, char fill = ' ');
 class Object{
 private:
 	int _POSITION;
+
+protected:
+	std::function<void(int, DamageType)> OnDamageCallback;
+
 public:
 	Object(int pos);
 	virtual ~Object();
@@ -78,6 +86,7 @@ public:
 	virtual std::unique_ptr<Object> clone() const;
 	virtual void update();
 	virtual void OnINTERACT(Object* obj);
+	//virtual void takeDamage(int dmg);
 	
 	int getPosition() const;
 	void setPosition(int pos);
@@ -86,8 +95,10 @@ public:
 	bool possibletomove(int direction);
 	int getTargetPosition(int direction) const;
 	int getTargetDirection(int pos2) const;
+	virtual void takeDamage(int dmg, DamageType type);
+	void setOnDamageCallback(std::function<void(int, DamageType)> callback);
+	void removeCallback();
 
-	
 };
 
 #endif 

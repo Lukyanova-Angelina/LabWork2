@@ -6,7 +6,7 @@ DisplayInfo Thorn::print()const{ //←, →, ↑, ↓.
 	return {
 		(dir[0] ? "↑": ""),
 		(dir[3] ? "← ": "  ") + std::to_string(getAmount()) + (dir[1] ? " →": "  "),
-		(dir[2] ? "↓": " "),
+		(dir[2] ? "↓": ""),
 		Color::BLUE
 	};
 }
@@ -32,7 +32,21 @@ void Thorn::turn(){
 int Thorn::getAmount() const{
 	return _Amount;
 }
+void Thorn::setAmount (int amount){
+	_Amount = amount;
+}
 
 std::array<bool, 4> Thorn::getDirections() const{
 	return directions;
+}
+void Thorn::takeDamage(int dmg, DamageType type){
+    if (getAmount() <= 0) return;
+    int finalDamage = calculateFinalDamage(dmg, type);
+    setAmount(getAmount() - finalDamage);
+    if (OnDamageCallback) {
+        OnDamageCallback(getPosition(), type);
+    }
+}
+int Thorn::calculateFinalDamage(int dmg, DamageType type){
+    return dmg;
 }

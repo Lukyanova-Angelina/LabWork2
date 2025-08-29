@@ -17,7 +17,10 @@ public:
 	
 	void turn();
 	int getAmount() const;
+	void setAmount (int amount);
 	std::array<bool, 4> getDirections() const;
+	void takeDamage(int dmg, DamageType type) override;
+	int calculateFinalDamage(int dmg, DamageType type);
 
 };
 

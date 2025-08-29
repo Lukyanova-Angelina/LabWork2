@@ -34,7 +34,7 @@ ObjectType Object::returntype() const {
     return ObjectType::OBJECT;
 }
 InteractionType Object::returnInteractionType() const{
-    return InteractionType::COMBAT_DEPENDENT;
+    return InteractionType::IMMEDIATE_PASS;
 }
 void Object::move(int direction){
     if (direction == 0 && getPosition() > 2){
@@ -93,24 +93,84 @@ void Object::update(){
 }
 void Object::OnINTERACT(Object* obj){}
 
+
+void Object::takeDamage(int dmg, DamageType type){
+    if (OnDamageCallback){
+        OnDamageCallback(getPosition(), type);
+    }
+}
+void Object::setOnDamageCallback(std::function<void(int, DamageType)> callback){
+    OnDamageCallback = callback;
+}
+void Object::removeCallback(){
+    OnDamageCallback = nullptr;
+}
+
+#include <string>
+
 size_t utf8Len(const std::string& str) {
     size_t len = 0;
-    for (char c : str) {
-        if ((c & 0xC0) != 0x80) len++;
+    for (size_t i = 0; i < str.length(); ) {
+        unsigned char c = str[i];
+        if (c <= 0x7F) {
+            // ASCII символ
+            i += 1;
+        } else if ((c & 0xE0) == 0xC0) {
+            // 2-байтовый символ UTF-8
+            i += 2;
+        } else if ((c & 0xF0) == 0xE0) {
+            // 3-байтовый символ UTF-8
+            i += 3;
+        } else if ((c & 0xF8) == 0xF0) {
+            i += 4;
+        } else {
+            i += 1;
+        }
+        len++;
     }
     return len;
 }
 
-std::string centerText(const std::string& text, size_t width) {
+std::string utf8Substr(const std::string& str, size_t maxChars) {
+    if (maxChars == 0) return "";
+    
+    size_t bytePos = 0;
+    size_t charCount = 0;
+    
+    for (size_t i = 0; i < str.length() && charCount < maxChars; ) {
+        unsigned char c = str[i];
+        size_t charBytes = 1;
+        
+        if ((c & 0x80) == 0) {
+            charBytes = 1;
+        } else if ((c & 0xE0) == 0xC0) {
+            charBytes = 2;
+        } else if ((c & 0xF0) == 0xE0) {
+            charBytes = 3;
+        } else if ((c & 0xF8) == 0xF0) {
+            charBytes = 4;
+        }
+        
+        if (i + charBytes > str.length()) break;
+        
+        i += charBytes;
+        charCount++;
+        bytePos = i;
+    }
+    
+    return str.substr(0, bytePos);
+}
+
+std::string centerText(const std::string& text, size_t width){
     size_t textLen = utf8Len(text);
-    if (textLen >= width) return text.substr(0, width);
+    if (textLen >= width) return utf8Substr(text, width);
     
     size_t padding = (width - textLen) / 2;
     return std::string(padding, ' ') + text + std::string(width - textLen - padding, ' ');
 }
 
-std::string leftAlign(const std::string& text, size_t width, char fill) {
+std::string leftAlign(const std::string& text, size_t width, char fill){
     size_t textLen = utf8Len(text);
-    if (textLen >= width) return text.substr(0, width);
+    if (textLen >= width) return utf8Substr(text, width);
     return text + std::string(width - textLen, fill);
 }
