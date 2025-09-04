@@ -5,16 +5,16 @@
 #include "ELmagic.h"
 class Elemental : public Enemy { 
 private:
-	int _Element; // 0 - ice 1 - fire 
+	DamageType _Type;
 public:
-	Elemental(int pos, std::string name, int hp, int maxhp); 
-	Elemental(int pos);
+	Elemental(int pos, int hp, DamageType type);
 	~Elemental();
 	DisplayInfo print() const override;
 	ObjectType returntype()const override;
-	int getElement();
+	DamageType getElement();
 	void takeDamage(Weapon* o) override;
 	InteractionType returnInteractionType() const override;
+	int calculateFinalDamage(int dmg, DamageType type) override;
 };
 
 #endif 

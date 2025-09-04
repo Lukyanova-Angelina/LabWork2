@@ -5,17 +5,18 @@
 
 class ELmagic:public Weapon { // волшебная палочка с видом элемента
 private:
-	int _Element;//0 - ice 1 - fire
+	DamageType _Type;
 public:
-	ELmagic(int pos, int el); 
-	ELmagic(int pos, int damage, int el);
+	ELmagic(int pos, DamageType el); 
+	ELmagic(int pos, int damage, DamageType el);
 	~ELmagic();
 	DisplayInfo print() const override;
 	ObjectType returntype() const override;
-	int getElement()const;
+	DamageType getElement()const;
 	std::unique_ptr<Object> clone() const override;
 	InteractionType returnInteractionType() const override;
+	int calculateFinalDamage(int dmg, DamageType type) override;
 
 };
 
-#endif // ELMAGIC_H
+#endif 

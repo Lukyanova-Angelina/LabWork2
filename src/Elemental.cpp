@@ -1,10 +1,8 @@
 #include "Elemental.h"
 
-Elemental::Elemental(int pos, std::string name, int hp, int maxhp)
-	: Enemy(pos, name, hp, maxhp) {} // По умолчанию оружия нет
 
-Elemental::Elemental(int pos)
-	: Enemy(pos, "name", 10, 10) {} // По умолчанию оружия нет
+Elemental::Elemental(int pos, int hp, DamageType type)
+	: Enemy(pos, hp), _Type(type) {} // По умолчанию оружия нет
 Elemental::~Elemental() {
 }
 
@@ -20,24 +18,53 @@ ObjectType Elemental::returntype() const {
     return ObjectType::ELEMENTAL;
 }
 
-int Elemental::getElement(){
-	return _Element;
+DamageType Elemental::getElement(){
+	return _Type;
 }
 void Elemental::takeDamage(Weapon* o){
+	int hp;
 	if (o->returntype() == ObjectType::ELMAGIC){
 		ELmagic* stick = dynamic_cast<ELmagic*>(o);
 		if (stick) {
-			int el = stick->getElement();
+			DamageType el = stick->getElement();
 			if (el == getElement()){
-				setHP(getHP() + o->getDamage());
+				hp = getHP();
+				setHP(hp + o->getDamage());
 			} else{
-				setHP(getHP() - 2 * o->getDamage());
+				if (2 * o->getDamage() < getHP()){
+					hp = getHP();
+					setHP(hp - 2 * o->getDamage());
+				}
+				else{
+					hp = (getHP() + 1) / 2;
+					setHP(getHP() - 2 * hp);
+				}
+				
 			}
+			
 		}
 	}else{
+		hp = getHP();
 		setHP(getHP() - o->getDamage());
+		
+	}
+	o->takeDamage(hp, DamageType::NORMAL);
+	if (OnDamageCallback) {
+		OnDamageCallback(getPosition(), o->returnDamageType());
 	}
 }
 InteractionType Elemental::returnInteractionType() const{
 	return InteractionType::COMBAT_DEPENDENT;
+}
+int Elemental::calculateFinalDamage(int dmg, DamageType type){
+	DamageType el = getElement();
+    if (type == el){
+        return -dmg;
+    }
+    else if((type == DamageType::FIRE && el == DamageType::ICE) || (type == DamageType::ICE && el == DamageType::FIRE)){
+        return dmg * 2;
+    }
+    else {
+        return dmg;
+    }
 }

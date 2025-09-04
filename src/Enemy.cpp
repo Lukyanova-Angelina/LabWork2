@@ -3,10 +3,9 @@
 Enemy::Enemy(int pos, std::string name, int hp, int maxhp)
 	: Character(pos, name, hp, maxhp) {}
 
-Enemy::Enemy(int pos)
-	: Character(pos, "name", 10, 10) {} 
 Enemy::~Enemy() {
 }
+Enemy::Enemy(int pos, int hp):Character(pos, "Enemy", hp, hp * 1.2){}
 
 DisplayInfo Enemy::print() const {
     return {

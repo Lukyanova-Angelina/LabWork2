@@ -42,3 +42,6 @@ void Weapon::takeDamage(int dmg, DamageType type){
 int Weapon::calculateFinalDamage(int dmg, DamageType type){
     return dmg;
 }
+DamageType Weapon::returnDamageType() const{
+    return DamageType::NORMAL;
+}

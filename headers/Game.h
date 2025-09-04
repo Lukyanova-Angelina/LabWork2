@@ -12,6 +12,8 @@
 #include "Potion.h"
 #include "Bomb.h"
 #include "Dynamite.h"
+#include "Chest.h"
+#include "Elemental.h"
 #include <memory>
 #include <array>
 #include <map>
@@ -42,14 +44,14 @@ public:
 	void handleIMMEDIATE_PASS(int pos1, int pos2);
 	void handleSWAP_REQUIRED(int pos1, int pos2);
 	void handleTRIGGER_ON_STAY(int pos1);
-	void handleCOMBAT_DEPENDENT(int pos1);
+	void handleCOMBAT_DEPENDENT(int pos1, int pos2);
 	void drawANIMATION(int pos1, int pos2);
 	void drawcard(int pos1, int col, int row);
 	bool isPlayerAlive() const;
 	bool isGameOver() const;
 	void initializeDamageCallbacks();
 	void handleObjectDamage(int pos, DamageType type);
-	void handleObjectDeath(int pos, DamageType killType);
+	void handleObjectDeath(int pos);
 };
 
 

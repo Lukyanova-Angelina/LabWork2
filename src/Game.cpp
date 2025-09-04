@@ -173,7 +173,7 @@ void Game::handleInput(char input) {// если возможность ходи�
                     handleTRIGGER_ON_STAY(poswheremove);
                     break;
                 case InteractionType::COMBAT_DEPENDENT:
-                    handleCOMBAT_DEPENDENT(poswheremove);
+                    handleCOMBAT_DEPENDENT(playerpos, poswheremove);
                     break;
             }
             
@@ -235,11 +235,11 @@ void Game::generatecard(int pos) { // пока что так, дальше пр�
     int randomValue = rand() % 100;
     std::unique_ptr<Object> newCard;
     if (randomValue < 20) {
-        newCard = std::make_unique<Gun>(pos, 5, std::array<bool, 4>{false, true, true, true});
+        newCard = std::make_unique<ELmagic>(pos, 5, DamageType::FIRE);
     } else if (randomValue < 60){
-        newCard = std::make_unique<Dynamite>(pos, 2);
+        newCard = std::make_unique<Elemental>(pos, 10, DamageType::ICE);
     }else{
-        newCard = std::make_unique<Weapon>(pos, 5);
+        newCard = std::make_unique<Weapon>(pos, 7);
     }
     if (newCard) {
         newCard->setOnDamageCallback([this](int pos, DamageType type) {
@@ -418,9 +418,75 @@ void Game::handleSWAP_REQUIRED(int pos1, int pos2){ // если можно по�
     
 }
 void Game::handleTRIGGER_ON_STAY(int pos1){ // если сундук, то стоим на месте
+    Object* obj = game[pos1].get();
+    if (!obj) {
+        std::cerr << "ERROR: Null object at position " << pos1 << std::endl;
+        return;
+    }
+    switch (obj->returntype()){
+        case ObjectType::CHEST:{
+            Chest* chest = dynamic_cast<Chest*>(obj);
+            std::unique_ptr<Object> loot = chest->generateLoot(_STATUS);
+            loot->setPosition(pos1);
+            loot->setOnDamageCallback([this](int pos, DamageType type) {
+                this->handleObjectDamage(pos, type);
+            });
+            game[pos1] = std::move(loot);
+            break;
+        }
+            
+        default:
+            std::cerr << "Неподдерживаемый тип объекта: "
+                      << static_cast<int>(obj->returntype())
+                      << std::endl;
+            break;
+    }
 
 }
-void Game::handleCOMBAT_DEPENDENT(int pos1){
+void Game::handleCOMBAT_DEPENDENT(int pos1, int pos2){
+    if (pos1 != player->getPosition()) return;
+    Object* obj = game[pos2].get();
+    if (!obj) {
+        std::cerr << "ERROR: Null object at position " << pos2 << std::endl;
+        return;
+    }
+    switch (obj->returntype()){
+        case ObjectType::ENEMY:
+        case ObjectType::BURGLAR:
+        case ObjectType::BAT:
+        case ObjectType::MAG:
+        case ObjectType::ELEMENTAL:
+            {
+                Enemy* enemy = dynamic_cast<Enemy*>(obj);
+                if (enemy){
+                    int enemyHP = enemy->getHP();
+                    Weapon* playerWeapon = player->getWeapon();
+                    if (!playerWeapon){
+                        player->takeDamage(enemyHP, DamageType::NORMAL);
+                        game[pos2].reset();
+                        gotodir(player->getTargetDirection(pos2));
+                    }else{
+                        if (playerWeapon->returntype() == ObjectType::ELMAGIC){
+                            int pos3 = pos2 * 2 - pos1;
+                            if ((pos3 - pos2 == 3 || pos3 / 3 == pos1 / 3) && pos3 > 0 && pos2 < 9){
+                                game[pos3]->takeDamage(playerWeapon->getDamage(), playerWeapon->returnDamageType());
+                            }
+                        }
+                        enemy->takeDamage(playerWeapon);
+                        if (playerWeapon->getDamage() <= 0) {
+                            player->removeWeapon();
+                        }
+                    }
+                    break;
+                }
+            }
+            
+        default:
+            std::cerr << "Неподдерживаемый тип объекта: "
+                      << static_cast<int>(obj->returntype())
+                      << std::endl;
+            break;
+    }
 
 }
 
@@ -451,44 +517,44 @@ void Game::handleObjectDamage(int pos, DamageType type) {
     
     if (auto* character = dynamic_cast<Character*>(obj)) {
         if (character->getHP() <= 0) {
-            handleObjectDeath(pos, type);
+            handleObjectDeath(pos);
         }
         return;
     }
     if (auto* weapon = dynamic_cast<Weapon*>(obj)) {
         if (weapon->getDamage() <= 0) {
-            handleObjectDeath(pos, type);
+            handleObjectDeath(pos);
         }
         return;
     }
     if (auto* thornOrGun = dynamic_cast<Thorn*>(obj)) {
         if (thornOrGun->getAmount() <= 0) {
-            handleObjectDeath(pos, type);
+            handleObjectDeath(pos);
         }
         return;
     }
     if (auto* pot = dynamic_cast<Potion*>(obj)) {
         if (pot->getPower() <= 0) {
-            handleObjectDeath(pos, type);
+            handleObjectDeath(pos);
         }
         return;
     }
     if (auto* gold = dynamic_cast<Gold*>(obj)) {
         if (gold->getAmount() <= 0) {
-            handleObjectDeath(pos, type);
+            handleObjectDeath(pos);
         }
         return;
     }
     if (auto* bomb = dynamic_cast<Bomb*>(obj)) {
         if (bomb->getDuration() <= 0 || bomb -> getAmount() <= 0) {
-            handleObjectDeath(pos, type);
+            handleObjectDeath(pos);
         }
         return;
     }
     
 
 }
-void Game::handleObjectDeath(int pos, DamageType killType) {
+void Game::handleObjectDeath(int pos) {
     if (game[pos].get() == player) {
         gameOver = true;
         return;

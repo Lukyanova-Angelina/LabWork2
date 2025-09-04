@@ -5,16 +5,17 @@
 
 class ELweapon:public Weapon { // оружие может заряжаться определенным элементом
 private:
-	int _Element;//0 - ice 1 - fire
+	DamageType _Type;
 public:
-	ELweapon(int pos, int el); 
-	ELweapon(int pos, int damage, int el);
+	ELweapon(int pos, DamageType el); 
+	ELweapon(int pos, int damage, DamageType el);
 	~ELweapon();
 	DisplayInfo print() const override;
 	std::unique_ptr<Object> clone() const override;
 	ObjectType returntype() const override;
-	int getElement()const;
+	DamageType getElement()const;
 	InteractionType returnInteractionType() const override;
+	int calculateFinalDamage(int dmg, DamageType type) override;
 
 };
 

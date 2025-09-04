@@ -1,24 +1,24 @@
 #include "ELmagic.h"
 
 
-ELmagic::ELmagic(int pos, int el):Weapon(pos), _Element(el){}
+ELmagic::ELmagic(int pos, DamageType el):Weapon(pos), _Type(el){}
 
 
-ELmagic::ELmagic(int pos, int damage, int el):Weapon(pos, damage), _Element(el){}
+ELmagic::ELmagic(int pos, int damage, DamageType el):Weapon(pos, damage), _Type(el){}
 
 ELmagic::~ELmagic(){}
 DisplayInfo ELmagic::print() const {
     return {
         "ELmagic",
         "Dmg: " + std::to_string(getDamage()),"",
-        Color::RED
+        Color::GREEN
     };
 }
 ObjectType ELmagic::returntype() const {
     return ObjectType::ELMAGIC;
 }
-int ELmagic::getElement()const{
-	return _Element;
+DamageType ELmagic::getElement()const{
+	return _Type;
 }
 InteractionType ELmagic::returnInteractionType() const{
 	return InteractionType::IMMEDIATE_PASS;
@@ -26,3 +26,15 @@ InteractionType ELmagic::returnInteractionType() const{
 std::unique_ptr<Object> ELmagic::clone() const {
         return std::make_unique<ELmagic>(*this);
     }
+int ELmagic::calculateFinalDamage(int dmg, DamageType type) {
+    DamageType el = getElement();
+    if (type == el){
+        return -dmg;
+    }
+    else if((type == DamageType::FIRE && el == DamageType::ICE) || (type == DamageType::ICE && el == DamageType::FIRE)){
+        return dmg * 2;
+    }
+    else {
+        return dmg;
+    }
+}

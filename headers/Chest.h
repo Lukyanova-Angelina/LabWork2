@@ -2,7 +2,8 @@
 #define CHEST_H
 
 #include "Object.h"
-
+#include "Status.h"
+class Status;
 enum class ChestType{
 	BADCHEST,
 	GOODCHEST
@@ -10,13 +11,14 @@ enum class ChestType{
 
 class Chest: public Object {
 private:
-	ChestType type;
+	ChestType _Type;
 public:
-	ChestType getChestType();
-	Chest(int pos, int amount);
+	Chest(int pos, ChestType type);
+	ChestType getChestType() const;
 	DisplayInfo print() const override;
 	ObjectType returntype() const override;
 	InteractionType returnInteractionType() const override;
+	std::unique_ptr<Object> generateLoot(const Status& status) const;
 
 };
 
