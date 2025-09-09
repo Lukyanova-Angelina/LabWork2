@@ -1,12 +1,11 @@
 #include "Mag.h"
 
-Mag::Mag(int pos, std::string name, int hp, int maxhp)
-	: Enemy(pos, name, hp, maxhp) {} // По умолчанию оружия нет
+Mag::Mag(int pos, int hp)
+    : Enemy(pos, hp) {}
 
 Mag::Mag(int pos)
-	: Enemy(pos, "name", 10, 10) {} // По умолчанию оружия нет
-Mag::~Mag() {
-}
+    : Enemy(pos, "name", 10, 10) {}
+
 
 DisplayInfo Mag::print() const {
     return {
@@ -20,8 +19,8 @@ ObjectType Mag::returntype() const {
     return ObjectType::MAG;
 }
 void Mag::update(){
-	setHP(getHP()+1);
+    setHP(std::min(getHP()+1, getMaxHP()));
 }
 InteractionType Mag::returnInteractionType() const{
-	return InteractionType::COMBAT_DEPENDENT;
+    return InteractionType::COMBAT_DEPENDENT;
 }

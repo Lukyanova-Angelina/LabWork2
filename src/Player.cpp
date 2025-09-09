@@ -1,5 +1,5 @@
 #include "Player.h"
-Player::Player(int pos, std::string name, int hp, int maxhp): Character(pos, name, hp, maxhp), _weapon(std::make_unique<Weapon>(-1)) {}
+Player::Player(int pos, std::string name, int hp, int maxhp): Character(pos, name, hp, maxhp), _weapon(nullptr) {}
 Player::Player(int pos)
 	: Character(pos, "name", 10, 10), _weapon(nullptr) {} // По умолчанию оружия нет
 
@@ -28,6 +28,3 @@ DisplayInfo Player::print() const {
 ObjectType Player::returntype() const {
     return ObjectType::PLAYER;
 }
-// std::unique_ptr<Object> Player::clone() const {
-//         return std::make_unique<Player>(*this);
-//     }

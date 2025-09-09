@@ -50,7 +50,12 @@ DisplayInfo Character::print() const {
 	};
 }
 void Character::takeDamage(Weapon* o){
+	int hp = getHP();
 	setHP(getHP() - (o->getDamage()));
+	o->takeDamage(std::min(o->getDamage(), hp), DamageType::NORMAL);
+	if (OnDamageCallback) {
+		OnDamageCallback(getPosition(), o->getElement());
+	}
 }
 
 void Character::takeHP(int hp){

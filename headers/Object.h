@@ -26,7 +26,6 @@ enum class ObjectType {
 	ENEMY,
 	ELEMENTAL,
 	MAG,
-	BURGLAR,
 	BAT,
 	WEAPON,
 	ELMAGIC,
@@ -66,8 +65,7 @@ struct DisplayInfo {
     std::string details;
     std::string color;
 };
-std::string utf8Substr(const std::string& str, size_t maxChars);
-size_t utf8Len(const std::string& str);
+
 std::string centerText(const std::string& text, size_t width);
 std::string leftAlign(const std::string& text, size_t width, char fill = ' ');
 class Object{

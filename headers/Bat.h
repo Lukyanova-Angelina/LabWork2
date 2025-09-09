@@ -1,16 +1,16 @@
-#ifndef MAG_H
-#define MAG_H
+#ifndef BAT_H
+#define BAT_H
 
 #include "Enemy.h"
 
-class Mag : public Enemy {
+class Bat : public Enemy {
 public:
-	Mag(int pos, int hp);
-	Mag(int pos);
+	Bat(int pos, int hp);
+	Bat(int pos);
 	DisplayInfo print() const override;
 	ObjectType returntype()const override;
 	InteractionType returnInteractionType() const override;
-	void update() override;
+
 };
 
 #endif 

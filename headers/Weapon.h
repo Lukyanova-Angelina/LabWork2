@@ -19,6 +19,7 @@ public:
 	InteractionType returnInteractionType() const override;
 	void takeDamage(int dmg, DamageType type) override;
 	virtual int calculateFinalDamage(int dmg, DamageType type);
+	virtual DamageType getElement() const;
 
 };
 
