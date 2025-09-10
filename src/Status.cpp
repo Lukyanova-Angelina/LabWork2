@@ -206,7 +206,7 @@ void Status::updateLootTable(){
 			{ObjectType::WEAPON, 4},
 			{ObjectType::RUBY, 1},
 			{ObjectType::ELWEAPON, 2},
-			{ObjectType::GUN, 5}
+			{ObjectType::THORN, 5}
 		};
 	} else if (level <= 4){
 		LootTable = {
@@ -221,7 +221,7 @@ void Status::updateLootTable(){
 			{ObjectType::ELWEAPON, 2},
 			{ObjectType::THORN, 2},
 			{ObjectType::POTION, 2},
-			{ObjectType::CHEST, 20},
+			{ObjectType::CHEST, 2},
 			{ObjectType::ELMAGIC, 1}
 		};
 	}else{
