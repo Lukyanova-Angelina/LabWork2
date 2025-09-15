@@ -1,3 +1,10 @@
+/* Lukyanova Angelina st128743@student.spbu.ru
+ * Lab Work 2 - Game
+ */
+/**
+ * @file Gun.h
+ * @brief Gun class.
+ */
 #include "Gun.h"
 Gun::Gun(int pos, int amount, const std::array<bool, 4>& dirs):Thorn(pos, amount, dirs){}
 

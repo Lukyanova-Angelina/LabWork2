@@ -1,3 +1,9 @@
+/* Lukyanova Angelina st128743@student.spbu.ru
+ * Lab Work 2 - Game
+ */
+/* @file Bomb.cpp
+ * @brief Bomb class.
+ */
 #include "Bomb.h"
 
 Bomb::Bomb(int pos, int amount):Object(pos), _Amount(amount), _Duration(5){}

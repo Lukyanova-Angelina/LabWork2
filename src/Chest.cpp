@@ -1,3 +1,10 @@
+/* Lukyanova Angelina st128743@student.spbu.ru
+ * Lab Work 2 - Game
+ */
+/**
+ * @file Chest.cpp
+ * @brief Chest class
+ */
 #include "Chest.h"
 
 Chest::Chest(int pos, ChestType type):Object(pos), _Type(type){}

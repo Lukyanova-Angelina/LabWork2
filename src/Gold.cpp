@@ -1,3 +1,10 @@
+/* Lukyanova Angelina st128743@student.spbu.ru
+ * Lab Work 2 - Game
+ */
+ /**
+ * @file Gold.cpp
+ * @brief Gold class.
+ */
 #include "Gold.h"
 
 Gold::Gold(int pos, int amount):Object(pos), _Amount(amount){}

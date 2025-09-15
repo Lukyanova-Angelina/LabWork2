@@ -1,3 +1,7 @@
+/* 
+Lukyanova Angelina st128743@student.spbu.ru
+Game
+*/
 #include <iostream>
 #include <chrono>
 #include <thread>

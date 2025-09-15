@@ -1,3 +1,11 @@
+/* Lukyanova Angelina st128743@student.spbu.ru
+ * Lab Work 2 - Game
+ */
+
+/**
+ * @file Game.cpp
+ * @brief Implementation of Game class methods.
+ */
 #include "Game.h"
 
 Game::Game(){
@@ -5,7 +13,6 @@ Game::Game(){
     initializeDamageCallbacks();
 }
 
-// Генерация игры
 void Game::generate_game() {
     srand(static_cast<unsigned int>(time(0)));
     for (int i = 0; i < 9; ++i) {
@@ -20,7 +27,6 @@ void Game::generate_game() {
     draw();
 }
 
-// Обновление игры
 void Game::update() {
     _STATUS.StepsUp();
     if (!isPlayerAlive()) {
@@ -34,7 +40,7 @@ void Game::update() {
     }
     for (int i = 0; i < 9; ++i) {
         if (game[i]) {
-            game[i]->takeDamage(0, DamageType::NORMAL); // колбэк если объект должен быть уничтожен
+            game[i]->takeDamage(0, DamageType::NORMAL); 
         }
     }
     checkAndConvertGoldToRubies();
@@ -42,15 +48,17 @@ void Game::update() {
         gameOver = true;
     }
 }
+
 bool Game::isGameOver() const { return gameOver; }
 
+// Converts lines of gold to rubies 
 void Game::checkAndConvertGoldToRubies() {
     std::vector<std::vector<int>> lines = {
-        {0, 1, 2},  // Первая горизонталь
-        {3, 4, 5},  // Вторая горизонталь
-        {6, 7, 8},  // Третья горизонталь
-        {0, 3, 6},  // Первая вертикаль
-        {1, 4, 7},  // Вторая вертикаль
+        {0, 1, 2},  
+        {3, 4, 5},  
+        {6, 7, 8},  
+        {0, 3, 6}, 
+        {1, 4, 7},  
         {2, 5, 8}  
     };
 
@@ -71,7 +79,6 @@ void Game::checkAndConvertGoldToRubies() {
         }
     }
 
-    // Заменяем золото на рубины
     for (int pos : positionsToConvert) {
         Gold* gold = dynamic_cast<Gold*>(game[pos].get());
         if (gold) {
@@ -84,6 +91,7 @@ void Game::checkAndConvertGoldToRubies() {
     }
 }
 
+// Renders the 3x3 game grid
 void Game::draw() {
     const std::string EMPTY_LINE = std::string(CELL_WIDTH, ' ');
     const std::string HORIZONTAL_BORDER = "━━━━━━━━━━━━━━━━━━━━━━━━";
@@ -130,13 +138,15 @@ void Game::draw() {
 void Game::clean(){
     std::cout << "\033[2J\033[1;1H"; 
 }
-void Game::handleInput(char input) {// если возможность ходить есть(невыход за пределы карты), но мы можем атаковать или открыть сундук или тд тп, тогда мы не ходим, а изменяем как-то характеристики с помощью методов обькектов
+
+// Handles player input and movement
+void Game::handleInput(char input) {
     std::map<char, int> directionMap = {{'w', 0}, {'d', 1}, {'s', 2}, {'a', 3}};
     auto it = directionMap.find(input);
     if (it != directionMap.end()) {
-        // Если ввод найден, проверяем возможность движения и двигаемся
+
         int direction = it->second;
-        if (player->possibletomove(direction)) { // есть возможность ходить, =>  дальше делаем проверку на карту, если это золото/оружие/или у игрока нет оружие и это злодей/ловушка- идем и обрабатываем ход
+        if (player->possibletomove(direction)) { 
             int poswheremove = player->getTargetPosition(direction);
             if (!game[poswheremove]) return;
             int playerpos = player->getPosition();
@@ -158,10 +168,11 @@ void Game::handleInput(char input) {// если возможность ходи�
             update();
         }
     } else {
-        std::cout << "Неизвестная клавиша: " << input << std::endl;
+        std::cout << "Unknown key: " << input << std::endl;
     }
 }
-void Game::switchcards(int pos1, int pos2){ // меняем местами карточки
+
+void Game::switchcards(int pos1, int pos2){ 
     std::unique_ptr<Object> temp = std::move(game[pos2]);
     game[pos2] = std::move(game[pos1]);
     game[pos1] = std::move(temp);
@@ -169,20 +180,22 @@ void Game::switchcards(int pos1, int pos2){ // меняем местами ка�
     game[pos2]->setPosition(pos2);
 }
 
-void Game::movecard(int pos, int direction){ // изменяем позицию карточки
+void Game::movecard(int pos, int direction){ 
     game[pos]->move(direction);
     game[game[pos]->getPosition()] = std::move(game[pos]);
 
 }
-void Game::gotodir(int direction){ // перемещаем карточку (с генерацией)
-    if (player->possibletomove((direction+2)%4)){// если герой может двинуться в противоположную сторону
+
+// Complex grid shifting logic
+void Game::gotodir(int direction){ 
+    if (player->possibletomove((direction+2)%4)){
         int temp = player->getTargetPosition((direction+2)%4);
         movecard(player->getPosition(), direction);
         movecard(temp, direction);
         generatecard(temp);
 
     }else{
-        if (player->possibletomove((direction+1)%4)){ // по часовой
+        if (player->possibletomove((direction+1)%4)){ 
             if (player->possibletomove((direction+3)%4)){
                 int temp = player->getTargetPosition((direction+1)%4);
                 movecard(player->getPosition(), direction);
@@ -206,6 +219,7 @@ void Game::gotodir(int direction){ // перемещаем карточку (с 
         }
     }
 }
+
 void Game::generatecard(int pos) {
     if (pos < 0 || pos >= 9) {
         std::cerr << "Invalid position in generatecard: " << pos << std::endl;
@@ -220,14 +234,16 @@ void Game::generatecard(int pos) {
     
     game[pos] = std::move(newCard);
 }
-void Game::handleIMMEDIATE_PASS(int pos1, int pos2) { // если это ловушки, лут, зелья или оружие, просто ходим
+
+// Handles immediate pass interactions
+void Game::handleIMMEDIATE_PASS(int pos1, int pos2) { 
     if (pos1 != player->getPosition()) return;
     Object* obj = game[pos2].get();
     if (!obj) {
         std::cerr << "ERROR: Null object at position " << pos2 << std::endl;
         return;
     }
-    switch (obj->returntype()) { // check Object type
+    switch (obj->returntype()) { 
         case ObjectType::WEAPON:
             {
                 Weapon* weapon = dynamic_cast<Weapon*>(obj);
@@ -348,7 +364,7 @@ void Game::handleIMMEDIATE_PASS(int pos1, int pos2) { // если это лов�
                 default: 
                     {
                         game[pos2].reset();
-                        std::cerr << "Неполадки в ObjectType::POTION "
+                        std::cerr << "Unknown PotionType in handleIMMEDIATE_PASS: "
                                   << static_cast<int>(obj->returntype())
                                   << std::endl;
                         break;
@@ -361,14 +377,15 @@ void Game::handleIMMEDIATE_PASS(int pos1, int pos2) { // если это лов�
             
         }
         default: {
-            std::cerr << "Неподдерживаемый тип объекта: "
+            std::cerr << "Unknown ObjectType in handleIMMEDIATE_PASS: "
                       << static_cast<int>(obj->returntype())
                       << std::endl;
             break;
         }
     }
 }
-void Game::handleSWAP_REQUIRED(int pos1, int pos2){ // если можно поменять карточки местами
+
+void Game::handleSWAP_REQUIRED(int pos1, int pos2){ 
     if (pos1 != player->getPosition()) return;
     Object* obj = game[pos2].get();
     if (!obj) {
@@ -381,7 +398,7 @@ void Game::handleSWAP_REQUIRED(int pos1, int pos2){ // если можно по�
             switchcards(pos1, pos2);
             break;
         default:
-            std::cerr << "Неподдерживаемый тип объекта: "
+            std::cerr << "Unknown ObjectType in handleSWAP_REQUIRED: "
                       << static_cast<int>(obj->returntype())
                       << std::endl;
             break;
@@ -390,7 +407,8 @@ void Game::handleSWAP_REQUIRED(int pos1, int pos2){ // если можно по�
     }
     
 }
-void Game::handleTRIGGER_ON_STAY(int pos1){ // если сундук, то стоим на месте
+
+void Game::handleTRIGGER_ON_STAY(int pos1){ 
     Object* obj = game[pos1].get();
     if (!obj) {
         std::cerr << "ERROR: Null object at position " << pos1 << std::endl;
@@ -409,13 +427,15 @@ void Game::handleTRIGGER_ON_STAY(int pos1){ // если сундук, то ст�
         }
             
         default:
-            std::cerr << "Неподдерживаемый тип объекта: "
+            std::cerr << "Unknown ObjectType in handleTRIGGER_ON_STAY: "
                       << static_cast<int>(obj->returntype())
                       << std::endl;
             break;
     }
 
 }
+
+// Handles combat with enemies
 void Game::handleCOMBAT_DEPENDENT(int pos1, int pos2){
     if (pos1 != player->getPosition()) return;
     Object* obj = game[pos2].get();
@@ -457,7 +477,7 @@ void Game::handleCOMBAT_DEPENDENT(int pos1, int pos2){
             }
             
         default:
-            std::cerr << "Неподдерживаемый тип объекта: "
+            std::cerr << "Unknown ObjectType in handleCOMBAT_DEPENDENT: "
                       << static_cast<int>(obj->returntype())
                       << std::endl;
             break;
@@ -468,6 +488,8 @@ void Game::handleCOMBAT_DEPENDENT(int pos1, int pos2){
 bool Game::isPlayerAlive() const {
     return player && player->getHP() > 0;
 }
+
+// Initialize damage callbacks for all objects
 void Game::initializeDamageCallbacks() {
     for (auto& obj : game) {
         if (obj) {
@@ -483,6 +505,8 @@ void Game::initializeDamageCallbacks() {
         });
     }
 }
+
+// Handle damage events and object death
 void Game::handleObjectDamage(int pos, DamageType type) {
     if (pos < 0 || pos >= 9 || !game[pos]) {
         std::cerr << "Invalid position in handleObjectDamage: " << pos << std::endl;
@@ -530,6 +554,8 @@ void Game::handleObjectDamage(int pos, DamageType type) {
     
 
 }
+
+// Handle object death and replacement
 void Game::handleObjectDeath(int pos) {
     if (pos < 0 || pos >= 9) {
         std::cerr << "Invalid position in handleObjectDeath: " << pos << std::endl;

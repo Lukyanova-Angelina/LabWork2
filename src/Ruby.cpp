@@ -1,3 +1,10 @@
+/* Lukyanova Angelina st128743@student.spbu.ru
+ * Lab Work 2 - Game
+ */
+/**
+ * @file Ruby.cpp
+ * @brief Ruby class.
+ */
 #include "Ruby.h"
 
 

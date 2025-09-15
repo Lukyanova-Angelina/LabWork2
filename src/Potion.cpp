@@ -1,3 +1,10 @@
+/* Lukyanova Angelina st128743@student.spbu.ru
+ * Lab Work 2 - Game
+ */
+/**
+ * @file Potion.cpp
+ * @brief Potion class.
+ */
 #include "Potion.h"
 
 Potion::Potion(int pos, PotionType type):Object(pos), _Type(type){

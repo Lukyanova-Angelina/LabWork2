@@ -1,13 +1,16 @@
+/* Lukyanova Angelina st128743@student.spbu.ru
+ * Lab Work 2 - Game
+ */
+ /**
+ * @file Status.cpp
+ * @brief Status class.
+ */
 #include "Status.h"
-
-
-
 
 Status::Status():_Steps(0), _Xp(0), _XpToNextLevel(500){
 	setLevel(1);
 	setGold(0);
 	updateLootTable();
-
 
 }
 void Status::StepsUp(){

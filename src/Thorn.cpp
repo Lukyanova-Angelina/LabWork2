@@ -1,3 +1,10 @@
+/* Lukyanova Angelina st128743@student.spbu.ru
+ * Lab Work 2 - Game
+ */
+/**
+ * @file Thorn.cpp
+ * @brief Thorn class.
+ */
 #include "Thorn.h"
 Thorn::Thorn(int pos, int amount, const std::array<bool, 4>& dirs):Object(pos), _Amount(amount), directions(dirs){}
 
