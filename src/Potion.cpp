@@ -12,7 +12,6 @@ Potion::Potion(int pos, PotionType type):Object(pos), _Type(type){
 }
 Potion::Potion(int pos, int power, PotionType type):Object(pos), _Power(power), _Type(type){}
 
-
 int Potion::getPower() const{
 	return _Power;
 }

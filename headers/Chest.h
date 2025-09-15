@@ -4,10 +4,7 @@
 #include "Object.h"
 #include "Status.h"
 class Status;
-enum class ChestType{
-	BADCHEST,
-	GOODCHEST
-};
+
 
 class Chest: public Object {
 private:

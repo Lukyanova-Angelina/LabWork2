@@ -13,11 +13,10 @@ private:
 public:
 	Player(int pos, std::string name, int hp, int maxhp); 
 	Player(int pos);
-	~Player() = default;
+	virtual ~Player() override;
 	Weapon* getWeapon() const;
 	void setWeapon(std::unique_ptr<Weapon> weapon) ;
 	void removeWeapon();
-	// std::unique_ptr<Object> clone() const override;
 	DisplayInfo print() const override;
 	ObjectType returntype()const override;
 	

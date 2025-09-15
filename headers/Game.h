@@ -20,6 +20,11 @@
 #include <array>
 #include <map>
 #include <set>
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+#include <chrono>
+#include <thread>
 
 inline const int CELL_WIDTH = 24;
 inline const int LINES_PER_CELL = 5;
@@ -54,7 +59,7 @@ public:
 	void initializeDamageCallbacks();
 	void handleObjectDamage(int pos, DamageType type);
 	void handleObjectDeath(int pos);
-	//void checkForThreeGoldInARow();
+	void checkAndConvertGoldToRubies();
 };
 
 

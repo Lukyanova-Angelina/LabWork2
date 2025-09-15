@@ -1,7 +1,7 @@
 PROJECT=GAME
 IDIR=headers/
 CXX=g++
-CXXFLAGS =-I$(IDIR) -Wall -Wpedantic -Werror -std=c++17
+CXXFLAGS =-I$(IDIR) -Wall -Wpedantic -Werror -std=c++17 -g -fsanitize=address -fno-omit-frame-pointer
 LDFLAGS=-lgtest -lgtest_main -lpthread
 
 
@@ -32,11 +32,6 @@ $(TEST_TARGET): $(TEST_OBJ_FILES) $(OBJ_FILES_WITHOUT_MAIN)
 test: $(TEST_TARGET)
 	./$(TEST_TARGET)
 
-valgrind: $(TARGET)
-	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose ./$(TARGET)
-
-valgrind-test: $(TEST_TARGET)
-	valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes --verbose ./$(TEST_TARGET)
 clean:
 	rm -f $(TARGET) $(TEST_TARGET) $(OBJ_FILES) $(TEST_OBJ_FILES)
 

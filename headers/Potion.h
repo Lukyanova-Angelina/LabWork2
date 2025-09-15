@@ -4,10 +4,6 @@
 #include "Object.h"
 #include "Weapon.h"
 
-enum class PotionType{
-	POISON,
-	HEAL
-};
 
 class Potion: public Object {
 private:

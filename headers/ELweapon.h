@@ -9,7 +9,6 @@ private:
 public:
 	ELweapon(int pos, DamageType el); 
 	ELweapon(int pos, int damage, DamageType el);
-	~ELweapon();
 	DisplayInfo print() const override;
 	std::unique_ptr<Object> clone() const override;
 	ObjectType returntype() const override;

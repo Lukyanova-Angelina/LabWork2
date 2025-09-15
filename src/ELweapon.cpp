@@ -6,7 +6,6 @@ ELweapon::ELweapon(int pos, DamageType el):Weapon(pos), _Type(el){}
 
 ELweapon::ELweapon(int pos, int damage, DamageType el):Weapon(pos, damage), _Type(el){}
 
-ELweapon::~ELweapon(){}
 DisplayInfo ELweapon::print() const {
     std::string el = (getElement() == DamageType::FIRE ? "FIRE" : "ICE");
     return {

@@ -2,9 +2,7 @@
 
 
 Elemental::Elemental(int pos, int hp, DamageType type)
-	: Enemy(pos, hp), _Type(type) {} // По умолчанию оружия нет
-Elemental::~Elemental() {
-}
+	: Enemy(pos, hp), _Type(type) {} 
 
 DisplayInfo Elemental::print() const {
 	std::string el = (getElement() == DamageType::FIRE ? "FIRE" : "ICE");

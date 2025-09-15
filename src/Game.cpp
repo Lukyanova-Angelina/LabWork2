@@ -1,9 +1,4 @@
 #include "Game.h"
-#include <cstdlib>
-#include <ctime>
-#include <iostream>
-#include <chrono>
-#include <thread>
 
 Game::Game(){
     generate_game();
@@ -15,7 +10,7 @@ void Game::generate_game() {
     srand(static_cast<unsigned int>(time(0)));
     for (int i = 0; i < 9; ++i) {
         if (i == 4) {
-            game[i] = std::make_unique<Player>(i, "Hero", 100, 100);
+            game[i] = std::make_unique<Player>(i, "Hero", 800, 1000);
             player = static_cast<Player*>(game[i].get());
         } else {
             generatecard(i);
@@ -42,112 +37,95 @@ void Game::update() {
             game[i]->takeDamage(0, DamageType::NORMAL); // колбэк если объект должен быть уничтожен
         }
     }
+    checkAndConvertGoldToRubies();
     if (!isPlayerAlive()) {
         gameOver = true;
     }
 }
 bool Game::isGameOver() const { return gameOver; }
-// Отрисовка игры
+
+void Game::checkAndConvertGoldToRubies() {
+    std::vector<std::vector<int>> lines = {
+        {0, 1, 2},  // Первая горизонталь
+        {3, 4, 5},  // Вторая горизонталь
+        {6, 7, 8},  // Третья горизонталь
+        {0, 3, 6},  // Первая вертикаль
+        {1, 4, 7},  // Вторая вертикаль
+        {2, 5, 8}  
+    };
+
+    std::set<int> positionsToConvert;
+
+    for (const auto& line : lines) {
+        bool allGold = true;
+        for (int pos : line) {
+            if (!game[pos] || game[pos]->returntype() != ObjectType::GOLD) {
+                allGold = false;
+                break;
+            }
+        }
+        if (allGold) {
+            for (int pos : line) {
+                positionsToConvert.insert(pos);
+            }
+        }
+    }
+
+    // Заменяем золото на рубины
+    for (int pos : positionsToConvert) {
+        Gold* gold = dynamic_cast<Gold*>(game[pos].get());
+        if (gold) {
+            int amount = gold->getAmount();
+            game[pos] = std::make_unique<Ruby>(pos, amount);
+            game[pos]->setOnDamageCallback([this](int pos, DamageType type) {
+                this->handleObjectDamage(pos, type);
+            });
+        }
+    }
+}
+
 void Game::draw() {
     const std::string EMPTY_LINE = std::string(CELL_WIDTH, ' ');
     const std::string HORIZONTAL_BORDER = "━━━━━━━━━━━━━━━━━━━━━━━━";
-
+    
     for (int row = 0; row < 3; ++row) {
-        std::vector<DisplayInfo> cells;
+
         for (int col = 0; col < 3; ++col) {
             int index = row * 3 + col;
-            cells.push_back(game[index] ? game[index]->print() 
-                                        : DisplayInfo{"Empty", "", "", Color::MAGENTA});
-        }
-        // Вывод содержимого ячеек
-        for (const auto& cell : cells) {
-            std::cout << cell.color << "┏" << HORIZONTAL_BORDER << "┓" << Color::RESET << "   ";
+            std::string color = game[index] ? game[index]->print().color : Color::MAGENTA;
+            std::cout << color << "┏" << HORIZONTAL_BORDER << "┓" << Color::RESET << "   ";
         }
         std::cout << "\n";
-        for (int line = 0; line < LINES_PER_CELL; ++line) {
-            for (const auto& cell : cells) {
+        
+        for (int line = 0; line < 10; ++line) {
+            for (int col = 0; col < 3; ++col) {
+                int index = row * 3 + col;
+                DisplayInfo cell = game[index] ? game[index]->print() 
+                                              : DisplayInfo{"Empty", "", "", Color::MAGENTA};
+                
                 std::string content;
-                std::string gr = "┃";
                 switch(line) {
-                    case 1: content = centerText(cell.header, CELL_WIDTH); break;
-                    case 2: content = centerText(cell.status, CELL_WIDTH); break;
-                    case 3: content = centerText(cell.details, CELL_WIDTH); break;
-                    default: content = EMPTY_LINE; 
+                    case 2: content = centerText(cell.header, CELL_WIDTH); break;
+                    case 4: content = centerText(cell.status, CELL_WIDTH); break;
+                    case 6: content = centerText(cell.details, CELL_WIDTH); break;
+                    default: content = EMPTY_LINE;
                 }
-
-                std::cout << cell.color<<"┃" << content << "┃   "<< Color::RESET ;
-
-            }
-
-            std::cout << "\n";
-            for (const auto& cell : cells) {
-                std::cout << cell.color << "┃" <<EMPTY_LINE << "┃" << Color::RESET << "   ";
+                
+                std::cout << cell.color << "┃" << content << "┃   " << Color::RESET;
             }
             std::cout << "\n";
         }
-        for (const auto& cell : cells) {
-            std::cout << cell.color << "┗" << HORIZONTAL_BORDER << "┛" << Color::RESET << "   ";
+        
+        for (int col = 0; col < 3; ++col) {
+            int index = row * 3 + col;
+            std::string color = game[index] ? game[index]->print().color : Color::MAGENTA;
+            std::cout << color << "┗" << HORIZONTAL_BORDER << "┛" << Color::RESET << "   ";
         }
         std::cout << "\n\n";
-        
-    }
-    std::cout<<_STATUS.print();
-    //std::cout << "\033[41H";
-}
-void Game::drawcard(int pos1, int col, int row){
-    const std::string HORIZONTAL_BORDER = "━━━━━━━━━━━━━━━━━━━━━━━━";
-    DisplayInfo cell = game[pos1]->print();
-    std::cout.flush();
-    int line = 0;
-    std::cout << "\033["<<row<<";"<<col<<"H";
-    std::cout << cell.color << "┏" << HORIZONTAL_BORDER << "┓" << Color::RESET << "   "<<std::flush;
-    for (; line < LINES_PER_CELL; ++line) {
-        std::cout.flush();
-        std::string content;
-        std::string gr = "┃";
-        switch(line) {
-            case 1: content = centerText(cell.header, CELL_WIDTH); break;
-            case 2: content = centerText(cell.status, CELL_WIDTH); break;
-            case 3: content = centerText(cell.details, CELL_WIDTH); break;
-            default: content = std::string(CELL_WIDTH,' '); 
-        }
-        std::cout << "\033["<<row+line*2+1<<";"<<col<<"H";
-        std::cout << cell.color<<"┃" << content << "┃   "<< Color::RESET<<std::flush;
-        std::cout << "\033["<<row+line*2 + 2<<";"<<col<<"H";
-        std::cout << cell.color << "┃" <<std::string(CELL_WIDTH,' ') << "┃" << Color::RESET << "   "<<std::flush;
-        std::cout << "\033[41;1H" << std::flush;
-    }
-    std::cout << "\033["<<row+line*2 +1<<";"<<col<<"H";
-    std::cout << cell.color << "┗" << HORIZONTAL_BORDER << "┛" << Color::RESET << "   "<<std::flush;
-    std::cout << "\033[41;1H" << std::flush;
-}
-
-void Game::drawANIMATION(int pos1, int pos2){
-    const std::string HORIZONTAL_BORDER = "━━━━━━━━━━━━━━━━━━━━━━━━";
-    bool IS_HORISONTAL = abs(pos1 - pos2) == 1;
-    int col1 = (pos1%3)*29 + 1;
-    int row1 = (pos1 / 3) * 13 + 1;
-    int col2 = (pos2%3)*29 + 1;
-    int row2 = (pos2 / 3) * 13 + 1;
-    std::cout.flush();
-    for (int movement = 0; movement < (IS_HORISONTAL ? abs(col1 - col2) + 1 : abs(row1 - row2) + 1); movement++){
-        for (int line = 0; line < (IS_HORISONTAL ? 12 : 13);++line){
-            std::cout << "\033["<<row1 + line<<";"<<col1<<"H";
-            std::cout << std::string(CELL_WIDTH+2,' ')<<std::flush;
-            std::cout << "\033[41;1H" << std::flush;
-            std::cout << "\033["<<row2 + line<<";"<<col2 - 3<<"H";
-            std::cout << std::string(CELL_WIDTH+5, ' ')<<std::flush;
-            std::cout << "\033[41;1H" << std::flush;
-        }
-        drawcard(pos1, (IS_HORISONTAL ? col1 - ((col1 > col2) - (col1 < col2)) * movement : col1),(IS_HORISONTAL ? row1: row1 - ((row1 > row2) - (row1 < row2)) * movement));
-        std::cout << "\033[41;1H" << std::flush;
-        std::this_thread::sleep_for(std::chrono::milliseconds((IS_HORISONTAL ? 20 : 40)));
     }
     
-    std::this_thread::sleep_for(std::chrono::milliseconds(100));
-    std::cout << "\033[41;1H" << std::flush;
+    std::cout << _STATUS.print();
 }
-
 
 void Game::clean(){
     std::cout << "\033[2J\033[1;1H"; 
@@ -177,8 +155,6 @@ void Game::handleInput(char input) {// если возможность ходи�
                     break;
             }
             
-            //gotodir(player->getTargetDirection(poswheremove));
-            //switchcards(playerpos, poswheremove);
             update();
         }
     } else {
@@ -194,7 +170,6 @@ void Game::switchcards(int pos1, int pos2){ // меняем местами ка�
 }
 
 void Game::movecard(int pos, int direction){ // изменяем позицию карточки
-    //drawANIMATION(pos, game[pos]->getTargetPosition(direction)); // --------------------------------анимация запускается тут
     game[pos]->move(direction);
     game[game[pos]->getPosition()] = std::move(game[pos]);
 
@@ -231,7 +206,11 @@ void Game::gotodir(int direction){ // перемещаем карточку (с 
         }
     }
 }
-void Game::generatecard(int pos) { // пока что так, дальше придумать систему генерации
+void Game::generatecard(int pos) {
+    if (pos < 0 || pos >= 9) {
+        std::cerr << "Invalid position in generatecard: " << pos << std::endl;
+        return;
+    }
     std::unique_ptr<Object> newCard = _STATUS.generateCard(pos);
     if (newCard) {
         newCard->setOnDamageCallback([this](int pos, DamageType type) {
@@ -506,6 +485,7 @@ void Game::initializeDamageCallbacks() {
 }
 void Game::handleObjectDamage(int pos, DamageType type) {
     if (pos < 0 || pos >= 9 || !game[pos]) {
+        std::cerr << "Invalid position in handleObjectDamage: " << pos << std::endl;
         return;
     }
     
@@ -551,6 +531,10 @@ void Game::handleObjectDamage(int pos, DamageType type) {
 
 }
 void Game::handleObjectDeath(int pos) {
+    if (pos < 0 || pos >= 9) {
+        std::cerr << "Invalid position in handleObjectDeath: " << pos << std::endl;
+        return;
+    }
     if (game[pos].get() == player) {
         gameOver = true;
         return;
@@ -565,28 +549,39 @@ void Game::handleObjectDeath(int pos) {
             {
                 Bomb* bomb = dynamic_cast<Bomb*>(deadObj);
                 if (bomb){
+                    int bombAmount = bomb->getAmount();
+                    std::vector<int> targetPositions;
                     for (int i = 0; i < 4; i++){
-                        int targetpos = bomb->getTargetPosition(i);
+                        targetPositions.push_back(bomb->getTargetPosition(i));
+                    }
+                    
+                    game[pos] = std::make_unique<Gold>(pos, 100);
+                    
+                    for (int i = 0; i < 4; i++){
+                        int targetpos = targetPositions[i];
                         if(0 <= targetpos && targetpos < 9 && game[targetpos]){
-                            game[targetpos]->takeDamage(bomb->getAmount(), DamageType::NORMAL);
+                            game[targetpos]->takeDamage(bombAmount, DamageType::NORMAL);
                         }
                     }
                 }
-                game[pos] = std::make_unique<Gold>(pos, 100);
                 break;
             }
         case ObjectType::DYNAMITE:
             {
                 Dynamite* dynamite = dynamic_cast<Dynamite*>(deadObj);
                 if (dynamite){
+                    int dynamiteAmount = dynamite->getAmount();
+                    int row = pos / 3;
+                    
+                    game[pos] = std::make_unique<Gold>(pos, 100);
+                    
                     for (int i = 0; i < 3; i++){
-                        int targetpos = (pos / 3) * 3 + i;
+                        int targetpos = row * 3 + i;
                         if(0 <= targetpos && targetpos < 9 && game[targetpos] && pos != targetpos){
-                            game[targetpos]->takeDamage(dynamite->getAmount(), DamageType::NORMAL);
+                            game[targetpos]->takeDamage(dynamiteAmount, DamageType::NORMAL);
                         }
                     }
                 }
-                game[pos] = std::make_unique<Gold>(pos, 100);
                 break;
             }
         case ObjectType::BAT:

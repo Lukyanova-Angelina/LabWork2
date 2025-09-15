@@ -9,7 +9,6 @@ private:
 public:
 	ELmagic(int pos, DamageType el); 
 	ELmagic(int pos, int damage, DamageType el);
-	~ELmagic();
 	DisplayInfo print() const override;
 	ObjectType returntype() const override;
 	DamageType getElement()const;

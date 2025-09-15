@@ -12,7 +12,6 @@ private:
 public:
 	Character();
 	Character(int pos, std::string name, int hp, int maxhp);
-	~Character();
 
 	std::string getName() const;
 	int getHP() const;

@@ -4,13 +4,11 @@ Object::Object(int pos) :_POSITION(pos){
 }
 
 // Деструктор
-Object::~Object() {}
+Object::~Object() {
+    removeCallback();
+}
 
-// Реализация оператора <<
-// std::ostream& operator<<(std::ostream& os, const Object& obj) {
-//     obj.print(os); // Вызов виртуального метода
-//     return os;
-// }
+
 DisplayInfo Object::print() const {
     return {
         "Object",
@@ -50,13 +48,18 @@ void Object::move(int direction){
 int Object::getTargetPosition(int direction) const {
     switch (direction) {
         case 0:
-            return getPosition() - 3;
+            if ((getPosition() -3) >= 0) {return getPosition() -3;}
+            return -1;
         case 1:
-            return getPosition() + 1;
+            if ((getPosition() + 1) / 3 == getPosition() / 3) 
+                {return getPosition() + 1;}
+            return -1;
         case 2:
-            return getPosition() + 3;
+            if ((getPosition() +3) <= 8) {return getPosition() +3;}
+            return -1;
         case 3:
-            return getPosition() - 1;
+            if ((getPosition() - 1) / 3 == getPosition() / 3) {return getPosition() -1;}
+            return -1;
         default:
             return -1; 
     }
@@ -113,13 +116,27 @@ std::string centerText(const std::string& text, size_t width) {
         return std::string(width, ' ');
     }
     
+    
+    static const std::unordered_map<std::string, int> symbolCorrections = {
+        {"→", -2},
+        {"←", -2},
+        {"↓", -2},
+        {"↑", -2},
+        {"▲", -2},
+        {"◀", -2},
+        {"▶", -2},
+        {"▼", -2},
+        {"⚔", -2}
+    };
+    
     size_t effectiveLength = text.length();
     
-    if (text.find("▶") != std::string::npos) effectiveLength += 2;
-    if (text.find("◀") != std::string::npos) effectiveLength += 1;
-    if (text.find("▼") != std::string::npos) effectiveLength -= 10;
-    if (text.find("▲") != std::string::npos) effectiveLength += 1;
-    
+    for (const auto& [symbol, correction] : symbolCorrections) {
+        if (text.find(symbol) != std::string::npos) {
+            effectiveLength += correction;
+        }
+    }
+
     if (effectiveLength >= width) {
         return text.substr(0, width);
     }

@@ -6,7 +6,6 @@ ELmagic::ELmagic(int pos, DamageType el):Weapon(pos), _Type(el){}
 
 ELmagic::ELmagic(int pos, int damage, DamageType el):Weapon(pos, damage), _Type(el){}
 
-ELmagic::~ELmagic(){}
 DisplayInfo ELmagic::print() const {
     std::string el = (getElement() == DamageType::FIRE ? "FIRE" : "ICE");
     return {

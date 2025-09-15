@@ -10,6 +10,7 @@ DisplayInfo Thorn::print()const{ //←, →, ↑, ↓.
 		Color::BLUE
 	};
 }
+
 ObjectType Thorn::returntype() const {
 	return ObjectType::THORN;
 

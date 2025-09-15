@@ -2,7 +2,9 @@
 Player::Player(int pos, std::string name, int hp, int maxhp): Character(pos, name, hp, maxhp), _weapon(nullptr) {}
 Player::Player(int pos)
 	: Character(pos, "name", 10, 10), _weapon(nullptr) {} // По умолчанию оружия нет
-
+Player::~Player(){
+    removeWeapon();
+}
 
 Weapon* Player::getWeapon() const {
 	return _weapon.get();

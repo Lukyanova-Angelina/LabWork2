@@ -5,7 +5,7 @@ DisplayInfo Gun::print()const{ //←, →, ↑, ↓.
 	auto dir = getDirections();
 	return {
 		(dir[0] ? "▲": ""),
-		(dir[3] ? "◀ ": "  ") + std::to_string(getAmount()) + (dir[1] ? " ▶": "  "),
+		(dir[3] ? "◀   ": "  ") + std::to_string(getAmount()) + (dir[1] ? "   ▶": "  "),
 		(dir[2] ? "▼": " "),
 		Color::RED
 	};

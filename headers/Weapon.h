@@ -10,7 +10,6 @@ private:
 public:
 	Weapon(int pos);
 	Weapon(int pos, int damage);
-	~Weapon();
 	int getDamage() const; 
 	void setDamage(int damage);
 	DisplayInfo print() const override;

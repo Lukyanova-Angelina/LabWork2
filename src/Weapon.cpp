@@ -4,7 +4,6 @@
 Weapon::Weapon(int pos) : Object(pos){
     _damage = rand() % 42;
 }
-Weapon::~Weapon() {}
 Weapon::Weapon(int pos, int damage) : Object(pos), _damage(damage) {}
 
 int Weapon::getDamage() const {

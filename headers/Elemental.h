@@ -8,7 +8,6 @@ private:
 	DamageType _Type;
 public:
 	Elemental(int pos, int hp, DamageType type);
-	~Elemental();
 	DisplayInfo print() const override;
 	ObjectType returntype()const override;
 	DamageType getElement() const;

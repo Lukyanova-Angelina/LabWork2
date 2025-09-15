@@ -1,63 +1,15 @@
 #ifndef OBJECT_H
 #define OBJECT_H
 
-#include <string>
 #include <cstdlib>
 #include <ctime>
 #include <iostream>
 #include <vector>
 #include <memory>
 #include <functional>
+#include "Colors.h"
+#include "Enums.h"
 
-enum class DamageType {
-	NORMAL,              // Обычный урон (меч)
-	FIRE,                 // Огненный урон (огонь, огненная палочка)
-	ICE                   // Ледяной урон
-};
-
-enum class InteractionType {
-	IMMEDIATE_PASS,    // перейти на карточку в любом случае
-	SWAP_REQUIRED,     // поменяться местами с карточкой
-	TRIGGER_ON_STAY,  // какое-то действие с карточкой (но стоим на месте)
-	COMBAT_DEPENDENT       // зависит от условий (наличие оружия, здоровье и тд)
-};
-enum class ObjectType {
-	OBJECT,
-	ENEMY,
-	ELEMENTAL,
-	MAG,
-	BAT,
-	WEAPON,
-	ELMAGIC,
-	ELWEAPON,
-	GOLD,
-	RUBY,
-	THORN,
-	GUN,
-	BOMB,
-	DYNAMITE,
-	POTION,
-	CHEST,
-	PLAYER
-};
-
-namespace Color {
-    const std::string RED = "\033[31m";
-    const std::string GREEN = "\033[32m";
-    const std::string YELLOW = "\033[33m";
-    const std::string BLUE = "\033[34m";
-    const std::string MAGENTA = "\033[35m";
-    const std::string CYAN = "\033[36m";
-    const std::string WHITE = "\033[37m";
-    const std::string BGRED = "\033[41m";
-    const std::string BGGREEN = "\033[42m";
-    const std::string BGYELLOW = "\033[43m";
-    const std::string BGBLUE = "\033[44m";
-    const std::string BGMAGENTA = "\033[45m";
-    const std::string BGCYAN = "\033[46m";
-    const std::string BGWHITE = "\033[47m";
-    const std::string RESET = "\033[0m";
-}
 
 struct DisplayInfo {
     std::string header;
@@ -84,7 +36,6 @@ public:
 	virtual std::unique_ptr<Object> clone() const;
 	virtual void update();
 	virtual void OnINTERACT(Object* obj);
-	//virtual void takeDamage(int dmg);
 	
 	int getPosition() const;
 	void setPosition(int pos);

@@ -5,8 +5,7 @@ Character::Character()
 
 Character::Character(int pos, std::string name, int hp, int maxhp)
 	:Object(pos), _Name(name), _HP(hp), _MAX_HP(maxhp){}
-Character::~Character(){}
-//getters
+
 std::string Character::getName() const 
 {
 	return _Name;
@@ -52,10 +51,11 @@ DisplayInfo Character::print() const {
 void Character::takeDamage(Weapon* o){
 	int hp = getHP();
 	setHP(getHP() - (o->getDamage()));
-	o->takeDamage(std::min(o->getDamage(), hp), DamageType::NORMAL);
+	
 	if (OnDamageCallback) {
 		OnDamageCallback(getPosition(), o->getElement());
 	}
+	o->takeDamage(std::min(o->getDamage(), hp), DamageType::NORMAL);
 }
 
 void Character::takeHP(int hp){

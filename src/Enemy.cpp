@@ -5,8 +5,6 @@ Enemy::Enemy(int pos, std::string name, int hp, int maxhp)
 
 Enemy::Enemy(int pos, int hp)
 	: Character(pos, "name", hp, hp * 1.5) {} 
-Enemy::~Enemy() {
-}
 
 DisplayInfo Enemy::print() const {
     return {
