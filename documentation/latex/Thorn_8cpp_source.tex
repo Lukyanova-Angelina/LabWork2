@@ -1,0 +1,62 @@
+\doxysection{Thorn.\+cpp}
+\hypertarget{Thorn_8cpp_source}{}\label{Thorn_8cpp_source}\index{src/Thorn.cpp@{src/Thorn.cpp}}
+\mbox{\hyperlink{Thorn_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Thorn_8h}{Thorn.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00009}\mbox{\hyperlink{classThorn_a9cad8ee285d2ad917ddba75e3fabfcff}{00009}}\ \mbox{\hyperlink{classThorn_a9cad8ee285d2ad917ddba75e3fabfcff}{Thorn::Thorn}}(\textcolor{keywordtype}{int}\ pos,\ \textcolor{keywordtype}{int}\ amount,\ \textcolor{keyword}{const}\ std::array<bool,\ 4>\&\ dirs):\mbox{\hyperlink{classObject}{Object}}(pos),\ \_Amount(amount),\ directions(dirs)\{\}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00011}\mbox{\hyperlink{classThorn_a74ac7e457866eed6a931060f53e3353b}{00011}}\ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classThorn_a74ac7e457866eed6a931060f53e3353b}{Thorn::print}}()\textcolor{keyword}{const}\{\ \textcolor{comment}{//←,\ →,\ ↑,\ ↓.}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{auto}\ dir\ =\ \mbox{\hyperlink{classThorn_a9f3dc4b7e56357ec996e3f1fb7d094b9}{getDirections}}();}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ (dir[0]\ ?\ \textcolor{stringliteral}{"{}↑"{}}:\ \textcolor{stringliteral}{"{}"{}}),}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ (dir[3]\ ?\ \textcolor{stringliteral}{"{}←\ "{}}:\ \textcolor{stringliteral}{"{}\ \ "{}})\ +\ std::to\_string(\mbox{\hyperlink{classThorn_a0e8fbc34d8d996dc01a9c9779445b871}{getAmount}}())\ +\ (dir[1]\ ?\ \textcolor{stringliteral}{"{}\ →"{}}:\ \textcolor{stringliteral}{"{}\ \ "{}}),}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ (dir[2]\ ?\ \textcolor{stringliteral}{"{}↓"{}}:\ \textcolor{stringliteral}{"{}"{}}),}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_ae0e9bb7492ab063e23ff4ca400371fef}{Color::BLUE}}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00018}00018\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00021}\mbox{\hyperlink{classThorn_aedbf24d78ec21a801b3df8d22621d5fc}{00021}}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classThorn_aedbf24d78ec21a801b3df8d22621d5fc}{Thorn::returntype}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00022}00022\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ce20399299146eae2f6c0e847de1f3b}{ObjectType::THORN}};}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00023}00023\ }
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00025}\mbox{\hyperlink{classThorn_a5ac388d3c6d127d15f5158fea05f6b91}{00025}}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{InteractionType}}\ \mbox{\hyperlink{classThorn_a5ac388d3c6d127d15f5158fea05f6b91}{Thorn::returnInteractionType}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{InteractionType::IMMEDIATE\_PASS}};}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00028}\mbox{\hyperlink{classThorn_a4aeae41abf17aa5bd99de37b300680d0}{00028}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classThorn_a4aeae41abf17aa5bd99de37b300680d0}{Thorn::update}}()\{}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00029}00029\ \ \ \ \ \mbox{\hyperlink{classThorn_a3d7f981d55a4ed44026aa6af5bbad6ae}{turn}}();}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00030}00030\ \}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00032}\mbox{\hyperlink{classThorn_a3d7f981d55a4ed44026aa6af5bbad6ae}{00032}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classThorn_a3d7f981d55a4ed44026aa6af5bbad6ae}{Thorn::turn}}()\{}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ last\ =\ directions[3];}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 3;\ i\ >\ 0;\ -\/-\/i)\{}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ directions[i]\ =\ directions[i-\/1];}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00036}00036\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00037}00037\ \ \ \ \ directions[0]\ =\ last;}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00040}\mbox{\hyperlink{classThorn_a0e8fbc34d8d996dc01a9c9779445b871}{00040}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classThorn_a0e8fbc34d8d996dc01a9c9779445b871}{Thorn::getAmount}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{return}\ \_Amount;}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00042}00042\ \}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00043}\mbox{\hyperlink{classThorn_a60a860e36566c0fe3767a4ec677742c2}{00043}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classThorn_a60a860e36566c0fe3767a4ec677742c2}{Thorn::setAmount}}\ (\textcolor{keywordtype}{int}\ amount)\{}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00044}00044\ \ \ \ \ \_Amount\ =\ amount;}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00045}00045\ \}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00047}\mbox{\hyperlink{classThorn_a9f3dc4b7e56357ec996e3f1fb7d094b9}{00047}}\ std::array<bool,\ 4>\ \mbox{\hyperlink{classThorn_a9f3dc4b7e56357ec996e3f1fb7d094b9}{Thorn::getDirections}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00048}00048\ \ \ \ \ \textcolor{keywordflow}{return}\ directions;}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00049}00049\ \}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00050}\mbox{\hyperlink{classThorn_a1145b88fe2bb63ad05bf9f10c62a57e3}{00050}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classThorn_a1145b88fe2bb63ad05bf9f10c62a57e3}{Thorn::takeDamage}}(\textcolor{keywordtype}{int}\ dmg,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type)\{}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00051}00051\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classThorn_a0e8fbc34d8d996dc01a9c9779445b871}{getAmount}}()\ <=\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00052}00052\ \ \ \ \ \textcolor{keywordtype}{int}\ finalDamage\ =\ \mbox{\hyperlink{classThorn_a69c43e713b8f280d68cb1547beb8ddf0}{calculateFinalDamage}}(dmg,\ type);}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00053}00053\ \ \ \ \ \mbox{\hyperlink{classThorn_a60a860e36566c0fe3767a4ec677742c2}{setAmount}}(\mbox{\hyperlink{classThorn_a0e8fbc34d8d996dc01a9c9779445b871}{getAmount}}()\ -\/\ finalDamage);}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00054}00054\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{OnDamageCallback}})\ \{}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{OnDamageCallback}}(\mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{getPosition}}(),\ type);}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00056}00056\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00057}00057\ \}}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00058}\mbox{\hyperlink{classThorn_a69c43e713b8f280d68cb1547beb8ddf0}{00058}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classThorn_a69c43e713b8f280d68cb1547beb8ddf0}{Thorn::calculateFinalDamage}}(\textcolor{keywordtype}{int}\ dmg,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type)\{}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00059}00059\ \ \ \ \ \textcolor{keywordflow}{return}\ dmg;}
+\DoxyCodeLine{\Hypertarget{Thorn_8cpp_source_l00060}00060\ \}}
+
+\end{DoxyCode}

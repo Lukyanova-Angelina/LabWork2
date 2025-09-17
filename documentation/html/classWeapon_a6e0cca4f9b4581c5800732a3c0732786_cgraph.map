@@ -1,0 +1,11 @@
+<map id="Weapon::takeDamage" name="Weapon::takeDamage">
+<area shape="rect" id="Node000001" title="Applies damage to weapon (reduces durability)." alt="" coords="5,80,171,105"/>
+<area shape="rect" id="Node000002" href="$classWeapon.html#a699365cd1118c61662b5567dc6266044" title="Calculates final damage after elemental modifications." alt="" coords="219,5,445,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,77,218,39,249,31,250,36,219,45,119,82"/>
+<area shape="rect" id="Node000003" href="$classWeapon.html#a5f1941efbf38c5719cf75e4a138e92d4" title="Gets current damage value." alt="" coords="253,55,411,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="170,81,238,74,239,80,171,87"/>
+<area shape="rect" id="Node000004" href="$classObject.html#ac94263cc1cd1fe7d0193f8400af2c1e4" title="Gets the current grid position." alt="" coords="259,104,405,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="171,98,246,106,245,111,170,103"/>
+<area shape="rect" id="Node000005" href="$classWeapon.html#a54e4b500dcc3f5c3d02df6f1c29ddbea" title="Sets damage value." alt="" coords="253,153,411,179"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="121,103,219,138,255,148,253,153,218,143,119,108"/>
+</map>

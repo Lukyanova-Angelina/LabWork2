@@ -1,0 +1,46 @@
+<map id="Status::getXpToNextLevel" name="Status::getXpToNextLevel">
+<area shape="rect" id="Node000001" title="Gets XP required for next level." alt="" coords="1791,301,1980,326"/>
+<area shape="rect" id="Node000002" href="$classStatus.html#a5839848d6c2f832789de5b3a0a058dab" title="Adds experience points and handles level ups." alt="" coords="1631,276,1743,301"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1777,303,1742,298,1743,293,1778,297"/>
+<area shape="rect" id="Node000017" href="$classStatus.html#af4f18066061f502586473fbd94ea4812" title="Gets formatted status string for UI." alt="" coords="1636,325,1737,350"/>
+<area shape="poly" id="edge23_Node000001_Node000017" title=" " alt="" coords="1778,330,1738,334,1737,329,1777,324"/>
+<area shape="rect" id="Node000003" href="$classGame.html#aaf59ec9035aa5b9cd8bd97c910284164" title="Handles combat&#45;dependent interactions (enemies)." alt="" coords="331,216,501,256"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1617,288,501,243,501,237,1617,283"/>
+<area shape="rect" id="Node000006" href="$classGame.html#aa7e441af2bf58d6926635c1b6e5c6747" title="Handles immediate pass interactions (weapons, items, etc.)." alt="" coords="303,281,529,306"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="1617,303,1445,327,1341,337,1236,340,973,340,850,337,727,330,517,309,517,304,727,324,850,332,973,335,1236,335,1340,331,1444,322,1617,298"/>
+<area shape="rect" id="Node000007" href="$classGame.html#a52331dc8166afc8a41bfa057a99631e1" title="Handles object death and replacement." alt="" coords="1388,124,1583,149"/>
+<area shape="poly" id="edge7_Node000002_Node000007" title=" " alt="" coords="1656,270,1502,152,1505,147,1660,265"/>
+<area shape="rect" id="Node000004" href="$classGame.html#a28d97d9a41d73e279d0255587b3e21e7" title="Handles player input and triggers appropriate actions." alt="" coords="108,224,255,249"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="317,239,255,239,255,234,317,234"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,300,60,325"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="145,258,60,302,57,297,142,253"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="343,281,302,271,228,252,229,247,303,266,344,275"/>
+<area shape="rect" id="Node000008" href="$classGame.html#adbe9a69a16dfb14821cc17f23aad440d" title="Handles damage events from objects." alt="" coords="1129,124,1340,149"/>
+<area shape="poly" id="edge8_Node000007_Node000008" title=" " alt="" coords="1374,148,1340,148,1340,143,1374,143"/>
+<area shape="poly" id="edge18_Node000008_Node000007" title=" " alt="" coords="1354,125,1388,125,1388,130,1354,130"/>
+<area shape="rect" id="Node000009" href="$classGame.html#a95e9edd88f6736aec599ba82886bbf56" title="Checks for and converts gold lines to rubies." alt="" coords="868,59,1081,99"/>
+<area shape="poly" id="edge9_Node000008_Node000009" title=" " alt="" coords="1162,123,1065,102,1066,97,1163,118"/>
+<area shape="rect" id="Node000011" href="$classGame.html#afc8b820ed9a65e30c55a1517c7b51d23" title="Generates a new object at specified position." alt="" coords="897,174,1052,200"/>
+<area shape="poly" id="edge12_Node000008_Node000011" title=" " alt="" coords="1156,154,1041,177,1040,172,1155,149"/>
+<area shape="rect" id="Node000015" href="$classGame.html#ad277e5df94316e85a695e9c6cd890e1d" title="Handles on&#45;stay trigger interactions (chests)." alt="" coords="331,10,501,50"/>
+<area shape="poly" id="edge19_Node000008_Node000015" title=" " alt="" coords="1205,118,1150,80,1116,63,1081,50,1003,31,923,19,843,12,764,9,618,12,502,21,501,16,618,7,764,3,843,7,924,14,1004,26,1082,45,1118,58,1153,76,1208,113"/>
+<area shape="rect" id="Node000016" href="$classGame.html#ab28abcae109099d44efcb27d7bfc9723" title="Initializes damage callbacks for all game objects." alt="" coords="577,124,820,149"/>
+<area shape="poly" id="edge21_Node000008_Node000016" title=" " alt="" coords="1115,139,820,139,820,134,1115,134"/>
+<area shape="rect" id="Node000010" href="$classGame.html#a79df6376b332d63c9eca0dcee30305c3" title="Updates game state (called each frame). Handles object updates, damage." alt="" coords="641,70,756,96"/>
+<area shape="poly" id="edge10_Node000009_Node000010" title=" " alt="" coords="854,84,756,85,756,80,854,78"/>
+<area shape="poly" id="edge11_Node000010_Node000004" title=" " alt="" coords="627,83,557,84,475,91,387,107,345,119,304,135,270,155,239,179,195,225,191,222,235,175,266,150,302,130,343,114,386,102,474,85,557,78,627,77"/>
+<area shape="rect" id="Node000012" href="$classGame.html#a0f55c42366732dd2c2b09f708ed3df1c" title="Generates initial game state with player and objects." alt="" coords="613,173,784,198"/>
+<area shape="poly" id="edge13_Node000011_Node000012" title=" " alt="" coords="884,189,784,189,784,184,884,184"/>
+<area shape="rect" id="Node000014" href="$classGame.html#acaa2f6520fc4c5deeec2dd079ebeefea" title="Handles complex movement logic for grid shifting." alt="" coords="641,274,756,300"/>
+<area shape="poly" id="edge15_Node000011_Node000014" title=" " alt="" coords="926,207,736,277,734,272,924,202"/>
+<area shape="rect" id="Node000013" href="$classGame.html#ad59df6562a58a614fda24622d3715b65" title="Constructs the game and initializes game state." alt="" coords="362,145,470,170"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="600,179,470,166,471,160,600,173"/>
+<area shape="poly" id="edge16_Node000014_Node000003" title=" " alt="" coords="627,277,501,254,502,249,628,272"/>
+<area shape="poly" id="edge17_Node000014_Node000006" title=" " alt="" coords="627,291,530,294,530,288,627,286"/>
+<area shape="poly" id="edge20_Node000015_Node000004" title=" " alt="" coords="337,58,304,77,266,114,233,156,191,225,187,222,228,153,262,111,301,73,334,53"/>
+<area shape="poly" id="edge22_Node000016_Node000013" title=" " alt="" coords="564,149,470,156,470,151,563,144"/>
+<area shape="rect" id="Node000018" href="$classGame.html#a6d54497ce3a66f6dd45eacfdccc8d0bd" title="Renders the game grid and UI." alt="" coords="924,376,1025,401"/>
+<area shape="poly" id="edge24_Node000017_Node000018" title=" " alt="" coords="1623,353,1583,359,1424,374,1266,383,1026,391,1026,385,1266,378,1423,369,1582,354,1622,348"/>
+<area shape="poly" id="edge26_Node000018_Node000005" title=" " alt="" coords="910,386,577,359,60,317,60,312,578,354,911,381"/>
+<area shape="poly" id="edge25_Node000018_Node000012" title=" " alt="" coords="947,369,889,320,818,265,720,201,723,196,822,261,892,316,950,364"/>
+</map>

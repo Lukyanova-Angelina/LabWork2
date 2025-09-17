@@ -1,7 +1,7 @@
 PROJECT=GAME
 IDIR=headers/
 CXX=g++
-CXXFLAGS =-I$(IDIR) -Wall -Wpedantic -Werror -std=c++17
+CXXFLAGS =-I$(IDIR) -Wall -Wpedantic -Werror -std=c++17 -g -fsanitize=address -fno-omit-frame-pointer
 LDFLAGS=-lgtest -lgtest_main -lpthread
 
 

@@ -1,0 +1,5 @@
+<map id="Thorn::turn" name="Thorn::turn">
+<area shape="rect" id="Node000001" title="Rotates the directional pattern." alt="" coords="165,5,259,31"/>
+<area shape="rect" id="Node000002" href="$classThorn.html#a4aeae41abf17aa5bd99de37b300680d0" title="Updates thorn state &#45; rotates directions." alt="" coords="5,5,117,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="152,21,118,21,118,15,152,15"/>
+</map>

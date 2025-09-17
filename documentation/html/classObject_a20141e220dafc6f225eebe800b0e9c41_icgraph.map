@@ -1,0 +1,5 @@
+<map id="Object::removeCallback" name="Object::removeCallback">
+<area shape="rect" id="Node000001" title="Removes the current damage callback." alt="" coords="179,5,357,31"/>
+<area shape="rect" id="Node000002" href="$classObject.html#ae8f5483f459e46687bd01e6f9977afd3" title="Virtual destructor for proper polymorphic destruction. Removes any active damage callback." alt="" coords="5,5,131,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,21,131,21,131,15,165,15"/>
+</map>

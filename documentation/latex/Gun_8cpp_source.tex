@@ -1,0 +1,24 @@
+\doxysection{Gun.\+cpp}
+\hypertarget{Gun_8cpp_source}{}\label{Gun_8cpp_source}\index{src/Gun.cpp@{src/Gun.cpp}}
+\mbox{\hyperlink{Gun_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Gun_8h}{Gun.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00009}\mbox{\hyperlink{classGun_ab262893cccb06dffa50990022bd226eb}{00009}}\ \mbox{\hyperlink{classGun_ab262893cccb06dffa50990022bd226eb}{Gun::Gun}}(\textcolor{keywordtype}{int}\ pos,\ \textcolor{keywordtype}{int}\ amount,\ \textcolor{keyword}{const}\ std::array<bool,\ 4>\&\ dirs):\mbox{\hyperlink{classThorn}{Thorn}}(pos,\ amount,\ dirs)\{\}}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00011}\mbox{\hyperlink{classGun_a283cd67227d10d0785e81e76621d9b70}{00011}}\ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classGun_a283cd67227d10d0785e81e76621d9b70}{Gun::print}}()\textcolor{keyword}{const}\{\ \textcolor{comment}{//←,\ →,\ ↑,\ ↓.}}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{auto}\ dir\ =\ \mbox{\hyperlink{classThorn_a9f3dc4b7e56357ec996e3f1fb7d094b9}{getDirections}}();}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ (dir[0]\ ?\ \textcolor{stringliteral}{"{}▲"{}}:\ \textcolor{stringliteral}{"{}"{}}),}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ (dir[3]\ ?\ \textcolor{stringliteral}{"{}◀\ \ \ "{}}:\ \textcolor{stringliteral}{"{}\ \ "{}})\ +\ std::to\_string(\mbox{\hyperlink{classThorn_a0e8fbc34d8d996dc01a9c9779445b871}{getAmount}}())\ +\ (dir[1]\ ?\ \textcolor{stringliteral}{"{}\ \ \ ▶"{}}:\ \textcolor{stringliteral}{"{}\ \ "{}}),}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ (dir[2]\ ?\ \textcolor{stringliteral}{"{}▼"{}}:\ \textcolor{stringliteral}{"{}\ "{}}),}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_a29bfda93a0cf8b1ec0fb44cf989d7eb0}{Color::RED}}}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00018}00018\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00020}\mbox{\hyperlink{classGun_aeadd6070441f8850c5dce0685f85f8ef}{00020}}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classGun_aeadd6070441f8850c5dce0685f85f8ef}{Gun::returntype}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00021}00021\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7f723c5fc350bac962b67157e70fff58}{ObjectType::GUN}};}
+\DoxyCodeLine{\Hypertarget{Gun_8cpp_source_l00022}00022\ \}}
+
+\end{DoxyCode}

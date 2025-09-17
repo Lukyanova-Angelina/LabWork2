@@ -1,0 +1,5 @@
+<map id="ELmagic::calculateFinalDamage" name="ELmagic::calculateFinalDamage">
+<area shape="rect" id="Node000001" title="Calculates final damage with elemental interactions." alt="" coords="5,5,236,31"/>
+<area shape="rect" id="Node000002" href="$classELmagic.html#a13197a13fbe69f92708fcd29d6f8bbd0" title="Gets the elemental type of the magic wand." alt="" coords="284,5,444,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="236,15,270,15,270,21,236,21"/>
+</map>

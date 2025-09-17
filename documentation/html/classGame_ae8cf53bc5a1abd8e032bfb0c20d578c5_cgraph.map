@@ -1,0 +1,9 @@
+<map id="Game::handleSWAP_REQUIRED" name="Game::handleSWAP_REQUIRED">
+<area shape="rect" id="Node000001" title="Handles swap&#45;required interactions (bombs, dynamite)." alt="" coords="5,55,231,80"/>
+<area shape="rect" id="Node000002" href="$classObject.html#ac94263cc1cd1fe7d0193f8400af2c1e4" title="Gets the current grid position." alt="" coords="279,5,425,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="178,52,277,31,278,36,179,57"/>
+<area shape="rect" id="Node000003" href="$classObject.html#a16b6fa35fd87615a3afb4499356d2a0d" title="Returns the type of this object." alt="" coords="282,55,422,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="231,65,268,65,268,70,231,70"/>
+<area shape="rect" id="Node000004" href="$classGame.html#a3e88db9c906c490c6b6b64637cff1dc4" title="Swaps positions of two objects on the grid." alt="" coords="279,104,425,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="179,77,278,98,277,104,178,83"/>
+</map>

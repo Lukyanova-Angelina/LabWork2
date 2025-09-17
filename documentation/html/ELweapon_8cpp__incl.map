@@ -1,0 +1,27 @@
+<map id="src/ELweapon.cpp" name="src/ELweapon.cpp">
+<area shape="rect" id="Node000001" title="Implementation of ELweapon class methods." alt="" coords="291,5,430,31"/>
+<area shape="rect" id="Node000002" href="$ELweapon_8h.html" title="Elemental_weapon class with charged elemental damage. Weapon that can be charged with elemental energ..." alt="" coords="311,79,411,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="363,31,363,65,358,65,358,31"/>
+<area shape="rect" id="Node000003" href="$Weapon_8h.html" title="Base weapon class for game combat system." alt="" coords="317,152,404,177"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="363,104,363,138,358,138,358,104"/>
+<area shape="rect" id="Node000004" href="$Object_8h.html" title="Base class for all game objects in the game." alt="" coords="323,225,399,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="363,178,363,212,358,212,358,178"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="5,299,71,324"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="323,250,85,301,84,296,322,244"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="95,299,154,324"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="324,253,168,300,166,295,322,248"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="178,299,258,324"/>
+<area shape="poly" id="edge6_Node000004_Node000007" title=" " alt="" coords="339,253,255,295,252,290,337,248"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="283,299,345,324"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="355,252,331,289,327,286,351,250"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="370,299,447,324"/>
+<area shape="poly" id="edge8_Node000004_Node000009" title=" " alt="" coords="371,250,396,286,391,289,366,253"/>
+<area shape="rect" id="Node000010" title=" " alt="" coords="472,299,559,324"/>
+<area shape="poly" id="edge9_Node000004_Node000010" title=" " alt="" coords="387,248,479,290,477,295,384,253"/>
+<area shape="rect" id="Node000011" href="$Colors_8h.html" title="ANSI color codes for terminal UI styling." alt="" coords="583,299,658,324"/>
+<area shape="poly" id="edge10_Node000004_Node000011" title=" " alt="" coords="400,247,570,294,569,299,398,252"/>
+<area shape="rect" id="Node000013" href="$Enums_8h.html" title="Centralized enumeration definitions for the game." alt="" coords="683,299,761,324"/>
+<area shape="poly" id="edge12_Node000004_Node000013" title=" " alt="" coords="399,244,669,296,668,301,398,249"/>
+<area shape="rect" id="Node000012" title=" " alt="" coords="591,372,650,397"/>
+<area shape="poly" id="edge11_Node000011_Node000012" title=" " alt="" coords="623,324,623,358,618,358,618,324"/>
+</map>

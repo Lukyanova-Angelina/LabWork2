@@ -1,0 +1,33 @@
+\doxysection{Enemy.\+cpp}
+\hypertarget{Enemy_8cpp_source}{}\label{Enemy_8cpp_source}\index{src/Enemy.cpp@{src/Enemy.cpp}}
+\mbox{\hyperlink{Enemy_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Enemy_8h}{Enemy.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00010}\mbox{\hyperlink{classEnemy_a1993866c8fec7ce962667557156fa1bd}{00010}}\ \mbox{\hyperlink{classEnemy_a1993866c8fec7ce962667557156fa1bd}{Enemy::Enemy}}(\textcolor{keywordtype}{int}\ pos,\ std::string\ name,\ \textcolor{keywordtype}{int}\ hp,\ \textcolor{keywordtype}{int}\ maxhp)}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00011}00011\ \ \ \ \ :\ \mbox{\hyperlink{classCharacter}{Character}}(pos,\ name,\ hp,\ maxhp)\ \{\}}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00013}\mbox{\hyperlink{classEnemy_a0a4a5ad817eb9feb4e4da79ffb3bcf8b}{00013}}\ \mbox{\hyperlink{classEnemy_a1993866c8fec7ce962667557156fa1bd}{Enemy::Enemy}}(\textcolor{keywordtype}{int}\ pos,\ \textcolor{keywordtype}{int}\ hp)}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00014}00014\ \ \ \ \ :\ \mbox{\hyperlink{classCharacter}{Character}}(pos,\ \textcolor{stringliteral}{"{}name"{}},\ hp,\ hp\ *\ 1.5)\ \{\}}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00016}\mbox{\hyperlink{classEnemy_a7c98914636edf5a718493d876475121a}{00016}}\ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classEnemy_a7c98914636edf5a718493d876475121a}{Enemy::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Enemy"{}},}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Dmg:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}()),}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_a29bfda93a0cf8b1ec0fb44cf989d7eb0}{Color::RED}}}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00022}00022\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00025}\mbox{\hyperlink{classEnemy_ad64a3a03fe351a6d59005015659079a3}{00025}}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classEnemy_ad64a3a03fe351a6d59005015659079a3}{Enemy::returntype}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a92b09d1635332c90ae8508618a174244}{ObjectType::ENEMY}};}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00029}\mbox{\hyperlink{classEnemy_a4e0da93b42c070ca9135a632e7a35ecf}{00029}}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{InteractionType}}\ \mbox{\hyperlink{classEnemy_a4e0da93b42c070ca9135a632e7a35ecf}{Enemy::returnInteractionType}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a9504dfedba96004cae68c7fbc11b5c67}{InteractionType::COMBAT\_DEPENDENT}};}
+\DoxyCodeLine{\Hypertarget{Enemy_8cpp_source_l00031}00031\ \}}
+
+\end{DoxyCode}

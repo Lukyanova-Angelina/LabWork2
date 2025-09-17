@@ -1,0 +1,45 @@
+\doxysection{Weapon.\+h}
+\hypertarget{Weapon_8h_source}{}\label{Weapon_8h_source}\index{headers/Weapon.h@{headers/Weapon.h}}
+\mbox{\hyperlink{Weapon_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00004}00004\ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00012}00012\ \textcolor{preprocessor}{\#ifndef\ WEAPON\_H}}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00013}00013\ \textcolor{preprocessor}{\#define\ WEAPON\_H}}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Object_8h}{Object.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00024}\mbox{\hyperlink{classWeapon}{00024}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classWeapon}{Weapon}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObject}{Object}}\ \{}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00025}00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \_damage;\ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00028}00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{classWeapon}{Weapon}}(\textcolor{keywordtype}{int}\ pos);}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00034}00034\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00040}00040\ \ \ \ \ \mbox{\hyperlink{classWeapon}{Weapon}}(\textcolor{keywordtype}{int}\ pos,\ \textcolor{keywordtype}{int}\ damage);}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00041}00041\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classWeapon_a5f1941efbf38c5719cf75e4a138e92d4}{getDamage}}()\ \textcolor{keyword}{const};\ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00047}00047\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00052}00052\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWeapon_a54e4b500dcc3f5c3d02df6f1c29ddbea}{setDamage}}(\textcolor{keywordtype}{int}\ damage);}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00053}00053\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00058}00058\ \ \ \ \ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classWeapon_a42f27519d8c5852b22a3e50b54dc4dcc}{print}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00059}00059\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00064}00064\ \ \ \ \ std::unique\_ptr<Object>\ \mbox{\hyperlink{classWeapon_aa9cebf36b0e905bddee7666f0a5c39ae}{clone}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00065}00065\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00070}00070\ \ \ \ \ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classWeapon_ae898bfca17d4f4112c90fe28040f79ae}{returntype}}()\textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00071}00071\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00076}00076\ \ \ \ \ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{InteractionType}}\ \mbox{\hyperlink{classWeapon_a7ba43f56f6facbb19ddcab879e39630b}{returnInteractionType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00077}00077\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00083}00083\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classWeapon_a6e0cca4f9b4581c5800732a3c0732786}{takeDamage}}(\textcolor{keywordtype}{int}\ dmg,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00084}00084\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00091}00091\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classWeapon_a699365cd1118c61662b5567dc6266044}{calculateFinalDamage}}(\textcolor{keywordtype}{int}\ dmg,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type);}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00092}00092\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00097}00097\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ \mbox{\hyperlink{classWeapon_afe428ac59d86ed0f815b704510441ddf}{getElement}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00098}00098\ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00099}00099\ \};}
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{Weapon_8h_source_l00101}00101\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,9 @@
+<map id="Gold::takeDamage" name="Gold::takeDamage">
+<area shape="rect" id="Node000001" title="Applies damage to gold (reduces amount)." alt="" coords="5,55,148,80"/>
+<area shape="rect" id="Node000002" href="$classGold.html#a5ab0573d600eb5a1fa8d6131a4503d16" title="Gets the gold amount." alt="" coords="203,5,335,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="126,52,204,32,206,37,127,57"/>
+<area shape="rect" id="Node000003" href="$classObject.html#ac94263cc1cd1fe7d0193f8400af2c1e4" title="Gets the current grid position." alt="" coords="196,55,341,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="149,65,182,65,182,70,149,70"/>
+<area shape="rect" id="Node000004" href="$classGold.html#a82ea7721dd036eb3b171f4fd1efb3d21" title="Sets the gold amount." alt="" coords="203,104,334,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="127,77,206,98,204,103,126,83"/>
+</map>

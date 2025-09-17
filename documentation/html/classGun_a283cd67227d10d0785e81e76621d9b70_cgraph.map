@@ -1,0 +1,7 @@
+<map id="Gun::print" name="Gun::print">
+<area shape="rect" id="Node000001" title="Gets display information with weapon sprites." alt="" coords="5,31,92,56"/>
+<area shape="rect" id="Node000002" href="$classThorn.html#a0e8fbc34d8d996dc01a9c9779445b871" title="Gets damage amount." alt="" coords="148,5,287,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="92,34,134,28,135,33,93,40"/>
+<area shape="rect" id="Node000003" href="$classThorn.html#a9f3dc4b7e56357ec996e3f1fb7d094b9" title="Gets current directional pattern." alt="" coords="140,55,295,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="93,47,127,52,126,57,92,52"/>
+</map>

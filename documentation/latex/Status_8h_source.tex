@@ -1,0 +1,81 @@
+\doxysection{Status.\+h}
+\hypertarget{Status_8h_source}{}\label{Status_8h_source}\index{headers/Status.h@{headers/Status.h}}
+\mbox{\hyperlink{Status_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ STATUS\_H}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ STATUS\_H}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ <iostream>}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ <sstream>}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Player_8h}{Player.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Weapon_8h}{Weapon.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Enemy_8h}{Enemy.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00019}00019\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Gold_8h}{Gold.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00020}00020\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Ruby_8h}{Ruby.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00021}00021\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Thorn_8h}{Thorn.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00022}00022\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Gun_8h}{Gun.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00023}00023\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Potion_8h}{Potion.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00024}00024\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Bomb_8h}{Bomb.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00025}00025\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Dynamite_8h}{Dynamite.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00026}00026\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Chest_8h}{Chest.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00027}00027\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Elemental_8h}{Elemental.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00028}00028\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Bat_8h}{Bat.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00029}00029\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Mag_8h}{Mag.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00031}00031\ \textcolor{keyword}{enum\ class}\ \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574e}{ChestType}};}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00040}\mbox{\hyperlink{classStatus}{00040}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classStatus}{Status}}\ \{}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00041}00041\ \textcolor{keyword}{private}:\ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00042}00042\ \ \ \ \ \textcolor{keywordtype}{int}\ \_Gold;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{int}\ \_Level;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00044}00044\ \ \ \ \ \textcolor{keywordtype}{int}\ \_Steps;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00045}00045\ \ \ \ \ \textcolor{keywordtype}{int}\ \_Xp;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00046}00046\ \ \ \ \ \textcolor{keywordtype}{int}\ \_XpToNextLevel;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00047}00047\ \ \ \ \ std::vector<std::pair<ObjectType,\ double>>\ LootTable;\ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00048}00048\ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00049}00049\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00053}00053\ \ \ \ \ \mbox{\hyperlink{classStatus_a944586fb328a3524805748c8f7b17f32}{Status}}();}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00054}00054\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00059}00059\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classStatus_a1f60585ad759d8d780a039a2a5bddc71}{getLevel}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00060}00060\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00065}00065\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStatus_a48c9085e3008c3f2108d7510386c39b7}{setLevel}}(\textcolor{keywordtype}{int}\ level);}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00066}00066\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00070}00070\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStatus_a7c1b69083a3d01cc7be0923c040b4895}{LevelUp}}();}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00071}00071\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00076}00076\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStatus_ace370730dcc7c815668f9296dd39af76}{setGold}}(\textcolor{keywordtype}{int}\ gold);}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00077}00077\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00082}00082\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStatus_a13cfac122ecddd7ba96ecd940d7a1e89}{addGold}}(\textcolor{keywordtype}{int}\ gold);}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00083}00083\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00088}00088\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classStatus_a174fbb499d0a99db3533903f9d04d0d4}{getGold}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00089}00089\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00094}00094\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStatus_a7f0898180535f03a1690284ef723913d}{takeGold}}(\textcolor{keywordtype}{int}\ gold);}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00095}00095\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00100}00100\ \ \ \ \ std::string\ \mbox{\hyperlink{classStatus_af4f18066061f502586473fbd94ea4812}{print}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00101}00101\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00105}00105\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStatus_a6c3144c5db5133bbe4f55720f06e5ca0}{StepsUp}}();}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00106}00106\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00111}00111\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classStatus_a75c98e51dc7301f5a7963143597f7472}{getSteps}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00112}00112\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00117}00117\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classStatus_a0cbf1f79ddb021c8406be509a48fab27}{getXp}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00118}00118\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00123}00123\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStatus_a5839848d6c2f832789de5b3a0a058dab}{addXp}}(\textcolor{keywordtype}{int}\ xp);}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00124}00124\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00129}00129\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classStatus_a6c4488c04843a79040c67d660ac1ac08}{getXpToNextLevel}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00130}00130\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00136}00136\ \ \ \ \ std::unique\_ptr<Object>\ \mbox{\hyperlink{classStatus_ada0ccdba81e8c80a89e43a8f0b9b172f}{generateCard}}(\textcolor{keywordtype}{int}\ pos)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00137}00137\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00144}00144\ \ \ \ \ std::unique\_ptr<Object>\ \mbox{\hyperlink{classStatus_ab609d516c858ca28a44665742e4519f8}{generateChestLoot}}(\textcolor{keywordtype}{int}\ pos,\ \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574e}{ChestType}}\ type)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00145}00145\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00149}00149\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classStatus_a6e5de977faeb21c93f44a2025a8b205b}{updateLootTable}}();}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00150}00150\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00155}00155\ \ \ \ \ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classStatus_aa4152ce21c305b69a6f4cdfbef28b898}{RandomSelection}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00156}00156\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00161}00161\ \ \ \ \ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{classStatus_aeb32ff747b6ec9ddb7b95baf165999dd}{getRandomValue}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00162}00162\ \};}
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{Status_8h_source_l00164}00164\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

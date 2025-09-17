@@ -1,0 +1,854 @@
+\doxysection{Game Class Reference}
+\hypertarget{classGame}{}\label{classGame}\index{Game@{Game}}
+
+
+Main game controller managing the 3x3 grid game.  
+
+
+
+
+{\ttfamily \#include $<$Game.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGame_ad59df6562a58a614fda24622d3715b65}{Game}} ()
+\begin{DoxyCompactList}\small\item\em Constructs the game and initializes game state. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classGame_a3d09cd0b68ef69107d36360ca903e023}{\texorpdfstring{$\sim$}{\string~}\+Game}} ()=default
+\item 
+void \mbox{\hyperlink{classGame_a0f55c42366732dd2c2b09f708ed3df1c}{generate\+\_\+game}} ()
+\begin{DoxyCompactList}\small\item\em Generates initial game state with player and objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a79df6376b332d63c9eca0dcee30305c3}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates game state (called each frame). Handles object updates, damage. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a6d54497ce3a66f6dd45eacfdccc8d0bd}{draw}} ()
+\begin{DoxyCompactList}\small\item\em Renders the game grid and UI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_ad4f36a72a2d06696f7973788606f57fc}{clean}} ()
+\begin{DoxyCompactList}\small\item\em Clears the console screen. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a28d97d9a41d73e279d0255587b3e21e7}{handle\+Input}} (char input)
+\begin{DoxyCompactList}\small\item\em Handles player input and triggers appropriate actions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a3e88db9c906c490c6b6b64637cff1dc4}{switchcards}} (int pos1, int pos2)
+\begin{DoxyCompactList}\small\item\em Swaps positions of two objects on the grid. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a2c19f6e9338d8c2a1b8ac0b2f0a71349}{movecard}} (int pos, int direction)
+\begin{DoxyCompactList}\small\item\em Moves an object in specified direction. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_acaa2f6520fc4c5deeec2dd079ebeefea}{gotodir}} (int direction)
+\begin{DoxyCompactList}\small\item\em Handles complex movement logic for grid shifting. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_afc8b820ed9a65e30c55a1517c7b51d23}{generatecard}} (int pos)
+\begin{DoxyCompactList}\small\item\em Generates a new object at specified position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_aa7e441af2bf58d6926635c1b6e5c6747}{handle\+IMMEDIATE\+\_\+\+PASS}} (int pos1, int pos2)
+\begin{DoxyCompactList}\small\item\em Handles immediate pass interactions (weapons, items, etc.). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_ae8cf53bc5a1abd8e032bfb0c20d578c5}{handle\+SWAP\+\_\+\+REQUIRED}} (int pos1, int pos2)
+\begin{DoxyCompactList}\small\item\em Handles swap-\/required interactions (bombs, dynamite). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_ad277e5df94316e85a695e9c6cd890e1d}{handle\+TRIGGER\+\_\+\+ON\+\_\+\+STAY}} (int pos1)
+\begin{DoxyCompactList}\small\item\em Handles on-\/stay trigger interactions (chests). \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_aaf59ec9035aa5b9cd8bd97c910284164}{handle\+COMBAT\+\_\+\+DEPENDENT}} (int pos1, int pos2)
+\begin{DoxyCompactList}\small\item\em Handles combat-\/dependent interactions (enemies). \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGame_aaf22d390c98b0fd98b7b90ac80beb08a}{is\+Player\+Alive}} () const
+\begin{DoxyCompactList}\small\item\em Checks if player is alive. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classGame_afedf2ae555affbcb6df2d3405cb73625}{is\+Game\+Over}} () const
+\begin{DoxyCompactList}\small\item\em Checks if game is over. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_ab28abcae109099d44efcb27d7bfc9723}{initialize\+Damage\+Callbacks}} ()
+\begin{DoxyCompactList}\small\item\em Initializes damage callbacks for all game objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_adbe9a69a16dfb14821cc17f23aad440d}{handle\+Object\+Damage}} (int pos, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Handles damage events from objects. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a52331dc8166afc8a41bfa057a99631e1}{handle\+Object\+Death}} (int pos)
+\begin{DoxyCompactList}\small\item\em Handles object death and replacement. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGame_a95e9edd88f6736aec599ba82886bbf56}{check\+And\+Convert\+Gold\+To\+Rubies}} ()
+\begin{DoxyCompactList}\small\item\em Checks for and converts gold lines to rubies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Main game controller managing the 3x3 grid game. 
+
+Definition at line \mbox{\hyperlink{Game_8h_source_l00047}{47}} of file \mbox{\hyperlink{Game_8h_source}{Game.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGame_ad59df6562a58a614fda24622d3715b65}\label{classGame_ad59df6562a58a614fda24622d3715b65} 
+\index{Game@{Game}!Game@{Game}}
+\index{Game@{Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{Game()}{Game()}}
+{\footnotesize\ttfamily Game\+::\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs the game and initializes game state. 
+
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Game_8cpp_source_l00016}{generate\+\_\+game()}}, and \mbox{\hyperlink{Game_8cpp_source_l00493}{initialize\+Damage\+Callbacks()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_ad59df6562a58a614fda24622d3715b65_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_a3d09cd0b68ef69107d36360ca903e023}\label{classGame_a3d09cd0b68ef69107d36360ca903e023} 
+\index{Game@{Game}!````~Game@{\texorpdfstring{$\sim$}{\string~}Game}}
+\index{````~Game@{\texorpdfstring{$\sim$}{\string~}Game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Game()}{\string~Game()}}
+{\footnotesize\ttfamily Game\+::\texorpdfstring{$\sim$}{\string~}\+Game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGame_a95e9edd88f6736aec599ba82886bbf56}\label{classGame_a95e9edd88f6736aec599ba82886bbf56} 
+\index{Game@{Game}!checkAndConvertGoldToRubies@{checkAndConvertGoldToRubies}}
+\index{checkAndConvertGoldToRubies@{checkAndConvertGoldToRubies}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{checkAndConvertGoldToRubies()}{checkAndConvertGoldToRubies()}}
+{\footnotesize\ttfamily void Game\+::check\+And\+Convert\+Gold\+To\+Rubies (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Checks for and converts gold lines to rubies. 
+
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Gold_8cpp_source_l00030}{Gold\+::get\+Amount()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a2c0898822ab3baf7f93bea86648adb26}{GOLD}}, and \mbox{\hyperlink{Game_8cpp_source_l00510}{handle\+Object\+Damage()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00030}{update()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a95e9edd88f6736aec599ba82886bbf56_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a95e9edd88f6736aec599ba82886bbf56_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_ad4f36a72a2d06696f7973788606f57fc}\label{classGame_ad4f36a72a2d06696f7973788606f57fc} 
+\index{Game@{Game}!clean@{clean}}
+\index{clean@{clean}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{clean()}{clean()}}
+{\footnotesize\ttfamily void Game\+::clean (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clears the console screen. 
+
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00138}{138}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00016}{generate\+\_\+game()}}, and \mbox{\hyperlink{main_8cpp_source_l00010}{main()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_ad4f36a72a2d06696f7973788606f57fc_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_a6d54497ce3a66f6dd45eacfdccc8d0bd}\label{classGame_a6d54497ce3a66f6dd45eacfdccc8d0bd} 
+\index{Game@{Game}!draw@{draw}}
+\index{draw@{draw}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void Game\+::draw (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Renders the game grid and UI. 
+
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00095}{95}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Game_8h_source_l00040}{CELL\+\_\+\+WIDTH}}, \mbox{\hyperlink{Object_8cpp_source_l00150}{center\+Text()}}, \mbox{\hyperlink{Object_8h_source_l00031}{Display\+Info\+::color}}, \mbox{\hyperlink{Object_8h_source_l00030}{Display\+Info\+::details}}, \mbox{\hyperlink{Object_8h_source_l00028}{Display\+Info\+::header}}, \mbox{\hyperlink{Colors_8h_source_l00029}{Color\+::\+MAGENTA}}, \mbox{\hyperlink{Status_8cpp_source_l00050}{Status\+::print()}}, \mbox{\hyperlink{Colors_8h_source_l00042}{Color\+::\+RESET}}, and \mbox{\hyperlink{Object_8h_source_l00029}{Display\+Info\+::status}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00016}{generate\+\_\+game()}}, and \mbox{\hyperlink{main_8cpp_source_l00010}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a6d54497ce3a66f6dd45eacfdccc8d0bd_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a6d54497ce3a66f6dd45eacfdccc8d0bd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_a0f55c42366732dd2c2b09f708ed3df1c}\label{classGame_a0f55c42366732dd2c2b09f708ed3df1c} 
+\index{Game@{Game}!generate\_game@{generate\_game}}
+\index{generate\_game@{generate\_game}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{generate\_game()}{generate\_game()}}
+{\footnotesize\ttfamily void Game\+::generate\+\_\+game (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates initial game state with player and objects. 
+
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Game_8cpp_source_l00138}{clean()}}, \mbox{\hyperlink{Game_8cpp_source_l00095}{draw()}}, and \mbox{\hyperlink{Game_8cpp_source_l00223}{generatecard()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00011}{Game()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a0f55c42366732dd2c2b09f708ed3df1c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{classGame_a0f55c42366732dd2c2b09f708ed3df1c_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_afc8b820ed9a65e30c55a1517c7b51d23}\label{classGame_afc8b820ed9a65e30c55a1517c7b51d23} 
+\index{Game@{Game}!generatecard@{generatecard}}
+\index{generatecard@{generatecard}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{generatecard()}{generatecard()}}
+{\footnotesize\ttfamily void Game\+::generatecard (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Generates a new object at specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position to generate object at. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00223}{223}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Status_8cpp_source_l00070}{Status\+::generate\+Card()}}, and \mbox{\hyperlink{Game_8cpp_source_l00510}{handle\+Object\+Damage()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00016}{generate\+\_\+game()}}, and \mbox{\hyperlink{Game_8cpp_source_l00190}{gotodir()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_afc8b820ed9a65e30c55a1517c7b51d23_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_afc8b820ed9a65e30c55a1517c7b51d23_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_acaa2f6520fc4c5deeec2dd079ebeefea}\label{classGame_acaa2f6520fc4c5deeec2dd079ebeefea} 
+\index{Game@{Game}!gotodir@{gotodir}}
+\index{gotodir@{gotodir}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{gotodir()}{gotodir()}}
+{\footnotesize\ttfamily void Game\+::gotodir (\begin{DoxyParamCaption}\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+Handles complex movement logic for grid shifting. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction of player movement. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00190}{190}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Game_8cpp_source_l00223}{generatecard()}}, \mbox{\hyperlink{Object_8cpp_source_l00030}{Object\+::get\+Position()}}, \mbox{\hyperlink{Object_8cpp_source_l00067}{Object\+::get\+Target\+Position()}}, \mbox{\hyperlink{Game_8cpp_source_l00183}{movecard()}}, and \mbox{\hyperlink{Object_8cpp_source_l00101}{Object\+::possibletomove()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00439}{handle\+COMBAT\+\_\+\+DEPENDENT()}}, and \mbox{\hyperlink{Game_8cpp_source_l00239}{handle\+IMMEDIATE\+\_\+\+PASS()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_acaa2f6520fc4c5deeec2dd079ebeefea_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_acaa2f6520fc4c5deeec2dd079ebeefea_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_aaf59ec9035aa5b9cd8bd97c910284164}\label{classGame_aaf59ec9035aa5b9cd8bd97c910284164} 
+\index{Game@{Game}!handleCOMBAT\_DEPENDENT@{handleCOMBAT\_DEPENDENT}}
+\index{handleCOMBAT\_DEPENDENT@{handleCOMBAT\_DEPENDENT}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{handleCOMBAT\_DEPENDENT()}{handleCOMBAT\_DEPENDENT()}}
+{\footnotesize\ttfamily void Game\+::handle\+COMBAT\+\_\+\+DEPENDENT (\begin{DoxyParamCaption}\item[{int}]{pos1,  }\item[{int}]{pos2 }\end{DoxyParamCaption})}
+
+
+
+Handles combat-\/dependent interactions (enemies). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos1} & \doxylink{classPlayer}{Player} position. \\
+\hline
+{\em pos2} & \doxylink{classEnemy}{Enemy} position. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00439}{439}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Status_8cpp_source_l00058}{Status\+::add\+Xp()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ac04cf18b7606efb16ff9ecbca87825}{BAT}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980af9c55990ee5893e66c504fc8ca35bf79}{ELEMENTAL}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7665821fee6cc3f7535933a177ebe0be}{ELMAGIC}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a92b09d1635332c90ae8508618a174244}{ENEMY}}, \mbox{\hyperlink{Weapon_8cpp_source_l00018}{Weapon\+::get\+Damage()}}, \mbox{\hyperlink{Weapon_8cpp_source_l00060}{Weapon\+::get\+Element()}}, \mbox{\hyperlink{Characters_8cpp_source_l00020}{Character\+::get\+HP()}}, \mbox{\hyperlink{Object_8cpp_source_l00030}{Object\+::get\+Position()}}, \mbox{\hyperlink{Object_8cpp_source_l00091}{Object\+::get\+Target\+Direction()}}, \mbox{\hyperlink{Player_8cpp_source_l00019}{Player\+::get\+Weapon()}}, \mbox{\hyperlink{Game_8cpp_source_l00190}{gotodir()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a9f289f3d4248ba595abb5f08766165a9}{MAG}}, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da1e23852820b9154316c7c06e2b7ba051}{NORMAL}}, \mbox{\hyperlink{Player_8cpp_source_l00027}{Player\+::remove\+Weapon()}}, \mbox{\hyperlink{Object_8cpp_source_l00038}{Object\+::returntype()}}, \mbox{\hyperlink{Weapon_8cpp_source_l00035}{Weapon\+::returntype()}}, and \mbox{\hyperlink{Characters_8cpp_source_l00042}{Character\+::take\+Damage()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00143}{handle\+Input()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_aaf59ec9035aa5b9cd8bd97c910284164_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_aaf59ec9035aa5b9cd8bd97c910284164_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_aa7e441af2bf58d6926635c1b6e5c6747}\label{classGame_aa7e441af2bf58d6926635c1b6e5c6747} 
+\index{Game@{Game}!handleIMMEDIATE\_PASS@{handleIMMEDIATE\_PASS}}
+\index{handleIMMEDIATE\_PASS@{handleIMMEDIATE\_PASS}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{handleIMMEDIATE\_PASS()}{handleIMMEDIATE\_PASS()}}
+{\footnotesize\ttfamily void Game\+::handle\+IMMEDIATE\+\_\+\+PASS (\begin{DoxyParamCaption}\item[{int}]{pos1,  }\item[{int}]{pos2 }\end{DoxyParamCaption})}
+
+
+
+Handles immediate pass interactions (weapons, items, etc.). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos1} & \doxylink{classPlayer}{Player} position. \\
+\hline
+{\em pos2} & Target object position. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00239}{239}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Status_8cpp_source_l00039}{Status\+::add\+Gold()}}, \mbox{\hyperlink{Status_8cpp_source_l00058}{Status\+::add\+Xp()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7665821fee6cc3f7535933a177ebe0be}{ELMAGIC}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a566621a60d66ad699cff53f2d21b8d9a}{ELWEAPON}}, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602dab7426fb9c3932995306fceba2874d057}{FIRE}}, \mbox{\hyperlink{Gold_8cpp_source_l00030}{Gold\+::get\+Amount()}}, \mbox{\hyperlink{Thorn_8cpp_source_l00040}{Thorn\+::get\+Amount()}}, \mbox{\hyperlink{Thorn_8cpp_source_l00047}{Thorn\+::get\+Directions()}}, \mbox{\hyperlink{Characters_8cpp_source_l00020}{Character\+::get\+HP()}}, \mbox{\hyperlink{Object_8cpp_source_l00030}{Object\+::get\+Position()}}, \mbox{\hyperlink{Potion_8cpp_source_l00029}{Potion\+::get\+Potion\+Type()}}, \mbox{\hyperlink{Potion_8cpp_source_l00022}{Potion\+::get\+Power()}}, \mbox{\hyperlink{Object_8cpp_source_l00091}{Object\+::get\+Target\+Direction()}}, \mbox{\hyperlink{Object_8cpp_source_l00067}{Object\+::get\+Target\+Position()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a2c0898822ab3baf7f93bea86648adb26}{GOLD}}, \mbox{\hyperlink{Game_8cpp_source_l00190}{gotodir()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7f723c5fc350bac962b67157e70fff58}{GUN}}, \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a3a25f1406daa84785c1291a745018fae}{HEAL}}, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da1e23852820b9154316c7c06e2b7ba051}{NORMAL}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a8eee8e217391199668cbac89472ace53}{OBJECT}}, \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a2a542f30a3c393aff9183c7b72f2b034}{POISON}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a6a492839f1a85f3ddb226750959f799a}{POTION}}, \mbox{\hyperlink{Object_8cpp_source_l00038}{Object\+::returntype()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a948ea267d4a32b3d91b837b54298de0a}{RUBY}}, \mbox{\hyperlink{Characters_8cpp_source_l00025}{Character\+::set\+HP()}}, \mbox{\hyperlink{Player_8cpp_source_l00023}{Player\+::set\+Weapon()}}, \mbox{\hyperlink{Characters_8cpp_source_l00042}{Character\+::take\+Damage()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ce20399299146eae2f6c0e847de1f3b}{THORN}}, and \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a192633948703cf46924846d15ea7b5c1}{WEAPON}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00143}{handle\+Input()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_aa7e441af2bf58d6926635c1b6e5c6747_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_aa7e441af2bf58d6926635c1b6e5c6747_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_a28d97d9a41d73e279d0255587b3e21e7}\label{classGame_a28d97d9a41d73e279d0255587b3e21e7} 
+\index{Game@{Game}!handleInput@{handleInput}}
+\index{handleInput@{handleInput}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{handleInput()}{handleInput()}}
+{\footnotesize\ttfamily void Game\+::handle\+Input (\begin{DoxyParamCaption}\item[{char}]{input }\end{DoxyParamCaption})}
+
+
+
+Handles player input and triggers appropriate actions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input} & \doxylink{classCharacter}{Character} input from player (\textquotesingle{}w\textquotesingle{}, \textquotesingle{}a\textquotesingle{}, \textquotesingle{}s\textquotesingle{}, \textquotesingle{}d\textquotesingle{}). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00143}{143}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a9504dfedba96004cae68c7fbc11b5c67}{COMBAT\+\_\+\+DEPENDENT}}, \mbox{\hyperlink{Object_8cpp_source_l00030}{Object\+::get\+Position()}}, \mbox{\hyperlink{Object_8cpp_source_l00067}{Object\+::get\+Target\+Position()}}, \mbox{\hyperlink{Game_8cpp_source_l00439}{handle\+COMBAT\+\_\+\+DEPENDENT()}}, \mbox{\hyperlink{Game_8cpp_source_l00239}{handle\+IMMEDIATE\+\_\+\+PASS()}}, \mbox{\hyperlink{Game_8cpp_source_l00388}{handle\+SWAP\+\_\+\+REQUIRED()}}, \mbox{\hyperlink{Game_8cpp_source_l00411}{handle\+TRIGGER\+\_\+\+ON\+\_\+\+STAY()}}, \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{IMMEDIATE\+\_\+\+PASS}}, \mbox{\hyperlink{Object_8cpp_source_l00101}{Object\+::possibletomove()}}, \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a6f76c71d94d1409dfe6847c8d7a1b3e1}{SWAP\+\_\+\+REQUIRED}}, \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a7c7bde73bcbcb7e25853c0715c4d203d}{TRIGGER\+\_\+\+ON\+\_\+\+STAY}}, and \mbox{\hyperlink{Game_8cpp_source_l00030}{update()}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00010}{main()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a28d97d9a41d73e279d0255587b3e21e7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=267pt]{classGame_a28d97d9a41d73e279d0255587b3e21e7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_adbe9a69a16dfb14821cc17f23aad440d}\label{classGame_adbe9a69a16dfb14821cc17f23aad440d} 
+\index{Game@{Game}!handleObjectDamage@{handleObjectDamage}}
+\index{handleObjectDamage@{handleObjectDamage}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{handleObjectDamage()}{handleObjectDamage()}}
+{\footnotesize\ttfamily void Game\+::handle\+Object\+Damage (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Handles damage events from objects. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Position of damaged object. \\
+\hline
+{\em type} & Type of damage applied. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00510}{510}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Game_8cpp_source_l00559}{handle\+Object\+Death()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00055}{check\+And\+Convert\+Gold\+To\+Rubies()}}, \mbox{\hyperlink{Game_8cpp_source_l00223}{generatecard()}}, \mbox{\hyperlink{Game_8cpp_source_l00559}{handle\+Object\+Death()}}, \mbox{\hyperlink{Game_8cpp_source_l00411}{handle\+TRIGGER\+\_\+\+ON\+\_\+\+STAY()}}, and \mbox{\hyperlink{Game_8cpp_source_l00493}{initialize\+Damage\+Callbacks()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_adbe9a69a16dfb14821cc17f23aad440d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_adbe9a69a16dfb14821cc17f23aad440d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_a52331dc8166afc8a41bfa057a99631e1}\label{classGame_a52331dc8166afc8a41bfa057a99631e1} 
+\index{Game@{Game}!handleObjectDeath@{handleObjectDeath}}
+\index{handleObjectDeath@{handleObjectDeath}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{handleObjectDeath()}{handleObjectDeath()}}
+{\footnotesize\ttfamily void Game\+::handle\+Object\+Death (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Handles object death and replacement. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Position of dead object. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00559}{559}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Status_8cpp_source_l00058}{Status\+::add\+Xp()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ac04cf18b7606efb16ff9ecbca87825}{BAT}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a1b7417bf9151374d7b062a64abd29425}{BOMB}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a0a6df5230f556851ce21cd18a9e6ac80}{DYNAMITE}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980af9c55990ee5893e66c504fc8ca35bf79}{ELEMENTAL}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a566621a60d66ad699cff53f2d21b8d9a}{ELWEAPON}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a92b09d1635332c90ae8508618a174244}{ENEMY}}, \mbox{\hyperlink{Bomb_8cpp_source_l00028}{Bomb\+::get\+Amount()}}, \mbox{\hyperlink{Object_8cpp_source_l00067}{Object\+::get\+Target\+Position()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a2c0898822ab3baf7f93bea86648adb26}{GOLD}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7f723c5fc350bac962b67157e70fff58}{GUN}}, \mbox{\hyperlink{Game_8cpp_source_l00510}{handle\+Object\+Damage()}}, \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a3a25f1406daa84785c1291a745018fae}{HEAL}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a9f289f3d4248ba595abb5f08766165a9}{MAG}}, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da1e23852820b9154316c7c06e2b7ba051}{NORMAL}}, \mbox{\hyperlink{Object_8cpp_source_l00038}{Object\+::returntype()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a948ea267d4a32b3d91b837b54298de0a}{RUBY}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ce20399299146eae2f6c0e847de1f3b}{THORN}}, and \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a192633948703cf46924846d15ea7b5c1}{WEAPON}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00510}{handle\+Object\+Damage()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a52331dc8166afc8a41bfa057a99631e1_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a52331dc8166afc8a41bfa057a99631e1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_ae8cf53bc5a1abd8e032bfb0c20d578c5}\label{classGame_ae8cf53bc5a1abd8e032bfb0c20d578c5} 
+\index{Game@{Game}!handleSWAP\_REQUIRED@{handleSWAP\_REQUIRED}}
+\index{handleSWAP\_REQUIRED@{handleSWAP\_REQUIRED}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{handleSWAP\_REQUIRED()}{handleSWAP\_REQUIRED()}}
+{\footnotesize\ttfamily void Game\+::handle\+SWAP\+\_\+\+REQUIRED (\begin{DoxyParamCaption}\item[{int}]{pos1,  }\item[{int}]{pos2 }\end{DoxyParamCaption})}
+
+
+
+Handles swap-\/required interactions (bombs, dynamite). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos1} & \doxylink{classPlayer}{Player} position. \\
+\hline
+{\em pos2} & Target object position. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00388}{388}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a1b7417bf9151374d7b062a64abd29425}{BOMB}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a0a6df5230f556851ce21cd18a9e6ac80}{DYNAMITE}}, \mbox{\hyperlink{Object_8cpp_source_l00030}{Object\+::get\+Position()}}, \mbox{\hyperlink{Object_8cpp_source_l00038}{Object\+::returntype()}}, and \mbox{\hyperlink{Game_8cpp_source_l00175}{switchcards()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00143}{handle\+Input()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_ae8cf53bc5a1abd8e032bfb0c20d578c5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_ae8cf53bc5a1abd8e032bfb0c20d578c5_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_ad277e5df94316e85a695e9c6cd890e1d}\label{classGame_ad277e5df94316e85a695e9c6cd890e1d} 
+\index{Game@{Game}!handleTRIGGER\_ON\_STAY@{handleTRIGGER\_ON\_STAY}}
+\index{handleTRIGGER\_ON\_STAY@{handleTRIGGER\_ON\_STAY}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{handleTRIGGER\_ON\_STAY()}{handleTRIGGER\_ON\_STAY()}}
+{\footnotesize\ttfamily void Game\+::handle\+TRIGGER\+\_\+\+ON\+\_\+\+STAY (\begin{DoxyParamCaption}\item[{int}]{pos1 }\end{DoxyParamCaption})}
+
+
+
+Handles on-\/stay trigger interactions (chests). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos1} & \doxylink{classObject}{Object} position to trigger. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00411}{411}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a5bdccd55677ef3fc449ed476ade69fb7}{CHEST}}, \mbox{\hyperlink{Chest_8cpp_source_l00052}{Chest\+::generate\+Loot()}}, \mbox{\hyperlink{Game_8cpp_source_l00510}{handle\+Object\+Damage()}}, and \mbox{\hyperlink{Object_8cpp_source_l00038}{Object\+::returntype()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00143}{handle\+Input()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_ad277e5df94316e85a695e9c6cd890e1d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_ad277e5df94316e85a695e9c6cd890e1d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_ab28abcae109099d44efcb27d7bfc9723}\label{classGame_ab28abcae109099d44efcb27d7bfc9723} 
+\index{Game@{Game}!initializeDamageCallbacks@{initializeDamageCallbacks}}
+\index{initializeDamageCallbacks@{initializeDamageCallbacks}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{initializeDamageCallbacks()}{initializeDamageCallbacks()}}
+{\footnotesize\ttfamily void Game\+::initialize\+Damage\+Callbacks (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initializes damage callbacks for all game objects. 
+
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00493}{493}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Game_8cpp_source_l00510}{handle\+Object\+Damage()}}, and \mbox{\hyperlink{Object_8cpp_source_l00131}{Object\+::set\+On\+Damage\+Callback()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00011}{Game()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_ab28abcae109099d44efcb27d7bfc9723_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_ab28abcae109099d44efcb27d7bfc9723_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_afedf2ae555affbcb6df2d3405cb73625}\label{classGame_afedf2ae555affbcb6df2d3405cb73625} 
+\index{Game@{Game}!isGameOver@{isGameOver}}
+\index{isGameOver@{isGameOver}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{isGameOver()}{isGameOver()}}
+{\footnotesize\ttfamily bool Game\+::is\+Game\+Over (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if game is over. 
+
+\begin{DoxyReturn}{Returns}
+true if game over condition met (player\textquotesingle{}s death). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{main_8cpp_source_l00010}{main()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classGame_afedf2ae555affbcb6df2d3405cb73625_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_aaf22d390c98b0fd98b7b90ac80beb08a}\label{classGame_aaf22d390c98b0fd98b7b90ac80beb08a} 
+\index{Game@{Game}!isPlayerAlive@{isPlayerAlive}}
+\index{isPlayerAlive@{isPlayerAlive}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{isPlayerAlive()}{isPlayerAlive()}}
+{\footnotesize\ttfamily bool Game\+::is\+Player\+Alive (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if player is alive. 
+
+\begin{DoxyReturn}{Returns}
+true if player has HP \texorpdfstring{$>$}{>} 0. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00488}{488}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Characters_8cpp_source_l00020}{Character\+::get\+HP()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00030}{update()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=331pt]{classGame_aaf22d390c98b0fd98b7b90ac80beb08a_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_aaf22d390c98b0fd98b7b90ac80beb08a_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_a2c19f6e9338d8c2a1b8ac0b2f0a71349}\label{classGame_a2c19f6e9338d8c2a1b8ac0b2f0a71349} 
+\index{Game@{Game}!movecard@{movecard}}
+\index{movecard@{movecard}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{movecard()}{movecard()}}
+{\footnotesize\ttfamily void Game\+::movecard (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+Moves an object in specified direction. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & \doxylink{classObject}{Object} position to move. \\
+\hline
+{\em direction} & Direction to move (0-\/3). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00183}{183}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00190}{gotodir()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a2c19f6e9338d8c2a1b8ac0b2f0a71349_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_a3e88db9c906c490c6b6b64637cff1dc4}\label{classGame_a3e88db9c906c490c6b6b64637cff1dc4} 
+\index{Game@{Game}!switchcards@{switchcards}}
+\index{switchcards@{switchcards}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{switchcards()}{switchcards()}}
+{\footnotesize\ttfamily void Game\+::switchcards (\begin{DoxyParamCaption}\item[{int}]{pos1,  }\item[{int}]{pos2 }\end{DoxyParamCaption})}
+
+
+
+Swaps positions of two objects on the grid. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos1} & First object position. \\
+\hline
+{\em pos2} & Second object position. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00175}{175}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00388}{handle\+SWAP\+\_\+\+REQUIRED()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a3e88db9c906c490c6b6b64637cff1dc4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGame_a79df6376b332d63c9eca0dcee30305c3}\label{classGame_a79df6376b332d63c9eca0dcee30305c3} 
+\index{Game@{Game}!update@{update}}
+\index{update@{update}!Game@{Game}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Game\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates game state (called each frame). Handles object updates, damage. 
+
+
+
+Definition at line \mbox{\hyperlink{Game_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{Game_8cpp_source}{Game.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Game_8cpp_source_l00055}{check\+And\+Convert\+Gold\+To\+Rubies()}}, \mbox{\hyperlink{Game_8cpp_source_l00488}{is\+Player\+Alive()}}, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da1e23852820b9154316c7c06e2b7ba051}{NORMAL}}, and \mbox{\hyperlink{Status_8cpp_source_l00016}{Status\+::\+Steps\+Up()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00143}{handle\+Input()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a79df6376b332d63c9eca0dcee30305c3_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGame_a79df6376b332d63c9eca0dcee30305c3_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{Game_8h}{Game.\+h}}\item 
+src/\mbox{\hyperlink{Game_8cpp}{Game.\+cpp}}\end{DoxyCompactItemize}

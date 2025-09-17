@@ -1,0 +1,5 @@
+<map id="Bat::print" name="Bat::print">
+<area shape="rect" id="Node000001" title="Gets display information for bat." alt="" coords="5,5,88,31"/>
+<area shape="rect" id="Node000002" href="$classCharacter.html#a719cf393f4cdcc82a403f70732adee02" title="Gets current health points." alt="" coords="136,5,268,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,15,122,15,122,21,88,21"/>
+</map>

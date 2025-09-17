@@ -1,0 +1,9 @@
+<map id="Mag" name="Mag">
+<area shape="rect" id="Node000001" title="Magician enemy with health regeneration ability." alt="" coords="23,225,73,251"/>
+<area shape="rect" id="Node000002" href="$classEnemy.html" title="Base class for all enemy entities." alt="" coords="15,152,81,177"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,191,51,225,45,225,45,191"/>
+<area shape="rect" id="Node000003" href="$classCharacter.html" title="Base class for all characters with health and combat capabilities." alt="" coords="5,79,91,104"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="51,118,51,152,45,152,45,118"/>
+<area shape="rect" id="Node000004" href="$classObject.html" title="Abstract base class representing any entity in the game world." alt="" coords="16,5,80,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="51,44,51,79,45,79,45,44"/>
+</map>

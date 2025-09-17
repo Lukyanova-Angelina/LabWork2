@@ -1,0 +1,22 @@
+var searchData=
+[
+  ['setamount_0',['setamount',['../classBomb.html#a11c44513306bbb7b9abc37e1aecf0da9',1,'Bomb::setAmount()'],['../classGold.html#a82ea7721dd036eb3b171f4fd1efb3d21',1,'Gold::setAmount()'],['../classThorn.html#a60a860e36566c0fe3767a4ec677742c2',1,'Thorn::setAmount()']]],
+  ['setdamage_1',['setDamage',['../classWeapon.html#a54e4b500dcc3f5c3d02df6f1c29ddbea',1,'Weapon']]],
+  ['setduration_2',['setDuration',['../classBomb.html#a73c2f929e99b012e5338c8a0b75d958f',1,'Bomb']]],
+  ['setgold_3',['setGold',['../classStatus.html#ace370730dcc7c815668f9296dd39af76',1,'Status']]],
+  ['sethp_4',['setHP',['../classCharacter.html#a030786bca8ce703c96a275751b74b2fd',1,'Character']]],
+  ['setlevel_5',['setLevel',['../classStatus.html#a48c9085e3008c3f2108d7510386c39b7',1,'Status']]],
+  ['setmaxhp_6',['setMaxHP',['../classCharacter.html#aa0d706d718ed2a4eeca87aeda83ff4ff',1,'Character']]],
+  ['setname_7',['setName',['../classCharacter.html#a11ab1f4f914a289e46b3e400cec26fc5',1,'Character']]],
+  ['setondamagecallback_8',['setOnDamageCallback',['../classObject.html#a65fb5ee0e5692e7158c266b92cdd2074',1,'Object']]],
+  ['setposition_9',['setPosition',['../classObject.html#a746b108f37d54122539916373d6ad824',1,'Object']]],
+  ['setpotiontype_10',['setPotionType',['../classPotion.html#a59be6c95c67102ed97f250e7a9abd491',1,'Potion']]],
+  ['setpower_11',['setPower',['../classPotion.html#a0234d4419089f6f672729c52969678e1',1,'Potion']]],
+  ['setweapon_12',['setWeapon',['../classPlayer.html#a08b794ac433d3fa6ca2f8aff03437ad9',1,'Player']]],
+  ['status_13',['status',['../structDisplayInfo.html#a417e7e97cf9869385a80656b853de131',1,'DisplayInfo::status'],['../classStatus.html#a944586fb328a3524805748c8f7b17f32',1,'Status::Status()'],['../classStatus.html',1,'Status']]],
+  ['status_2ecpp_14',['Status.cpp',['../Status_8cpp.html',1,'']]],
+  ['status_2eh_15',['Status.h',['../Status_8h.html',1,'']]],
+  ['stepsup_16',['StepsUp',['../classStatus.html#a6c3144c5db5133bbe4f55720f06e5ca0',1,'Status']]],
+  ['swap_5frequired_17',['SWAP_REQUIRED',['../Enums_8h.html#a9a40fc7400eafce3fb17486772fdea35a6f76c71d94d1409dfe6847c8d7a1b3e1',1,'Enums.h']]],
+  ['switchcards_18',['switchcards',['../classGame.html#a3e88db9c906c490c6b6b64637cff1dc4',1,'Game']]]
+];

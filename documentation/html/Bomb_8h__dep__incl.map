@@ -1,0 +1,28 @@
+<map id="headers/Bomb.h" name="headers/Bomb.h">
+<area shape="rect" id="Node000001" title="Bomb object class with timed explosion." alt="" coords="182,5,310,31"/>
+<area shape="rect" id="Node000002" href="$Dynamite_8h.html" title="Dynamite object class &#45; explosive that damages entire row." alt="" coords="111,79,266,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="230,43,200,80,196,77,226,40"/>
+<area shape="rect" id="Node000003" href="$Game_8h.html" title="Main game controller class managing game state, objects, and interactions." alt="" coords="61,299,191,324"/>
+<area shape="poly" id="edge13_Node000001_Node000003" title=" " alt="" coords="170,35,132,53,115,65,101,80,88,102,80,122,77,160,85,201,98,250,108,276,120,297,116,300,103,278,93,251,80,202,71,160,75,121,83,100,97,77,112,61,129,48,168,30"/>
+<area shape="rect" id="Node000006" href="$Status_8h.html" title="Game progression and loot management system." alt="" coords="281,152,411,177"/>
+<area shape="poly" id="edge14_Node000001_Node000006" title=" " alt="" coords="264,41,340,150,336,153,260,44"/>
+<area shape="rect" id="Node000011" href="$Bomb_8cpp.html" title=" " alt="" coords="341,79,452,104"/>
+<area shape="poly" id="edge15_Node000001_Node000011" title=" " alt="" coords="284,34,373,76,371,81,281,39"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="152,113,129,130,111,153,104,172,101,192,103,233,113,270,123,298,118,299,108,272,98,234,96,192,99,171,106,151,125,126,149,109"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="228,107,321,149,319,154,225,112"/>
+<area shape="rect" id="Node000010" href="$Dynamite_8cpp.html" title="Dynamite class." alt="" coords="121,152,257,177"/>
+<area shape="poly" id="edge12_Node000002_Node000010" title=" " alt="" coords="191,118,191,152,186,152,186,118"/>
+<area shape="rect" id="Node000004" href="$Game_8cpp.html" title="Implementation of Game class methods." alt="" coords="5,372,116,397"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="108,336,73,374,69,370,104,333"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title=" " alt="" coords="140,372,245,397"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="148,333,184,370,180,374,145,336"/>
+<area shape="poly" id="edge10_Node000006_Node000003" title=" " alt="" coords="312,186,238,228,184,267,141,301,138,297,180,262,235,223,309,181"/>
+<area shape="rect" id="Node000007" href="$Chest_8h.html" title="Chest container class with randomized loot." alt="" coords="248,225,375,251"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="329,190,313,226,308,224,324,188"/>
+<area shape="rect" id="Node000009" href="$Status_8cpp.html" title="Status class." alt="" coords="399,225,512,251"/>
+<area shape="poly" id="edge11_Node000006_Node000009" title=" " alt="" coords="376,183,439,223,436,227,374,187"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="270,258,157,301,155,296,268,253"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="329,213,345,177,350,179,334,215"/>
+<area shape="rect" id="Node000008" href="$Chest_8cpp.html" title="Chest class." alt="" coords="257,299,366,324"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="314,264,314,299,309,299,309,264"/>
+</map>

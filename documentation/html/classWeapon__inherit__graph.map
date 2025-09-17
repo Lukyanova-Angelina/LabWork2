@@ -1,0 +1,9 @@
+<map id="Weapon" name="Weapon">
+<area shape="rect" id="Node000001" title="Base class for all weapons in the game." alt="" coords="60,79,135,104"/>
+<area shape="rect" id="Node000003" href="$classELmagic.html" title="Elemental magic wand with complex damage calculations." alt="" coords="5,152,83,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="83,117,55,153,51,150,78,113"/>
+<area shape="rect" id="Node000004" href="$classELweapon.html" title="Elemental weapon with charged damage system." alt="" coords="107,152,195,177"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="116,113,144,150,140,153,112,117"/>
+<area shape="rect" id="Node000002" href="$classObject.html" title="Abstract base class representing any entity in the game world." alt="" coords="65,5,129,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,44,100,79,95,79,95,44"/>
+</map>

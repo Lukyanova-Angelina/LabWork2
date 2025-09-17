@@ -1,0 +1,40 @@
+<map id="headers/Enemy.h" name="headers/Enemy.h">
+<area shape="rect" id="Node000001" title="Base enemy class for hostile game entities." alt="" coords="517,5,651,31"/>
+<area shape="rect" id="Node000002" href="$Bat_8h.html" title="Bat enemy class &#45; basic flying enemy type." alt="" coords="443,79,555,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="562,41,514,80,511,76,558,37"/>
+<area shape="rect" id="Node000003" href="$Game_8h.html" title="Main game controller class managing game state, objects, and interactions." alt="" coords="482,299,611,324"/>
+<area shape="poly" id="edge17_Node000001_Node000003" title=" " alt="" coords="648,32,715,54,778,85,802,104,818,127,822,152,813,179,794,204,771,226,717,261,660,286,608,301,607,296,659,281,715,257,767,222,790,201,808,176,817,151,813,129,798,108,775,89,713,58,646,37"/>
+<area shape="rect" id="Node000006" href="$Status_8h.html" title="Game progression and loot management system." alt="" coords="323,152,453,177"/>
+<area shape="poly" id="edge22_Node000001_Node000006" title=" " alt="" coords="515,37,472,54,432,81,418,98,407,117,393,153,388,151,402,115,414,95,429,77,469,50,513,32"/>
+<area shape="rect" id="Node000011" href="$Elemental_8h.html" title="Elemental enemy class with complex elemental interactions." alt="" coords="158,79,314,104"/>
+<area shape="poly" id="edge13_Node000001_Node000011" title=" " alt="" coords="515,36,293,81,292,76,514,31"/>
+<area shape="rect" id="Node000013" href="$Mag_8h.html" title="Magician enemy class with health regeneration." alt="" coords="586,79,705,104"/>
+<area shape="poly" id="edge18_Node000001_Node000013" title=" " alt="" coords="605,40,637,77,633,80,601,43"/>
+<area shape="rect" id="Node000015" href="$Enemy_8cpp.html" title="Implementation of Enemy class methods." alt="" coords="875,79,989,104"/>
+<area shape="poly" id="edge23_Node000001_Node000015" title=" " alt="" coords="654,31,876,76,875,81,653,36"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="506,117,519,177,547,298,541,299,513,178,501,118"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="471,114,408,154,405,150,468,109"/>
+<area shape="rect" id="Node000010" href="$Bat_8cpp.html" title="Implementation of Bat class methods." alt="" coords="529,152,623,177"/>
+<area shape="poly" id="edge12_Node000002_Node000010" title=" " alt="" coords="523,111,565,150,562,154,519,115"/>
+<area shape="rect" id="Node000004" href="$Game_8cpp.html" title="Implementation of Game class methods." alt="" coords="425,372,535,397"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="528,336,493,374,489,370,524,333"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html" title=" " alt="" coords="559,372,665,397"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="569,333,603,370,599,374,565,336"/>
+<area shape="poly" id="edge10_Node000006_Node000003" title=" " alt="" coords="431,181,465,199,497,223,526,262,544,297,539,300,522,265,493,227,462,204,429,185"/>
+<area shape="rect" id="Node000007" href="$Chest_8h.html" title="Chest container class with randomized loot." alt="" coords="219,225,346,251"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="354,187,295,227,292,223,351,182"/>
+<area shape="rect" id="Node000009" href="$Status_8cpp.html" title="Status class." alt="" coords="370,225,483,251"/>
+<area shape="poly" id="edge11_Node000006_Node000009" title=" " alt="" coords="403,188,423,224,418,226,399,191"/>
+<area shape="poly" id="edge7_Node000007_Node000003" title=" " alt="" coords="339,252,505,296,503,301,338,257"/>
+<area shape="poly" id="edge8_Node000007_Node000006" title=" " alt="" coords="317,216,376,175,379,180,320,220"/>
+<area shape="rect" id="Node000008" href="$Chest_8cpp.html" title="Chest class." alt="" coords="228,299,337,324"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="285,264,285,299,280,299,280,264"/>
+<area shape="poly" id="edge14_Node000011_Node000003" title=" " alt="" coords="224,117,209,147,197,182,195,218,200,234,209,249,226,262,253,274,324,291,407,301,482,306,482,311,406,306,323,296,251,279,223,267,205,252,195,236,190,218,192,181,204,145,219,115"/>
+<area shape="poly" id="edge15_Node000011_Node000006" title=" " alt="" coords="274,107,364,149,362,154,271,112"/>
+<area shape="rect" id="Node000012" href="$Elemental_8cpp.html" title="Implementation of Elemental class methods." alt="" coords="5,152,144,177"/>
+<area shape="poly" id="edge16_Node000011_Node000012" title=" " alt="" coords="199,112,102,154,100,149,197,107"/>
+<area shape="poly" id="edge19_Node000013_Node000003" title=" " alt="" coords="648,118,645,147,637,178,620,215,598,250,559,300,555,297,594,247,615,213,632,176,640,146,643,117"/>
+<area shape="poly" id="edge20_Node000013_Node000006" title=" " alt="" coords="592,110,430,154,429,149,590,105"/>
+<area shape="rect" id="Node000014" href="$Mag_8cpp.html" title="Implementation of Mag class methods." alt="" coords="699,152,799,177"/>
+<area shape="poly" id="edge21_Node000013_Node000014" title=" " alt="" coords="675,110,734,150,731,154,672,114"/>
+</map>

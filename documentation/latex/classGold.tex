@@ -1,0 +1,344 @@
+\doxysection{Gold Class Reference}
+\hypertarget{classGold}{}\label{classGold}\index{Gold@{Gold}}
+
+
+Collectible gold currency object.  
+
+
+
+
+{\ttfamily \#include $<$Gold.\+h$>$}
+
+
+
+Inheritance diagram for Gold\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{classGold__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Gold\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{classGold__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGold_a55985df6880a433d3220d7072bce6d1d}{Gold}} (int pos, int amount)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classGold}{Gold} with specified amount. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classGold_a90468e3b228d335b60a093684a1ee008}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information for gold. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classGold_aba91bb9d72e966d25f932e7a6534a7e9}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classGold_a100059cf7b125252632206e0546feb5d}{return\+Interaction\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the interaction type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGold_a5ab0573d600eb5a1fa8d6131a4503d16}{get\+Amount}} () const
+\begin{DoxyCompactList}\small\item\em Gets the gold amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGold_a82ea7721dd036eb3b171f4fd1efb3d21}{set\+Amount}} (int amount)
+\begin{DoxyCompactList}\small\item\em Sets the gold amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGold_aada5c334442fc4b85e947190146c6f82}{take\+Amount}} (int amount)
+\begin{DoxyCompactList}\small\item\em Reduces gold amount by specified value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGold_ac4d5688668fca8db54e549cf5060caee}{take\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Applies damage to gold (reduces amount). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_a71da04043bdd83585112550c3e27a85d}{Object}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classObject}{Object} at the specified position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classObject_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. Removes any active damage callback. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classObject_ada211a17211c090c8a20c0893c6ec3a1}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Creates a copy of this object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObject_a4abd48bacb1b004c8ac891597c831f77}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates object state (called each game step). Base implementation does nothing -\/ override for custom behavior. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a746b108f37d54122539916373d6ad824}{set\+Position}} (int pos)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa893c9e84c6f0342507291ea2e50b30e}{move}} (int direction)
+\begin{DoxyCompactList}\small\item\em Moves the object in the specified direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classObject_a110b0235d69e91d6cd2684e54696f45b}{possibletomove}} (int direction)
+\begin{DoxyCompactList}\small\item\em Checks if movement in a direction is possible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7}{get\+Target\+Position}} (int direction) const
+\begin{DoxyCompactList}\small\item\em Calculates target position for a movement direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a569361cd11827f5d158b05537011d544}{get\+Target\+Direction}} (int pos2) const
+\begin{DoxyCompactList}\small\item\em Calculates direction to reach a target position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a65fb5ee0e5692e7158c266b92cdd2074}{set\+On\+Damage\+Callback}} (std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ callback)
+\begin{DoxyCompactList}\small\item\em Sets a callback function for damage events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a20141e220dafc6f225eebe800b0e9c41}{remove\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Removes the current damage callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{On\+Damage\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback for damage events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Collectible gold currency object. 
+
+Inherits from \doxylink{classObject}{Object}. Represents gold coins that player can collect. Has amount value that can be reduced by damage or collection. 
+
+Definition at line \mbox{\hyperlink{Gold_8h_source_l00023}{23}} of file \mbox{\hyperlink{Gold_8h_source}{Gold.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGold_a55985df6880a433d3220d7072bce6d1d}\label{classGold_a55985df6880a433d3220d7072bce6d1d} 
+\index{Gold@{Gold}!Gold@{Gold}}
+\index{Gold@{Gold}!Gold@{Gold}}
+\doxysubsubsection{\texorpdfstring{Gold()}{Gold()}}
+{\footnotesize\ttfamily Gold\+::\+Gold (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classGold}{Gold} with specified amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+{\em amount} & Amount of gold. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Gold_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{Gold_8cpp_source}{Gold.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGold_a5ab0573d600eb5a1fa8d6131a4503d16}\label{classGold_a5ab0573d600eb5a1fa8d6131a4503d16} 
+\index{Gold@{Gold}!getAmount@{getAmount}}
+\index{getAmount@{getAmount}!Gold@{Gold}}
+\doxysubsubsection{\texorpdfstring{getAmount()}{getAmount()}}
+{\footnotesize\ttfamily int Gold\+::get\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the gold amount. 
+
+\begin{DoxyReturn}{Returns}
+Current gold value. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Gold_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{Gold_8cpp_source}{Gold.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00055}{Game\+::check\+And\+Convert\+Gold\+To\+Rubies()}}, \mbox{\hyperlink{Game_8cpp_source_l00239}{Game\+::handle\+IMMEDIATE\+\_\+\+PASS()}}, \mbox{\hyperlink{Gold_8cpp_source_l00012}{print()}}, \mbox{\hyperlink{Ruby_8cpp_source_l00014}{Ruby\+::print()}}, \mbox{\hyperlink{Gold_8cpp_source_l00037}{take\+Amount()}}, and \mbox{\hyperlink{Gold_8cpp_source_l00041}{take\+Damage()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classGold_a5ab0573d600eb5a1fa8d6131a4503d16_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGold_a90468e3b228d335b60a093684a1ee008}\label{classGold_a90468e3b228d335b60a093684a1ee008} 
+\index{Gold@{Gold}!print@{print}}
+\index{print@{print}!Gold@{Gold}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDisplayInfo}{Display\+Info}} Gold\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets display information for gold. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDisplayInfo}{Display\+Info} structure with gold amount. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_ab79063b8627e3f798f3a01f278cf2190}{Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classRuby_a10b7819f002c4e796c3c5daf7a10eb82}{Ruby}}.
+
+
+
+Definition at line \mbox{\hyperlink{Gold_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{Gold_8cpp_source}{Gold.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Gold_8cpp_source_l00030}{get\+Amount()}}, and \mbox{\hyperlink{Colors_8h_source_l00027}{Color\+::\+YELLOW}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=283pt]{classGold_a90468e3b228d335b60a093684a1ee008_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGold_a100059cf7b125252632206e0546feb5d}\label{classGold_a100059cf7b125252632206e0546feb5d} 
+\index{Gold@{Gold}!returnInteractionType@{returnInteractionType}}
+\index{returnInteractionType@{returnInteractionType}!Gold@{Gold}}
+\doxysubsubsection{\texorpdfstring{returnInteractionType()}{returnInteractionType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} Gold\+::return\+Interaction\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the interaction type. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{Interaction\+Type\+::\+IMMEDIATE\+\_\+\+PASS} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_adbab575cfa08f2b354263d132f27c811}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Gold_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{Gold_8cpp_source}{Gold.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{IMMEDIATE\+\_\+\+PASS}}.
+
+\Hypertarget{classGold_aba91bb9d72e966d25f932e7a6534a7e9}\label{classGold_aba91bb9d72e966d25f932e7a6534a7e9} 
+\index{Gold@{Gold}!returntype@{returntype}}
+\index{returntype@{returntype}!Gold@{Gold}}
+\doxysubsubsection{\texorpdfstring{returntype()}{returntype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Gold\+::returntype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the object type identifier. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a842c5e2e69277690b064bf363c017980a2c0898822ab3baf7f93bea86648adb26}{Object\+Type\+::\+GOLD} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_a16b6fa35fd87615a3afb4499356d2a0d}{Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classRuby_ae64ed8cfcef2201dcc1cd2cdde644618}{Ruby}}.
+
+
+
+Definition at line \mbox{\hyperlink{Gold_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{Gold_8cpp_source}{Gold.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a2c0898822ab3baf7f93bea86648adb26}{GOLD}}.
+
+\Hypertarget{classGold_a82ea7721dd036eb3b171f4fd1efb3d21}\label{classGold_a82ea7721dd036eb3b171f4fd1efb3d21} 
+\index{Gold@{Gold}!setAmount@{setAmount}}
+\index{setAmount@{setAmount}!Gold@{Gold}}
+\doxysubsubsection{\texorpdfstring{setAmount()}{setAmount()}}
+{\footnotesize\ttfamily void Gold\+::set\+Amount (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Sets the gold amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & New gold value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Gold_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{Gold_8cpp_source}{Gold.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Gold_8cpp_source_l00037}{take\+Amount()}}, and \mbox{\hyperlink{Gold_8cpp_source_l00041}{take\+Damage()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{classGold_a82ea7721dd036eb3b171f4fd1efb3d21_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGold_aada5c334442fc4b85e947190146c6f82}\label{classGold_aada5c334442fc4b85e947190146c6f82} 
+\index{Gold@{Gold}!takeAmount@{takeAmount}}
+\index{takeAmount@{takeAmount}!Gold@{Gold}}
+\doxysubsubsection{\texorpdfstring{takeAmount()}{takeAmount()}}
+{\footnotesize\ttfamily void Gold\+::take\+Amount (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Reduces gold amount by specified value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & Amount to subtract. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Gold_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{Gold_8cpp_source}{Gold.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Gold_8cpp_source_l00030}{get\+Amount()}}, and \mbox{\hyperlink{Gold_8cpp_source_l00033}{set\+Amount()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=319pt]{classGold_aada5c334442fc4b85e947190146c6f82_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGold_ac4d5688668fca8db54e549cf5060caee}\label{classGold_ac4d5688668fca8db54e549cf5060caee} 
+\index{Gold@{Gold}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Gold@{Gold}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily void Gold\+::take\+Damage (\begin{DoxyParamCaption}\item[{int}]{dmg,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Applies damage to gold (reduces amount). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dmg} & Amount of damage to apply. \\
+\hline
+{\em type} & Type of damage being applied. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_ac886af1d32fa2370531cffcd7e5125fb}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Gold_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{Gold_8cpp_source}{Gold.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Gold_8cpp_source_l00030}{get\+Amount()}}, \mbox{\hyperlink{Object_8cpp_source_l00030}{Object\+::get\+Position()}}, \mbox{\hyperlink{Object_8h_source_l00050}{Object\+::\+On\+Damage\+Callback}}, and \mbox{\hyperlink{Gold_8cpp_source_l00033}{set\+Amount()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=332pt]{classGold_ac4d5688668fca8db54e549cf5060caee_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{Gold_8h}{Gold.\+h}}\item 
+src/\mbox{\hyperlink{Gold_8cpp}{Gold.\+cpp}}\end{DoxyCompactItemize}

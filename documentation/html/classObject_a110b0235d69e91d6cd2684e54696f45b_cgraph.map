@@ -1,0 +1,5 @@
+<map id="Object::possibletomove" name="Object::possibletomove">
+<area shape="rect" id="Node000001" title="Checks if movement in a direction is possible." alt="" coords="5,5,181,31"/>
+<area shape="rect" id="Node000002" href="$classObject.html#ac94263cc1cd1fe7d0193f8400af2c1e4" title="Gets the current grid position." alt="" coords="229,5,375,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="181,15,215,15,215,21,181,21"/>
+</map>

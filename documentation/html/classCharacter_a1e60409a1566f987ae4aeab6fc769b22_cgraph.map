@@ -1,0 +1,14 @@
+<map id="Character::takeDamage" name="Character::takeDamage">
+<area shape="rect" id="Node000001" title="Applies damage with specified type." alt="" coords="5,95,181,121"/>
+<area shape="rect" id="Node000002" href="$classCharacter.html#aea5b5db69ac071ad6030f6d924b3ce08" title="Calculates final damage after applying type modifiers." alt="" coords="229,5,412,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,93,251,48,253,53,130,98"/>
+<area shape="rect" id="Node000003" href="$classCharacter.html#a719cf393f4cdcc82a403f70732adee02" title="Gets current health points." alt="" coords="460,95,592,121"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="182,105,446,105,446,111,182,111"/>
+<area shape="rect" id="Node000004" href="$classObject.html#ac94263cc1cd1fe7d0193f8400af2c1e4" title="Gets the current grid position." alt="" coords="248,121,393,146"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="182,115,235,121,234,126,181,120"/>
+<area shape="rect" id="Node000005" href="$classCharacter.html#a8d6fad66d361d74a9a9122a7d6c620b0" title="Reduces character&#39;s health by specified amount." alt="" coords="251,170,390,195"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="127,118,230,156,256,164,254,169,228,161,125,123"/>
+<area shape="poly" id="edge5_Node000005_Node000003" title=" " alt="" coords="374,167,411,156,486,124,488,129,413,161,376,173"/>
+<area shape="rect" id="Node000006" href="$classCharacter.html#a030786bca8ce703c96a275751b74b2fd" title="Sets current health points." alt="" coords="461,170,591,195"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="390,180,447,180,447,185,390,185"/>
+</map>

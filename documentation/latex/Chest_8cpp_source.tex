@@ -1,0 +1,56 @@
+\doxysection{Chest.\+cpp}
+\hypertarget{Chest_8cpp_source}{}\label{Chest_8cpp_source}\index{src/Chest.cpp@{src/Chest.cpp}}
+\mbox{\hyperlink{Chest_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Chest_8h}{Chest.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00010}\mbox{\hyperlink{classChest_af3adff4dcbecf65c0c063308b511a36c}{00010}}\ \mbox{\hyperlink{classChest_af3adff4dcbecf65c0c063308b511a36c}{Chest::Chest}}(\textcolor{keywordtype}{int}\ pos,\ \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574e}{ChestType}}\ type):\mbox{\hyperlink{classObject}{Object}}(pos),\ \_Type(type)\{\}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00012}\mbox{\hyperlink{classChest_a6c89f699203941d71c7419be42325732}{00012}}\ \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574e}{ChestType}}\ \mbox{\hyperlink{classChest_a6c89f699203941d71c7419be42325732}{Chest::getChestType}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{return}\ \_Type;}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00014}00014\ \}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00015}\mbox{\hyperlink{classChest_a24834bef6b2b7cbe52460a58d4700b2b}{00015}}\ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classChest_a24834bef6b2b7cbe52460a58d4700b2b}{Chest::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00016}00016\ \ \ \ \ \textcolor{keywordflow}{switch}(\mbox{\hyperlink{classChest_a6c89f699203941d71c7419be42325732}{getChestType}}())\{}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574eae0c09b20cdfdabe58874256eb0b97787}{ChestType::BADCHEST}}:}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Bad\ chest"{}},}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00022}00022\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00023}00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_a29bfda93a0cf8b1ec0fb44cf989d7eb0}{Color::RED}}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00024}00024\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00025}00025\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574ea7c0524e018f5a3d31da0ae59a08ff091}{ChestType::GOODCHEST}}:}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00027}00027\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00028}00028\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00029}00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Good\ chest"{}},}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00030}00030\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00031}00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00032}00032\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_ae0e9bb7492ab063e23ff4ca400371fef}{Color::BLUE}}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00035}00035\ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ std::cerr<<\textcolor{stringliteral}{"{}None\ ChestType"{}};}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}UNKNOWN"{}},\ }
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Chest"{}},\ }
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Error"{}},\ }
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_a2e038ccfb37704ee8a7e53a20ac5e59d}{Color::WHITE}}\};}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00042}00042\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00043}00043\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00044}00044\ \}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00045}\mbox{\hyperlink{classChest_a1a293cbef8fe5ba40d1baad21de4fcef}{00045}}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classChest_a1a293cbef8fe5ba40d1baad21de4fcef}{Chest::returntype}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a5bdccd55677ef3fc449ed476ade69fb7}{ObjectType::CHEST}};}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00047}00047\ \}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00048}\mbox{\hyperlink{classChest_a0e1c166093a009b4a736a65086a6b7ca}{00048}}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{InteractionType}}\ \mbox{\hyperlink{classChest_a0e1c166093a009b4a736a65086a6b7ca}{Chest::returnInteractionType}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00049}00049\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a7c7bde73bcbcb7e25853c0715c4d203d}{InteractionType::TRIGGER\_ON\_STAY}};}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00050}00050\ \}}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00051}00051\ }
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00052}\mbox{\hyperlink{classChest_a2fd12807b717e0c5165360fdd31eb344}{00052}}\ std::unique\_ptr<Object>\ \mbox{\hyperlink{classChest_a2fd12807b717e0c5165360fdd31eb344}{Chest::generateLoot}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classStatus}{Status}}\&\ status)\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00053}00053\ \ \ \ \ \textcolor{keywordflow}{return}\ status.\mbox{\hyperlink{classStatus_ab609d516c858ca28a44665742e4519f8}{generateChestLoot}}(\mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{getPosition}}(),\ \mbox{\hyperlink{classChest_a6c89f699203941d71c7419be42325732}{getChestType}}());}
+\DoxyCodeLine{\Hypertarget{Chest_8cpp_source_l00054}00054\ \}}
+
+\end{DoxyCode}

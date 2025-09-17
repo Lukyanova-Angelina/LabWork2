@@ -1,0 +1,119 @@
+\doxysection{headers/\+Object.h File Reference}
+\hypertarget{Object_8h}{}\label{Object_8h}\index{headers/Object.h@{headers/Object.h}}
+
+
+Base class for all game objects in the game.  
+
+
+{\ttfamily \#include $<$cstdlib$>$}\newline
+{\ttfamily \#include $<$ctime$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$memory$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include "{}Colors.\+h"{}}\newline
+{\ttfamily \#include "{}Enums.\+h"{}}\newline
+Include dependency graph for Object.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Object_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Object_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structDisplayInfo}{Display\+Info}}
+\begin{DoxyCompactList}\small\item\em Contains information for rendering an object in the game UI. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classObject}{Object}}
+\begin{DoxyCompactList}\small\item\em Abstract base class representing any entity in the game world. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{Object_8h_a32083e5d8074832176c4c56837ada8f1}{center\+Text}} (const std\+::string \&text, size\+\_\+t width)
+\begin{DoxyCompactList}\small\item\em Centers text with special handling for Unicode symbols. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{Object_8h_a6f66aed5f0cd5f9f838cb6014bdaa365}{left\+Align}} (const std\+::string \&text, size\+\_\+t width, char fill=\textquotesingle{} \textquotesingle{})
+\begin{DoxyCompactList}\small\item\em Left-\/aligns text with padding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base class for all game objects in the game. 
+
+Provides core functionality for position management, movement, interaction, damage handling, and UI representation. All game entities inherit from this class. 
+
+Definition in file \mbox{\hyperlink{Object_8h_source}{Object.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Object_8h_a32083e5d8074832176c4c56837ada8f1}\label{Object_8h_a32083e5d8074832176c4c56837ada8f1} 
+\index{Object.h@{Object.h}!centerText@{centerText}}
+\index{centerText@{centerText}!Object.h@{Object.h}}
+\doxysubsubsection{\texorpdfstring{centerText()}{centerText()}}
+{\footnotesize\ttfamily std\+::string center\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{size\+\_\+t}]{width }\end{DoxyParamCaption})}
+
+
+
+Centers text with special handling for Unicode symbols. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Text to center. \\
+\hline
+{\em width} & Total width for centering. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Centered text string with proper Unicode symbol handling. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00150}{150}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00095}{Game\+::draw()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Object_8h_a32083e5d8074832176c4c56837ada8f1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{Object_8h_a6f66aed5f0cd5f9f838cb6014bdaa365}\label{Object_8h_a6f66aed5f0cd5f9f838cb6014bdaa365} 
+\index{Object.h@{Object.h}!leftAlign@{leftAlign}}
+\index{leftAlign@{leftAlign}!Object.h@{Object.h}}
+\doxysubsubsection{\texorpdfstring{leftAlign()}{leftAlign()}}
+{\footnotesize\ttfamily std\+::string left\+Align (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{size\+\_\+t}]{width,  }\item[{char}]{fill }\end{DoxyParamCaption})}
+
+
+
+Left-\/aligns text with padding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Text to align. \\
+\hline
+{\em width} & Total width for alignment. \\
+\hline
+{\em fill} & char to use for padding. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Left-\/aligned text string. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00193}{193}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+

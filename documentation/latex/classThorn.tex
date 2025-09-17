@@ -1,0 +1,432 @@
+\doxysection{Thorn Class Reference}
+\hypertarget{classThorn}{}\label{classThorn}\index{Thorn@{Thorn}}
+
+
+Rotating trap that can damage in specific directions.  
+
+
+
+
+{\ttfamily \#include $<$Thorn.\+h$>$}
+
+
+
+Inheritance diagram for Thorn\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{classThorn__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Thorn\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{classThorn__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classThorn_a9cad8ee285d2ad917ddba75e3fabfcff}{Thorn}} (int pos, int amount, const std\+::array$<$ bool, 4 $>$ \&dirs=\{false\})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classThorn}{Thorn} with specified damage and directions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classThorn_a74ac7e457866eed6a931060f53e3353b}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information with directional arrows. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classThorn_aedbf24d78ec21a801b3df8d22621d5fc}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classThorn_a5ac388d3c6d127d15f5158fea05f6b91}{return\+Interaction\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the interaction type. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classThorn_a4aeae41abf17aa5bd99de37b300680d0}{update}} () override
+\begin{DoxyCompactList}\small\item\em Updates thorn state -\/ rotates directions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classThorn_a3d7f981d55a4ed44026aa6af5bbad6ae}{turn}} ()
+\begin{DoxyCompactList}\small\item\em Rotates the directional pattern. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classThorn_a0e8fbc34d8d996dc01a9c9779445b871}{get\+Amount}} () const
+\begin{DoxyCompactList}\small\item\em Gets damage amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classThorn_a60a860e36566c0fe3767a4ec677742c2}{set\+Amount}} (int amount)
+\begin{DoxyCompactList}\small\item\em Sets damage amount. \end{DoxyCompactList}\item 
+std\+::array$<$ bool, 4 $>$ \mbox{\hyperlink{classThorn_a9f3dc4b7e56357ec996e3f1fb7d094b9}{get\+Directions}} () const
+\begin{DoxyCompactList}\small\item\em Gets current directional pattern. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classThorn_a1145b88fe2bb63ad05bf9f10c62a57e3}{take\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Applies damage to the thorn (reduces durability). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classThorn_a69c43e713b8f280d68cb1547beb8ddf0}{calculate\+Final\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Calculates final damage taken (no modifications). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_a71da04043bdd83585112550c3e27a85d}{Object}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classObject}{Object} at the specified position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classObject_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. Removes any active damage callback. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classObject_ada211a17211c090c8a20c0893c6ec3a1}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Creates a copy of this object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a746b108f37d54122539916373d6ad824}{set\+Position}} (int pos)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa893c9e84c6f0342507291ea2e50b30e}{move}} (int direction)
+\begin{DoxyCompactList}\small\item\em Moves the object in the specified direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classObject_a110b0235d69e91d6cd2684e54696f45b}{possibletomove}} (int direction)
+\begin{DoxyCompactList}\small\item\em Checks if movement in a direction is possible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7}{get\+Target\+Position}} (int direction) const
+\begin{DoxyCompactList}\small\item\em Calculates target position for a movement direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a569361cd11827f5d158b05537011d544}{get\+Target\+Direction}} (int pos2) const
+\begin{DoxyCompactList}\small\item\em Calculates direction to reach a target position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a65fb5ee0e5692e7158c266b92cdd2074}{set\+On\+Damage\+Callback}} (std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ callback)
+\begin{DoxyCompactList}\small\item\em Sets a callback function for damage events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a20141e220dafc6f225eebe800b0e9c41}{remove\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Removes the current damage callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{On\+Damage\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback for damage events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Rotating trap that can damage in specific directions. 
+
+Inherits from \doxylink{classObject}{Object}. Has damage amount and directional pattern that rotates each game turn. 
+
+Definition at line \mbox{\hyperlink{Thorn_8h_source_l00025}{25}} of file \mbox{\hyperlink{Thorn_8h_source}{Thorn.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classThorn_a9cad8ee285d2ad917ddba75e3fabfcff}\label{classThorn_a9cad8ee285d2ad917ddba75e3fabfcff} 
+\index{Thorn@{Thorn}!Thorn@{Thorn}}
+\index{Thorn@{Thorn}!Thorn@{Thorn}}
+\doxysubsubsection{\texorpdfstring{Thorn()}{Thorn()}}
+{\footnotesize\ttfamily Thorn\+::\+Thorn (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{int}]{amount,  }\item[{const std\+::array$<$ bool, 4 $>$ \&}]{dirs = {\ttfamily \{false\}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classThorn}{Thorn} with specified damage and directions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+{\em amount} & Damage amount. \\
+\hline
+{\em dirs} & Initial directional pattern (default\+: all false). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Thorn_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{Thorn_8cpp_source}{Thorn.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classThorn_a69c43e713b8f280d68cb1547beb8ddf0}\label{classThorn_a69c43e713b8f280d68cb1547beb8ddf0} 
+\index{Thorn@{Thorn}!calculateFinalDamage@{calculateFinalDamage}}
+\index{calculateFinalDamage@{calculateFinalDamage}!Thorn@{Thorn}}
+\doxysubsubsection{\texorpdfstring{calculateFinalDamage()}{calculateFinalDamage()}}
+{\footnotesize\ttfamily int Thorn\+::calculate\+Final\+Damage (\begin{DoxyParamCaption}\item[{int}]{dmg,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Calculates final damage taken (no modifications). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dmg} & Base damage amount. \\
+\hline
+{\em type} & Type of damage being applied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unmodified damage amount. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Thorn_8cpp_source_l00058}{58}} of file \mbox{\hyperlink{Thorn_8cpp_source}{Thorn.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Thorn_8cpp_source_l00050}{take\+Damage()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classThorn_a69c43e713b8f280d68cb1547beb8ddf0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classThorn_a0e8fbc34d8d996dc01a9c9779445b871}\label{classThorn_a0e8fbc34d8d996dc01a9c9779445b871} 
+\index{Thorn@{Thorn}!getAmount@{getAmount}}
+\index{getAmount@{getAmount}!Thorn@{Thorn}}
+\doxysubsubsection{\texorpdfstring{getAmount()}{getAmount()}}
+{\footnotesize\ttfamily int Thorn\+::get\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets damage amount. 
+
+\begin{DoxyReturn}{Returns}
+Current damage value. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Thorn_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{Thorn_8cpp_source}{Thorn.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00239}{Game\+::handle\+IMMEDIATE\+\_\+\+PASS()}}, \mbox{\hyperlink{Gun_8cpp_source_l00011}{Gun\+::print()}}, \mbox{\hyperlink{Thorn_8cpp_source_l00011}{print()}}, and \mbox{\hyperlink{Thorn_8cpp_source_l00050}{take\+Damage()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classThorn_a0e8fbc34d8d996dc01a9c9779445b871_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classThorn_a9f3dc4b7e56357ec996e3f1fb7d094b9}\label{classThorn_a9f3dc4b7e56357ec996e3f1fb7d094b9} 
+\index{Thorn@{Thorn}!getDirections@{getDirections}}
+\index{getDirections@{getDirections}!Thorn@{Thorn}}
+\doxysubsubsection{\texorpdfstring{getDirections()}{getDirections()}}
+{\footnotesize\ttfamily std\+::array$<$ bool, 4 $>$ Thorn\+::get\+Directions (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets current directional pattern. 
+
+\begin{DoxyReturn}{Returns}
+Array of booleans representing active directions. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Thorn_8cpp_source_l00047}{47}} of file \mbox{\hyperlink{Thorn_8cpp_source}{Thorn.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00239}{Game\+::handle\+IMMEDIATE\+\_\+\+PASS()}}, \mbox{\hyperlink{Gun_8cpp_source_l00011}{Gun\+::print()}}, and \mbox{\hyperlink{Thorn_8cpp_source_l00011}{print()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classThorn_a9f3dc4b7e56357ec996e3f1fb7d094b9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classThorn_a74ac7e457866eed6a931060f53e3353b}\label{classThorn_a74ac7e457866eed6a931060f53e3353b} 
+\index{Thorn@{Thorn}!print@{print}}
+\index{print@{print}!Thorn@{Thorn}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDisplayInfo}{Display\+Info}} Thorn\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets display information with directional arrows. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDisplayInfo}{Display\+Info} structure with visual direction indicators. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_ab79063b8627e3f798f3a01f278cf2190}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Thorn_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{Thorn_8cpp_source}{Thorn.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Colors_8h_source_l00028}{Color\+::\+BLUE}}, \mbox{\hyperlink{Thorn_8cpp_source_l00040}{get\+Amount()}}, and \mbox{\hyperlink{Thorn_8cpp_source_l00047}{get\+Directions()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classThorn_a74ac7e457866eed6a931060f53e3353b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classThorn_a5ac388d3c6d127d15f5158fea05f6b91}\label{classThorn_a5ac388d3c6d127d15f5158fea05f6b91} 
+\index{Thorn@{Thorn}!returnInteractionType@{returnInteractionType}}
+\index{returnInteractionType@{returnInteractionType}!Thorn@{Thorn}}
+\doxysubsubsection{\texorpdfstring{returnInteractionType()}{returnInteractionType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} Thorn\+::return\+Interaction\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the interaction type. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{Interaction\+Type\+::\+IMMEDIATE\+\_\+\+PASS} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_adbab575cfa08f2b354263d132f27c811}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Thorn_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{Thorn_8cpp_source}{Thorn.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{IMMEDIATE\+\_\+\+PASS}}.
+
+\Hypertarget{classThorn_aedbf24d78ec21a801b3df8d22621d5fc}\label{classThorn_aedbf24d78ec21a801b3df8d22621d5fc} 
+\index{Thorn@{Thorn}!returntype@{returntype}}
+\index{returntype@{returntype}!Thorn@{Thorn}}
+\doxysubsubsection{\texorpdfstring{returntype()}{returntype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Thorn\+::returntype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the object type identifier. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ce20399299146eae2f6c0e847de1f3b}{Object\+Type\+::\+THORN} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_a16b6fa35fd87615a3afb4499356d2a0d}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Thorn_8cpp_source_l00021}{21}} of file \mbox{\hyperlink{Thorn_8cpp_source}{Thorn.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ce20399299146eae2f6c0e847de1f3b}{THORN}}.
+
+\Hypertarget{classThorn_a60a860e36566c0fe3767a4ec677742c2}\label{classThorn_a60a860e36566c0fe3767a4ec677742c2} 
+\index{Thorn@{Thorn}!setAmount@{setAmount}}
+\index{setAmount@{setAmount}!Thorn@{Thorn}}
+\doxysubsubsection{\texorpdfstring{setAmount()}{setAmount()}}
+{\footnotesize\ttfamily void Thorn\+::set\+Amount (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Sets damage amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & New damage value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Thorn_8cpp_source_l00043}{43}} of file \mbox{\hyperlink{Thorn_8cpp_source}{Thorn.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Thorn_8cpp_source_l00050}{take\+Damage()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classThorn_a60a860e36566c0fe3767a4ec677742c2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classThorn_a1145b88fe2bb63ad05bf9f10c62a57e3}\label{classThorn_a1145b88fe2bb63ad05bf9f10c62a57e3} 
+\index{Thorn@{Thorn}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Thorn@{Thorn}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily void Thorn\+::take\+Damage (\begin{DoxyParamCaption}\item[{int}]{dmg,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Applies damage to the thorn (reduces durability). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dmg} & Amount of damage to apply. \\
+\hline
+{\em type} & Type of damage being applied. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_ac886af1d32fa2370531cffcd7e5125fb}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Thorn_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{Thorn_8cpp_source}{Thorn.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Thorn_8cpp_source_l00058}{calculate\+Final\+Damage()}}, \mbox{\hyperlink{Thorn_8cpp_source_l00040}{get\+Amount()}}, \mbox{\hyperlink{Object_8cpp_source_l00030}{Object\+::get\+Position()}}, \mbox{\hyperlink{Object_8h_source_l00050}{Object\+::\+On\+Damage\+Callback}}, and \mbox{\hyperlink{Thorn_8cpp_source_l00043}{set\+Amount()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classThorn_a1145b88fe2bb63ad05bf9f10c62a57e3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classThorn_a3d7f981d55a4ed44026aa6af5bbad6ae}\label{classThorn_a3d7f981d55a4ed44026aa6af5bbad6ae} 
+\index{Thorn@{Thorn}!turn@{turn}}
+\index{turn@{turn}!Thorn@{Thorn}}
+\doxysubsubsection{\texorpdfstring{turn()}{turn()}}
+{\footnotesize\ttfamily void Thorn\+::turn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Rotates the directional pattern. 
+
+
+
+Definition at line \mbox{\hyperlink{Thorn_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{Thorn_8cpp_source}{Thorn.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Thorn_8cpp_source_l00028}{update()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classThorn_a3d7f981d55a4ed44026aa6af5bbad6ae_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classThorn_a4aeae41abf17aa5bd99de37b300680d0}\label{classThorn_a4aeae41abf17aa5bd99de37b300680d0} 
+\index{Thorn@{Thorn}!update@{update}}
+\index{update@{update}!Thorn@{Thorn}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Thorn\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates thorn state -\/ rotates directions. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classObject_a4abd48bacb1b004c8ac891597c831f77}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Thorn_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{Thorn_8cpp_source}{Thorn.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Thorn_8cpp_source_l00032}{turn()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=270pt]{classThorn_a4aeae41abf17aa5bd99de37b300680d0_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{Thorn_8h}{Thorn.\+h}}\item 
+src/\mbox{\hyperlink{Thorn_8cpp}{Thorn.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,5 @@
+<map id="Bomb::setDuration" name="Bomb::setDuration">
+<area shape="rect" id="Node000001" title="Sets explosion duration." alt="" coords="167,5,311,31"/>
+<area shape="rect" id="Node000002" href="$classBomb.html#a15851182c209713a5946f977a7fb24b8" title="Updates bomb state &#45; decreases countdown." alt="" coords="5,5,119,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="153,21,119,21,119,15,153,15"/>
+</map>

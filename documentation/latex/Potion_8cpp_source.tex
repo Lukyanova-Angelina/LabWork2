@@ -1,0 +1,87 @@
+\doxysection{Potion.\+cpp}
+\hypertarget{Potion_8cpp_source}{}\label{Potion_8cpp_source}\index{src/Potion.cpp@{src/Potion.cpp}}
+\mbox{\hyperlink{Potion_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Potion_8h}{Potion.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00010}\mbox{\hyperlink{classPotion_a9d71a47cf97b86f9a0f6857f57f499c4}{00010}}\ \mbox{\hyperlink{classPotion_a9d71a47cf97b86f9a0f6857f57f499c4}{Potion::Potion}}(\textcolor{keywordtype}{int}\ pos,\ \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257}{PotionType}}\ type):\mbox{\hyperlink{classObject}{Object}}(pos),\ \_Type(type)\{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00011}00011\ \ \ \ \ \textcolor{keywordflow}{switch}(type)\ \{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00012}00012\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a3a25f1406daa84785c1291a745018fae}{PotionType::HEAL}}:}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00013}00013\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPotion_a0234d4419089f6f672729c52969678e1}{setPower}}(20\ +\ rand()\ \%\ 31);}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a2a542f30a3c393aff9183c7b72f2b034}{PotionType::POISON}}:}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classPotion_a0234d4419089f6f672729c52969678e1}{setPower}}(20\ +\ rand()\ \%\ 15);}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00018}00018\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00020}\mbox{\hyperlink{classPotion_ae115b4a9a71dd5564664d865c502de69}{00020}}\ \mbox{\hyperlink{classPotion_a9d71a47cf97b86f9a0f6857f57f499c4}{Potion::Potion}}(\textcolor{keywordtype}{int}\ pos,\ \textcolor{keywordtype}{int}\ power,\ \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257}{PotionType}}\ type):\mbox{\hyperlink{classObject}{Object}}(pos),\ \_Power(power),\ \_Type(type)\{\}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00022}\mbox{\hyperlink{classPotion_aa1cf3151691e85127c5ca61f6eb9ef60}{00022}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPotion_aa1cf3151691e85127c5ca61f6eb9ef60}{Potion::getPower}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00023}00023\ \ \ \ \ \textcolor{keywordflow}{return}\ \_Power;}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00024}00024\ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00025}\mbox{\hyperlink{classPotion_a0234d4419089f6f672729c52969678e1}{00025}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPotion_a0234d4419089f6f672729c52969678e1}{Potion::setPower}}(\textcolor{keywordtype}{int}\ power)\{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00026}00026\ \ \ \ \ \_Power\ =\ power;}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00029}\mbox{\hyperlink{classPotion_abf4f6cc60914e8ac8dc7d2f0d2afac35}{00029}}\ \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257}{PotionType}}\ \mbox{\hyperlink{classPotion_abf4f6cc60914e8ac8dc7d2f0d2afac35}{Potion::getPotionType}}()\textcolor{keyword}{const}\{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00030}00030\ \ \ \ \ \textcolor{keywordflow}{return}\ \_Type;}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00032}\mbox{\hyperlink{classPotion_a59be6c95c67102ed97f250e7a9abd491}{00032}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPotion_a59be6c95c67102ed97f250e7a9abd491}{Potion::setPotionType}}(\mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257}{PotionType}}\ type)\{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00033}00033\ \ \ \ \ \_Type\ =\ type;}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00034}00034\ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00035}00035\ }
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00036}\mbox{\hyperlink{classPotion_a6882ce4beaf489d2eefdc5e3d11c9268}{00036}}\ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classPotion_a6882ce4beaf489d2eefdc5e3d11c9268}{Potion::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00037}00037\ \ \ \ \ \textcolor{keywordflow}{switch}(\mbox{\hyperlink{classPotion_abf4f6cc60914e8ac8dc7d2f0d2afac35}{getPotionType}}())\{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a3a25f1406daa84785c1291a745018fae}{PotionType::HEAL}}:}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Heal"{}},}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}power:"{}}\ +\ std::to\_string(\mbox{\hyperlink{classPotion_aa1cf3151691e85127c5ca61f6eb9ef60}{getPower}}()),}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_ad78a2985947b6bba7de20b94cd987808}{Color::GREEN}}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a2a542f30a3c393aff9183c7b72f2b034}{PotionType::POISON}}:}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00050}00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Poison"{}},}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}power:"{}}\ +\ std::to\_string(\mbox{\hyperlink{classPotion_aa1cf3151691e85127c5ca61f6eb9ef60}{getPower}}()),}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_a26aa69c9914eaaecde8cae8a41a91aba}{Color::MAGENTA}}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Unknown"{}},}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Power:"{}}\ +\ std::to\_string(\mbox{\hyperlink{classPotion_aa1cf3151691e85127c5ca61f6eb9ef60}{getPower}}()),}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_a2e038ccfb37704ee8a7e53a20ac5e59d}{Color::WHITE}}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00065}00065\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00066}00066\ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00067}00067\ }
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00068}\mbox{\hyperlink{classPotion_af53824329e3d7c13ffa34a54779ff9d4}{00068}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPotion_af53824329e3d7c13ffa34a54779ff9d4}{Potion::takeDamage}}(\mbox{\hyperlink{classWeapon}{Weapon}}*\ o)\{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00069}00069\ \ \ \ \ \mbox{\hyperlink{classPotion_a0234d4419089f6f672729c52969678e1}{setPower}}(\mbox{\hyperlink{classPotion_aa1cf3151691e85127c5ca61f6eb9ef60}{getPower}}()\ -\/\ o-\/>\mbox{\hyperlink{classWeapon_a5f1941efbf38c5719cf75e4a138e92d4}{getDamage}}());}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00070}00070\ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00071}\mbox{\hyperlink{classPotion_a7e254ba6621490d38f2f640e284a049b}{00071}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPotion_af53824329e3d7c13ffa34a54779ff9d4}{Potion::takeDamage}}(\textcolor{keywordtype}{int}\ dmg,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type)\{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00072}00072\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classPotion_aa1cf3151691e85127c5ca61f6eb9ef60}{getPower}}()\ <=\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00073}00073\ \ \ \ \ \textcolor{keywordtype}{int}\ finalDamage\ =\ dmg;}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00074}00074\ \ \ \ \ \mbox{\hyperlink{classPotion_a0234d4419089f6f672729c52969678e1}{setPower}}(\mbox{\hyperlink{classPotion_aa1cf3151691e85127c5ca61f6eb9ef60}{getPower}}()\ -\/\ finalDamage);}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00075}00075\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00076}00076\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{OnDamageCallback}})\ \{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00077}00077\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{OnDamageCallback}}(\mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{getPosition}}(),\ type);}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00078}00078\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00079}00079\ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00080}\mbox{\hyperlink{classPotion_a34ea68a06f51ae03f8388533abd0213b}{00080}}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{InteractionType}}\ \mbox{\hyperlink{classPotion_a34ea68a06f51ae03f8388533abd0213b}{Potion::returnInteractionType}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00081}00081\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{InteractionType::IMMEDIATE\_PASS}};}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00082}00082\ \}}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00083}\mbox{\hyperlink{classPotion_a3b9d8ca2d94df0d8e845e73321b8259a}{00083}}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classPotion_a3b9d8ca2d94df0d8e845e73321b8259a}{Potion::returntype}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00084}00084\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a6a492839f1a85f3ddb226750959f799a}{ObjectType::POTION}};}
+\DoxyCodeLine{\Hypertarget{Potion_8cpp_source_l00085}00085\ \}}
+
+\end{DoxyCode}

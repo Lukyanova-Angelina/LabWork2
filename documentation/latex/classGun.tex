@@ -1,0 +1,198 @@
+\doxysection{Gun Class Reference}
+\hypertarget{classGun}{}\label{classGun}\index{Gun@{Gun}}
+
+
+Directional weapon trap with rotating.  
+
+
+
+
+{\ttfamily \#include $<$Gun.\+h$>$}
+
+
+
+Inheritance diagram for Gun\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{classGun__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Gun\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{classGun__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGun_ab262893cccb06dffa50990022bd226eb}{Gun}} (int pos, int amount, const std\+::array$<$ bool, 4 $>$ \&dirs=\{false\})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classGun}{Gun} with specified damage and directions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classGun_a283cd67227d10d0785e81e76621d9b70}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information with weapon sprites. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classGun_aeadd6070441f8850c5dce0685f85f8ef}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classThorn}{Thorn}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classThorn_a9cad8ee285d2ad917ddba75e3fabfcff}{Thorn}} (int pos, int amount, const std\+::array$<$ bool, 4 $>$ \&dirs=\{false\})
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classThorn}{Thorn} with specified damage and directions. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classThorn_a74ac7e457866eed6a931060f53e3353b}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information with directional arrows. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classThorn_aedbf24d78ec21a801b3df8d22621d5fc}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classThorn_a5ac388d3c6d127d15f5158fea05f6b91}{return\+Interaction\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the interaction type. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classThorn_a4aeae41abf17aa5bd99de37b300680d0}{update}} () override
+\begin{DoxyCompactList}\small\item\em Updates thorn state -\/ rotates directions. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classThorn_a3d7f981d55a4ed44026aa6af5bbad6ae}{turn}} ()
+\begin{DoxyCompactList}\small\item\em Rotates the directional pattern. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classThorn_a0e8fbc34d8d996dc01a9c9779445b871}{get\+Amount}} () const
+\begin{DoxyCompactList}\small\item\em Gets damage amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classThorn_a60a860e36566c0fe3767a4ec677742c2}{set\+Amount}} (int amount)
+\begin{DoxyCompactList}\small\item\em Sets damage amount. \end{DoxyCompactList}\item 
+std\+::array$<$ bool, 4 $>$ \mbox{\hyperlink{classThorn_a9f3dc4b7e56357ec996e3f1fb7d094b9}{get\+Directions}} () const
+\begin{DoxyCompactList}\small\item\em Gets current directional pattern. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classThorn_a1145b88fe2bb63ad05bf9f10c62a57e3}{take\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Applies damage to the thorn (reduces durability). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classThorn_a69c43e713b8f280d68cb1547beb8ddf0}{calculate\+Final\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Calculates final damage taken (no modifications). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_a71da04043bdd83585112550c3e27a85d}{Object}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classObject}{Object} at the specified position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classObject_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. Removes any active damage callback. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classObject_ada211a17211c090c8a20c0893c6ec3a1}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Creates a copy of this object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a746b108f37d54122539916373d6ad824}{set\+Position}} (int pos)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa893c9e84c6f0342507291ea2e50b30e}{move}} (int direction)
+\begin{DoxyCompactList}\small\item\em Moves the object in the specified direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classObject_a110b0235d69e91d6cd2684e54696f45b}{possibletomove}} (int direction)
+\begin{DoxyCompactList}\small\item\em Checks if movement in a direction is possible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7}{get\+Target\+Position}} (int direction) const
+\begin{DoxyCompactList}\small\item\em Calculates target position for a movement direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a569361cd11827f5d158b05537011d544}{get\+Target\+Direction}} (int pos2) const
+\begin{DoxyCompactList}\small\item\em Calculates direction to reach a target position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a65fb5ee0e5692e7158c266b92cdd2074}{set\+On\+Damage\+Callback}} (std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ callback)
+\begin{DoxyCompactList}\small\item\em Sets a callback function for damage events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a20141e220dafc6f225eebe800b0e9c41}{remove\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Removes the current damage callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{On\+Damage\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback for damage events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Directional weapon trap with rotating. 
+
+Inherits from \doxylink{classThorn}{Thorn}. Uses different visual representation. 
+
+Definition at line \mbox{\hyperlink{Gun_8h_source_l00023}{23}} of file \mbox{\hyperlink{Gun_8h_source}{Gun.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classGun_ab262893cccb06dffa50990022bd226eb}\label{classGun_ab262893cccb06dffa50990022bd226eb} 
+\index{Gun@{Gun}!Gun@{Gun}}
+\index{Gun@{Gun}!Gun@{Gun}}
+\doxysubsubsection{\texorpdfstring{Gun()}{Gun()}}
+{\footnotesize\ttfamily Gun\+::\+Gun (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{int}]{amount,  }\item[{const std\+::array$<$ bool, 4 $>$ \&}]{dirs = {\ttfamily \{false\}} }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classGun}{Gun} with specified damage and directions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+{\em amount} & Damage amount per shot. \\
+\hline
+{\em dirs} & Initial firing directions (default\+: all false). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Gun_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{Gun_8cpp_source}{Gun.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classGun_a283cd67227d10d0785e81e76621d9b70}\label{classGun_a283cd67227d10d0785e81e76621d9b70} 
+\index{Gun@{Gun}!print@{print}}
+\index{print@{print}!Gun@{Gun}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDisplayInfo}{Display\+Info}} Gun\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets display information with weapon sprites. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDisplayInfo}{Display\+Info} structure with gun visualization. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_ab79063b8627e3f798f3a01f278cf2190}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Gun_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{Gun_8cpp_source}{Gun.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Thorn_8cpp_source_l00040}{Thorn\+::get\+Amount()}}, \mbox{\hyperlink{Thorn_8cpp_source_l00047}{Thorn\+::get\+Directions()}}, and \mbox{\hyperlink{Colors_8h_source_l00025}{Color\+::\+RED}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=297pt]{classGun_a283cd67227d10d0785e81e76621d9b70_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classGun_aeadd6070441f8850c5dce0685f85f8ef}\label{classGun_aeadd6070441f8850c5dce0685f85f8ef} 
+\index{Gun@{Gun}!returntype@{returntype}}
+\index{returntype@{returntype}!Gun@{Gun}}
+\doxysubsubsection{\texorpdfstring{returntype()}{returntype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Gun\+::returntype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the object type identifier. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a842c5e2e69277690b064bf363c017980a7f723c5fc350bac962b67157e70fff58}{Object\+Type\+::\+GUN} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_a16b6fa35fd87615a3afb4499356d2a0d}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Gun_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{Gun_8cpp_source}{Gun.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7f723c5fc350bac962b67157e70fff58}{GUN}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{Gun_8h}{Gun.\+h}}\item 
+src/\mbox{\hyperlink{Gun_8cpp}{Gun.\+cpp}}\end{DoxyCompactItemize}

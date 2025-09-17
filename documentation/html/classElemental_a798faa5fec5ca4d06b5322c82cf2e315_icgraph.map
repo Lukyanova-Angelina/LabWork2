@@ -1,0 +1,9 @@
+<map id="Elemental::getElement" name="Elemental::getElement">
+<area shape="rect" id="Node000001" title="Gets the elemental affinity." alt="" coords="240,70,411,95"/>
+<area shape="rect" id="Node000002" href="$classElemental.html#a27b786fd729172e19918e952605eb5e3" title="Calculates final damage with elemental interactions." alt="" coords="5,5,192,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="261,69,178,48,179,43,262,64"/>
+<area shape="rect" id="Node000003" href="$classElemental.html#a2dcd55023ea6c637ca8014bd66582912" title="Gets display information including elemental type." alt="" coords="35,70,162,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="226,85,162,85,162,80,226,80"/>
+<area shape="rect" id="Node000004" href="$classElemental.html#a4d942a61f73f0d363bb0f9fdd51a1026" title="Takes damage from weapon with elemental calculations." alt="" coords="9,119,188,145"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="254,101,158,122,157,117,252,96"/>
+</map>

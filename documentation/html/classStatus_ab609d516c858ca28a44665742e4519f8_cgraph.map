@@ -1,0 +1,7 @@
+<map id="Status::generateChestLoot" name="Status::generateChestLoot">
+<area shape="rect" id="Node000001" title="Generates loot from chest based on chest type." alt="" coords="5,31,200,56"/>
+<area shape="rect" id="Node000002" href="$classStatus.html#a1f60585ad759d8d780a039a2a5bddc71" title="Gets current player level." alt="" coords="276,5,403,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="200,30,262,24,263,29,200,36"/>
+<area shape="rect" id="Node000003" href="$classStatus.html#aeb32ff747b6ec9ddb7b95baf165999dd" title="Gets random value between 0 and 1." alt="" coords="248,55,431,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="200,51,235,54,234,59,200,56"/>
+</map>

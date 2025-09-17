@@ -1,0 +1,718 @@
+\doxysection{Status Class Reference}
+\hypertarget{classStatus}{}\label{classStatus}\index{Status@{Status}}
+
+
+\doxylink{classGame}{Game} state manager for progression and content generation.  
+
+
+
+
+{\ttfamily \#include $<$Status.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStatus_a944586fb328a3524805748c8f7b17f32}{Status}} ()
+\begin{DoxyCompactList}\small\item\em Constructs \doxylink{classStatus}{Status} with initial values. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classStatus_a1f60585ad759d8d780a039a2a5bddc71}{get\+Level}} () const
+\begin{DoxyCompactList}\small\item\em Gets current player level. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStatus_a48c9085e3008c3f2108d7510386c39b7}{set\+Level}} (int level)
+\begin{DoxyCompactList}\small\item\em Sets player level and updates loot table. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStatus_a7c1b69083a3d01cc7be0923c040b4895}{Level\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Increases player level and updates progression. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStatus_ace370730dcc7c815668f9296dd39af76}{set\+Gold}} (int gold)
+\begin{DoxyCompactList}\small\item\em Sets gold amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStatus_a13cfac122ecddd7ba96ecd940d7a1e89}{add\+Gold}} (int gold)
+\begin{DoxyCompactList}\small\item\em Adds gold to player\textquotesingle{}s total. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classStatus_a174fbb499d0a99db3533903f9d04d0d4}{get\+Gold}} () const
+\begin{DoxyCompactList}\small\item\em Gets current gold amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStatus_a7f0898180535f03a1690284ef723913d}{take\+Gold}} (int gold)
+\begin{DoxyCompactList}\small\item\em Reduces player\textquotesingle{}s gold. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classStatus_af4f18066061f502586473fbd94ea4812}{print}} () const
+\begin{DoxyCompactList}\small\item\em Gets formatted status string for UI. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStatus_a6c3144c5db5133bbe4f55720f06e5ca0}{Steps\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Increments step counter. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classStatus_a75c98e51dc7301f5a7963143597f7472}{get\+Steps}} () const
+\begin{DoxyCompactList}\small\item\em Gets steps taken. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classStatus_a0cbf1f79ddb021c8406be509a48fab27}{get\+Xp}} () const
+\begin{DoxyCompactList}\small\item\em Gets current experience points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStatus_a5839848d6c2f832789de5b3a0a058dab}{add\+Xp}} (int xp)
+\begin{DoxyCompactList}\small\item\em Adds experience points and handles level ups. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classStatus_a6c4488c04843a79040c67d660ac1ac08}{get\+Xp\+To\+Next\+Level}} () const
+\begin{DoxyCompactList}\small\item\em Gets XP required for next level. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classStatus_ada0ccdba81e8c80a89e43a8f0b9b172f}{generate\+Card}} (int pos) const
+\begin{DoxyCompactList}\small\item\em Generates a random game object based on loot table. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classStatus_ab609d516c858ca28a44665742e4519f8}{generate\+Chest\+Loot}} (int pos, \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574e}{Chest\+Type}} type) const
+\begin{DoxyCompactList}\small\item\em Generates loot from chest based on chest type. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStatus_a6e5de977faeb21c93f44a2025a8b205b}{update\+Loot\+Table}} ()
+\begin{DoxyCompactList}\small\item\em Updates loot table weights based on current level. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classStatus_aa4152ce21c305b69a6f4cdfbef28b898}{Random\+Selection}} () const
+\begin{DoxyCompactList}\small\item\em Selects random object type from loot table. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classStatus_aeb32ff747b6ec9ddb7b95baf165999dd}{get\+Random\+Value}} () const
+\begin{DoxyCompactList}\small\item\em Gets random value between 0 and 1. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classGame}{Game} state manager for progression and content generation. 
+
+Tracks player stats, experience, economy, and manages procedural content generation through weighted loot tables. 
+
+Definition at line \mbox{\hyperlink{Status_8h_source_l00040}{40}} of file \mbox{\hyperlink{Status_8h_source}{Status.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classStatus_a944586fb328a3524805748c8f7b17f32}\label{classStatus_a944586fb328a3524805748c8f7b17f32} 
+\index{Status@{Status}!Status@{Status}}
+\index{Status@{Status}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{Status()}{Status()}}
+{\footnotesize\ttfamily Status\+::\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Constructs \doxylink{classStatus}{Status} with initial values. 
+
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Status_8cpp_source_l00029}{set\+Gold()}}, \mbox{\hyperlink{Status_8cpp_source_l00026}{set\+Level()}}, and \mbox{\hyperlink{Status_8cpp_source_l00201}{update\+Loot\+Table()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_a944586fb328a3524805748c8f7b17f32_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classStatus_a13cfac122ecddd7ba96ecd940d7a1e89}\label{classStatus_a13cfac122ecddd7ba96ecd940d7a1e89} 
+\index{Status@{Status}!addGold@{addGold}}
+\index{addGold@{addGold}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{addGold()}{addGold()}}
+{\footnotesize\ttfamily void Status\+::add\+Gold (\begin{DoxyParamCaption}\item[{int}]{gold }\end{DoxyParamCaption})}
+
+
+
+Adds gold to player\textquotesingle{}s total. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gold} & Amount to add. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00039}{39}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Status_8cpp_source_l00042}{get\+Gold()}}, and \mbox{\hyperlink{Status_8cpp_source_l00029}{set\+Gold()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00239}{Game\+::handle\+IMMEDIATE\+\_\+\+PASS()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=302pt]{classStatus_a13cfac122ecddd7ba96ecd940d7a1e89_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_a13cfac122ecddd7ba96ecd940d7a1e89_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_a5839848d6c2f832789de5b3a0a058dab}\label{classStatus_a5839848d6c2f832789de5b3a0a058dab} 
+\index{Status@{Status}!addXp@{addXp}}
+\index{addXp@{addXp}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{addXp()}{addXp()}}
+{\footnotesize\ttfamily void Status\+::add\+Xp (\begin{DoxyParamCaption}\item[{int}]{xp }\end{DoxyParamCaption})}
+
+
+
+Adds experience points and handles level ups. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em xp} & Amount of XP to add. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00058}{58}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Status_8cpp_source_l00066}{get\+Xp\+To\+Next\+Level()}}, and \mbox{\hyperlink{Status_8cpp_source_l00033}{Level\+Up()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00439}{Game\+::handle\+COMBAT\+\_\+\+DEPENDENT()}}, \mbox{\hyperlink{Game_8cpp_source_l00239}{Game\+::handle\+IMMEDIATE\+\_\+\+PASS()}}, and \mbox{\hyperlink{Game_8cpp_source_l00559}{Game\+::handle\+Object\+Death()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_a5839848d6c2f832789de5b3a0a058dab_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_a5839848d6c2f832789de5b3a0a058dab_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_ada0ccdba81e8c80a89e43a8f0b9b172f}\label{classStatus_ada0ccdba81e8c80a89e43a8f0b9b172f} 
+\index{Status@{Status}!generateCard@{generateCard}}
+\index{generateCard@{generateCard}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{generateCard()}{generateCard()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ Status\+::generate\+Card (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption}) const}
+
+
+
+Generates a random game object based on loot table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position for the object. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unique pointer to generated object. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00070}{70}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574eae0c09b20cdfdabe58874256eb0b97787}{BADCHEST}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ac04cf18b7606efb16ff9ecbca87825}{BAT}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a1b7417bf9151374d7b062a64abd29425}{BOMB}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a5bdccd55677ef3fc449ed476ade69fb7}{CHEST}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a0a6df5230f556851ce21cd18a9e6ac80}{DYNAMITE}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980af9c55990ee5893e66c504fc8ca35bf79}{ELEMENTAL}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7665821fee6cc3f7535933a177ebe0be}{ELMAGIC}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a566621a60d66ad699cff53f2d21b8d9a}{ELWEAPON}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a92b09d1635332c90ae8508618a174244}{ENEMY}}, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602dab7426fb9c3932995306fceba2874d057}{FIRE}}, \mbox{\hyperlink{Status_8cpp_source_l00022}{get\+Level()}}, \mbox{\hyperlink{Status_8cpp_source_l00198}{get\+Random\+Value()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a2c0898822ab3baf7f93bea86648adb26}{GOLD}}, \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574ea7c0524e018f5a3d31da0ae59a08ff091}{GOODCHEST}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7f723c5fc350bac962b67157e70fff58}{GUN}}, \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a3a25f1406daa84785c1291a745018fae}{HEAL}}, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da22fb77eba93786121faa55c581785893}{ICE}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a9f289f3d4248ba595abb5f08766165a9}{MAG}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a8eee8e217391199668cbac89472ace53}{OBJECT}}, \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a2a542f30a3c393aff9183c7b72f2b034}{POISON}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a6a492839f1a85f3ddb226750959f799a}{POTION}}, \mbox{\hyperlink{Status_8cpp_source_l00177}{Random\+Selection()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a948ea267d4a32b3d91b837b54298de0a}{RUBY}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ce20399299146eae2f6c0e847de1f3b}{THORN}}, and \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a192633948703cf46924846d15ea7b5c1}{WEAPON}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00223}{Game\+::generatecard()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_ada0ccdba81e8c80a89e43a8f0b9b172f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_ada0ccdba81e8c80a89e43a8f0b9b172f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_ab609d516c858ca28a44665742e4519f8}\label{classStatus_ab609d516c858ca28a44665742e4519f8} 
+\index{Status@{Status}!generateChestLoot@{generateChestLoot}}
+\index{generateChestLoot@{generateChestLoot}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{generateChestLoot()}{generateChestLoot()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ Status\+::generate\+Chest\+Loot (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{\mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574e}{Chest\+Type}}}]{type }\end{DoxyParamCaption}) const}
+
+
+
+Generates loot from chest based on chest type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position for the loot. \\
+\hline
+{\em type} & Type of chest (good or bad). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unique pointer to generated loot object. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00144}{144}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574eae0c09b20cdfdabe58874256eb0b97787}{BADCHEST}}, \mbox{\hyperlink{Status_8cpp_source_l00022}{get\+Level()}}, \mbox{\hyperlink{Status_8cpp_source_l00198}{get\+Random\+Value()}}, \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574ea7c0524e018f5a3d31da0ae59a08ff091}{GOODCHEST}}, \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a3a25f1406daa84785c1291a745018fae}{HEAL}}, and \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a2a542f30a3c393aff9183c7b72f2b034}{POISON}}.
+
+
+
+Referenced by \mbox{\hyperlink{Chest_8cpp_source_l00052}{Chest\+::generate\+Loot()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_ab609d516c858ca28a44665742e4519f8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_ab609d516c858ca28a44665742e4519f8_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_a174fbb499d0a99db3533903f9d04d0d4}\label{classStatus_a174fbb499d0a99db3533903f9d04d0d4} 
+\index{Status@{Status}!getGold@{getGold}}
+\index{getGold@{getGold}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{getGold()}{getGold()}}
+{\footnotesize\ttfamily int Status\+::get\+Gold (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets current gold amount. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classGold}{Gold} value. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Status_8cpp_source_l00039}{add\+Gold()}}, \mbox{\hyperlink{Status_8cpp_source_l00050}{print()}}, and \mbox{\hyperlink{Status_8cpp_source_l00046}{take\+Gold()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_a174fbb499d0a99db3533903f9d04d0d4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_a1f60585ad759d8d780a039a2a5bddc71}\label{classStatus_a1f60585ad759d8d780a039a2a5bddc71} 
+\index{Status@{Status}!getLevel@{getLevel}}
+\index{getLevel@{getLevel}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{getLevel()}{getLevel()}}
+{\footnotesize\ttfamily int Status\+::get\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets current player level. 
+
+\begin{DoxyReturn}{Returns}
+Current level. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Status_8cpp_source_l00070}{generate\+Card()}}, \mbox{\hyperlink{Status_8cpp_source_l00144}{generate\+Chest\+Loot()}}, \mbox{\hyperlink{Status_8cpp_source_l00033}{Level\+Up()}}, \mbox{\hyperlink{Status_8cpp_source_l00050}{print()}}, and \mbox{\hyperlink{Status_8cpp_source_l00201}{update\+Loot\+Table()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_a1f60585ad759d8d780a039a2a5bddc71_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_aeb32ff747b6ec9ddb7b95baf165999dd}\label{classStatus_aeb32ff747b6ec9ddb7b95baf165999dd} 
+\index{Status@{Status}!getRandomValue@{getRandomValue}}
+\index{getRandomValue@{getRandomValue}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{getRandomValue()}{getRandomValue()}}
+{\footnotesize\ttfamily double Status\+::get\+Random\+Value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets random value between 0 and 1. 
+
+\begin{DoxyReturn}{Returns}
+Random double value. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00198}{198}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Status_8cpp_source_l00070}{generate\+Card()}}, \mbox{\hyperlink{Status_8cpp_source_l00144}{generate\+Chest\+Loot()}}, and \mbox{\hyperlink{Status_8cpp_source_l00177}{Random\+Selection()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_aeb32ff747b6ec9ddb7b95baf165999dd_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_a75c98e51dc7301f5a7963143597f7472}\label{classStatus_a75c98e51dc7301f5a7963143597f7472} 
+\index{Status@{Status}!getSteps@{getSteps}}
+\index{getSteps@{getSteps}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{getSteps()}{getSteps()}}
+{\footnotesize\ttfamily int Status\+::get\+Steps (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets steps taken. 
+
+\begin{DoxyReturn}{Returns}
+Step count. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+\Hypertarget{classStatus_a0cbf1f79ddb021c8406be509a48fab27}\label{classStatus_a0cbf1f79ddb021c8406be509a48fab27} 
+\index{Status@{Status}!getXp@{getXp}}
+\index{getXp@{getXp}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{getXp()}{getXp()}}
+{\footnotesize\ttfamily int Status\+::get\+Xp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets current experience points. 
+
+\begin{DoxyReturn}{Returns}
+XP value. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Status_8cpp_source_l00050}{print()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_a0cbf1f79ddb021c8406be509a48fab27_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_a6c4488c04843a79040c67d660ac1ac08}\label{classStatus_a6c4488c04843a79040c67d660ac1ac08} 
+\index{Status@{Status}!getXpToNextLevel@{getXpToNextLevel}}
+\index{getXpToNextLevel@{getXpToNextLevel}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{getXpToNextLevel()}{getXpToNextLevel()}}
+{\footnotesize\ttfamily int Status\+::get\+Xp\+To\+Next\+Level (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets XP required for next level. 
+
+\begin{DoxyReturn}{Returns}
+XP requirement. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Status_8cpp_source_l00058}{add\+Xp()}}, and \mbox{\hyperlink{Status_8cpp_source_l00050}{print()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_a6c4488c04843a79040c67d660ac1ac08_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_a7c1b69083a3d01cc7be0923c040b4895}\label{classStatus_a7c1b69083a3d01cc7be0923c040b4895} 
+\index{Status@{Status}!LevelUp@{LevelUp}}
+\index{LevelUp@{LevelUp}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{LevelUp()}{LevelUp()}}
+{\footnotesize\ttfamily void Status\+::\+Level\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Increases player level and updates progression. 
+
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Status_8cpp_source_l00022}{get\+Level()}}, \mbox{\hyperlink{Status_8cpp_source_l00026}{set\+Level()}}, and \mbox{\hyperlink{Status_8cpp_source_l00201}{update\+Loot\+Table()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Status_8cpp_source_l00058}{add\+Xp()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_a7c1b69083a3d01cc7be0923c040b4895_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_a7c1b69083a3d01cc7be0923c040b4895_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_af4f18066061f502586473fbd94ea4812}\label{classStatus_af4f18066061f502586473fbd94ea4812} 
+\index{Status@{Status}!print@{print}}
+\index{print@{print}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily std\+::string Status\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets formatted status string for UI. 
+
+\begin{DoxyReturn}{Returns}
+String with gold, level, and XP information. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Status_8cpp_source_l00042}{get\+Gold()}}, \mbox{\hyperlink{Status_8cpp_source_l00022}{get\+Level()}}, \mbox{\hyperlink{Status_8cpp_source_l00055}{get\+Xp()}}, and \mbox{\hyperlink{Status_8cpp_source_l00066}{get\+Xp\+To\+Next\+Level()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00095}{Game\+::draw()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=334pt]{classStatus_af4f18066061f502586473fbd94ea4812_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_af4f18066061f502586473fbd94ea4812_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_aa4152ce21c305b69a6f4cdfbef28b898}\label{classStatus_aa4152ce21c305b69a6f4cdfbef28b898} 
+\index{Status@{Status}!RandomSelection@{RandomSelection}}
+\index{RandomSelection@{RandomSelection}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{RandomSelection()}{RandomSelection()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Status\+::\+Random\+Selection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Selects random object type from loot table. 
+
+\begin{DoxyReturn}{Returns}
+Selected Object\+Type based on weights. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00177}{177}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Status_8cpp_source_l00198}{get\+Random\+Value()}}, and \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a8eee8e217391199668cbac89472ace53}{OBJECT}}.
+
+
+
+Referenced by \mbox{\hyperlink{Status_8cpp_source_l00070}{generate\+Card()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_aa4152ce21c305b69a6f4cdfbef28b898_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_aa4152ce21c305b69a6f4cdfbef28b898_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_ace370730dcc7c815668f9296dd39af76}\label{classStatus_ace370730dcc7c815668f9296dd39af76} 
+\index{Status@{Status}!setGold@{setGold}}
+\index{setGold@{setGold}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{setGold()}{setGold()}}
+{\footnotesize\ttfamily void Status\+::set\+Gold (\begin{DoxyParamCaption}\item[{int}]{gold }\end{DoxyParamCaption})}
+
+
+
+Sets gold amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gold} & New gold value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Status_8cpp_source_l00039}{add\+Gold()}}, \mbox{\hyperlink{Status_8cpp_source_l00010}{Status()}}, and \mbox{\hyperlink{Status_8cpp_source_l00046}{take\+Gold()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_ace370730dcc7c815668f9296dd39af76_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_a48c9085e3008c3f2108d7510386c39b7}\label{classStatus_a48c9085e3008c3f2108d7510386c39b7} 
+\index{Status@{Status}!setLevel@{setLevel}}
+\index{setLevel@{setLevel}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{setLevel()}{setLevel()}}
+{\footnotesize\ttfamily void Status\+::set\+Level (\begin{DoxyParamCaption}\item[{int}]{level }\end{DoxyParamCaption})}
+
+
+
+Sets player level and updates loot table. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level} & New level value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Status_8cpp_source_l00033}{Level\+Up()}}, and \mbox{\hyperlink{Status_8cpp_source_l00010}{Status()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_a48c9085e3008c3f2108d7510386c39b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_a6c3144c5db5133bbe4f55720f06e5ca0}\label{classStatus_a6c3144c5db5133bbe4f55720f06e5ca0} 
+\index{Status@{Status}!StepsUp@{StepsUp}}
+\index{StepsUp@{StepsUp}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{StepsUp()}{StepsUp()}}
+{\footnotesize\ttfamily void Status\+::\+Steps\+Up (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Increments step counter. 
+
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00030}{Game\+::update()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_a6c3144c5db5133bbe4f55720f06e5ca0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_a7f0898180535f03a1690284ef723913d}\label{classStatus_a7f0898180535f03a1690284ef723913d} 
+\index{Status@{Status}!takeGold@{takeGold}}
+\index{takeGold@{takeGold}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{takeGold()}{takeGold()}}
+{\footnotesize\ttfamily void Status\+::take\+Gold (\begin{DoxyParamCaption}\item[{int}]{gold }\end{DoxyParamCaption})}
+
+
+
+Reduces player\textquotesingle{}s gold. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gold} & Amount to subtract. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Status_8cpp_source_l00042}{get\+Gold()}}, and \mbox{\hyperlink{Status_8cpp_source_l00029}{set\+Gold()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classStatus_a7f0898180535f03a1690284ef723913d_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classStatus_a6e5de977faeb21c93f44a2025a8b205b}\label{classStatus_a6e5de977faeb21c93f44a2025a8b205b} 
+\index{Status@{Status}!updateLootTable@{updateLootTable}}
+\index{updateLootTable@{updateLootTable}!Status@{Status}}
+\doxysubsubsection{\texorpdfstring{updateLootTable()}{updateLootTable()}}
+{\footnotesize\ttfamily void Status\+::update\+Loot\+Table (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Updates loot table weights based on current level. 
+
+
+
+Definition at line \mbox{\hyperlink{Status_8cpp_source_l00201}{201}} of file \mbox{\hyperlink{Status_8cpp_source}{Status.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ac04cf18b7606efb16ff9ecbca87825}{BAT}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a1b7417bf9151374d7b062a64abd29425}{BOMB}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a5bdccd55677ef3fc449ed476ade69fb7}{CHEST}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a0a6df5230f556851ce21cd18a9e6ac80}{DYNAMITE}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980af9c55990ee5893e66c504fc8ca35bf79}{ELEMENTAL}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7665821fee6cc3f7535933a177ebe0be}{ELMAGIC}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a566621a60d66ad699cff53f2d21b8d9a}{ELWEAPON}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a92b09d1635332c90ae8508618a174244}{ENEMY}}, \mbox{\hyperlink{Status_8cpp_source_l00022}{get\+Level()}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a2c0898822ab3baf7f93bea86648adb26}{GOLD}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7f723c5fc350bac962b67157e70fff58}{GUN}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a9f289f3d4248ba595abb5f08766165a9}{MAG}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a6a492839f1a85f3ddb226750959f799a}{POTION}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a948ea267d4a32b3d91b837b54298de0a}{RUBY}}, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ce20399299146eae2f6c0e847de1f3b}{THORN}}, and \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a192633948703cf46924846d15ea7b5c1}{WEAPON}}.
+
+
+
+Referenced by \mbox{\hyperlink{Status_8cpp_source_l00033}{Level\+Up()}}, and \mbox{\hyperlink{Status_8cpp_source_l00010}{Status()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=345pt]{classStatus_a6e5de977faeb21c93f44a2025a8b205b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classStatus_a6e5de977faeb21c93f44a2025a8b205b_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{Status_8h}{Status.\+h}}\item 
+src/\mbox{\hyperlink{Status_8cpp}{Status.\+cpp}}\end{DoxyCompactItemize}
