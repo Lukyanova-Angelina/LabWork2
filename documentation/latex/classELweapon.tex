@@ -1,0 +1,344 @@
+\doxysection{ELweapon Class Reference}
+\hypertarget{classELweapon}{}\label{classELweapon}\index{ELweapon@{ELweapon}}
+
+
+\doxylink{classElemental}{Elemental} weapon with charged damage system.  
+
+
+
+
+{\ttfamily \#include $<$ELweapon.\+h$>$}
+
+
+
+Inheritance diagram for ELweapon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{classELweapon__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ELweapon\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{classELweapon__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classELweapon_a26af28775779f6f1c4ebe0fdfbd74bbe}{ELweapon}} (int pos, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} el)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classELweapon}{ELweapon} with random damage and specified element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classELweapon_a7ea6154f992802ce4f71cc64f401be03}{ELweapon}} (int pos, int damage, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} el)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classELweapon}{ELweapon} with specified damage and element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classELweapon_ab0ed30db19014801e5cd04e30f91623e}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information including elemental charge. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classELweapon_ac91ff7c3f86ef2953b8b6936b46a2d90}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a copy of the elemental weapon. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classELweapon_adcf1d2a03ce4ff09a2cc39c8be9685be}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} \mbox{\hyperlink{classELweapon_ab29b3767c0e514bd74a2426e0db34bd0}{get\+Element}} () const
+\begin{DoxyCompactList}\small\item\em Gets the charged elemental type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classELweapon_a4b895737ad933d332312a717bd830b8a}{return\+Interaction\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the interaction type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classELweapon_a782efb39cf8970cf090d70a08a40f40b}{calculate\+Final\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Calculates final damage with elemental charge bonuses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classWeapon}{Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWeapon_a485632635fd5cb2aa5d1b773d86012f2}{Weapon}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classWeapon}{Weapon} with random damage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWeapon_a4c824de4e4d24859b5fc2d49477af59e}{Weapon}} (int pos, int damage)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classWeapon}{Weapon} with specified damage. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWeapon_a5f1941efbf38c5719cf75e4a138e92d4}{get\+Damage}} () const
+\begin{DoxyCompactList}\small\item\em Gets current damage value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeapon_a54e4b500dcc3f5c3d02df6f1c29ddbea}{set\+Damage}} (int damage)
+\begin{DoxyCompactList}\small\item\em Sets damage value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classWeapon_a42f27519d8c5852b22a3e50b54dc4dcc}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information for weapon. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classWeapon_aa9cebf36b0e905bddee7666f0a5c39ae}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a copy of the weapon. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classWeapon_ae898bfca17d4f4112c90fe28040f79ae}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classWeapon_a7ba43f56f6facbb19ddcab879e39630b}{return\+Interaction\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the interaction type for weapons. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeapon_a6e0cca4f9b4581c5800732a3c0732786}{take\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Applies damage to weapon (reduces durability). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_a71da04043bdd83585112550c3e27a85d}{Object}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classObject}{Object} at the specified position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classObject_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. Removes any active damage callback. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObject_a4abd48bacb1b004c8ac891597c831f77}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates object state (called each game step). Base implementation does nothing -\/ override for custom behavior. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a746b108f37d54122539916373d6ad824}{set\+Position}} (int pos)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa893c9e84c6f0342507291ea2e50b30e}{move}} (int direction)
+\begin{DoxyCompactList}\small\item\em Moves the object in the specified direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classObject_a110b0235d69e91d6cd2684e54696f45b}{possibletomove}} (int direction)
+\begin{DoxyCompactList}\small\item\em Checks if movement in a direction is possible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7}{get\+Target\+Position}} (int direction) const
+\begin{DoxyCompactList}\small\item\em Calculates target position for a movement direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a569361cd11827f5d158b05537011d544}{get\+Target\+Direction}} (int pos2) const
+\begin{DoxyCompactList}\small\item\em Calculates direction to reach a target position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a65fb5ee0e5692e7158c266b92cdd2074}{set\+On\+Damage\+Callback}} (std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ callback)
+\begin{DoxyCompactList}\small\item\em Sets a callback function for damage events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a20141e220dafc6f225eebe800b0e9c41}{remove\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Removes the current damage callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{On\+Damage\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback for damage events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classElemental}{Elemental} weapon with charged damage system. 
+
+Inherits from \doxylink{classWeapon}{Weapon} and adds elemental charging functionality. Provides damage bonuses when hitting with correct element. 
+
+Definition at line \mbox{\hyperlink{ELweapon_8h_source_l00022}{22}} of file \mbox{\hyperlink{ELweapon_8h_source}{ELweapon.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classELweapon_a26af28775779f6f1c4ebe0fdfbd74bbe}\label{classELweapon_a26af28775779f6f1c4ebe0fdfbd74bbe} 
+\index{ELweapon@{ELweapon}!ELweapon@{ELweapon}}
+\index{ELweapon@{ELweapon}!ELweapon@{ELweapon}}
+\doxysubsubsection{\texorpdfstring{ELweapon()}{ELweapon()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ELweapon\+::\+ELweapon (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{el }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classELweapon}{ELweapon} with random damage and specified element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+{\em el} & \doxylink{classElemental}{Elemental} type. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ELweapon_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{ELweapon_8cpp_source}{ELweapon.\+cpp}}.
+
+\Hypertarget{classELweapon_a7ea6154f992802ce4f71cc64f401be03}\label{classELweapon_a7ea6154f992802ce4f71cc64f401be03} 
+\index{ELweapon@{ELweapon}!ELweapon@{ELweapon}}
+\index{ELweapon@{ELweapon}!ELweapon@{ELweapon}}
+\doxysubsubsection{\texorpdfstring{ELweapon()}{ELweapon()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ELweapon\+::\+ELweapon (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{int}]{damage,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{el }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classELweapon}{ELweapon} with specified damage and element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+{\em damage} & Initial damage value. \\
+\hline
+{\em el} & \doxylink{classElemental}{Elemental} type to charge with. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ELweapon_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{ELweapon_8cpp_source}{ELweapon.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classELweapon_a782efb39cf8970cf090d70a08a40f40b}\label{classELweapon_a782efb39cf8970cf090d70a08a40f40b} 
+\index{ELweapon@{ELweapon}!calculateFinalDamage@{calculateFinalDamage}}
+\index{calculateFinalDamage@{calculateFinalDamage}!ELweapon@{ELweapon}}
+\doxysubsubsection{\texorpdfstring{calculateFinalDamage()}{calculateFinalDamage()}}
+{\footnotesize\ttfamily int ELweapon\+::calculate\+Final\+Damage (\begin{DoxyParamCaption}\item[{int}]{dmg,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates final damage with elemental charge bonuses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dmg} & Base damage amount. \\
+\hline
+{\em type} & Type of damage being applied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Final damage after elemental calculations. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classWeapon_a699365cd1118c61662b5567dc6266044}{Weapon}}.
+
+
+
+Definition at line \mbox{\hyperlink{ELweapon_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{ELweapon_8cpp_source}{ELweapon.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{ELweapon_8cpp_source_l00029}{get\+Element()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classELweapon_a782efb39cf8970cf090d70a08a40f40b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classELweapon_ac91ff7c3f86ef2953b8b6936b46a2d90}\label{classELweapon_ac91ff7c3f86ef2953b8b6936b46a2d90} 
+\index{ELweapon@{ELweapon}!clone@{clone}}
+\index{clone@{clone}!ELweapon@{ELweapon}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ ELweapon\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a copy of the elemental weapon. 
+
+\begin{DoxyReturn}{Returns}
+Unique pointer to cloned \doxylink{classELweapon}{ELweapon}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_ada211a17211c090c8a20c0893c6ec3a1}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{ELweapon_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{ELweapon_8cpp_source}{ELweapon.\+cpp}}.
+
+\Hypertarget{classELweapon_ab29b3767c0e514bd74a2426e0db34bd0}\label{classELweapon_ab29b3767c0e514bd74a2426e0db34bd0} 
+\index{ELweapon@{ELweapon}!getElement@{getElement}}
+\index{getElement@{getElement}!ELweapon@{ELweapon}}
+\doxysubsubsection{\texorpdfstring{getElement()}{getElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} ELweapon\+::get\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the charged elemental type. 
+
+\begin{DoxyReturn}{Returns}
+Damage\+Type enum value of the charge. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classWeapon_afe428ac59d86ed0f815b704510441ddf}{Weapon}}.
+
+
+
+Definition at line \mbox{\hyperlink{ELweapon_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{ELweapon_8cpp_source}{ELweapon.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{ELweapon_8cpp_source_l00041}{calculate\+Final\+Damage()}}, and \mbox{\hyperlink{ELweapon_8cpp_source_l00015}{print()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classELweapon_ab29b3767c0e514bd74a2426e0db34bd0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classELweapon_ab0ed30db19014801e5cd04e30f91623e}\label{classELweapon_ab0ed30db19014801e5cd04e30f91623e} 
+\index{ELweapon@{ELweapon}!print@{print}}
+\index{print@{print}!ELweapon@{ELweapon}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDisplayInfo}{Display\+Info}} ELweapon\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets display information including elemental charge. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDisplayInfo}{Display\+Info} structure for UI rendering. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_ab79063b8627e3f798f3a01f278cf2190}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{ELweapon_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{ELweapon_8cpp_source}{ELweapon.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602dab7426fb9c3932995306fceba2874d057}{FIRE}}, \mbox{\hyperlink{Weapon_8cpp_source_l00018}{Weapon\+::get\+Damage()}}, \mbox{\hyperlink{ELweapon_8cpp_source_l00029}{get\+Element()}}, and \mbox{\hyperlink{Colors_8h_source_l00029}{Color\+::\+MAGENTA}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classELweapon_ab0ed30db19014801e5cd04e30f91623e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classELweapon_a4b895737ad933d332312a717bd830b8a}\label{classELweapon_a4b895737ad933d332312a717bd830b8a} 
+\index{ELweapon@{ELweapon}!returnInteractionType@{returnInteractionType}}
+\index{returnInteractionType@{returnInteractionType}!ELweapon@{ELweapon}}
+\doxysubsubsection{\texorpdfstring{returnInteractionType()}{returnInteractionType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} ELweapon\+::return\+Interaction\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the interaction type. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{Interaction\+Type\+::\+IMMEDIATE\+\_\+\+PASS} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_adbab575cfa08f2b354263d132f27c811}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{ELweapon_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{ELweapon_8cpp_source}{ELweapon.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{IMMEDIATE\+\_\+\+PASS}}.
+
+\Hypertarget{classELweapon_adcf1d2a03ce4ff09a2cc39c8be9685be}\label{classELweapon_adcf1d2a03ce4ff09a2cc39c8be9685be} 
+\index{ELweapon@{ELweapon}!returntype@{returntype}}
+\index{returntype@{returntype}!ELweapon@{ELweapon}}
+\doxysubsubsection{\texorpdfstring{returntype()}{returntype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} ELweapon\+::returntype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the object type identifier. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a842c5e2e69277690b064bf363c017980a566621a60d66ad699cff53f2d21b8d9a}{Object\+Type\+::\+ELWEAPON} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_a16b6fa35fd87615a3afb4499356d2a0d}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{ELweapon_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{ELweapon_8cpp_source}{ELweapon.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a566621a60d66ad699cff53f2d21b8d9a}{ELWEAPON}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{ELweapon_8h}{ELweapon.\+h}}\item 
+src/\mbox{\hyperlink{ELweapon_8cpp}{ELweapon.\+cpp}}\end{DoxyCompactItemize}

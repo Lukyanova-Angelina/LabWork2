@@ -1,0 +1,5 @@
+<map id="Character::takeHP" name="Character::takeHP">
+<area shape="rect" id="Node000001" title="Reduces character&#39;s health by specified amount." alt="" coords="229,5,368,31"/>
+<area shape="rect" id="Node000002" href="$classCharacter.html#a1e60409a1566f987ae4aeab6fc769b22" title="Applies damage with specified type." alt="" coords="5,5,181,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="216,21,182,21,182,15,216,15"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Status::addGold" name="Status::addGold">
+<area shape="rect" id="Node000001" title="Adds gold to player&#39;s total." alt="" coords="5,31,131,56"/>
+<area shape="rect" id="Node000002" href="$classStatus.html#a174fbb499d0a99db3533903f9d04d0d4" title="Gets current gold amount." alt="" coords="179,5,301,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="131,31,165,26,166,32,131,37"/>
+<area shape="rect" id="Node000003" href="$classStatus.html#ace370730dcc7c815668f9296dd39af76" title="Sets gold amount." alt="" coords="179,55,301,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="131,49,166,54,165,60,131,55"/>
+</map>

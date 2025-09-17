@@ -1,0 +1,97 @@
+\doxysection{src/\+Object.cpp File Reference}
+\hypertarget{Object_8cpp}{}\label{Object_8cpp}\index{src/Object.cpp@{src/Object.cpp}}
+
+
+Implementation of the \doxylink{classObject}{Object} base class methods.  
+
+
+{\ttfamily \#include "{}Object.\+h"{}}\newline
+Include dependency graph for Object.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Object_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{Object_8cpp_a32083e5d8074832176c4c56837ada8f1}{center\+Text}} (const std\+::string \&text, size\+\_\+t width)
+\begin{DoxyCompactList}\small\item\em Centers text with special handling for Unicode symbols. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{Object_8cpp_a9511872ad0cdad248047a0d3649b555a}{left\+Align}} (const std\+::string \&text, size\+\_\+t width, char fill)
+\begin{DoxyCompactList}\small\item\em Left-\/aligns text with padding. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the \doxylink{classObject}{Object} base class methods. 
+
+
+
+Definition in file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Object_8cpp_a32083e5d8074832176c4c56837ada8f1}\label{Object_8cpp_a32083e5d8074832176c4c56837ada8f1} 
+\index{Object.cpp@{Object.cpp}!centerText@{centerText}}
+\index{centerText@{centerText}!Object.cpp@{Object.cpp}}
+\doxysubsubsection{\texorpdfstring{centerText()}{centerText()}}
+{\footnotesize\ttfamily std\+::string center\+Text (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{size\+\_\+t}]{width }\end{DoxyParamCaption})}
+
+
+
+Centers text with special handling for Unicode symbols. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Text to center. \\
+\hline
+{\em width} & Total width for centering. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Centered text string with proper Unicode symbol handling. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00150}{150}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00095}{Game\+::draw()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Object_8cpp_a32083e5d8074832176c4c56837ada8f1_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{Object_8cpp_a9511872ad0cdad248047a0d3649b555a}\label{Object_8cpp_a9511872ad0cdad248047a0d3649b555a} 
+\index{Object.cpp@{Object.cpp}!leftAlign@{leftAlign}}
+\index{leftAlign@{leftAlign}!Object.cpp@{Object.cpp}}
+\doxysubsubsection{\texorpdfstring{leftAlign()}{leftAlign()}}
+{\footnotesize\ttfamily std\+::string left\+Align (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{text,  }\item[{size\+\_\+t}]{width,  }\item[{char}]{fill }\end{DoxyParamCaption})}
+
+
+
+Left-\/aligns text with padding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em text} & Text to align. \\
+\hline
+{\em width} & Total width for alignment. \\
+\hline
+{\em fill} & char to use for padding. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Left-\/aligned text string. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00193}{193}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+

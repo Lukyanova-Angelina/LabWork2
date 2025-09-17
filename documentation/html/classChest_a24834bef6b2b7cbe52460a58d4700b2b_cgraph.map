@@ -1,0 +1,5 @@
+<map id="Chest::print" name="Chest::print">
+<area shape="rect" id="Node000001" title="Gets display information for the chest." alt="" coords="5,5,103,31"/>
+<area shape="rect" id="Node000002" href="$classChest.html#a6c89f699203941d71c7419be42325732" title="Gets the chest type." alt="" coords="151,5,305,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,15,137,15,137,21,103,21"/>
+</map>

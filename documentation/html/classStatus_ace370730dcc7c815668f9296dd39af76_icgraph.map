@@ -1,0 +1,15 @@
+<map id="Status::setGold" name="Status::setGold">
+<area shape="rect" id="Node000001" title="Sets gold amount." alt="" coords="755,55,876,80"/>
+<area shape="rect" id="Node000002" href="$classStatus.html#a13cfac122ecddd7ba96ecd940d7a1e89" title="Adds gold to player&#39;s total." alt="" coords="579,5,705,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="756,53,687,33,688,28,758,48"/>
+<area shape="rect" id="Node000006" href="$classStatus.html#a944586fb328a3524805748c8f7b17f32" title="Constructs Status with initial values." alt="" coords="586,55,698,80"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="741,70,698,70,698,65,741,65"/>
+<area shape="rect" id="Node000007" href="$classStatus.html#a7f0898180535f03a1690284ef723913d" title="Reduces player&#39;s gold." alt="" coords="577,104,707,129"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="758,86,688,106,687,101,756,81"/>
+<area shape="rect" id="Node000003" href="$classGame.html#aa7e441af2bf58d6926635c1b6e5c6747" title="Handles immediate pass interactions (weapons, items, etc.)." alt="" coords="303,5,529,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="565,21,530,21,530,15,565,15"/>
+<area shape="rect" id="Node000004" href="$classGame.html#a28d97d9a41d73e279d0255587b3e21e7" title="Handles player input and triggers appropriate actions." alt="" coords="108,5,255,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="289,21,255,21,255,15,289,15"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

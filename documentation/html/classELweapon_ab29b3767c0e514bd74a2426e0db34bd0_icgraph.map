@@ -1,0 +1,7 @@
+<map id="ELweapon::getElement" name="ELweapon::getElement">
+<area shape="rect" id="Node000001" title="Gets the charged elemental type." alt="" coords="240,42,411,67"/>
+<area shape="rect" id="Node000002" href="$classELweapon.html#a782efb39cf8970cf090d70a08a40f40b" title="Calculates final damage with elemental charge bonuses." alt="" coords="5,5,192,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="226,45,192,40,192,35,227,39"/>
+<area shape="rect" id="Node000003" href="$classELweapon.html#ab0ed30db19014801e5cd04e30f91623e" title="Gets display information including elemental charge." alt="" coords="35,70,162,95"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="227,70,162,78,162,72,226,64"/>
+</map>

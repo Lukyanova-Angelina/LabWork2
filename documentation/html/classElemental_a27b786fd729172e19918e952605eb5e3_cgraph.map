@@ -1,0 +1,5 @@
+<map id="Elemental::calculateFinalDamage" name="Elemental::calculateFinalDamage">
+<area shape="rect" id="Node000001" title="Calculates final damage with elemental interactions." alt="" coords="5,5,192,45"/>
+<area shape="rect" id="Node000002" href="$classElemental.html#a798faa5fec5ca4d06b5322c82cf2e315" title="Gets the elemental affinity." alt="" coords="240,13,411,38"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="192,23,226,23,226,28,192,28"/>
+</map>

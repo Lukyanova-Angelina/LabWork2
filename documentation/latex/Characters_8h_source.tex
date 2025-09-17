@@ -1,0 +1,50 @@
+\doxysection{Characters.\+h}
+\hypertarget{Characters_8h_source}{}\label{Characters_8h_source}\index{headers/Characters.h@{headers/Characters.h}}
+\mbox{\hyperlink{Characters_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ CHARACTERS\_H}}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ CHARACTERS\_H}}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Object_8h}{Object.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Weapon_8h}{Weapon.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00024}\mbox{\hyperlink{classCharacter}{00024}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classCharacter}{Character}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObject}{Object}}\ \{}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00025}00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00026}00026\ \ \ \ \ std::string\ \_Name;\ \ \ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00027}00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \_HP;\ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00028}00028\ \ \ \ \ \textcolor{keywordtype}{int}\ \_MAX\_HP;\ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00030}00030\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{classCharacter_adc27bdd255876169bad2ed0bae0cffb5}{Character}}();}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00036}00036\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{classCharacter_adc27bdd255876169bad2ed0bae0cffb5}{Character}}(\textcolor{keywordtype}{int}\ pos,\ std::string\ name,\ \textcolor{keywordtype}{int}\ hp,\ \textcolor{keywordtype}{int}\ maxhp);}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00045}00045\ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00050}00050\ \ \ \ \ std::string\ \mbox{\hyperlink{classCharacter_ad79f892fe576c7ef0804cad502d94517}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00051}00051\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00056}00056\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00057}00057\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCharacter_a6eedfaea70dc15a219b3dc8f646d3e23}{getMaxHP}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00068}00068\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCharacter_a11ab1f4f914a289e46b3e400cec26fc5}{setName}}(\textcolor{keyword}{const}\ std::string\&\ name);}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00069}00069\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00074}00074\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCharacter_a030786bca8ce703c96a275751b74b2fd}{setHP}}(\textcolor{keywordtype}{int}\ hp);}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00075}00075\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00080}00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCharacter_aa0d706d718ed2a4eeca87aeda83ff4ff}{setMaxHP}}(\textcolor{keywordtype}{int}\ maxhp);}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00081}00081\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCharacter_a8d6fad66d361d74a9a9122a7d6c620b0}{takeHP}}(\textcolor{keywordtype}{int}\ hp);}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00087}00087\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00092}00092\ \ \ \ \ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classCharacter_aa450176031bc9781a158f77ee2fa505f}{print}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00093}00093\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00101}00101\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCharacter_a899331777864cf087d745d6095039b75}{takeDamage}}(\mbox{\hyperlink{classWeapon}{Weapon}}*\ o);}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00102}00102\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00111}00111\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classCharacter_a899331777864cf087d745d6095039b75}{takeDamage}}(\textcolor{keywordtype}{int}\ dmg,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00112}00112\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00121}00121\ \ \ \ \ \textcolor{keyword}{virtual}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classCharacter_aea5b5db69ac071ad6030f6d924b3ce08}{calculateFinalDamage}}(\textcolor{keywordtype}{int}\ dmg,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type);}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00122}00122\ \};}
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00123}00123\ }
+\DoxyCodeLine{\Hypertarget{Characters_8h_source_l00124}00124\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

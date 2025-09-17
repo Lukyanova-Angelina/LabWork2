@@ -1,0 +1,5 @@
+<map id="Game::isPlayerAlive" name="Game::isPlayerAlive">
+<area shape="rect" id="Node000001" title="Checks if player is alive." alt="" coords="5,5,160,31"/>
+<area shape="rect" id="Node000002" href="$classCharacter.html#a719cf393f4cdcc82a403f70732adee02" title="Gets current health points." alt="" coords="208,5,340,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="160,15,194,15,194,21,160,21"/>
+</map>

@@ -1,0 +1,405 @@
+\doxysection{Bomb Class Reference}
+\hypertarget{classBomb}{}\label{classBomb}\index{Bomb@{Bomb}}
+
+
+Timed explosive that damages adjacent cells.  
+
+
+
+
+{\ttfamily \#include $<$Bomb.\+h$>$}
+
+
+
+Inheritance diagram for Bomb\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{classBomb__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Bomb\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{classBomb__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBomb_a2c5a249212a8fe9a8b40af66f1d376ff}{Bomb}} (int pos, int amount)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classBomb}{Bomb} with specified damage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classBomb_ab3ab7b1d137e0565874279f79c76e36f}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information for bomb. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classBomb_a7e0816b8cde7b836876f03c4a63a6e2e}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classBomb_a77602c50c280ef8ae8c8f256dd0be202}{return\+Interaction\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the interaction type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBomb_a5aace3f4176e3ef80da7b80ae13a3126}{get\+Amount}} () const
+\begin{DoxyCompactList}\small\item\em Gets explosion damage amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBomb_a11c44513306bbb7b9abc37e1aecf0da9}{set\+Amount}} (int amount)
+\begin{DoxyCompactList}\small\item\em Sets explosion damage amount. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBomb_a43c1ca638c7e6f1605ae2dcb72e49b88}{get\+Duration}} () const
+\begin{DoxyCompactList}\small\item\em Gets remaining duration until explosion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBomb_a73c2f929e99b012e5338c8a0b75d958f}{set\+Duration}} (int dur)
+\begin{DoxyCompactList}\small\item\em Sets explosion duration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBomb_a15851182c209713a5946f977a7fb24b8}{update}} () override
+\begin{DoxyCompactList}\small\item\em Updates bomb state -\/ decreases countdown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBomb_ac1dd7e17fb778897865e170d43b3a255}{take\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Applies damage to bomb (reduces explosion power). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_a71da04043bdd83585112550c3e27a85d}{Object}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classObject}{Object} at the specified position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classObject_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. Removes any active damage callback. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classObject_ada211a17211c090c8a20c0893c6ec3a1}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Creates a copy of this object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a746b108f37d54122539916373d6ad824}{set\+Position}} (int pos)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa893c9e84c6f0342507291ea2e50b30e}{move}} (int direction)
+\begin{DoxyCompactList}\small\item\em Moves the object in the specified direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classObject_a110b0235d69e91d6cd2684e54696f45b}{possibletomove}} (int direction)
+\begin{DoxyCompactList}\small\item\em Checks if movement in a direction is possible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7}{get\+Target\+Position}} (int direction) const
+\begin{DoxyCompactList}\small\item\em Calculates target position for a movement direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a569361cd11827f5d158b05537011d544}{get\+Target\+Direction}} (int pos2) const
+\begin{DoxyCompactList}\small\item\em Calculates direction to reach a target position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a65fb5ee0e5692e7158c266b92cdd2074}{set\+On\+Damage\+Callback}} (std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ callback)
+\begin{DoxyCompactList}\small\item\em Sets a callback function for damage events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a20141e220dafc6f225eebe800b0e9c41}{remove\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Removes the current damage callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{On\+Damage\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback for damage events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Timed explosive that damages adjacent cells. 
+
+Inherits from \doxylink{classObject}{Object}. Has countdown timer and explosion damage value. Explodes when timer reaches zero. 
+
+Definition at line \mbox{\hyperlink{Bomb_8h_source_l00022}{22}} of file \mbox{\hyperlink{Bomb_8h_source}{Bomb.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classBomb_a2c5a249212a8fe9a8b40af66f1d376ff}\label{classBomb_a2c5a249212a8fe9a8b40af66f1d376ff} 
+\index{Bomb@{Bomb}!Bomb@{Bomb}}
+\index{Bomb@{Bomb}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{Bomb()}{Bomb()}}
+{\footnotesize\ttfamily Bomb\+::\+Bomb (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classBomb}{Bomb} with specified damage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+{\em amount} & Explosion damage amount. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Bomb_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{Bomb_8cpp_source}{Bomb.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classBomb_a5aace3f4176e3ef80da7b80ae13a3126}\label{classBomb_a5aace3f4176e3ef80da7b80ae13a3126} 
+\index{Bomb@{Bomb}!getAmount@{getAmount}}
+\index{getAmount@{getAmount}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{getAmount()}{getAmount()}}
+{\footnotesize\ttfamily int Bomb\+::get\+Amount (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets explosion damage amount. 
+
+\begin{DoxyReturn}{Returns}
+Damage value of explosion. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Bomb_8cpp_source_l00028}{28}} of file \mbox{\hyperlink{Bomb_8cpp_source}{Bomb.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00559}{Game\+::handle\+Object\+Death()}}, \mbox{\hyperlink{Bomb_8cpp_source_l00011}{print()}}, \mbox{\hyperlink{Dynamite_8cpp_source_l00010}{Dynamite\+::print()}}, and \mbox{\hyperlink{Bomb_8cpp_source_l00045}{take\+Damage()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classBomb_a5aace3f4176e3ef80da7b80ae13a3126_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBomb_a43c1ca638c7e6f1605ae2dcb72e49b88}\label{classBomb_a43c1ca638c7e6f1605ae2dcb72e49b88} 
+\index{Bomb@{Bomb}!getDuration@{getDuration}}
+\index{getDuration@{getDuration}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{getDuration()}{getDuration()}}
+{\footnotesize\ttfamily int Bomb\+::get\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets remaining duration until explosion. 
+
+\begin{DoxyReturn}{Returns}
+Turns remaining. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Bomb_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{Bomb_8cpp_source}{Bomb.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Bomb_8cpp_source_l00011}{print()}}, \mbox{\hyperlink{Dynamite_8cpp_source_l00010}{Dynamite\+::print()}}, and \mbox{\hyperlink{Bomb_8cpp_source_l00042}{update()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classBomb_a43c1ca638c7e6f1605ae2dcb72e49b88_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBomb_ab3ab7b1d137e0565874279f79c76e36f}\label{classBomb_ab3ab7b1d137e0565874279f79c76e36f} 
+\index{Bomb@{Bomb}!print@{print}}
+\index{print@{print}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDisplayInfo}{Display\+Info}} Bomb\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets display information for bomb. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDisplayInfo}{Display\+Info} structure with countdown visualization. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_ab79063b8627e3f798f3a01f278cf2190}{Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classDynamite_a1caa8e196929239c81137059063cb360}{Dynamite}}.
+
+
+
+Definition at line \mbox{\hyperlink{Bomb_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{Bomb_8cpp_source}{Bomb.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Bomb_8cpp_source_l00028}{get\+Amount()}}, and \mbox{\hyperlink{Bomb_8cpp_source_l00035}{get\+Duration()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=299pt]{classBomb_ab3ab7b1d137e0565874279f79c76e36f_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBomb_a77602c50c280ef8ae8c8f256dd0be202}\label{classBomb_a77602c50c280ef8ae8c8f256dd0be202} 
+\index{Bomb@{Bomb}!returnInteractionType@{returnInteractionType}}
+\index{returnInteractionType@{returnInteractionType}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{returnInteractionType()}{returnInteractionType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} Bomb\+::return\+Interaction\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the interaction type. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a6f76c71d94d1409dfe6847c8d7a1b3e1}{Interaction\+Type\+::\+SWAP\+\_\+\+REQUIRED} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_adbab575cfa08f2b354263d132f27c811}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Bomb_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{Bomb_8cpp_source}{Bomb.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a6f76c71d94d1409dfe6847c8d7a1b3e1}{SWAP\+\_\+\+REQUIRED}}.
+
+\Hypertarget{classBomb_a7e0816b8cde7b836876f03c4a63a6e2e}\label{classBomb_a7e0816b8cde7b836876f03c4a63a6e2e} 
+\index{Bomb@{Bomb}!returntype@{returntype}}
+\index{returntype@{returntype}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{returntype()}{returntype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Bomb\+::returntype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the object type identifier. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a842c5e2e69277690b064bf363c017980a1b7417bf9151374d7b062a64abd29425}{Object\+Type\+::\+BOMB} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_a16b6fa35fd87615a3afb4499356d2a0d}{Object}}.
+
+
+
+Reimplemented in \mbox{\hyperlink{classDynamite_add365eae971de27b92012fe3e7a84731}{Dynamite}}.
+
+
+
+Definition at line \mbox{\hyperlink{Bomb_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{Bomb_8cpp_source}{Bomb.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a1b7417bf9151374d7b062a64abd29425}{BOMB}}.
+
+\Hypertarget{classBomb_a11c44513306bbb7b9abc37e1aecf0da9}\label{classBomb_a11c44513306bbb7b9abc37e1aecf0da9} 
+\index{Bomb@{Bomb}!setAmount@{setAmount}}
+\index{setAmount@{setAmount}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{setAmount()}{setAmount()}}
+{\footnotesize\ttfamily void Bomb\+::set\+Amount (\begin{DoxyParamCaption}\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Sets explosion damage amount. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & New damage value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Bomb_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{Bomb_8cpp_source}{Bomb.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Bomb_8cpp_source_l00045}{take\+Damage()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=333pt]{classBomb_a11c44513306bbb7b9abc37e1aecf0da9_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBomb_a73c2f929e99b012e5338c8a0b75d958f}\label{classBomb_a73c2f929e99b012e5338c8a0b75d958f} 
+\index{Bomb@{Bomb}!setDuration@{setDuration}}
+\index{setDuration@{setDuration}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{setDuration()}{setDuration()}}
+{\footnotesize\ttfamily void Bomb\+::set\+Duration (\begin{DoxyParamCaption}\item[{int}]{dur }\end{DoxyParamCaption})}
+
+
+
+Sets explosion duration. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dur} & New duration value. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Bomb_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{Bomb_8cpp_source}{Bomb.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Bomb_8cpp_source_l00042}{update()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=309pt]{classBomb_a73c2f929e99b012e5338c8a0b75d958f_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBomb_ac1dd7e17fb778897865e170d43b3a255}\label{classBomb_ac1dd7e17fb778897865e170d43b3a255} 
+\index{Bomb@{Bomb}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily void Bomb\+::take\+Damage (\begin{DoxyParamCaption}\item[{int}]{dmg,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Applies damage to bomb (reduces explosion power). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dmg} & Amount of damage to apply. \\
+\hline
+{\em type} & Type of damage being applied. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_ac886af1d32fa2370531cffcd7e5125fb}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Bomb_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{Bomb_8cpp_source}{Bomb.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Bomb_8cpp_source_l00028}{get\+Amount()}}, \mbox{\hyperlink{Object_8cpp_source_l00030}{Object\+::get\+Position()}}, \mbox{\hyperlink{Object_8h_source_l00050}{Object\+::\+On\+Damage\+Callback}}, and \mbox{\hyperlink{Bomb_8cpp_source_l00031}{set\+Amount()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classBomb_ac1dd7e17fb778897865e170d43b3a255_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classBomb_a15851182c209713a5946f977a7fb24b8}\label{classBomb_a15851182c209713a5946f977a7fb24b8} 
+\index{Bomb@{Bomb}!update@{update}}
+\index{update@{update}!Bomb@{Bomb}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Bomb\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Updates bomb state -\/ decreases countdown. 
+
+
+
+Reimplemented from \mbox{\hyperlink{classObject_a4abd48bacb1b004c8ac891597c831f77}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Bomb_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{Bomb_8cpp_source}{Bomb.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Bomb_8cpp_source_l00035}{get\+Duration()}}, and \mbox{\hyperlink{Bomb_8cpp_source_l00038}{set\+Duration()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=310pt]{classBomb_a15851182c209713a5946f977a7fb24b8_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{Bomb_8h}{Bomb.\+h}}\item 
+src/\mbox{\hyperlink{Bomb_8cpp}{Bomb.\+cpp}}\end{DoxyCompactItemize}

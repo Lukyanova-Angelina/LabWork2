@@ -1,0 +1,350 @@
+\doxysection{Elemental Class Reference}
+\hypertarget{classElemental}{}\label{classElemental}\index{Elemental@{Elemental}}
+
+
+\doxylink{classElemental}{Elemental} enemy with damage type interactions.  
+
+
+
+
+{\ttfamily \#include $<$Elemental.\+h$>$}
+
+
+
+Inheritance diagram for Elemental\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{classElemental__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Elemental\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=146pt]{classElemental__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classElemental_a6f08d79e2a0d668eba552f1525c1a390}{Elemental}} (int pos, int hp, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classElemental}{Elemental} with specified health and element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classElemental_a2dcd55023ea6c637ca8014bd66582912}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information including elemental type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classElemental_ac9e477707283a12b706d2c5e0f4fedec}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} \mbox{\hyperlink{classElemental_a798faa5fec5ca4d06b5322c82cf2e315}{get\+Element}} () const
+\begin{DoxyCompactList}\small\item\em Gets the elemental affinity. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classElemental_a4d942a61f73f0d363bb0f9fdd51a1026}{take\+Damage}} (\mbox{\hyperlink{classWeapon}{Weapon}} \texorpdfstring{$\ast$}{*}o) override
+\begin{DoxyCompactList}\small\item\em Takes damage from weapon with elemental calculations. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classElemental_adc01a38adcc17544f37e072014e4077b}{return\+Interaction\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the interaction type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classElemental_a27b786fd729172e19918e952605eb5e3}{calculate\+Final\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Calculates final damage with elemental interactions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classEnemy}{Enemy}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEnemy_a1993866c8fec7ce962667557156fa1bd}{Enemy}} (int pos, std\+::string name, int hp, int maxhp)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classEnemy}{Enemy} with specified parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEnemy_a0a4a5ad817eb9feb4e4da79ffb3bcf8b}{Enemy}} (int pos, int hp)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classEnemy}{Enemy} with health parameter. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classEnemy_a6a0dd750ac14a96bfb60eeac61eb2cdc}{Enemy}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classEnemy}{Enemy} with default parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classEnemy_a7c98914636edf5a718493d876475121a}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information for enemy. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classEnemy_ad64a3a03fe351a6d59005015659079a3}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classEnemy_a4e0da93b42c070ca9135a632e7a35ecf}{return\+Interaction\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the interaction type for enemies. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCharacter}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacter_adc27bdd255876169bad2ed0bae0cffb5}{Character}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates a character with default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCharacter_a844efb6d850a7310298eddfaca1f9548}{Character}} (int pos, std\+::string name, int hp, int maxhp)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCharacter_ad79f892fe576c7ef0804cad502d94517}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the character\textquotesingle{}s name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{get\+HP}} () const
+\begin{DoxyCompactList}\small\item\em Gets current health points. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacter_a6eedfaea70dc15a219b3dc8f646d3e23}{get\+Max\+HP}} () const
+\begin{DoxyCompactList}\small\item\em Gets maximum health points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a11ab1f4f914a289e46b3e400cec26fc5}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the character\textquotesingle{}s name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a030786bca8ce703c96a275751b74b2fd}{set\+HP}} (int hp)
+\begin{DoxyCompactList}\small\item\em Sets current health points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_aa0d706d718ed2a4eeca87aeda83ff4ff}{set\+Max\+HP}} (int maxhp)
+\begin{DoxyCompactList}\small\item\em Sets maximum health points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a8d6fad66d361d74a9a9122a7d6c620b0}{take\+HP}} (int hp)
+\begin{DoxyCompactList}\small\item\em Reduces character\textquotesingle{}s health by specified amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a1e60409a1566f987ae4aeab6fc769b22}{take\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Applies damage with specified type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_a71da04043bdd83585112550c3e27a85d}{Object}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classObject}{Object} at the specified position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classObject_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. Removes any active damage callback. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classObject_ada211a17211c090c8a20c0893c6ec3a1}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Creates a copy of this object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObject_a4abd48bacb1b004c8ac891597c831f77}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates object state (called each game step). Base implementation does nothing -\/ override for custom behavior. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a746b108f37d54122539916373d6ad824}{set\+Position}} (int pos)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa893c9e84c6f0342507291ea2e50b30e}{move}} (int direction)
+\begin{DoxyCompactList}\small\item\em Moves the object in the specified direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classObject_a110b0235d69e91d6cd2684e54696f45b}{possibletomove}} (int direction)
+\begin{DoxyCompactList}\small\item\em Checks if movement in a direction is possible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7}{get\+Target\+Position}} (int direction) const
+\begin{DoxyCompactList}\small\item\em Calculates target position for a movement direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a569361cd11827f5d158b05537011d544}{get\+Target\+Direction}} (int pos2) const
+\begin{DoxyCompactList}\small\item\em Calculates direction to reach a target position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a65fb5ee0e5692e7158c266b92cdd2074}{set\+On\+Damage\+Callback}} (std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ callback)
+\begin{DoxyCompactList}\small\item\em Sets a callback function for damage events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a20141e220dafc6f225eebe800b0e9c41}{remove\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Removes the current damage callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{On\+Damage\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback for damage events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classElemental}{Elemental} enemy with damage type interactions. 
+
+Inherits from \doxylink{classEnemy}{Enemy}. Has FIRE or ICE affinity and reacts differently to elemental attacks. Can heal from same element or take double damage from opposite. 
+
+Definition at line \mbox{\hyperlink{Elemental_8h_source_l00024}{24}} of file \mbox{\hyperlink{Elemental_8h_source}{Elemental.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classElemental_a6f08d79e2a0d668eba552f1525c1a390}\label{classElemental_a6f08d79e2a0d668eba552f1525c1a390} 
+\index{Elemental@{Elemental}!Elemental@{Elemental}}
+\index{Elemental@{Elemental}!Elemental@{Elemental}}
+\doxysubsubsection{\texorpdfstring{Elemental()}{Elemental()}}
+{\footnotesize\ttfamily Elemental\+::\+Elemental (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{int}]{hp,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classElemental}{Elemental} with specified health and element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+{\em hp} & Health points. \\
+\hline
+{\em type} & \doxylink{classElemental}{Elemental} affinity (FIRE or ICE). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Elemental_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{Elemental_8cpp_source}{Elemental.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classElemental_a27b786fd729172e19918e952605eb5e3}\label{classElemental_a27b786fd729172e19918e952605eb5e3} 
+\index{Elemental@{Elemental}!calculateFinalDamage@{calculateFinalDamage}}
+\index{calculateFinalDamage@{calculateFinalDamage}!Elemental@{Elemental}}
+\doxysubsubsection{\texorpdfstring{calculateFinalDamage()}{calculateFinalDamage()}}
+{\footnotesize\ttfamily int Elemental\+::calculate\+Final\+Damage (\begin{DoxyParamCaption}\item[{int}]{dmg,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates final damage with elemental interactions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dmg} & Base damage amount. \\
+\hline
+{\em type} & Type of damage being applied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Final damage after elemental calculations. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCharacter_aea5b5db69ac071ad6030f6d924b3ce08}{Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{Elemental_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{Elemental_8cpp_source}{Elemental.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602dab7426fb9c3932995306fceba2874d057}{FIRE}}, \mbox{\hyperlink{Elemental_8cpp_source_l00027}{get\+Element()}}, and \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da22fb77eba93786121faa55c581785893}{ICE}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classElemental_a27b786fd729172e19918e952605eb5e3_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classElemental_a798faa5fec5ca4d06b5322c82cf2e315}\label{classElemental_a798faa5fec5ca4d06b5322c82cf2e315} 
+\index{Elemental@{Elemental}!getElement@{getElement}}
+\index{getElement@{getElement}!Elemental@{Elemental}}
+\doxysubsubsection{\texorpdfstring{getElement()}{getElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} Elemental\+::get\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the elemental affinity. 
+
+\begin{DoxyReturn}{Returns}
+Damage\+Type enum value (FIRE or ICE). 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Elemental_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{Elemental_8cpp_source}{Elemental.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Elemental_8cpp_source_l00064}{calculate\+Final\+Damage()}}, \mbox{\hyperlink{Elemental_8cpp_source_l00013}{print()}}, and \mbox{\hyperlink{Elemental_8cpp_source_l00031}{take\+Damage()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classElemental_a798faa5fec5ca4d06b5322c82cf2e315_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classElemental_a2dcd55023ea6c637ca8014bd66582912}\label{classElemental_a2dcd55023ea6c637ca8014bd66582912} 
+\index{Elemental@{Elemental}!print@{print}}
+\index{print@{print}!Elemental@{Elemental}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDisplayInfo}{Display\+Info}} Elemental\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets display information including elemental type. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDisplayInfo}{Display\+Info} structure for UI rendering. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCharacter_aa450176031bc9781a158f77ee2fa505f}{Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{Elemental_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{Elemental_8cpp_source}{Elemental.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602dab7426fb9c3932995306fceba2874d057}{FIRE}}, \mbox{\hyperlink{Elemental_8cpp_source_l00027}{get\+Element()}}, \mbox{\hyperlink{Characters_8cpp_source_l00020}{Character\+::get\+HP()}}, and \mbox{\hyperlink{Colors_8h_source_l00025}{Color\+::\+RED}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=339pt]{classElemental_a2dcd55023ea6c637ca8014bd66582912_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classElemental_adc01a38adcc17544f37e072014e4077b}\label{classElemental_adc01a38adcc17544f37e072014e4077b} 
+\index{Elemental@{Elemental}!returnInteractionType@{returnInteractionType}}
+\index{returnInteractionType@{returnInteractionType}!Elemental@{Elemental}}
+\doxysubsubsection{\texorpdfstring{returnInteractionType()}{returnInteractionType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} Elemental\+::return\+Interaction\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the interaction type. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a9504dfedba96004cae68c7fbc11b5c67}{Interaction\+Type\+::\+COMBAT\+\_\+\+DEPENDENT} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_adbab575cfa08f2b354263d132f27c811}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Elemental_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{Elemental_8cpp_source}{Elemental.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a9504dfedba96004cae68c7fbc11b5c67}{COMBAT\+\_\+\+DEPENDENT}}.
+
+\Hypertarget{classElemental_ac9e477707283a12b706d2c5e0f4fedec}\label{classElemental_ac9e477707283a12b706d2c5e0f4fedec} 
+\index{Elemental@{Elemental}!returntype@{returntype}}
+\index{returntype@{returntype}!Elemental@{Elemental}}
+\doxysubsubsection{\texorpdfstring{returntype()}{returntype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Elemental\+::returntype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the object type identifier. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a842c5e2e69277690b064bf363c017980af9c55990ee5893e66c504fc8ca35bf79}{Object\+Type\+::\+ELEMENTAL} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_a16b6fa35fd87615a3afb4499356d2a0d}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Elemental_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{Elemental_8cpp_source}{Elemental.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980af9c55990ee5893e66c504fc8ca35bf79}{ELEMENTAL}}.
+
+\Hypertarget{classElemental_a4d942a61f73f0d363bb0f9fdd51a1026}\label{classElemental_a4d942a61f73f0d363bb0f9fdd51a1026} 
+\index{Elemental@{Elemental}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Elemental@{Elemental}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily void Elemental\+::take\+Damage (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classWeapon}{Weapon}} \texorpdfstring{$\ast$}{*}}]{o }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Takes damage from weapon with elemental calculations. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em o} & Pointer to weapon dealing damage. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{classCharacter_a899331777864cf087d745d6095039b75}{Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{Elemental_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{Elemental_8cpp_source}{Elemental.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7665821fee6cc3f7535933a177ebe0be}{ELMAGIC}}, \mbox{\hyperlink{Weapon_8cpp_source_l00018}{Weapon\+::get\+Damage()}}, \mbox{\hyperlink{Elemental_8cpp_source_l00027}{get\+Element()}}, \mbox{\hyperlink{ELmagic_8cpp_source_l00029}{ELmagic\+::get\+Element()}}, \mbox{\hyperlink{Weapon_8cpp_source_l00060}{Weapon\+::get\+Element()}}, \mbox{\hyperlink{Characters_8cpp_source_l00020}{Character\+::get\+HP()}}, \mbox{\hyperlink{Object_8cpp_source_l00030}{Object\+::get\+Position()}}, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da1e23852820b9154316c7c06e2b7ba051}{NORMAL}}, \mbox{\hyperlink{Object_8h_source_l00050}{Object\+::\+On\+Damage\+Callback}}, \mbox{\hyperlink{Weapon_8cpp_source_l00035}{Weapon\+::returntype()}}, \mbox{\hyperlink{Characters_8cpp_source_l00025}{Character\+::set\+HP()}}, and \mbox{\hyperlink{Weapon_8cpp_source_l00047}{Weapon\+::take\+Damage()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classElemental_a4d942a61f73f0d363bb0f9fdd51a1026_cgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{Elemental_8h}{Elemental.\+h}}\item 
+src/\mbox{\hyperlink{Elemental_8cpp}{Elemental.\+cpp}}\end{DoxyCompactItemize}

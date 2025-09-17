@@ -1,0 +1,7 @@
+<map id="Thorn::print" name="Thorn::print">
+<area shape="rect" id="Node000001" title="Gets display information with directional arrows." alt="" coords="5,31,103,56"/>
+<area shape="rect" id="Node000002" href="$classThorn.html#a0e8fbc34d8d996dc01a9c9779445b871" title="Gets damage amount." alt="" coords="159,5,297,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,34,144,28,145,33,103,39"/>
+<area shape="rect" id="Node000003" href="$classThorn.html#a9f3dc4b7e56357ec996e3f1fb7d094b9" title="Gets current directional pattern." alt="" coords="151,55,305,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="103,47,137,52,137,57,103,53"/>
+</map>

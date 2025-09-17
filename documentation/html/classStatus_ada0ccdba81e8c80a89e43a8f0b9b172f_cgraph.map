@@ -1,0 +1,10 @@
+<map id="Status::generateCard" name="Status::generateCard">
+<area shape="rect" id="Node000001" title="Generates a random game object based on loot table." alt="" coords="5,56,164,81"/>
+<area shape="rect" id="Node000002" href="$classStatus.html#a1f60585ad759d8d780a039a2a5bddc71" title="Gets current player level." alt="" coords="241,5,368,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="140,53,235,31,236,36,141,58"/>
+<area shape="rect" id="Node000003" href="$classStatus.html#aeb32ff747b6ec9ddb7b95baf165999dd" title="Gets random value between 0 and 1." alt="" coords="445,81,628,107"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="164,70,432,86,432,91,164,76"/>
+<area shape="rect" id="Node000004" href="$classStatus.html#aa4152ce21c305b69a6f4cdfbef28b898" title="Selects random object type from loot table." alt="" coords="212,107,397,132"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="141,79,236,101,235,106,140,84"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="398,107,431,103,432,108,398,112"/>
+</map>

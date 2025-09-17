@@ -1,0 +1,281 @@
+\doxysection{Chest Class Reference}
+\hypertarget{classChest}{}\label{classChest}\index{Chest@{Chest}}
+
+
+Container object that generates random loot when opened.  
+
+
+
+
+{\ttfamily \#include $<$Chest.\+h$>$}
+
+
+
+Inheritance diagram for Chest\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{classChest__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Chest\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{classChest__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classChest_af3adff4dcbecf65c0c063308b511a36c}{Chest}} (int pos, \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574e}{Chest\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classChest}{Chest} with specified type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574e}{Chest\+Type}} \mbox{\hyperlink{classChest_a6c89f699203941d71c7419be42325732}{get\+Chest\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Gets the chest type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classChest_a24834bef6b2b7cbe52460a58d4700b2b}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information for the chest. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classChest_a1a293cbef8fe5ba40d1baad21de4fcef}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classChest_a0e1c166093a009b4a736a65086a6b7ca}{return\+Interaction\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the interaction type. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classChest_a2fd12807b717e0c5165360fdd31eb344}{generate\+Loot}} (const \mbox{\hyperlink{classStatus}{Status}} \&status) const
+\begin{DoxyCompactList}\small\item\em Generates random loot based on chest type and game status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_a71da04043bdd83585112550c3e27a85d}{Object}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classObject}{Object} at the specified position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classObject_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. Removes any active damage callback. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classObject_ada211a17211c090c8a20c0893c6ec3a1}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Creates a copy of this object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObject_a4abd48bacb1b004c8ac891597c831f77}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates object state (called each game step). Base implementation does nothing -\/ override for custom behavior. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a746b108f37d54122539916373d6ad824}{set\+Position}} (int pos)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa893c9e84c6f0342507291ea2e50b30e}{move}} (int direction)
+\begin{DoxyCompactList}\small\item\em Moves the object in the specified direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classObject_a110b0235d69e91d6cd2684e54696f45b}{possibletomove}} (int direction)
+\begin{DoxyCompactList}\small\item\em Checks if movement in a direction is possible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7}{get\+Target\+Position}} (int direction) const
+\begin{DoxyCompactList}\small\item\em Calculates target position for a movement direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a569361cd11827f5d158b05537011d544}{get\+Target\+Direction}} (int pos2) const
+\begin{DoxyCompactList}\small\item\em Calculates direction to reach a target position. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObject_ac886af1d32fa2370531cffcd7e5125fb}{take\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Applies damage to the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a65fb5ee0e5692e7158c266b92cdd2074}{set\+On\+Damage\+Callback}} (std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ callback)
+\begin{DoxyCompactList}\small\item\em Sets a callback function for damage events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a20141e220dafc6f225eebe800b0e9c41}{remove\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Removes the current damage callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{On\+Damage\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback for damage events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Container object that generates random loot when opened. 
+
+Inherits from \doxylink{classObject}{Object}. Comes in two variants\+: good chests (helpful items) and bad chests (harmful items). Generates loot based on game status. 
+
+Definition at line \mbox{\hyperlink{Chest_8h_source_l00026}{26}} of file \mbox{\hyperlink{Chest_8h_source}{Chest.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classChest_af3adff4dcbecf65c0c063308b511a36c}\label{classChest_af3adff4dcbecf65c0c063308b511a36c} 
+\index{Chest@{Chest}!Chest@{Chest}}
+\index{Chest@{Chest}!Chest@{Chest}}
+\doxysubsubsection{\texorpdfstring{Chest()}{Chest()}}
+{\footnotesize\ttfamily Chest\+::\+Chest (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{\mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574e}{Chest\+Type}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classChest}{Chest} with specified type. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+{\em type} & \doxylink{classChest}{Chest} type (GOODCHEST or BADCHEST). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Chest_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{Chest_8cpp_source}{Chest.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classChest_a2fd12807b717e0c5165360fdd31eb344}\label{classChest_a2fd12807b717e0c5165360fdd31eb344} 
+\index{Chest@{Chest}!generateLoot@{generateLoot}}
+\index{generateLoot@{generateLoot}!Chest@{Chest}}
+\doxysubsubsection{\texorpdfstring{generateLoot()}{generateLoot()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ Chest\+::generate\+Loot (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classStatus}{Status}} \&}]{status }\end{DoxyParamCaption}) const}
+
+
+
+Generates random loot based on chest type and game status. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em status} & Reference to game status for loot generation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Unique pointer to generated loot object. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Chest_8cpp_source_l00052}{52}} of file \mbox{\hyperlink{Chest_8cpp_source}{Chest.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Status_8cpp_source_l00144}{Status\+::generate\+Chest\+Loot()}}, \mbox{\hyperlink{Chest_8cpp_source_l00012}{get\+Chest\+Type()}}, and \mbox{\hyperlink{Object_8cpp_source_l00030}{Object\+::get\+Position()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00411}{Game\+::handle\+TRIGGER\+\_\+\+ON\+\_\+\+STAY()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChest_a2fd12807b717e0c5165360fdd31eb344_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChest_a2fd12807b717e0c5165360fdd31eb344_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classChest_a6c89f699203941d71c7419be42325732}\label{classChest_a6c89f699203941d71c7419be42325732} 
+\index{Chest@{Chest}!getChestType@{getChestType}}
+\index{getChestType@{getChestType}!Chest@{Chest}}
+\doxysubsubsection{\texorpdfstring{getChestType()}{getChestType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574e}{Chest\+Type}} Chest\+::get\+Chest\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the chest type. 
+
+\begin{DoxyReturn}{Returns}
+Chest\+Type enum value. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Chest_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{Chest_8cpp_source}{Chest.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Chest_8cpp_source_l00052}{generate\+Loot()}}, and \mbox{\hyperlink{Chest_8cpp_source_l00015}{print()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classChest_a6c89f699203941d71c7419be42325732_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classChest_a24834bef6b2b7cbe52460a58d4700b2b}\label{classChest_a24834bef6b2b7cbe52460a58d4700b2b} 
+\index{Chest@{Chest}!print@{print}}
+\index{print@{print}!Chest@{Chest}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDisplayInfo}{Display\+Info}} Chest\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets display information for the chest. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDisplayInfo}{Display\+Info} structure indicating chest type. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_ab79063b8627e3f798f3a01f278cf2190}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Chest_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{Chest_8cpp_source}{Chest.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574eae0c09b20cdfdabe58874256eb0b97787}{BADCHEST}}, \mbox{\hyperlink{Colors_8h_source_l00028}{Color\+::\+BLUE}}, \mbox{\hyperlink{Chest_8cpp_source_l00012}{get\+Chest\+Type()}}, \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574ea7c0524e018f5a3d31da0ae59a08ff091}{GOODCHEST}}, \mbox{\hyperlink{Colors_8h_source_l00025}{Color\+::\+RED}}, and \mbox{\hyperlink{Colors_8h_source_l00031}{Color\+::\+WHITE}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=305pt]{classChest_a24834bef6b2b7cbe52460a58d4700b2b_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classChest_a0e1c166093a009b4a736a65086a6b7ca}\label{classChest_a0e1c166093a009b4a736a65086a6b7ca} 
+\index{Chest@{Chest}!returnInteractionType@{returnInteractionType}}
+\index{returnInteractionType@{returnInteractionType}!Chest@{Chest}}
+\doxysubsubsection{\texorpdfstring{returnInteractionType()}{returnInteractionType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} Chest\+::return\+Interaction\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the interaction type. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a7c7bde73bcbcb7e25853c0715c4d203d}{Interaction\+Type\+::\+TRIGGER\+\_\+\+ON\+\_\+\+STAY} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_adbab575cfa08f2b354263d132f27c811}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Chest_8cpp_source_l00048}{48}} of file \mbox{\hyperlink{Chest_8cpp_source}{Chest.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a7c7bde73bcbcb7e25853c0715c4d203d}{TRIGGER\+\_\+\+ON\+\_\+\+STAY}}.
+
+\Hypertarget{classChest_a1a293cbef8fe5ba40d1baad21de4fcef}\label{classChest_a1a293cbef8fe5ba40d1baad21de4fcef} 
+\index{Chest@{Chest}!returntype@{returntype}}
+\index{returntype@{returntype}!Chest@{Chest}}
+\doxysubsubsection{\texorpdfstring{returntype()}{returntype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Chest\+::returntype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the object type identifier. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a842c5e2e69277690b064bf363c017980a5bdccd55677ef3fc449ed476ade69fb7}{Object\+Type\+::\+CHEST} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_a16b6fa35fd87615a3afb4499356d2a0d}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Chest_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{Chest_8cpp_source}{Chest.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a5bdccd55677ef3fc449ed476ade69fb7}{CHEST}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{Chest_8h}{Chest.\+h}}\item 
+src/\mbox{\hyperlink{Chest_8cpp}{Chest.\+cpp}}\end{DoxyCompactItemize}

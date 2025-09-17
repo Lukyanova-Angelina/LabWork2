@@ -1,0 +1,7 @@
+<map id="Character::takeHP" name="Character::takeHP">
+<area shape="rect" id="Node000001" title="Reduces character&#39;s health by specified amount." alt="" coords="5,31,144,56"/>
+<area shape="rect" id="Node000002" href="$classCharacter.html#a719cf393f4cdcc82a403f70732adee02" title="Gets current health points." alt="" coords="192,5,324,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="144,31,178,26,179,32,145,36"/>
+<area shape="rect" id="Node000003" href="$classCharacter.html#a030786bca8ce703c96a275751b74b2fd" title="Sets current health points." alt="" coords="193,55,323,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="145,50,179,54,179,60,144,55"/>
+</map>

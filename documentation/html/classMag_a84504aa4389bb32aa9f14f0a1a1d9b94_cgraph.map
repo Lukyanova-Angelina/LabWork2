@@ -1,0 +1,5 @@
+<map id="Mag::print" name="Mag::print">
+<area shape="rect" id="Node000001" title="Gets display information for Mag." alt="" coords="5,5,93,31"/>
+<area shape="rect" id="Node000002" href="$classCharacter.html#a719cf393f4cdcc82a403f70732adee02" title="Gets current health points." alt="" coords="141,5,273,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="94,15,127,15,127,21,94,21"/>
+</map>

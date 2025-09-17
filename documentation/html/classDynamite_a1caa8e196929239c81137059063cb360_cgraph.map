@@ -1,0 +1,7 @@
+<map id="Dynamite::print" name="Dynamite::print">
+<area shape="rect" id="Node000001" title="Gets display information for dynamite." alt="" coords="5,31,129,56"/>
+<area shape="rect" id="Node000002" href="$classBomb.html#a5aace3f4176e3ef80da7b80ae13a3126" title="Gets explosion damage amount." alt="" coords="180,5,320,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="129,32,166,27,167,32,130,37"/>
+<area shape="rect" id="Node000003" href="$classBomb.html#a43c1ca638c7e6f1605ae2dcb72e49b88" title="Gets remaining duration until explosion." alt="" coords="177,55,323,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,49,164,53,163,59,129,54"/>
+</map>

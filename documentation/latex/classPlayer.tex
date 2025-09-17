@@ -1,0 +1,347 @@
+\doxysection{Player Class Reference}
+\hypertarget{classPlayer}{}\label{classPlayer}\index{Player@{Player}}
+
+
+\doxylink{classPlayer}{Player} character with weapon equipment system.  
+
+
+
+
+{\ttfamily \#include $<$Player.\+h$>$}
+
+
+
+Inheritance diagram for Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classPlayer__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Player\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=144pt]{classPlayer__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer_aa8125835abff491dffa66fefdc2f06e0}{Player}} (int pos, std\+::string name, int hp, int maxhp)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classPlayer}{Player} with specified parameters. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classPlayer_a20d6c146fbb017830cf9d24ebf5419a1}{Player}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classPlayer}{Player} with default parameters. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classPlayer_a8ed544987af18de0e6b2932206bf1186}{\texorpdfstring{$\sim$}{\string~}\+Player}} () override
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper cleanup. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWeapon}{Weapon}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{classPlayer_a2997e4db0b122b5bee957e45c1edcc49}{get\+Weapon}} () const
+\begin{DoxyCompactList}\small\item\em Gets the currently equipped weapon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_a08b794ac433d3fa6ca2f8aff03437ad9}{set\+Weapon}} (std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWeapon}{Weapon}} $>$ weapon)
+\begin{DoxyCompactList}\small\item\em Equips a weapon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classPlayer_ab32f4507f6ff61361d9cb6b79378a3e2}{remove\+Weapon}} ()
+\begin{DoxyCompactList}\small\item\em Removes currently equipped weapon. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classPlayer_a1b199d782d3671895519de7e7fadd30a}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information including weapon status. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classPlayer_a4691db09ca049520277e998ab743e96d}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classCharacter}{Character}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classCharacter_adc27bdd255876169bad2ed0bae0cffb5}{Character}} ()
+\begin{DoxyCompactList}\small\item\em Default constructor. Creates a character with default values. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classCharacter_a844efb6d850a7310298eddfaca1f9548}{Character}} (int pos, std\+::string name, int hp, int maxhp)
+\begin{DoxyCompactList}\small\item\em Parameterized constructor. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classCharacter_ad79f892fe576c7ef0804cad502d94517}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the character\textquotesingle{}s name. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{get\+HP}} () const
+\begin{DoxyCompactList}\small\item\em Gets current health points. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classCharacter_a6eedfaea70dc15a219b3dc8f646d3e23}{get\+Max\+HP}} () const
+\begin{DoxyCompactList}\small\item\em Gets maximum health points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a11ab1f4f914a289e46b3e400cec26fc5}{set\+Name}} (const std\+::string \&name)
+\begin{DoxyCompactList}\small\item\em Sets the character\textquotesingle{}s name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a030786bca8ce703c96a275751b74b2fd}{set\+HP}} (int hp)
+\begin{DoxyCompactList}\small\item\em Sets current health points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_aa0d706d718ed2a4eeca87aeda83ff4ff}{set\+Max\+HP}} (int maxhp)
+\begin{DoxyCompactList}\small\item\em Sets maximum health points. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a8d6fad66d361d74a9a9122a7d6c620b0}{take\+HP}} (int hp)
+\begin{DoxyCompactList}\small\item\em Reduces character\textquotesingle{}s health by specified amount. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classCharacter_a899331777864cf087d745d6095039b75}{take\+Damage}} (\mbox{\hyperlink{classWeapon}{Weapon}} \texorpdfstring{$\ast$}{*}o)
+\begin{DoxyCompactList}\small\item\em Applies damage from a weapon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classCharacter_a1e60409a1566f987ae4aeab6fc769b22}{take\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Applies damage with specified type. \end{DoxyCompactList}\item 
+virtual int \mbox{\hyperlink{classCharacter_aea5b5db69ac071ad6030f6d924b3ce08}{calculate\+Final\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Calculates final damage after applying type modifiers. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_a71da04043bdd83585112550c3e27a85d}{Object}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classObject}{Object} at the specified position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classObject_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. Removes any active damage callback. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classObject_adbab575cfa08f2b354263d132f27c811}{return\+Interaction\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Defines how this object interacts with others. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classObject_ada211a17211c090c8a20c0893c6ec3a1}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Creates a copy of this object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObject_a4abd48bacb1b004c8ac891597c831f77}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates object state (called each game step). Base implementation does nothing -\/ override for custom behavior. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a746b108f37d54122539916373d6ad824}{set\+Position}} (int pos)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa893c9e84c6f0342507291ea2e50b30e}{move}} (int direction)
+\begin{DoxyCompactList}\small\item\em Moves the object in the specified direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classObject_a110b0235d69e91d6cd2684e54696f45b}{possibletomove}} (int direction)
+\begin{DoxyCompactList}\small\item\em Checks if movement in a direction is possible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7}{get\+Target\+Position}} (int direction) const
+\begin{DoxyCompactList}\small\item\em Calculates target position for a movement direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a569361cd11827f5d158b05537011d544}{get\+Target\+Direction}} (int pos2) const
+\begin{DoxyCompactList}\small\item\em Calculates direction to reach a target position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a65fb5ee0e5692e7158c266b92cdd2074}{set\+On\+Damage\+Callback}} (std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ callback)
+\begin{DoxyCompactList}\small\item\em Sets a callback function for damage events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a20141e220dafc6f225eebe800b0e9c41}{remove\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Removes the current damage callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{On\+Damage\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback for damage events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classPlayer}{Player} character with weapon equipment system. 
+
+Inherits from \doxylink{classCharacter}{Character} and adds weapon management for combat interactions. Handles weapon equipping, removal, and display information. 
+
+Definition at line \mbox{\hyperlink{Player_8h_source_l00027}{27}} of file \mbox{\hyperlink{Player_8h_source}{Player.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classPlayer_aa8125835abff491dffa66fefdc2f06e0}\label{classPlayer_aa8125835abff491dffa66fefdc2f06e0} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{std\+::string}]{name,  }\item[{int}]{hp,  }\item[{int}]{maxhp }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classPlayer}{Player} with specified parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+{\em name} & \doxylink{classCharacter}{Character} name. \\
+\hline
+{\em hp} & Health points. \\
+\hline
+{\em maxhp} & Maximum health points. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Player_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{Player_8cpp_source}{Player.\+cpp}}.
+
+\Hypertarget{classPlayer_a20d6c146fbb017830cf9d24ebf5419a1}\label{classPlayer_a20d6c146fbb017830cf9d24ebf5419a1} 
+\index{Player@{Player}!Player@{Player}}
+\index{Player@{Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{Player()}{Player()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Player\+::\+Player (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classPlayer}{Player} with default parameters. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Player_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{Player_8cpp_source}{Player.\+cpp}}.
+
+\Hypertarget{classPlayer_a8ed544987af18de0e6b2932206bf1186}\label{classPlayer_a8ed544987af18de0e6b2932206bf1186} 
+\index{Player@{Player}!````~Player@{\texorpdfstring{$\sim$}{\string~}Player}}
+\index{````~Player@{\texorpdfstring{$\sim$}{\string~}Player}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Player()}{\string~Player()}}
+{\footnotesize\ttfamily Player\+::\texorpdfstring{$\sim$}{\string~}\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Virtual destructor for proper cleanup. 
+
+
+
+Definition at line \mbox{\hyperlink{Player_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{Player_8cpp_source}{Player.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Player_8cpp_source_l00027}{remove\+Weapon()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=338pt]{classPlayer_a8ed544987af18de0e6b2932206bf1186_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classPlayer_a2997e4db0b122b5bee957e45c1edcc49}\label{classPlayer_a2997e4db0b122b5bee957e45c1edcc49} 
+\index{Player@{Player}!getWeapon@{getWeapon}}
+\index{getWeapon@{getWeapon}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{getWeapon()}{getWeapon()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classWeapon}{Weapon}} \texorpdfstring{$\ast$}{*} Player\+::get\+Weapon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the currently equipped weapon. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to equipped weapon or nullptr if none. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Player_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{Player_8cpp_source}{Player.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00439}{Game\+::handle\+COMBAT\+\_\+\+DEPENDENT()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_a2997e4db0b122b5bee957e45c1edcc49_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPlayer_a1b199d782d3671895519de7e7fadd30a}\label{classPlayer_a1b199d782d3671895519de7e7fadd30a} 
+\index{Player@{Player}!print@{print}}
+\index{print@{print}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDisplayInfo}{Display\+Info}} Player\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets display information including weapon status. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDisplayInfo}{Display\+Info} structure for UI rendering. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classCharacter_aa450176031bc9781a158f77ee2fa505f}{Character}}.
+
+
+
+Definition at line \mbox{\hyperlink{Player_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{Player_8cpp_source}{Player.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Characters_8cpp_source_l00020}{Character\+::get\+HP()}}, \mbox{\hyperlink{Characters_8cpp_source_l00021}{Character\+::get\+Max\+HP()}}, and \mbox{\hyperlink{Colors_8h_source_l00026}{Color\+::\+GREEN}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=312pt]{classPlayer_a1b199d782d3671895519de7e7fadd30a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPlayer_ab32f4507f6ff61361d9cb6b79378a3e2}\label{classPlayer_ab32f4507f6ff61361d9cb6b79378a3e2} 
+\index{Player@{Player}!removeWeapon@{removeWeapon}}
+\index{removeWeapon@{removeWeapon}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{removeWeapon()}{removeWeapon()}}
+{\footnotesize\ttfamily void Player\+::remove\+Weapon (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes currently equipped weapon. 
+
+
+
+Definition at line \mbox{\hyperlink{Player_8cpp_source_l00027}{27}} of file \mbox{\hyperlink{Player_8cpp_source}{Player.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00439}{Game\+::handle\+COMBAT\+\_\+\+DEPENDENT()}}, and \mbox{\hyperlink{Player_8cpp_source_l00015}{\texorpdfstring{$\sim$}{\string~}\+Player()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_ab32f4507f6ff61361d9cb6b79378a3e2_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classPlayer_a4691db09ca049520277e998ab743e96d}\label{classPlayer_a4691db09ca049520277e998ab743e96d} 
+\index{Player@{Player}!returntype@{returntype}}
+\index{returntype@{returntype}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{returntype()}{returntype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Player\+::returntype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the object type identifier. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855}{Object\+Type\+::\+PLAYER} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_a16b6fa35fd87615a3afb4499356d2a0d}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{Player_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{Player_8cpp_source}{Player.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855}{PLAYER}}.
+
+\Hypertarget{classPlayer_a08b794ac433d3fa6ca2f8aff03437ad9}\label{classPlayer_a08b794ac433d3fa6ca2f8aff03437ad9} 
+\index{Player@{Player}!setWeapon@{setWeapon}}
+\index{setWeapon@{setWeapon}!Player@{Player}}
+\doxysubsubsection{\texorpdfstring{setWeapon()}{setWeapon()}}
+{\footnotesize\ttfamily void Player\+::set\+Weapon (\begin{DoxyParamCaption}\item[{std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classWeapon}{Weapon}} $>$}]{weapon }\end{DoxyParamCaption})}
+
+
+
+Equips a weapon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em weapon} & Unique pointer to weapon to equip. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Player_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{Player_8cpp_source}{Player.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00239}{Game\+::handle\+IMMEDIATE\+\_\+\+PASS()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classPlayer_a08b794ac433d3fa6ca2f8aff03437ad9_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{Player_8h}{Player.\+h}}\item 
+src/\mbox{\hyperlink{Player_8cpp}{Player.\+cpp}}\end{DoxyCompactItemize}

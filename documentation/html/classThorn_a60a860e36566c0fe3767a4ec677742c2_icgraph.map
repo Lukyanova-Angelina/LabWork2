@@ -1,0 +1,5 @@
+<map id="Thorn::setAmount" name="Thorn::setAmount">
+<area shape="rect" id="Node000001" title="Sets damage amount." alt="" coords="204,5,343,31"/>
+<area shape="rect" id="Node000002" href="$classThorn.html#a1145b88fe2bb63ad05bf9f10c62a57e3" title="Applies damage to the thorn (reduces durability)." alt="" coords="5,5,156,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="190,21,156,21,156,15,190,15"/>
+</map>

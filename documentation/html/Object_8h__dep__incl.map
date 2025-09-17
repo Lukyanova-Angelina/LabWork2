@@ -1,0 +1,118 @@
+<map id="headers/Object.h" name="headers/Object.h">
+<area shape="rect" id="Node000001" title="Base class for all game objects in the game." alt="" coords="1789,5,1921,31"/>
+<area shape="rect" id="Node000002" href="$Bomb_8h.html" title="Bomb object class with timed explosion." alt="" coords="1665,225,1793,251"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="1844,44,1738,226,1733,224,1839,42"/>
+<area shape="rect" id="Node000008" href="$Chest_8h.html" title="Chest container class with randomized loot." alt="" coords="2053,445,2180,471"/>
+<area shape="poly" id="edge40_Node000001_Node000008" title=" " alt="" coords="1936,17,2107,23,2208,31,2308,44,2400,62,2475,87,2504,102,2527,120,2541,140,2546,163,2546,313,2545,340,2540,362,2530,381,2510,399,2485,413,2451,425,2363,442,2266,452,2180,457,2180,452,2265,447,2362,436,2449,420,2483,408,2507,395,2525,378,2535,360,2540,339,2541,313,2541,164,2536,143,2523,124,2501,107,2473,92,2398,67,2307,49,2207,36,2107,28,1936,22"/>
+<area shape="rect" id="Node000013" href="$Characters_8h.html" title="Base class for all characters in the game (Player and Enemy)." alt="" coords="457,152,617,177"/>
+<area shape="poly" id="edge17_Node000001_Node000013" title=" " alt="" coords="1775,23,1615,26,1400,36,1155,53,908,81,814,98,722,117,578,154,576,149,721,112,813,92,907,76,1154,48,1399,30,1615,21,1775,17"/>
+<area shape="rect" id="Node000025" href="$Gold_8h.html" title="Gold currency class for advancement in the game." alt="" coords="1873,225,1993,251"/>
+<area shape="poly" id="edge41_Node000001_Node000025" title=" " alt="" coords="1866,43,1931,224,1926,226,1861,45"/>
+<area shape="rect" id="Node000029" href="$Potion_8h.html" title="Potion consumable class for health manipulation." alt="" coords="1305,152,1435,177"/>
+<area shape="poly" id="edge49_Node000001_Node000029" title=" " alt="" coords="1805,37,1409,154,1408,149,1803,32"/>
+<area shape="rect" id="Node000031" href="$Thorn_8h.html" title="Thorn trap class with rotating damage directions." alt="" coords="2155,225,2281,251"/>
+<area shape="poly" id="edge53_Node000001_Node000031" title=" " alt="" coords="1887,35,2200,223,2197,227,1884,40"/>
+<area shape="rect" id="Node000035" href="$Weapon_8h.html" title="Base weapon class for game combat system." alt="" coords="920,79,1063,104"/>
+<area shape="poly" id="edge61_Node000001_Node000035" title=" " alt="" coords="1776,29,1063,87,1063,81,1776,23"/>
+<area shape="rect" id="Node000041" href="$Object_8cpp.html" title="Implementation of the Object base class methods." alt="" coords="2581,79,2695,104"/>
+<area shape="poly" id="edge75_Node000001_Node000041" title=" " alt="" coords="1935,22,2213,42,2562,76,2581,78,2580,84,2562,81,2212,48,1935,27"/>
+<area shape="rect" id="Node000003" href="$Dynamite_8h.html" title="Dynamite object class &#45; explosive that damages entire row." alt="" coords="1651,299,1806,324"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="1731,264,1731,299,1726,299,1726,264"/>
+<area shape="rect" id="Node000004" href="$Game_8h.html" title="Main game controller class managing game state, objects, and interactions." alt="" coords="1217,519,1347,544"/>
+<area shape="poly" id="edge14_Node000002_Node000004" title=" " alt="" coords="1773,254,1799,272,1820,297,1827,320,1828,348,1823,376,1811,399,1778,424,1730,446,1670,466,1603,483,1465,509,1347,525,1347,520,1464,504,1602,477,1669,461,1728,441,1775,420,1807,396,1818,375,1822,347,1822,320,1816,300,1796,276,1770,259"/>
+<area shape="rect" id="Node000007" href="$Status_8h.html" title="Game progression and loot management system." alt="" coords="1209,372,1339,397"/>
+<area shape="poly" id="edge15_Node000002_Node000007" title=" " alt="" coords="1651,247,1532,264,1466,280,1403,301,1369,318,1337,338,1289,374,1286,370,1334,333,1366,313,1401,296,1465,275,1531,259,1651,242"/>
+<area shape="rect" id="Node000012" href="$Bomb_8cpp.html" title=" " alt="" coords="1415,299,1525,324"/>
+<area shape="poly" id="edge16_Node000002_Node000012" title=" " alt="" coords="1675,257,1513,301,1511,296,1673,252"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1694,332,1307,521,1305,516,1692,328"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="1643,329,1340,376,1339,371,1642,323"/>
+<area shape="rect" id="Node000011" href="$Dynamite_8cpp.html" title="Dynamite class." alt="" coords="1661,372,1797,397"/>
+<area shape="poly" id="edge13_Node000003_Node000011" title=" " alt="" coords="1731,338,1731,372,1726,372,1726,338"/>
+<area shape="rect" id="Node000005" href="$Game_8cpp.html" title="Implementation of Game class methods." alt="" coords="1161,592,1272,617"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="1264,556,1229,594,1225,590,1260,553"/>
+<area shape="rect" id="Node000006" href="$main_8cpp.html" title=" " alt="" coords="1296,592,1401,617"/>
+<area shape="poly" id="edge5_Node000004_Node000006" title=" " alt="" coords="1304,553,1340,590,1336,594,1301,556"/>
+<area shape="poly" id="edge11_Node000007_Node000004" title=" " alt="" coords="1246,408,1231,421,1219,436,1213,453,1215,470,1236,497,1262,516,1259,521,1232,501,1210,472,1207,452,1214,434,1227,417,1243,404"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="1353,390,2053,449,2053,454,1353,396"/>
+<area shape="rect" id="Node000010" href="$Status_8cpp.html" title="Status class." alt="" coords="1225,445,1339,471"/>
+<area shape="poly" id="edge12_Node000007_Node000010" title=" " alt="" coords="1279,411,1283,445,1278,446,1274,411"/>
+<area shape="poly" id="edge8_Node000008_Node000004" title=" " alt="" coords="2040,473,2034,473,1645,508,1347,529,1347,523,1644,503,2034,468,2039,467"/>
+<area shape="poly" id="edge9_Node000008_Node000007" title=" " alt="" coords="2040,452,1339,394,1340,388,2040,447"/>
+<area shape="rect" id="Node000009" href="$Chest_8cpp.html" title="Chest class." alt="" coords="2062,519,2171,544"/>
+<area shape="poly" id="edge10_Node000008_Node000009" title=" " alt="" coords="2119,484,2119,519,2114,519,2114,484"/>
+<area shape="poly" id="edge34_Node000013_Node000004" title=" " alt="" coords="443,169,359,178,317,187,277,201,241,219,214,243,195,273,189,310,189,386,191,394,197,403,222,420,262,435,315,449,451,473,614,491,788,505,957,515,1217,526,1217,531,957,521,787,511,613,497,450,478,313,454,260,440,219,424,193,407,186,397,183,386,183,310,190,271,210,240,238,215,274,196,315,182,359,173,443,163"/>
+<area shape="rect" id="Node000014" href="$Enemy_8h.html" title="Base enemy class for hostile game entities." alt="" coords="470,225,603,251"/>
+<area shape="poly" id="edge18_Node000013_Node000014" title=" " alt="" coords="539,191,539,225,534,225,534,191"/>
+<area shape="rect" id="Node000022" href="$Player_8h.html" title="Player character class with weapon management capabilities." alt="" coords="894,225,1025,251"/>
+<area shape="poly" id="edge35_Node000013_Node000022" title=" " alt="" coords="619,177,894,223,893,228,618,182"/>
+<area shape="rect" id="Node000024" href="$Characters_8cpp.html" title="Implementation of Character class methods." alt="" coords="5,225,148,251"/>
+<area shape="poly" id="edge39_Node000013_Node000024" title=" " alt="" coords="450,182,149,228,148,223,449,177"/>
+<area shape="poly" id="edge27_Node000014_Node000004" title=" " alt="" coords="456,248,399,256,342,266,293,281,276,290,264,300,255,316,254,329,258,341,268,353,298,374,334,395,396,428,447,445,572,468,754,496,935,513,1096,523,1217,527,1217,532,1096,528,935,519,753,501,571,473,446,450,393,433,331,400,296,379,264,356,254,344,248,330,250,314,260,297,273,286,291,276,340,261,398,250,456,243"/>
+<area shape="poly" id="edge32_Node000014_Node000007" title=" " alt="" coords="617,247,755,268,911,296,1013,321,1223,369,1222,375,1012,327,909,301,754,273,617,253"/>
+<area shape="rect" id="Node000015" href="$Bat_8h.html" title="Bat enemy class &#45; basic flying enemy type." alt="" coords="555,299,667,324"/>
+<area shape="poly" id="edge19_Node000014_Node000015" title=" " alt="" coords="560,258,601,297,597,300,557,262"/>
+<area shape="rect" id="Node000017" href="$Elemental_8h.html" title="Elemental enemy class with complex elemental interactions." alt="" coords="743,299,899,324"/>
+<area shape="poly" id="edge23_Node000014_Node000017" title=" " alt="" coords="596,251,775,296,774,301,595,257"/>
+<area shape="rect" id="Node000019" href="$Mag_8h.html" title="Magician enemy class with health regeneration." alt="" coords="413,299,532,324"/>
+<area shape="poly" id="edge28_Node000014_Node000019" title=" " alt="" coords="519,263,485,300,481,297,515,259"/>
+<area shape="rect" id="Node000021" href="$Enemy_8cpp.html" title="Implementation of Enemy class methods." alt="" coords="274,299,389,324"/>
+<area shape="poly" id="edge33_Node000014_Node000021" title=" " alt="" coords="492,258,365,301,364,296,490,253"/>
+<area shape="poly" id="edge20_Node000015_Node000004" title=" " alt="" coords="622,336,652,412,670,447,688,468,716,479,767,489,913,505,1217,524,1217,530,913,510,766,494,714,484,684,473,666,450,647,414,617,338"/>
+<area shape="poly" id="edge21_Node000015_Node000007" title=" " alt="" coords="682,317,1209,374,1208,379,681,323"/>
+<area shape="rect" id="Node000016" href="$Bat_8cpp.html" title="Implementation of Bat class methods." alt="" coords="521,372,616,397"/>
+<area shape="poly" id="edge22_Node000015_Node000016" title=" " alt="" coords="600,337,578,373,573,371,595,334"/>
+<area shape="poly" id="edge24_Node000017_Node000004" title=" " alt="" coords="801,335,781,366,778,381,783,396,810,421,853,443,908,463,971,480,1103,505,1217,521,1217,526,1103,510,970,485,906,468,851,448,807,425,778,399,773,382,776,364,796,333"/>
+<area shape="poly" id="edge25_Node000017_Node000007" title=" " alt="" coords="908,324,1209,370,1208,376,907,329"/>
+<area shape="rect" id="Node000018" href="$Elemental_8cpp.html" title="Implementation of Elemental class methods." alt="" coords="793,372,931,397"/>
+<area shape="poly" id="edge26_Node000017_Node000018" title=" " alt="" coords="837,335,858,371,853,373,832,337"/>
+<area shape="poly" id="edge29_Node000019_Node000004" title=" " alt="" coords="481,337,492,367,511,396,546,427,579,444,663,468,738,486,816,501,971,519,1110,527,1217,529,1217,534,1110,532,970,524,815,506,737,492,661,473,577,449,543,431,507,399,487,369,476,339"/>
+<area shape="poly" id="edge30_Node000019_Node000007" title=" " alt="" coords="546,322,738,342,925,358,1209,377,1208,382,924,363,738,347,546,327"/>
+<area shape="rect" id="Node000020" href="$Mag_8cpp.html" title="Implementation of Mag class methods." alt="" coords="345,372,445,397"/>
+<area shape="poly" id="edge31_Node000019_Node000020" title=" " alt="" coords="452,335,410,374,406,370,448,331"/>
+<area shape="poly" id="edge36_Node000022_Node000004" title=" " alt="" coords="974,262,992,292,1015,322,1081,386,1152,442,1264,516,1261,521,1149,446,1077,390,1011,326,987,295,969,265"/>
+<area shape="poly" id="edge37_Node000022_Node000007" title=" " alt="" coords="1023,252,1085,270,1150,296,1214,334,1262,370,1259,374,1211,339,1147,301,1084,275,1022,257"/>
+<area shape="rect" id="Node000023" href="$Player_8cpp.html" title="Implementation of Player class methods." alt="" coords="1025,299,1137,324"/>
+<area shape="poly" id="edge38_Node000022_Node000023" title=" " alt="" coords="992,255,1062,296,1059,301,990,260"/>
+<area shape="poly" id="edge42_Node000025_Node000004" title=" " alt="" coords="2007,248,2088,268,2121,281,2143,297,2151,317,2154,343,2148,372,2133,399,2115,414,2089,427,2024,448,1902,473,1747,499,1592,516,1454,526,1347,531,1347,526,1453,521,1592,511,1747,494,1902,468,2023,443,2087,422,2112,410,2129,396,2143,370,2148,343,2146,318,2139,300,2119,286,2086,273,2005,253"/>
+<area shape="poly" id="edge47_Node000025_Node000007" title=" " alt="" coords="1860,250,1735,269,1665,283,1596,301,1567,314,1538,327,1434,355,1340,375,1339,369,1433,350,1536,321,1565,309,1594,296,1664,278,1734,264,1859,245"/>
+<area shape="rect" id="Node000026" href="$Ruby_8h.html" title="Ruby currency class &#45; premium version of gold." alt="" coords="2008,299,2129,324"/>
+<area shape="poly" id="edge43_Node000025_Node000026" title=" " alt="" coords="1968,254,2048,296,2045,301,1965,259"/>
+<area shape="rect" id="Node000028" href="$Gold_8cpp.html" title="Gold class." alt="" coords="1881,299,1984,324"/>
+<area shape="poly" id="edge48_Node000025_Node000028" title=" " alt="" coords="1935,264,1935,299,1930,299,1930,264"/>
+<area shape="poly" id="edge44_Node000026_Node000004" title=" " alt="" coords="2047,335,1954,413,1903,450,1863,473,1819,486,1761,497,1619,514,1470,524,1347,530,1347,525,1470,519,1619,508,1761,492,1818,481,1861,468,1900,446,1950,409,2043,331"/>
+<area shape="poly" id="edge45_Node000026_Node000007" title=" " alt="" coords="1995,327,1620,362,1340,382,1340,377,1620,357,1994,321"/>
+<area shape="rect" id="Node000027" href="$Ruby_8cpp.html" title="Ruby class." alt="" coords="2017,372,2120,397"/>
+<area shape="poly" id="edge46_Node000026_Node000027" title=" " alt="" coords="2071,338,2071,372,2066,372,2066,338"/>
+<area shape="poly" id="edge50_Node000029_Node000004" title=" " alt="" coords="1404,183,1424,201,1440,224,1444,238,1441,252,1433,267,1423,277,1414,286,1404,300,1387,347,1381,387,1374,426,1352,472,1328,500,1302,521,1299,516,1324,496,1348,469,1369,425,1376,386,1382,346,1400,297,1409,283,1419,273,1428,264,1435,250,1438,238,1436,226,1420,205,1400,187"/>
+<area shape="poly" id="edge51_Node000029_Node000007" title=" " alt="" coords="1341,187,1320,205,1303,227,1287,266,1279,307,1276,372,1271,372,1274,306,1282,264,1298,224,1316,201,1337,183"/>
+<area shape="rect" id="Node000030" href="$Potion_8cpp.html" title="Potion class." alt="" coords="1313,225,1427,251"/>
+<area shape="poly" id="edge52_Node000029_Node000030" title=" " alt="" coords="1373,191,1373,225,1367,225,1367,191"/>
+<area shape="poly" id="edge54_Node000031_Node000004" title=" " alt="" coords="2227,264,2234,309,2235,366,2232,395,2224,423,2212,450,2193,473,2175,483,2146,492,2062,507,1950,518,1821,525,1554,532,1347,533,1347,528,1554,527,1820,520,1949,513,2061,502,2145,487,2173,478,2190,469,2207,447,2219,422,2227,394,2230,365,2229,310,2222,265"/>
+<area shape="poly" id="edge59_Node000031_Node000007" title=" " alt="" coords="2141,247,1874,268,1738,283,1640,301,1613,313,1586,326,1521,345,1455,359,1340,378,1339,373,1454,354,1520,339,1584,322,1611,308,1639,296,1737,278,1874,262,2141,241"/>
+<area shape="rect" id="Node000032" href="$Gun_8h.html" title="Gun trap class &#45; directional weapon emplacement." alt="" coords="2389,299,2505,324"/>
+<area shape="poly" id="edge55_Node000031_Node000032" title=" " alt="" coords="2269,252,2411,296,2409,301,2267,257"/>
+<area shape="rect" id="Node000034" href="$Thorn_8cpp.html" title="Thorn class." alt="" coords="2255,299,2365,324"/>
+<area shape="poly" id="edge60_Node000031_Node000034" title=" " alt="" coords="2245,257,2297,296,2293,301,2242,261"/>
+<area shape="poly" id="edge56_Node000032_Node000004" title=" " alt="" coords="2426,335,2330,413,2279,450,2238,473,2160,493,2055,508,1933,519,1801,527,1542,533,1347,533,1347,528,1542,528,1800,521,1932,514,2055,503,2159,488,2236,468,2276,446,2327,409,2422,331"/>
+<area shape="poly" id="edge57_Node000032_Node000007" title=" " alt="" coords="2376,327,2146,344,1848,360,1339,383,1339,378,1848,355,2146,339,2376,321"/>
+<area shape="rect" id="Node000033" href="$Gun_8cpp.html" title=" " alt="" coords="2398,372,2497,397"/>
+<area shape="poly" id="edge58_Node000032_Node000033" title=" " alt="" coords="2450,338,2450,372,2445,372,2445,338"/>
+<area shape="poly" id="edge70_Node000035_Node000004" title=" " alt="" coords="907,106,766,128,709,141,681,154,671,162,662,165,659,165,660,168,732,323,755,373,778,411,808,441,854,468,883,479,922,488,1020,504,1217,523,1217,528,1019,509,921,493,882,484,852,473,804,446,773,415,751,376,728,325,655,169,655,162,661,160,668,158,678,150,708,136,765,123,906,101"/>
+<area shape="poly" id="edge73_Node000035_Node000007" title=" " alt="" coords="1077,102,1168,121,1205,134,1231,150,1242,168,1251,193,1264,258,1276,371,1271,372,1259,259,1246,195,1237,170,1227,154,1203,139,1166,126,1076,107"/>
+<area shape="poly" id="edge62_Node000035_Node000013" title=" " alt="" coords="907,108,610,155,609,149,906,103"/>
+<area shape="poly" id="edge71_Node000035_Node000022" title=" " alt="" coords="949,112,923,130,903,153,900,163,900,172,909,192,925,209,943,223,940,227,922,213,905,195,895,174,895,162,898,151,919,126,946,108"/>
+<area shape="poly" id="edge72_Node000035_Node000029" title=" " alt="" coords="1066,104,1309,149,1308,155,1065,109"/>
+<area shape="rect" id="Node000036" href="$ELmagic_8h.html" title="Elemental_magic wand weapon class." alt="" coords="692,152,837,177"/>
+<area shape="poly" id="edge63_Node000035_Node000036" title=" " alt="" coords="943,111,802,154,801,149,941,106"/>
+<area shape="rect" id="Node000038" href="$ELweapon_8h.html" title="Elemental_weapon class with charged elemental damage. Weapon that can be charged with elemental energ..." alt="" coords="913,152,1069,177"/>
+<area shape="poly" id="edge67_Node000035_Node000038" title=" " alt="" coords="994,118,994,152,989,152,989,118"/>
+<area shape="rect" id="Node000040" href="$Weapon_8cpp.html" title="Implementation of Weapon class methods." alt="" coords="1093,152,1217,177"/>
+<area shape="poly" id="edge74_Node000035_Node000040" title=" " alt="" coords="1031,107,1130,149,1127,154,1029,112"/>
+<area shape="poly" id="edge64_Node000036_Node000017" title=" " alt="" coords="747,190,731,219,728,235,732,250,744,265,758,278,790,296,788,301,755,282,740,268,728,252,723,235,726,218,742,187"/>
+<area shape="poly" id="edge65_Node000036_Node000022" title=" " alt="" coords="809,179,928,223,927,228,808,184"/>
+<area shape="rect" id="Node000037" href="$ELmagic_8cpp.html" title="Implementation of ELmagic class methods." alt="" coords="743,225,869,251"/>
+<area shape="poly" id="edge66_Node000036_Node000037" title=" " alt="" coords="781,188,802,224,797,227,776,191"/>
+<area shape="poly" id="edge68_Node000038_Node000022" title=" " alt="" coords="983,191,967,226,962,224,978,189"/>
+<area shape="rect" id="Node000039" href="$ELweapon_8cpp.html" title="Implementation of ELweapon class methods." alt="" coords="1049,225,1187,251"/>
+<area shape="poly" id="edge69_Node000038_Node000039" title=" " alt="" coords="1025,182,1099,223,1096,227,1022,186"/>
+</map>

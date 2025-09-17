@@ -1,0 +1,51 @@
+\doxysection{Gold.\+cpp}
+\hypertarget{Gold_8cpp_source}{}\label{Gold_8cpp_source}\index{src/Gold.cpp@{src/Gold.cpp}}
+\mbox{\hyperlink{Gold_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Gold_8h}{Gold.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00010}\mbox{\hyperlink{classGold_a55985df6880a433d3220d7072bce6d1d}{00010}}\ \mbox{\hyperlink{classGold_a55985df6880a433d3220d7072bce6d1d}{Gold::Gold}}(\textcolor{keywordtype}{int}\ pos,\ \textcolor{keywordtype}{int}\ amount):\mbox{\hyperlink{classObject}{Object}}(pos),\ \_Amount(amount)\{\}}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00012}\mbox{\hyperlink{classGold_a90468e3b228d335b60a093684a1ee008}{00012}}\ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classGold_a90468e3b228d335b60a093684a1ee008}{Gold::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00013}00013\ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00014}00014\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Gold!!!!"{}},}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}}\ +\ std::to\_string(\mbox{\hyperlink{classGold_a5ab0573d600eb5a1fa8d6131a4503d16}{getAmount}}()),}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_a5acf2b5464b7be1be1bdb3635a69861f}{Color::YELLOW}}}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00018}00018\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00019}00019\ \}}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00021}00021\ }
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00023}\mbox{\hyperlink{classGold_aba91bb9d72e966d25f932e7a6534a7e9}{00023}}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classGold_aba91bb9d72e966d25f932e7a6534a7e9}{Gold::returntype}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a2c0898822ab3baf7f93bea86648adb26}{ObjectType::GOLD}};}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00026}\mbox{\hyperlink{classGold_a100059cf7b125252632206e0546feb5d}{00026}}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{InteractionType}}\ \mbox{\hyperlink{classGold_a100059cf7b125252632206e0546feb5d}{Gold::returnInteractionType}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00027}00027\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{InteractionType::IMMEDIATE\_PASS}};}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00028}00028\ \}}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00029}00029\ }
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00030}\mbox{\hyperlink{classGold_a5ab0573d600eb5a1fa8d6131a4503d16}{00030}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classGold_a5ab0573d600eb5a1fa8d6131a4503d16}{Gold::getAmount}}()\textcolor{keyword}{\ const}\{}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00031}00031\ \ \ \ \ \textcolor{keywordflow}{return}\ \_Amount;}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00032}00032\ \}}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00033}\mbox{\hyperlink{classGold_a82ea7721dd036eb3b171f4fd1efb3d21}{00033}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGold_a82ea7721dd036eb3b171f4fd1efb3d21}{Gold::setAmount}}(\textcolor{keywordtype}{int}\ amount)\{}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00034}00034\ \ \ \ \ \_Amount\ =\ amount;}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00035}00035\ \}}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00036}00036\ }
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00037}\mbox{\hyperlink{classGold_aada5c334442fc4b85e947190146c6f82}{00037}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGold_aada5c334442fc4b85e947190146c6f82}{Gold::takeAmount}}(\textcolor{keywordtype}{int}\ amount)\{}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00038}00038\ \ \ \ \ \mbox{\hyperlink{classGold_a82ea7721dd036eb3b171f4fd1efb3d21}{setAmount}}(\mbox{\hyperlink{classGold_a5ab0573d600eb5a1fa8d6131a4503d16}{getAmount}}()\ -\/\ amount);}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00039}00039\ \}}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00041}\mbox{\hyperlink{classGold_ac4d5688668fca8db54e549cf5060caee}{00041}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classGold_ac4d5688668fca8db54e549cf5060caee}{Gold::takeDamage}}(\textcolor{keywordtype}{int}\ dmg,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type)\{}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00042}00042\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classGold_a5ab0573d600eb5a1fa8d6131a4503d16}{getAmount}}()\ <=\ 0)\ \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00043}00043\ \ \ \ \ \textcolor{keywordtype}{int}\ finalDamage\ =\ dmg;}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00044}00044\ \ \ \ \ \mbox{\hyperlink{classGold_a82ea7721dd036eb3b171f4fd1efb3d21}{setAmount}}(\mbox{\hyperlink{classGold_a5ab0573d600eb5a1fa8d6131a4503d16}{getAmount}}()\ -\/\ finalDamage);}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00045}00045\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00046}00046\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{OnDamageCallback}})\ \{}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{OnDamageCallback}}(\mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{getPosition}}(),\ type);}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00048}00048\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Gold_8cpp_source_l00049}00049\ \}}
+
+\end{DoxyCode}

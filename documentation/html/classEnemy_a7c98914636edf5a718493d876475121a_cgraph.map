@@ -1,0 +1,5 @@
+<map id="Enemy::print" name="Enemy::print">
+<area shape="rect" id="Node000001" title="Gets display information for enemy." alt="" coords="5,5,109,31"/>
+<area shape="rect" id="Node000002" href="$classCharacter.html#a719cf393f4cdcc82a403f70732adee02" title="Gets current health points." alt="" coords="157,5,289,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="109,15,143,15,143,21,109,21"/>
+</map>

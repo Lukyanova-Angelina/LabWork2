@@ -1,0 +1,5 @@
+<map id="Status::RandomSelection" name="Status::RandomSelection">
+<area shape="rect" id="Node000001" title="Selects random object type from loot table." alt="" coords="5,5,191,31"/>
+<area shape="rect" id="Node000002" href="$classStatus.html#aeb32ff747b6ec9ddb7b95baf165999dd" title="Gets random value between 0 and 1." alt="" coords="239,5,421,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="191,15,225,15,225,21,191,21"/>
+</map>

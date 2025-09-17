@@ -1,0 +1,27 @@
+<map id="Elemental::takeDamage" name="Elemental::takeDamage">
+<area shape="rect" id="Node000001" title="Takes damage from weapon with elemental calculations." alt="" coords="5,204,184,229"/>
+<area shape="rect" id="Node000002" href="$classWeapon.html#a5f1941efbf38c5719cf75e4a138e92d4" title="Gets current damage value." alt="" coords="485,5,643,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="100,202,119,171,147,130,185,89,231,56,290,31,353,17,414,10,471,9,471,14,415,16,353,22,291,37,233,60,189,93,151,134,123,174,105,205"/>
+<area shape="rect" id="Node000003" href="$classElemental.html#a798faa5fec5ca4d06b5322c82cf2e315" title="Gets the elemental affinity." alt="" coords="232,155,403,180"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="152,201,246,180,247,186,153,207"/>
+<area shape="rect" id="Node000004" href="$classELmagic.html#a13197a13fbe69f92708fcd29d6f8bbd0" title="Gets the elemental type of the magic wand." alt="" coords="237,204,397,229"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="184,214,224,214,224,219,184,219"/>
+<area shape="rect" id="Node000005" href="$classWeapon.html#afe428ac59d86ed0f815b704510441ddf" title="Gets the elemental type of the weapon." alt="" coords="239,253,396,279"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="153,227,247,248,246,253,152,232"/>
+<area shape="rect" id="Node000006" href="$classCharacter.html#a719cf393f4cdcc82a403f70732adee02" title="Gets current health points." alt="" coords="251,303,383,328"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="117,227,169,258,233,289,253,296,251,301,231,294,166,262,115,232"/>
+<area shape="rect" id="Node000007" href="$classObject.html#ac94263cc1cd1fe7d0193f8400af2c1e4" title="Gets the current grid position." alt="" coords="491,56,637,81"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="103,202,152,146,189,115,231,90,293,70,358,60,421,56,478,57,478,63,421,61,359,65,294,75,233,95,192,119,156,150,107,206"/>
+<area shape="rect" id="Node000008" href="$classWeapon.html#ae898bfca17d4f4112c90fe28040f79ae" title="Returns the object type identifier." alt="" coords="242,352,393,377"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="108,228,159,281,194,312,233,338,247,345,244,350,231,343,191,316,155,285,105,231"/>
+<area shape="rect" id="Node000009" href="$classCharacter.html#a030786bca8ce703c96a275751b74b2fd" title="Sets current health points." alt="" coords="252,401,383,427"/>
+<area shape="poly" id="edge8_Node000001_Node000009" title=" " alt="" coords="105,228,123,260,151,304,189,349,234,388,243,394,241,398,230,392,185,353,147,307,118,263,100,231"/>
+<area shape="rect" id="Node000010" href="$classWeapon.html#a6e0cca4f9b4581c5800732a3c0732786" title="Applies damage to weapon (reduces durability)." alt="" coords="235,105,400,131"/>
+<area shape="poly" id="edge9_Node000001_Node000010" title=" " alt="" coords="115,202,166,171,231,140,251,132,253,137,233,144,169,176,117,206"/>
+<area shape="poly" id="edge11_Node000010_Node000002" title=" " alt="" coords="336,103,386,72,450,41,478,32,480,37,452,46,388,77,338,108"/>
+<area shape="poly" id="edge12_Node000010_Node000007" title=" " alt="" coords="381,103,486,81,487,87,382,108"/>
+<area shape="rect" id="Node000011" href="$classWeapon.html#a699365cd1118c61662b5567dc6266044" title="Calculates final damage after elemental modifications." alt="" coords="451,105,677,131"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="400,115,437,115,437,121,400,121"/>
+<area shape="rect" id="Node000012" href="$classWeapon.html#a54e4b500dcc3f5c3d02df6f1c29ddbea" title="Sets damage value." alt="" coords="485,155,643,180"/>
+<area shape="poly" id="edge13_Node000010_Node000012" title=" " alt="" coords="382,128,487,149,486,155,381,133"/>
+</map>

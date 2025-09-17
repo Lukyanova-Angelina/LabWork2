@@ -1,0 +1,76 @@
+\doxysection{Elemental.\+cpp}
+\hypertarget{Elemental_8cpp_source}{}\label{Elemental_8cpp_source}\index{src/Elemental.cpp@{src/Elemental.cpp}}
+\mbox{\hyperlink{Elemental_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Elemental_8h}{Elemental.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00010}\mbox{\hyperlink{classElemental_a6f08d79e2a0d668eba552f1525c1a390}{00010}}\ \mbox{\hyperlink{classElemental_a6f08d79e2a0d668eba552f1525c1a390}{Elemental::Elemental}}(\textcolor{keywordtype}{int}\ pos,\ \textcolor{keywordtype}{int}\ hp,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type)}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00011}00011\ \ \ \ \ :\ \mbox{\hyperlink{classEnemy}{Enemy}}(pos,\ hp),\ \_Type(type)\ \{\}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00013}\mbox{\hyperlink{classElemental_a2dcd55023ea6c637ca8014bd66582912}{00013}}\ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classElemental_a2dcd55023ea6c637ca8014bd66582912}{Elemental::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00014}00014\ \ \ \ \ std::string\ el\ =\ (\mbox{\hyperlink{classElemental_a798faa5fec5ca4d06b5322c82cf2e315}{getElement}}()\ ==\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602dab7426fb9c3932995306fceba2874d057}{DamageType::FIRE}}\ ?\ \textcolor{stringliteral}{"{}FIRE"{}}\ :\ \textcolor{stringliteral}{"{}ICE"{}});}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Elemental\ "{}}\ +\ el,}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Dmg:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}()),}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_a29bfda93a0cf8b1ec0fb44cf989d7eb0}{Color::RED}}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00020}00020\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00023}\mbox{\hyperlink{classElemental_ac9e477707283a12b706d2c5e0f4fedec}{00023}}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classElemental_ac9e477707283a12b706d2c5e0f4fedec}{Elemental::returntype}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980af9c55990ee5893e66c504fc8ca35bf79}{ObjectType::ELEMENTAL}};}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00027}\mbox{\hyperlink{classElemental_a798faa5fec5ca4d06b5322c82cf2e315}{00027}}\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ \mbox{\hyperlink{classElemental_a798faa5fec5ca4d06b5322c82cf2e315}{Elemental::getElement}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ \_Type;}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00031}\mbox{\hyperlink{classElemental_a4d942a61f73f0d363bb0f9fdd51a1026}{00031}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classElemental_a4d942a61f73f0d363bb0f9fdd51a1026}{Elemental::takeDamage}}(\mbox{\hyperlink{classWeapon}{Weapon}}*\ o)\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordtype}{int}\ hp;}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00033}00033\ \ \ \ \ \textcolor{keywordflow}{if}\ (o-\/>\mbox{\hyperlink{classWeapon_ae898bfca17d4f4112c90fe28040f79ae}{returntype}}()\ ==\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7665821fee6cc3f7535933a177ebe0be}{ObjectType::ELMAGIC}})\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classELmagic}{ELmagic}}*\ stick\ =\ \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classELmagic}{ELmagic}}*\textcolor{keyword}{>}(o);}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (stick)\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ el\ =\ stick-\/>\mbox{\hyperlink{classELmagic_a13197a13fbe69f92708fcd29d6f8bbd0}{getElement}}();}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00037}00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (el\ ==\ \mbox{\hyperlink{classElemental_a798faa5fec5ca4d06b5322c82cf2e315}{getElement}}())\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00038}00038\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hp\ =\ \mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}();}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00039}00039\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCharacter_a030786bca8ce703c96a275751b74b2fd}{setHP}}(hp\ +\ std::min(o-\/>\mbox{\hyperlink{classWeapon_a5f1941efbf38c5719cf75e4a138e92d4}{getDamage}}(),\ hp));}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00040}00040\ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00041}00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (2\ *\ o-\/>\mbox{\hyperlink{classWeapon_a5f1941efbf38c5719cf75e4a138e92d4}{getDamage}}()\ <\ \mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}())\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00042}00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hp\ =\ \mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}();}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00043}00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCharacter_a030786bca8ce703c96a275751b74b2fd}{setHP}}(hp\ -\/\ 2\ *\ o-\/>\mbox{\hyperlink{classWeapon_a5f1941efbf38c5719cf75e4a138e92d4}{getDamage}}());}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00044}00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00045}00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ hp\ =\ (\mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}()\ +\ 1)\ /\ 2;}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00046}00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCharacter_a030786bca8ce703c96a275751b74b2fd}{setHP}}(\mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}()\ -\/\ 2\ *\ hp);}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00047}00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00048}00048\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00049}00049\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00050}00050\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00051}00051\ \ \ \ \ \ \ \ \ hp\ =\ \mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}();}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00052}00052\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classCharacter_a030786bca8ce703c96a275751b74b2fd}{setHP}}(\mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}()\ -\/\ o-\/>\mbox{\hyperlink{classWeapon_a5f1941efbf38c5719cf75e4a138e92d4}{getDamage}}());}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00053}00053\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00054}00054\ \ \ \ \ o-\/>\mbox{\hyperlink{classWeapon_a6e0cca4f9b4581c5800732a3c0732786}{takeDamage}}(std::min(o-\/>\mbox{\hyperlink{classWeapon_a5f1941efbf38c5719cf75e4a138e92d4}{getDamage}}(),\ hp),\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da1e23852820b9154316c7c06e2b7ba051}{DamageType::NORMAL}});}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00055}00055\ \ \ \ \ \textcolor{keywordflow}{if}\ (\mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{OnDamageCallback}})\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00056}00056\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{OnDamageCallback}}(\mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{getPosition}}(),\ o-\/>\mbox{\hyperlink{classWeapon_afe428ac59d86ed0f815b704510441ddf}{getElement}}());}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00057}00057\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00058}00058\ \}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00060}\mbox{\hyperlink{classElemental_adc01a38adcc17544f37e072014e4077b}{00060}}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{InteractionType}}\ \mbox{\hyperlink{classElemental_adc01a38adcc17544f37e072014e4077b}{Elemental::returnInteractionType}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00061}00061\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a9504dfedba96004cae68c7fbc11b5c67}{InteractionType::COMBAT\_DEPENDENT}};}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00062}00062\ \}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00063}00063\ }
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00064}\mbox{\hyperlink{classElemental_a27b786fd729172e19918e952605eb5e3}{00064}}\ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classElemental_a27b786fd729172e19918e952605eb5e3}{Elemental::calculateFinalDamage}}(\textcolor{keywordtype}{int}\ dmg,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type)\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00065}00065\ \ \ \ \ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ el\ =\ \mbox{\hyperlink{classElemental_a798faa5fec5ca4d06b5322c82cf2e315}{getElement}}();}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00066}00066\ \ \ \ \ \textcolor{keywordflow}{if}\ (type\ ==\ el)\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00067}00067\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/dmg;\ \textcolor{comment}{//\ Heal\ from\ same\ element}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00068}00068\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ ((type\ ==\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602dab7426fb9c3932995306fceba2874d057}{DamageType::FIRE}}\ \&\&\ el\ ==\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da22fb77eba93786121faa55c581785893}{DamageType::ICE}})\ ||\ }
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ (type\ ==\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da22fb77eba93786121faa55c581785893}{DamageType::ICE}}\ \&\&\ el\ ==\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602dab7426fb9c3932995306fceba2874d057}{DamageType::FIRE}}))\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00070}00070\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dmg\ *\ 2;\ \textcolor{comment}{//\ Double\ damage\ from\ opposite\ element}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00071}00071\ \ \ \ \ \}\ \textcolor{keywordflow}{else}\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00072}00072\ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ dmg;\ \textcolor{comment}{//\ Normal\ damage}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00073}00073\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{Elemental_8cpp_source_l00074}00074\ \}}
+
+\end{DoxyCode}

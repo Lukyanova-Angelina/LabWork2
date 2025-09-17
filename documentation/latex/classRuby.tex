@@ -1,0 +1,188 @@
+\doxysection{Ruby Class Reference}
+\hypertarget{classRuby}{}\label{classRuby}\index{Ruby@{Ruby}}
+
+
+Premium currency that gives bonus rewards.  
+
+
+
+
+{\ttfamily \#include $<$Ruby.\+h$>$}
+
+
+
+Inheritance diagram for Ruby\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{classRuby__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Ruby\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=128pt]{classRuby__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRuby_a8fc42ec1ac42e292d18768c18ab7c222}{Ruby}} (int pos, int amount)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classRuby}{Ruby} with specified value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classRuby_a10b7819f002c4e796c3c5daf7a10eb82}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information for ruby. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classRuby_ae64ed8cfcef2201dcc1cd2cdde644618}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classGold}{Gold}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGold_a55985df6880a433d3220d7072bce6d1d}{Gold}} (int pos, int amount)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classGold}{Gold} with specified amount. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classGold_a100059cf7b125252632206e0546feb5d}{return\+Interaction\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the interaction type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classGold_a5ab0573d600eb5a1fa8d6131a4503d16}{get\+Amount}} () const
+\begin{DoxyCompactList}\small\item\em Gets the gold amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGold_a82ea7721dd036eb3b171f4fd1efb3d21}{set\+Amount}} (int amount)
+\begin{DoxyCompactList}\small\item\em Sets the gold amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGold_aada5c334442fc4b85e947190146c6f82}{take\+Amount}} (int amount)
+\begin{DoxyCompactList}\small\item\em Reduces gold amount by specified value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classGold_ac4d5688668fca8db54e549cf5060caee}{take\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Applies damage to gold (reduces amount). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_a71da04043bdd83585112550c3e27a85d}{Object}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classObject}{Object} at the specified position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classObject_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. Removes any active damage callback. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classObject_ada211a17211c090c8a20c0893c6ec3a1}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Creates a copy of this object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObject_a4abd48bacb1b004c8ac891597c831f77}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates object state (called each game step). Base implementation does nothing -\/ override for custom behavior. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a746b108f37d54122539916373d6ad824}{set\+Position}} (int pos)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa893c9e84c6f0342507291ea2e50b30e}{move}} (int direction)
+\begin{DoxyCompactList}\small\item\em Moves the object in the specified direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classObject_a110b0235d69e91d6cd2684e54696f45b}{possibletomove}} (int direction)
+\begin{DoxyCompactList}\small\item\em Checks if movement in a direction is possible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7}{get\+Target\+Position}} (int direction) const
+\begin{DoxyCompactList}\small\item\em Calculates target position for a movement direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a569361cd11827f5d158b05537011d544}{get\+Target\+Direction}} (int pos2) const
+\begin{DoxyCompactList}\small\item\em Calculates direction to reach a target position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a65fb5ee0e5692e7158c266b92cdd2074}{set\+On\+Damage\+Callback}} (std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ callback)
+\begin{DoxyCompactList}\small\item\em Sets a callback function for damage events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a20141e220dafc6f225eebe800b0e9c41}{remove\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Removes the current damage callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{On\+Damage\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback for damage events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Premium currency that gives bonus rewards. 
+
+Inherits from \doxylink{classGold}{Gold}. Provides double gold and bonus XP when collected. Special variant of currency with enhanced value. 
+
+Definition at line \mbox{\hyperlink{Ruby_8h_source_l00023}{23}} of file \mbox{\hyperlink{Ruby_8h_source}{Ruby.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classRuby_a8fc42ec1ac42e292d18768c18ab7c222}\label{classRuby_a8fc42ec1ac42e292d18768c18ab7c222} 
+\index{Ruby@{Ruby}!Ruby@{Ruby}}
+\index{Ruby@{Ruby}!Ruby@{Ruby}}
+\doxysubsubsection{\texorpdfstring{Ruby()}{Ruby()}}
+{\footnotesize\ttfamily Ruby\+::\+Ruby (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classRuby}{Ruby} with specified value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+{\em amount} & Base value of the ruby. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Ruby_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{Ruby_8cpp_source}{Ruby.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classRuby_a10b7819f002c4e796c3c5daf7a10eb82}\label{classRuby_a10b7819f002c4e796c3c5daf7a10eb82} 
+\index{Ruby@{Ruby}!print@{print}}
+\index{print@{print}!Ruby@{Ruby}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDisplayInfo}{Display\+Info}} Ruby\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets display information for ruby. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDisplayInfo}{Display\+Info} structure with ruby visualization. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classGold_a90468e3b228d335b60a093684a1ee008}{Gold}}.
+
+
+
+Definition at line \mbox{\hyperlink{Ruby_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{Ruby_8cpp_source}{Ruby.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Gold_8cpp_source_l00030}{Gold\+::get\+Amount()}}, and \mbox{\hyperlink{Colors_8h_source_l00025}{Color\+::\+RED}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=284pt]{classRuby_a10b7819f002c4e796c3c5daf7a10eb82_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classRuby_ae64ed8cfcef2201dcc1cd2cdde644618}\label{classRuby_ae64ed8cfcef2201dcc1cd2cdde644618} 
+\index{Ruby@{Ruby}!returntype@{returntype}}
+\index{returntype@{returntype}!Ruby@{Ruby}}
+\doxysubsubsection{\texorpdfstring{returntype()}{returntype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Ruby\+::returntype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the object type identifier. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a842c5e2e69277690b064bf363c017980a948ea267d4a32b3d91b837b54298de0a}{Object\+Type\+::\+RUBY} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classGold_aba91bb9d72e966d25f932e7a6534a7e9}{Gold}}.
+
+
+
+Definition at line \mbox{\hyperlink{Ruby_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{Ruby_8cpp_source}{Ruby.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a948ea267d4a32b3d91b837b54298de0a}{RUBY}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{Ruby_8h}{Ruby.\+h}}\item 
+src/\mbox{\hyperlink{Ruby_8cpp}{Ruby.\+cpp}}\end{DoxyCompactItemize}

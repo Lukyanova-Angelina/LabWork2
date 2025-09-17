@@ -1,0 +1,22 @@
+<map id="Gold::getAmount" name="Gold::getAmount">
+<area shape="rect" id="Node000001" title="Gets the gold amount." alt="" coords="839,146,971,171"/>
+<area shape="rect" id="Node000002" href="$classGame.html#a95e9edd88f6736aec599ba82886bbf56" title="Checks for and converts gold lines to rubies." alt="" coords="577,5,791,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="879,138,839,102,789,66,750,48,752,43,792,62,842,97,883,134"/>
+<area shape="rect" id="Node000006" href="$classGame.html#aa7e441af2bf58d6926635c1b6e5c6747" title="Handles immediate pass interactions (weapons, items, etc.)." alt="" coords="303,66,529,91"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="867,142,831,126,790,112,724,98,656,89,529,81,530,76,656,84,725,93,791,107,833,121,870,137"/>
+<area shape="rect" id="Node000007" href="$classGold.html#a90468e3b228d335b60a093684a1ee008" title="Gets display information for gold." alt="" coords="639,121,729,146"/>
+<area shape="poly" id="edge7_Node000001_Node000007" title=" " alt="" coords="825,152,729,141,730,136,825,147"/>
+<area shape="rect" id="Node000008" href="$classRuby.html#a10b7819f002c4e796c3c5daf7a10eb82" title="Gets display information for ruby." alt="" coords="638,170,730,195"/>
+<area shape="poly" id="edge8_Node000001_Node000008" title=" " alt="" coords="825,170,731,180,730,175,825,165"/>
+<area shape="rect" id="Node000009" href="$classGold.html#aada5c334442fc4b85e947190146c6f82" title="Reduces gold amount by specified value." alt="" coords="615,219,753,245"/>
+<area shape="poly" id="edge9_Node000001_Node000009" title=" " alt="" coords="866,180,792,211,751,222,749,217,790,205,864,175"/>
+<area shape="rect" id="Node000010" href="$classGold.html#ac4d5688668fca8db54e549cf5060caee" title="Applies damage to gold (reduces amount)." alt="" coords="613,269,755,294"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="885,184,845,223,819,243,792,260,757,273,755,268,790,255,816,238,842,219,882,180"/>
+<area shape="rect" id="Node000003" href="$classGame.html#a79df6376b332d63c9eca0dcee30305c3" title="Updates game state (called each frame). Handles object updates, damage." alt="" coords="359,15,473,41"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="564,29,473,30,473,25,564,24"/>
+<area shape="rect" id="Node000004" href="$classGame.html#a28d97d9a41d73e279d0255587b3e21e7" title="Handles player input and triggers appropriate actions." alt="" coords="108,42,255,67"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="345,39,255,49,255,44,345,33"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,42,60,67"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="94,57,60,57,60,52,94,52"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="289,68,255,65,255,59,289,63"/>
+</map>

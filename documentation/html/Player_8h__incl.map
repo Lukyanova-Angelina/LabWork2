@@ -1,0 +1,36 @@
+<map id="headers/Player.h" name="headers/Player.h">
+<area shape="rect" id="Node000001" title="Player character class with weapon management capabilities." alt="" coords="450,5,581,31"/>
+<area shape="rect" id="Node000002" href="$Characters_8h.html" title="Base class for all characters in the game (Player and Enemy)." alt="" coords="291,79,395,104"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="489,33,385,76,383,71,487,28"/>
+<area shape="rect" id="Node000008" title=" " alt="" coords="683,299,761,324"/>
+<area shape="poly" id="edge19_Node000001_Node000008" title=" " alt="" coords="582,21,613,27,644,38,674,54,699,77,715,102,726,129,736,187,735,242,730,285,725,284,730,241,731,187,721,130,710,104,695,80,671,59,642,43,611,32,580,26"/>
+<area shape="rect" id="Node000013" href="$Weapon_8h.html" title="Base weapon class for game combat system." alt="" coords="389,152,476,177"/>
+<area shape="poly" id="edge14_Node000001_Node000013" title=" " alt="" coords="503,33,482,53,462,80,448,110,440,139,435,138,443,108,457,77,478,50,500,29"/>
+<area shape="rect" id="Node000014" href="$ELmagic_8h.html" title="Elemental_magic wand weapon class." alt="" coords="471,79,560,104"/>
+<area shape="poly" id="edge15_Node000001_Node000014" title=" " alt="" coords="518,31,518,65,513,65,513,31"/>
+<area shape="rect" id="Node000015" href="$ELweapon_8h.html" title="Elemental_weapon class with charged elemental damage. Weapon that can be charged with elemental energ..." alt="" coords="584,79,684,104"/>
+<area shape="poly" id="edge17_Node000001_Node000015" title=" " alt="" coords="536,28,604,69,601,74,533,33"/>
+<area shape="rect" id="Node000003" href="$Object_8h.html" title="Base class for all game objects in the game." alt="" coords="344,225,420,251"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="349,104,378,211,373,213,344,105"/>
+<area shape="poly" id="edge12_Node000002_Node000013" title=" " alt="" coords="359,102,409,141,406,145,356,106"/>
+<area shape="rect" id="Node000004" title=" " alt="" coords="5,299,71,324"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="344,249,85,301,84,296,343,244"/>
+<area shape="rect" id="Node000005" title=" " alt="" coords="95,299,154,324"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="344,252,168,301,166,296,343,247"/>
+<area shape="rect" id="Node000006" title=" " alt="" coords="178,299,258,324"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="357,253,258,296,256,291,355,248"/>
+<area shape="rect" id="Node000007" title=" " alt="" coords="283,299,345,324"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="373,253,337,290,333,287,369,249"/>
+<area shape="poly" id="edge7_Node000003_Node000008" title=" " alt="" coords="421,244,671,296,670,301,420,250"/>
+<area shape="rect" id="Node000009" title=" " alt="" coords="369,299,456,324"/>
+<area shape="poly" id="edge8_Node000003_Node000009" title=" " alt="" coords="390,250,405,285,400,287,385,252"/>
+<area shape="rect" id="Node000010" href="$Colors_8h.html" title="ANSI color codes for terminal UI styling." alt="" coords="481,299,555,324"/>
+<area shape="poly" id="edge9_Node000003_Node000010" title=" " alt="" coords="405,248,485,290,483,295,403,253"/>
+<area shape="rect" id="Node000012" href="$Enums_8h.html" title="Centralized enumeration definitions for the game." alt="" coords="580,299,659,324"/>
+<area shape="poly" id="edge11_Node000003_Node000012" title=" " alt="" coords="421,248,569,292,567,297,419,253"/>
+<area shape="rect" id="Node000011" title=" " alt="" coords="489,372,547,397"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="521,324,521,358,515,358,515,324"/>
+<area shape="poly" id="edge13_Node000013_Node000003" title=" " alt="" coords="426,179,400,216,396,213,422,176"/>
+<area shape="poly" id="edge16_Node000014_Node000013" title=" " alt="" coords="504,106,458,145,455,141,500,102"/>
+<area shape="poly" id="edge18_Node000015_Node000013" title=" " alt="" coords="603,107,479,150,477,145,601,102"/>
+</map>

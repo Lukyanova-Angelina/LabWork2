@@ -1,0 +1,13 @@
+<map id="Chest::generateLoot" name="Chest::generateLoot">
+<area shape="rect" id="Node000001" title="Generates random loot based on chest type and game status." alt="" coords="5,79,159,104"/>
+<area shape="rect" id="Node000002" href="$classStatus.html#ab609d516c858ca28a44665742e4519f8" title="Generates loot from chest based on chest type." alt="" coords="207,29,401,55"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="139,76,232,55,233,60,140,81"/>
+<area shape="rect" id="Node000005" href="$classChest.html#a6c89f699203941d71c7419be42325732" title="Gets the chest type." alt="" coords="227,79,381,104"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="159,89,213,89,213,94,159,94"/>
+<area shape="rect" id="Node000006" href="$classObject.html#ac94263cc1cd1fe7d0193f8400af2c1e4" title="Gets the current grid position." alt="" coords="231,128,377,153"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="140,101,233,122,232,128,139,107"/>
+<area shape="rect" id="Node000003" href="$classStatus.html#a1f60585ad759d8d780a039a2a5bddc71" title="Gets current player level." alt="" coords="477,5,604,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="401,29,464,23,464,28,402,35"/>
+<area shape="rect" id="Node000004" href="$classStatus.html#aeb32ff747b6ec9ddb7b95baf165999dd" title="Gets random value between 0 and 1." alt="" coords="449,55,632,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="402,50,436,53,436,59,401,55"/>
+</map>

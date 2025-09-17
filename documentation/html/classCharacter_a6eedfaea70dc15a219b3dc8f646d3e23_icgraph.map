@@ -1,0 +1,9 @@
+<map id="Character::getMaxHP" name="Character::getMaxHP">
+<area shape="rect" id="Node000001" title="Gets maximum health points." alt="" coords="176,55,336,80"/>
+<area shape="rect" id="Node000002" href="$classCharacter.html#aa450176031bc9781a158f77ee2fa505f" title="Gets display information for UI rendering." alt="" coords="5,5,128,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="193,54,116,33,117,28,194,49"/>
+<area shape="rect" id="Node000003" href="$classPlayer.html#a1b199d782d3671895519de7e7fadd30a" title="Gets display information including weapon status." alt="" coords="16,55,117,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="162,70,118,70,118,65,162,65"/>
+<area shape="rect" id="Node000004" href="$classMag.html#a347d597040e143424f71ac53966cc0ba" title="Updates magician state &#45; regenerates health." alt="" coords="15,104,118,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="194,86,117,106,116,101,193,81"/>
+</map>

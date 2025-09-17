@@ -1,0 +1,7 @@
+<map id="ELmagic::print" name="ELmagic::print">
+<area shape="rect" id="Node000001" title="Gets display information including elemental type." alt="" coords="5,31,120,56"/>
+<area shape="rect" id="Node000002" href="$classWeapon.html#a5f1941efbf38c5719cf75e4a138e92d4" title="Gets current damage value." alt="" coords="169,5,327,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="120,33,155,28,155,33,121,38"/>
+<area shape="rect" id="Node000003" href="$classELmagic.html#a13197a13fbe69f92708fcd29d6f8bbd0" title="Gets the elemental type of the magic wand." alt="" coords="168,55,328,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="121,48,155,53,154,58,120,53"/>
+</map>

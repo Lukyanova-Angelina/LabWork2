@@ -1,0 +1,45 @@
+\doxysection{Potion.\+h}
+\hypertarget{Potion_8h_source}{}\label{Potion_8h_source}\index{headers/Potion.h@{headers/Potion.h}}
+\mbox{\hyperlink{Potion_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ POTION\_H}}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ POTION\_H}}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Object_8h}{Object.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Weapon_8h}{Weapon.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00024}\mbox{\hyperlink{classPotion}{00024}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPotion}{Potion}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObject}{Object}}\ \{}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00025}00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00026}00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \_Power;\ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00027}00027\ \ \ \ \ \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257}{PotionType}}\ \_Type;\ \ \ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00029}00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{classPotion}{Potion}}(\textcolor{keywordtype}{int}\ pos,\ \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257}{PotionType}}\ type);}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00036}00036\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00043}00043\ \ \ \ \ \mbox{\hyperlink{classPotion}{Potion}}(\textcolor{keywordtype}{int}\ pos,\ \textcolor{keywordtype}{int}\ power,\ \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257}{PotionType}}\ type);}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00044}00044\ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00049}00049\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classPotion_aa1cf3151691e85127c5ca61f6eb9ef60}{getPower}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00050}00050\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00055}00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPotion_a0234d4419089f6f672729c52969678e1}{setPower}}(\textcolor{keywordtype}{int}\ power);}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00061}00061\ \ \ \ \ \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257}{PotionType}}\ \mbox{\hyperlink{classPotion_abf4f6cc60914e8ac8dc7d2f0d2afac35}{getPotionType}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00062}00062\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00067}00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPotion_a59be6c95c67102ed97f250e7a9abd491}{setPotionType}}(\mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257}{PotionType}}\ type);}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00068}00068\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00073}00073\ \ \ \ \ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classPotion_a6882ce4beaf489d2eefdc5e3d11c9268}{print}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00074}00074\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00079}00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPotion_af53824329e3d7c13ffa34a54779ff9d4}{takeDamage}}(\mbox{\hyperlink{classWeapon}{Weapon}}*\ o);}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00080}00080\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00086}00086\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPotion_af53824329e3d7c13ffa34a54779ff9d4}{takeDamage}}(\textcolor{keywordtype}{int}\ dmg,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00087}00087\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00092}00092\ \ \ \ \ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{InteractionType}}\ \mbox{\hyperlink{classPotion_a34ea68a06f51ae03f8388533abd0213b}{returnInteractionType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00093}00093\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00098}00098\ \ \ \ \ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classPotion_a3b9d8ca2d94df0d8e845e73321b8259a}{returntype}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00099}00099\ \};}
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00100}00100\ }
+\DoxyCodeLine{\Hypertarget{Potion_8h_source_l00101}00101\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

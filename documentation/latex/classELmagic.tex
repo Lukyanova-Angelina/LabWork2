@@ -1,0 +1,344 @@
+\doxysection{ELmagic Class Reference}
+\hypertarget{classELmagic}{}\label{classELmagic}\index{ELmagic@{ELmagic}}
+
+
+\doxylink{classElemental}{Elemental} magic wand with complex damage calculations.  
+
+
+
+
+{\ttfamily \#include $<$ELmagic.\+h$>$}
+
+
+
+Inheritance diagram for ELmagic\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{classELmagic__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ELmagic\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=138pt]{classELmagic__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classELmagic_ae34736312afac02560d0d9a58cc7d72f}{ELmagic}} (int pos, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} el)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classELmagic}{ELmagic} with random damage and specified element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classELmagic_a9ba5848da176bc3f7349002c8ed84e14}{ELmagic}} (int pos, int damage, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} el)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classELmagic}{ELmagic} with specified damage and element. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classELmagic_ae325dc96de1c4364aac56e4de0d37e0a}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information including elemental type. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classELmagic_ab244c591d04277be28249c0f48b51fe0}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} \mbox{\hyperlink{classELmagic_a13197a13fbe69f92708fcd29d6f8bbd0}{get\+Element}} () const
+\begin{DoxyCompactList}\small\item\em Gets the elemental type of the magic wand. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classELmagic_aabe25a1af2cae108814343fc534feda2}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a copy of the magic wand. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classELmagic_a16aaad9fe6c0614a0bb67b127a0641f2}{return\+Interaction\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the interaction type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classELmagic_ac15606696d91b140f08abd19afa27df7}{calculate\+Final\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Calculates final damage with elemental interactions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classWeapon}{Weapon}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classWeapon_a485632635fd5cb2aa5d1b773d86012f2}{Weapon}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classWeapon}{Weapon} with random damage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classWeapon_a4c824de4e4d24859b5fc2d49477af59e}{Weapon}} (int pos, int damage)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classWeapon}{Weapon} with specified damage. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classWeapon_a5f1941efbf38c5719cf75e4a138e92d4}{get\+Damage}} () const
+\begin{DoxyCompactList}\small\item\em Gets current damage value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeapon_a54e4b500dcc3f5c3d02df6f1c29ddbea}{set\+Damage}} (int damage)
+\begin{DoxyCompactList}\small\item\em Sets damage value. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classWeapon_a42f27519d8c5852b22a3e50b54dc4dcc}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information for weapon. \end{DoxyCompactList}\item 
+std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classWeapon_aa9cebf36b0e905bddee7666f0a5c39ae}{clone}} () const override
+\begin{DoxyCompactList}\small\item\em Creates a copy of the weapon. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classWeapon_ae898bfca17d4f4112c90fe28040f79ae}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classWeapon_a7ba43f56f6facbb19ddcab879e39630b}{return\+Interaction\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the interaction type for weapons. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classWeapon_a6e0cca4f9b4581c5800732a3c0732786}{take\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type) override
+\begin{DoxyCompactList}\small\item\em Applies damage to weapon (reduces durability). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_a71da04043bdd83585112550c3e27a85d}{Object}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classObject}{Object} at the specified position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classObject_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. Removes any active damage callback. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObject_a4abd48bacb1b004c8ac891597c831f77}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates object state (called each game step). Base implementation does nothing -\/ override for custom behavior. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a746b108f37d54122539916373d6ad824}{set\+Position}} (int pos)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa893c9e84c6f0342507291ea2e50b30e}{move}} (int direction)
+\begin{DoxyCompactList}\small\item\em Moves the object in the specified direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classObject_a110b0235d69e91d6cd2684e54696f45b}{possibletomove}} (int direction)
+\begin{DoxyCompactList}\small\item\em Checks if movement in a direction is possible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7}{get\+Target\+Position}} (int direction) const
+\begin{DoxyCompactList}\small\item\em Calculates target position for a movement direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a569361cd11827f5d158b05537011d544}{get\+Target\+Direction}} (int pos2) const
+\begin{DoxyCompactList}\small\item\em Calculates direction to reach a target position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a65fb5ee0e5692e7158c266b92cdd2074}{set\+On\+Damage\+Callback}} (std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ callback)
+\begin{DoxyCompactList}\small\item\em Sets a callback function for damage events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a20141e220dafc6f225eebe800b0e9c41}{remove\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Removes the current damage callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{On\+Damage\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback for damage events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classElemental}{Elemental} magic wand with complex damage calculations. 
+
+Inherits from \doxylink{classWeapon}{Weapon} and adds elemental damage type system. Features damage modifiers based on elemental interactions. 
+
+Definition at line \mbox{\hyperlink{ELmagic_8h_source_l00024}{24}} of file \mbox{\hyperlink{ELmagic_8h_source}{ELmagic.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classELmagic_ae34736312afac02560d0d9a58cc7d72f}\label{classELmagic_ae34736312afac02560d0d9a58cc7d72f} 
+\index{ELmagic@{ELmagic}!ELmagic@{ELmagic}}
+\index{ELmagic@{ELmagic}!ELmagic@{ELmagic}}
+\doxysubsubsection{\texorpdfstring{ELmagic()}{ELmagic()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ELmagic\+::\+ELmagic (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{el }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classELmagic}{ELmagic} with random damage and specified element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+{\em el} & \doxylink{classElemental}{Elemental} type (FIRE or ICE). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ELmagic_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{ELmagic_8cpp_source}{ELmagic.\+cpp}}.
+
+\Hypertarget{classELmagic_a9ba5848da176bc3f7349002c8ed84e14}\label{classELmagic_a9ba5848da176bc3f7349002c8ed84e14} 
+\index{ELmagic@{ELmagic}!ELmagic@{ELmagic}}
+\index{ELmagic@{ELmagic}!ELmagic@{ELmagic}}
+\doxysubsubsection{\texorpdfstring{ELmagic()}{ELmagic()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ELmagic\+::\+ELmagic (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{int}]{damage,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{el }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classELmagic}{ELmagic} with specified damage and element. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+{\em damage} & Initial damage value. \\
+\hline
+{\em el} & \doxylink{classElemental}{Elemental} type (FIRE or ICE). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{ELmagic_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{ELmagic_8cpp_source}{ELmagic.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classELmagic_ac15606696d91b140f08abd19afa27df7}\label{classELmagic_ac15606696d91b140f08abd19afa27df7} 
+\index{ELmagic@{ELmagic}!calculateFinalDamage@{calculateFinalDamage}}
+\index{calculateFinalDamage@{calculateFinalDamage}!ELmagic@{ELmagic}}
+\doxysubsubsection{\texorpdfstring{calculateFinalDamage()}{calculateFinalDamage()}}
+{\footnotesize\ttfamily int ELmagic\+::calculate\+Final\+Damage (\begin{DoxyParamCaption}\item[{int}]{dmg,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Calculates final damage with elemental interactions. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em dmg} & Base damage amount. \\
+\hline
+{\em type} & Type of damage being applied. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Final damage after elemental calculations. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classWeapon_a699365cd1118c61662b5567dc6266044}{Weapon}}.
+
+
+
+Definition at line \mbox{\hyperlink{ELmagic_8cpp_source_l00041}{41}} of file \mbox{\hyperlink{ELmagic_8cpp_source}{ELmagic.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602dab7426fb9c3932995306fceba2874d057}{FIRE}}, \mbox{\hyperlink{ELmagic_8cpp_source_l00029}{get\+Element()}}, and \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da22fb77eba93786121faa55c581785893}{ICE}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classELmagic_ac15606696d91b140f08abd19afa27df7_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classELmagic_aabe25a1af2cae108814343fc534feda2}\label{classELmagic_aabe25a1af2cae108814343fc534feda2} 
+\index{ELmagic@{ELmagic}!clone@{clone}}
+\index{clone@{clone}!ELmagic@{ELmagic}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ ELmagic\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Creates a copy of the magic wand. 
+
+\begin{DoxyReturn}{Returns}
+Unique pointer to cloned \doxylink{classELmagic}{ELmagic}. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_ada211a17211c090c8a20c0893c6ec3a1}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{ELmagic_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{ELmagic_8cpp_source}{ELmagic.\+cpp}}.
+
+\Hypertarget{classELmagic_a13197a13fbe69f92708fcd29d6f8bbd0}\label{classELmagic_a13197a13fbe69f92708fcd29d6f8bbd0} 
+\index{ELmagic@{ELmagic}!getElement@{getElement}}
+\index{getElement@{getElement}!ELmagic@{ELmagic}}
+\doxysubsubsection{\texorpdfstring{getElement()}{getElement()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} ELmagic\+::get\+Element (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Gets the elemental type of the magic wand. 
+
+\begin{DoxyReturn}{Returns}
+Damage\+Type enum value (FIRE or ICE). 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classWeapon_afe428ac59d86ed0f815b704510441ddf}{Weapon}}.
+
+
+
+Definition at line \mbox{\hyperlink{ELmagic_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{ELmagic_8cpp_source}{ELmagic.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{ELmagic_8cpp_source_l00041}{calculate\+Final\+Damage()}}, \mbox{\hyperlink{ELmagic_8cpp_source_l00015}{print()}}, and \mbox{\hyperlink{Elemental_8cpp_source_l00031}{Elemental\+::take\+Damage()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classELmagic_a13197a13fbe69f92708fcd29d6f8bbd0_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classELmagic_ae325dc96de1c4364aac56e4de0d37e0a}\label{classELmagic_ae325dc96de1c4364aac56e4de0d37e0a} 
+\index{ELmagic@{ELmagic}!print@{print}}
+\index{print@{print}!ELmagic@{ELmagic}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDisplayInfo}{Display\+Info}} ELmagic\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets display information including elemental type. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDisplayInfo}{Display\+Info} structure for UI rendering. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_ab79063b8627e3f798f3a01f278cf2190}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{ELmagic_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{ELmagic_8cpp_source}{ELmagic.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602dab7426fb9c3932995306fceba2874d057}{FIRE}}, \mbox{\hyperlink{Weapon_8cpp_source_l00018}{Weapon\+::get\+Damage()}}, \mbox{\hyperlink{ELmagic_8cpp_source_l00029}{get\+Element()}}, and \mbox{\hyperlink{Colors_8h_source_l00026}{Color\+::\+GREEN}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=322pt]{classELmagic_ae325dc96de1c4364aac56e4de0d37e0a_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classELmagic_a16aaad9fe6c0614a0bb67b127a0641f2}\label{classELmagic_a16aaad9fe6c0614a0bb67b127a0641f2} 
+\index{ELmagic@{ELmagic}!returnInteractionType@{returnInteractionType}}
+\index{returnInteractionType@{returnInteractionType}!ELmagic@{ELmagic}}
+\doxysubsubsection{\texorpdfstring{returnInteractionType()}{returnInteractionType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} ELmagic\+::return\+Interaction\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the interaction type. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{Interaction\+Type\+::\+IMMEDIATE\+\_\+\+PASS} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_adbab575cfa08f2b354263d132f27c811}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{ELmagic_8cpp_source_l00033}{33}} of file \mbox{\hyperlink{ELmagic_8cpp_source}{ELmagic.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{IMMEDIATE\+\_\+\+PASS}}.
+
+\Hypertarget{classELmagic_ab244c591d04277be28249c0f48b51fe0}\label{classELmagic_ab244c591d04277be28249c0f48b51fe0} 
+\index{ELmagic@{ELmagic}!returntype@{returntype}}
+\index{returntype@{returntype}!ELmagic@{ELmagic}}
+\doxysubsubsection{\texorpdfstring{returntype()}{returntype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} ELmagic\+::returntype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the object type identifier. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a842c5e2e69277690b064bf363c017980a7665821fee6cc3f7535933a177ebe0be}{Object\+Type\+::\+ELMAGIC} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classObject_a16b6fa35fd87615a3afb4499356d2a0d}{Object}}.
+
+
+
+Definition at line \mbox{\hyperlink{ELmagic_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{ELmagic_8cpp_source}{ELmagic.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7665821fee6cc3f7535933a177ebe0be}{ELMAGIC}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{ELmagic_8h}{ELmagic.\+h}}\item 
+src/\mbox{\hyperlink{ELmagic_8cpp}{ELmagic.\+cpp}}\end{DoxyCompactItemize}

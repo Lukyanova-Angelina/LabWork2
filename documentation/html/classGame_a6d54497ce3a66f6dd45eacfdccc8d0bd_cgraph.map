@@ -1,0 +1,15 @@
+<map id="Game::draw" name="Game::draw">
+<area shape="rect" id="Node000001" title="Renders the game grid and UI." alt="" coords="5,56,107,81"/>
+<area shape="rect" id="Node000002" href="$Object_8cpp.html#a32083e5d8074832176c4c56837ada8f1" title="Centers text with special handling for Unicode symbols." alt="" coords="160,31,251,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="107,57,146,51,147,56,107,63"/>
+<area shape="rect" id="Node000003" href="$classStatus.html#af4f18066061f502586473fbd94ea4812" title="Gets formatted status string for UI." alt="" coords="155,80,256,105"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="107,74,142,80,141,85,107,79"/>
+<area shape="rect" id="Node000004" href="$classStatus.html#a174fbb499d0a99db3533903f9d04d0d4" title="Gets current gold amount." alt="" coords="337,5,460,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="231,77,255,65,278,51,303,40,325,32,327,37,305,44,281,56,257,70,233,82"/>
+<area shape="rect" id="Node000005" href="$classStatus.html#a1f60585ad759d8d780a039a2a5bddc71" title="Gets current player level." alt="" coords="335,55,462,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="256,83,321,75,322,80,257,89"/>
+<area shape="rect" id="Node000006" href="$classStatus.html#a0cbf1f79ddb021c8406be509a48fab27" title="Gets current experience points." alt="" coords="344,104,453,129"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="257,96,331,106,330,111,256,102"/>
+<area shape="rect" id="Node000007" href="$classStatus.html#a6c4488c04843a79040c67d660ac1ac08" title="Gets XP required for next level." alt="" coords="304,153,493,179"/>
+<area shape="poly" id="edge6_Node000003_Node000007" title=" " alt="" coords="230,103,305,138,331,147,330,152,303,143,228,108"/>
+</map>

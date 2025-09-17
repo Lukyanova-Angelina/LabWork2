@@ -1,0 +1,37 @@
+\doxysection{Mag.\+cpp}
+\hypertarget{Mag_8cpp_source}{}\label{Mag_8cpp_source}\index{src/Mag.cpp@{src/Mag.cpp}}
+\mbox{\hyperlink{Mag_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Mag_8h}{Mag.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00010}\mbox{\hyperlink{classMag_a3dccedaea2bb216a7a00054806544705}{00010}}\ \mbox{\hyperlink{classMag_a3dccedaea2bb216a7a00054806544705}{Mag::Mag}}(\textcolor{keywordtype}{int}\ pos,\ \textcolor{keywordtype}{int}\ hp)}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00011}00011\ \ \ \ \ :\ \mbox{\hyperlink{classEnemy}{Enemy}}(pos,\ hp)\ \{\}}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00013}\mbox{\hyperlink{classMag_a906ef88402bafd982d5a2339ead32aac}{00013}}\ \mbox{\hyperlink{classMag_a3dccedaea2bb216a7a00054806544705}{Mag::Mag}}(\textcolor{keywordtype}{int}\ pos)}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00014}00014\ \ \ \ \ :\ \mbox{\hyperlink{classEnemy}{Enemy}}(pos,\ \textcolor{stringliteral}{"{}name"{}},\ 10,\ 10)\ \{\}}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00016}\mbox{\hyperlink{classMag_a84504aa4389bb32aa9f14f0a1a1d9b94}{00016}}\ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classMag_a84504aa4389bb32aa9f14f0a1a1d9b94}{Mag::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00017}00017\ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Mag"{}},}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}⚔\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}()),}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00021}00021\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_a29bfda93a0cf8b1ec0fb44cf989d7eb0}{Color::RED}}}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00022}00022\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00023}00023\ \}}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00024}00024\ }
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00025}\mbox{\hyperlink{classMag_ab75e1afaec3553416df0e1be34d504e8}{00025}}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classMag_ab75e1afaec3553416df0e1be34d504e8}{Mag::returntype}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00026}00026\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a9f289f3d4248ba595abb5f08766165a9}{ObjectType::MAG}};}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00027}00027\ \}}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00029}\mbox{\hyperlink{classMag_a347d597040e143424f71ac53966cc0ba}{00029}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classMag_a347d597040e143424f71ac53966cc0ba}{Mag::update}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00030}00030\ \ \ \ \ \mbox{\hyperlink{classCharacter_a030786bca8ce703c96a275751b74b2fd}{setHP}}(std::min(\mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}()\ +\ 1,\ \mbox{\hyperlink{classCharacter_a6eedfaea70dc15a219b3dc8f646d3e23}{getMaxHP}}()));}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00031}00031\ \}}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00032}00032\ }
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00033}\mbox{\hyperlink{classMag_a9801d1f331f6b4a5e1ed19a569631e1c}{00033}}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{InteractionType}}\ \mbox{\hyperlink{classMag_a9801d1f331f6b4a5e1ed19a569631e1c}{Mag::returnInteractionType}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00034}00034\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a9504dfedba96004cae68c7fbc11b5c67}{InteractionType::COMBAT\_DEPENDENT}};}
+\DoxyCodeLine{\Hypertarget{Mag_8cpp_source_l00035}00035\ \}}
+
+\end{DoxyCode}

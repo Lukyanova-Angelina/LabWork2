@@ -1,0 +1,9 @@
+<map id="Game::draw" name="Game::draw">
+<area shape="rect" id="Node000001" title="Renders the game grid and UI." alt="" coords="380,31,481,56"/>
+<area shape="rect" id="Node000002" href="$classGame.html#a0f55c42366732dd2c2b09f708ed3df1c" title="Generates initial game state with player and objects." alt="" coords="161,5,332,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="366,37,332,32,332,27,367,32"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="219,55,274,80"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="367,54,274,67,274,61,366,49"/>
+<area shape="rect" id="Node000003" href="$classGame.html#ad59df6562a58a614fda24622d3715b65" title="Constructs the game and initializes game state." alt="" coords="5,5,113,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="147,21,114,21,114,15,147,15"/>
+</map>

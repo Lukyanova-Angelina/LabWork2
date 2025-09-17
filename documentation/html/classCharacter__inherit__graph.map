@@ -1,0 +1,15 @@
+<map id="Character" name="Character">
+<area shape="rect" id="Node000001" title="Base class for all characters with health and combat capabilities." alt="" coords="119,79,205,104"/>
+<area shape="rect" id="Node000003" href="$classEnemy.html" title="Base class for all enemy entities." alt="" coords="85,152,151,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="150,117,127,153,123,150,145,114"/>
+<area shape="rect" id="Node000007" href="$classPlayer.html" title="Player character with weapon equipment system." alt="" coords="176,152,239,177"/>
+<area shape="poly" id="edge6_Node000001_Node000007" title=" " alt="" coords="179,114,202,150,198,153,175,117"/>
+<area shape="rect" id="Node000002" href="$classObject.html" title="Abstract base class representing any entity in the game world." alt="" coords="130,5,194,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="165,44,165,79,159,79,159,44"/>
+<area shape="rect" id="Node000004" href="$classBat.html" title="Basic flying enemy with variable damage based on health." alt="" coords="5,225,49,251"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,188,44,227,41,223,91,184"/>
+<area shape="rect" id="Node000005" href="$classElemental.html" title="Elemental enemy with damage type interactions." alt="" coords="74,225,162,251"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="121,191,121,225,115,225,115,191"/>
+<area shape="rect" id="Node000006" href="$classMag.html" title="Magician enemy with health regeneration ability." alt="" coords="186,225,237,251"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="145,183,198,223,194,227,142,188"/>
+</map>

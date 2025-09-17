@@ -1,0 +1,31 @@
+\doxysection{Bat.\+cpp}
+\hypertarget{Bat_8cpp_source}{}\label{Bat_8cpp_source}\index{src/Bat.cpp@{src/Bat.cpp}}
+\mbox{\hyperlink{Bat_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Bat_8h}{Bat.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00010}\mbox{\hyperlink{classBat_a8bd0355441f6a635d9eaa173aae5484e}{00010}}\ \mbox{\hyperlink{classBat_a8bd0355441f6a635d9eaa173aae5484e}{Bat::Bat}}(\textcolor{keywordtype}{int}\ pos,\ \textcolor{keywordtype}{int}\ hp):\ \mbox{\hyperlink{classEnemy}{Enemy}}(pos,\ hp)\ \{\}}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00012}\mbox{\hyperlink{classBat_a4e729bd4c3d6a97266e1cbf0815867de}{00012}}\ \mbox{\hyperlink{classBat_a8bd0355441f6a635d9eaa173aae5484e}{Bat::Bat}}(\textcolor{keywordtype}{int}\ pos):\ \mbox{\hyperlink{classEnemy}{Enemy}}(pos,\ rand()\ \%\ 10\ +\ 10)\ \{\}}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00014}\mbox{\hyperlink{classBat_a48189124fd8b13e94cf7bd13bbffdf90}{00014}}\ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classBat_a48189124fd8b13e94cf7bd13bbffdf90}{Bat::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00015}00015\ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00016}00016\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Bat"{}},}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00017}00017\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Dmg:\ "{}}\ +\ std::to\_string(\mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}()),}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}},}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00019}00019\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_a29bfda93a0cf8b1ec0fb44cf989d7eb0}{Color::RED}}}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00020}00020\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00023}\mbox{\hyperlink{classBat_ac2f3dd9d274feed8023287177b1fc8b5}{00023}}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classBat_ac2f3dd9d274feed8023287177b1fc8b5}{Bat::returntype}}()\textcolor{keyword}{const\ }\{}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00024}00024\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ac04cf18b7606efb16ff9ecbca87825}{ObjectType::BAT}};}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00027}\mbox{\hyperlink{classBat_a595c9b81db4769d1443cae8b76de0049}{00027}}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{InteractionType}}\ \mbox{\hyperlink{classBat_a595c9b81db4769d1443cae8b76de0049}{Bat::returnInteractionType}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00028}00028\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a9504dfedba96004cae68c7fbc11b5c67}{InteractionType::COMBAT\_DEPENDENT}};}
+\DoxyCodeLine{\Hypertarget{Bat_8cpp_source_l00029}00029\ \}}
+
+\end{DoxyCode}
