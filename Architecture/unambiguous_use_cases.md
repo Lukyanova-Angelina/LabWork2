@@ -87,3 +87,46 @@
 - Empty grid position handling
 
 - Concurrent callback execution
+
+### Classes description
+
+**Object**: Base class for all game entities. Stores position, movement, and damage callbacks.
+
+**Character**: Base class for characters with health management. All characters inherit from this.
+
+**Player**: Playable character with weapon equipment system. Can collect weapon and fight enemies.
+
+**Enemy**: Base enemy class. All enemy types inherit from this with combat-dependent interaction.
+
+**Bat**: Basic enemy. Drops potion upon death.
+
+**Elemental**: Enemy with elemental affinity. Takes double damage from opposite element, gets healed by same element.
+
+**Mag**: Mage enemy that regenerates 1 HP per turn up to maximum health.
+
+**Weapon**: Base weapon class. Has damage that decreases when used.
+
+**ELmagic**: Magic wand with elemental damage. Deals damage to tile behind enemy.
+
+**ELweapon**: Elemental weapon. Can be charged by same element.
+
+**Gold**: Collectible currency. Can be damaged and destroyed.
+
+**Ruby**: Premium currency. Gives double gold and bonus XP when collected.
+
+**Potion**: Consumable item. Can be healing (restores HP) or poison (damages player).
+
+**Bomb**: Timed explosive. Damages adjacent tiles after countdown.
+
+**Dynamite**: Powerful explosive. Damages entire row when activated.
+
+**Thorn**: Rotating trap. deals damage to the player if the spike is directed at him.
+
+**Gun**: Rotating trap. Damages in specific directions that change each turn.
+
+**Chest**: Loot container. Can be good (helpful items) or bad (harmful items).
+
+**Game**: Main controller. Manages 3x3 grid, player input, and game state.
+
+**Status**: Progression system. Handles XP, levels, gold, and loot table generation.
+
