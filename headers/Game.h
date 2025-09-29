@@ -53,12 +53,14 @@ private:
     std::function<void(int, DamageType)> damageCallback; ///< Damage callback reference
 
 public:
+
     /**
      * @brief Constructs the game and initializes game state.
      */
     Game();
     
     ~Game() = default;
+    friend class GameTestAccess;
     
     /**
      * @brief Generates initial game state with player and objects.
