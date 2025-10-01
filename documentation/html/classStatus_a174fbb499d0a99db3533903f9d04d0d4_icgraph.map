@@ -1,0 +1,22 @@
+<map id="Status::getGold" name="Status::getGold">
+<area shape="rect" id="Node000001" title="Gets current gold amount." alt="" coords="832,56,955,81"/>
+<area shape="rect" id="Node000002" href="$classStatus.html#a13cfac122ecddd7ba96ecd940d7a1e89" title="Adds gold to player&#39;s total." alt="" coords="657,7,782,32"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="834,55,764,35,766,30,836,50"/>
+<area shape="rect" id="Node000006" href="$classStatus.html#af4f18066061f502586473fbd94ea4812" title="Gets formatted status string for UI." alt="" coords="669,56,770,81"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="818,71,770,71,770,66,818,66"/>
+<area shape="rect" id="Node000010" href="$classStatus.html#a7f0898180535f03a1690284ef723913d" title="Reduces player&#39;s gold." alt="" coords="655,105,784,131"/>
+<area shape="poly" id="edge10_Node000001_Node000010" title=" " alt="" coords="836,88,766,108,764,103,834,83"/>
+<area shape="rect" id="Node000003" href="$classGame.html#aa7e441af2bf58d6926635c1b6e5c6747" title="Handles immediate pass interactions (weapons, items, etc.)." alt="" coords="380,7,607,32"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="643,22,607,22,607,17,643,17"/>
+<area shape="rect" id="Node000004" href="$classGame.html#a28d97d9a41d73e279d0255587b3e21e7" title="Handles player input and triggers appropriate actions." alt="" coords="173,5,320,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="367,21,320,21,320,16,367,16"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="32,31,87,56"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="160,32,87,42,86,37,159,27"/>
+<area shape="rect" id="Node000007" href="$classGame.html#a6d54497ce3a66f6dd45eacfdccc8d0bd" title="Renders the game grid and UI." alt="" coords="443,56,544,81"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="655,71,544,71,544,66,655,66"/>
+<area shape="poly" id="edge9_Node000007_Node000005" title=" " alt="" coords="429,68,87,48,87,42,429,62"/>
+<area shape="rect" id="Node000008" href="$classGame.html#a0f55c42366732dd2c2b09f708ed3df1c" title="Generates initial game state with player and objects." alt="" coords="161,107,332,132"/>
+<area shape="poly" id="edge7_Node000007_Node000008" title=" " alt="" coords="430,84,310,109,309,104,429,79"/>
+<area shape="rect" id="Node000009" href="$classGame.html#ad59df6562a58a614fda24622d3715b65" title="Constructs the game and initializes game state." alt="" coords="5,107,113,132"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="147,122,114,122,114,117,147,117"/>
+</map>

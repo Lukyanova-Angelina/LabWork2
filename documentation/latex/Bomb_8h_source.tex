@@ -1,0 +1,42 @@
+\doxysection{Bomb.\+h}
+\hypertarget{Bomb_8h_source}{}\label{Bomb_8h_source}\index{headers/Bomb.h@{headers/Bomb.h}}
+\mbox{\hyperlink{Bomb_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00010}00010\ \textcolor{preprocessor}{\#ifndef\ BOMB\_H}}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00011}00011\ \textcolor{preprocessor}{\#define\ BOMB\_H}}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00012}00012\ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00013}00013\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Object_8h}{Object.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00022}\mbox{\hyperlink{classBomb}{00022}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classBomb}{Bomb}}:\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classObject}{Object}}\ \{}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00023}00023\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00024}00024\ \ \ \ \ \textcolor{keywordtype}{int}\ \_Amount;\ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00025}00025\ \ \ \ \ \textcolor{keywordtype}{int}\ \_Duration;\ \ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00027}00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00033}00033\ \ \ \ \ \mbox{\hyperlink{classBomb}{Bomb}}(\textcolor{keywordtype}{int}\ pos,\ \textcolor{keywordtype}{int}\ amount);}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00034}00034\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classBomb_ab3ab7b1d137e0565874279f79c76e36f}{print}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00040}00040\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classBomb_a7e0816b8cde7b836876f03c4a63a6e2e}{returntype}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00046}00046\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00051}00051\ \ \ \ \ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{InteractionType}}\ \mbox{\hyperlink{classBomb_a77602c50c280ef8ae8c8f256dd0be202}{returnInteractionType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00052}00052\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00057}00057\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBomb_a5aace3f4176e3ef80da7b80ae13a3126}{getAmount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00058}00058\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00063}00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBomb_a11c44513306bbb7b9abc37e1aecf0da9}{setAmount}}(\textcolor{keywordtype}{int}\ amount);}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00064}00064\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00069}00069\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classBomb_a43c1ca638c7e6f1605ae2dcb72e49b88}{getDuration}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00070}00070\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00075}00075\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBomb_a73c2f929e99b012e5338c8a0b75d958f}{setDuration}}(\textcolor{keywordtype}{int}\ dur);}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00076}00076\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00080}00080\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBomb_a15851182c209713a5946f977a7fb24b8}{update}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00081}00081\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00087}00087\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classBomb_ac1dd7e17fb778897865e170d43b3a255}{takeDamage}}(\textcolor{keywordtype}{int}\ dmg,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type);}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00088}00088\ \};}
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00089}00089\ }
+\DoxyCodeLine{\Hypertarget{Bomb_8h_source_l00090}00090\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,7 @@
+<map id="Character::print" name="Character::print">
+<area shape="rect" id="Node000001" title="Gets display information for UI rendering." alt="" coords="5,31,128,56"/>
+<area shape="rect" id="Node000002" href="$classCharacter.html#a719cf393f4cdcc82a403f70732adee02" title="Gets current health points." alt="" coords="190,5,322,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="128,33,176,26,177,31,128,38"/>
+<area shape="rect" id="Node000003" href="$classCharacter.html#a6eedfaea70dc15a219b3dc8f646d3e23" title="Gets maximum health points." alt="" coords="176,55,336,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="128,48,163,53,162,58,128,54"/>
+</map>

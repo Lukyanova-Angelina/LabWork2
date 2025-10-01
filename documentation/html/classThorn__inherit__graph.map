@@ -1,0 +1,7 @@
+<map id="Thorn" name="Thorn">
+<area shape="rect" id="Node000001" title="Rotating trap that can damage in specific directions." alt="" coords="8,79,67,104"/>
+<area shape="rect" id="Node000003" href="$classGun.html" title="Directional weapon trap with rotating." alt="" coords="13,152,61,177"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="40,118,40,152,35,152,35,118"/>
+<area shape="rect" id="Node000002" href="$classObject.html" title="Abstract base class representing any entity in the game world." alt="" coords="5,5,69,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="40,44,40,79,35,79,35,44"/>
+</map>

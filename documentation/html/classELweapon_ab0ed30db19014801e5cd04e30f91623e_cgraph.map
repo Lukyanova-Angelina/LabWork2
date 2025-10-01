@@ -1,0 +1,7 @@
+<map id="ELweapon::print" name="ELweapon::print">
+<area shape="rect" id="Node000001" title="Gets display information including elemental charge." alt="" coords="5,31,132,56"/>
+<area shape="rect" id="Node000002" href="$classWeapon.html#a5f1941efbf38c5719cf75e4a138e92d4" title="Gets current damage value." alt="" coords="186,5,345,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,33,172,27,173,33,133,38"/>
+<area shape="rect" id="Node000003" href="$classELweapon.html#ab29b3767c0e514bd74a2426e0db34bd0" title="Gets the charged elemental type." alt="" coords="180,55,351,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,48,167,53,166,58,132,54"/>
+</map>

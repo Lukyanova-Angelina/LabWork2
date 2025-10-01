@@ -1,0 +1,5 @@
+<map id="Game::initializeDamageCallbacks" name="Game::initializeDamageCallbacks">
+<area shape="rect" id="Node000001" title="Initializes damage callbacks for all game objects." alt="" coords="161,5,404,31"/>
+<area shape="rect" id="Node000002" href="$classGame.html#ad59df6562a58a614fda24622d3715b65" title="Constructs the game and initializes game state." alt="" coords="5,5,113,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="148,21,113,21,113,15,148,15"/>
+</map>

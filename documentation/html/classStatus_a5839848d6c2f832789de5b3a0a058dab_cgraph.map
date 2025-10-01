@@ -1,0 +1,14 @@
+<map id="Status::addXp" name="Status::addXp">
+<area shape="rect" id="Node000001" title="Adds experience points and handles level ups." alt="" coords="5,31,117,56"/>
+<area shape="rect" id="Node000002" href="$classStatus.html#a6c4488c04843a79040c67d660ac1ac08" title="Gets XP required for next level." alt="" coords="165,5,355,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="117,34,151,29,152,34,118,39"/>
+<area shape="rect" id="Node000003" href="$classStatus.html#a7c1b69083a3d01cc7be0923c040b4895" title="Increases player level and updates progression." alt="" coords="198,55,322,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="118,47,185,56,184,61,117,53"/>
+<area shape="rect" id="Node000004" href="$classStatus.html#a1f60585ad759d8d780a039a2a5bddc71" title="Gets current player level." alt="" coords="629,55,756,80"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="318,52,402,39,492,33,582,39,634,49,633,54,581,45,492,39,403,45,319,57"/>
+<area shape="rect" id="Node000005" href="$classStatus.html#a48c9085e3008c3f2108d7510386c39b7" title="Sets player level and updates loot table." alt="" coords="429,55,555,80"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="322,65,415,65,415,70,322,70"/>
+<area shape="rect" id="Node000006" href="$classStatus.html#a6e5de977faeb21c93f44a2025a8b205b" title="Updates loot table weights based on current level." alt="" coords="403,104,581,129"/>
+<area shape="poly" id="edge5_Node000003_Node000006" title=" " alt="" coords="321,77,419,98,418,104,320,83"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="544,101,626,81,628,86,545,107"/>
+</map>

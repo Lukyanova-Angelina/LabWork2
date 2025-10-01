@@ -1,0 +1,5 @@
+<map id="Character" name="Character">
+<area shape="rect" id="Node000001" title="Base class for all characters with health and combat capabilities." alt="" coords="5,79,91,104"/>
+<area shape="rect" id="Node000002" href="$classObject.html" title="Abstract base class representing any entity in the game world." alt="" coords="16,5,80,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="51,44,51,79,45,79,45,44"/>
+</map>

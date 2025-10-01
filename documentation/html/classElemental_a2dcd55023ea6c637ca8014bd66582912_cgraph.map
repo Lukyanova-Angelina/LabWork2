@@ -1,0 +1,7 @@
+<map id="Elemental::print" name="Elemental::print">
+<area shape="rect" id="Node000001" title="Gets display information including elemental type." alt="" coords="5,31,132,56"/>
+<area shape="rect" id="Node000002" href="$classElemental.html#a798faa5fec5ca4d06b5322c82cf2e315" title="Gets the elemental affinity." alt="" coords="180,5,351,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="132,33,166,28,167,33,133,38"/>
+<area shape="rect" id="Node000003" href="$classCharacter.html#a719cf393f4cdcc82a403f70732adee02" title="Gets current health points." alt="" coords="199,55,331,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="133,48,186,55,186,60,132,54"/>
+</map>

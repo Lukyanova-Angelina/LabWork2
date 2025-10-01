@@ -1,0 +1,41 @@
+\doxysection{Player.\+h}
+\hypertarget{Player_8h_source}{}\label{Player_8h_source}\index{headers/Player.h@{headers/Player.h}}
+\mbox{\hyperlink{Player_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ PLAYER\_H}}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ PLAYER\_H}}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Characters_8h}{Characters.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Weapon_8h}{Weapon.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00016}00016\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ELmagic_8h}{ELmagic.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00017}00017\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ELweapon_8h}{ELweapon.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00018}00018\ \textcolor{preprocessor}{\#include\ <memory>}}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00019}00019\ }
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00027}\mbox{\hyperlink{classPlayer}{00027}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classPlayer}{Player}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classCharacter}{Character}}\ \{}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00028}00028\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00029}00029\ \ \ \ \ std::unique\_ptr<Weapon>\ \_weapon;\ }
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00031}00031\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00039}00039\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player}}(\textcolor{keywordtype}{int}\ pos,\ std::string\ name,\ \textcolor{keywordtype}{int}\ hp,\ \textcolor{keywordtype}{int}\ maxhp);\ }
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00040}00040\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00045}00045\ \ \ \ \ \mbox{\hyperlink{classPlayer}{Player}}(\textcolor{keywordtype}{int}\ pos);}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00046}00046\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00050}00050\ \ \ \ \ \textcolor{keyword}{virtual}\ \mbox{\hyperlink{classPlayer_a8ed544987af18de0e6b2932206bf1186}{\string~Player}}()\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00051}00051\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00056}00056\ \ \ \ \ \mbox{\hyperlink{classWeapon}{Weapon}}*\ \mbox{\hyperlink{classPlayer_a2997e4db0b122b5bee957e45c1edcc49}{getWeapon}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00057}00057\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00062}00062\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlayer_a08b794ac433d3fa6ca2f8aff03437ad9}{setWeapon}}(std::unique\_ptr<Weapon>\ weapon);}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00063}00063\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00067}00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlayer_ab32f4507f6ff61361d9cb6b79378a3e2}{removeWeapon}}();}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00068}00068\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00073}00073\ \ \ \ \ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classPlayer_a1b199d782d3671895519de7e7fadd30a}{print}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00074}00074\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00079}00079\ \ \ \ \ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classPlayer_a4691db09ca049520277e998ab743e96d}{returntype}}()\textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00080}00080\ \};}
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00081}00081\ }
+\DoxyCodeLine{\Hypertarget{Player_8h_source_l00082}00082\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

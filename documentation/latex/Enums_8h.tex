@@ -1,0 +1,265 @@
+\doxysection{headers/\+Enums.h File Reference}
+\hypertarget{Enums_8h}{}\label{Enums_8h}\index{headers/Enums.h@{headers/Enums.h}}
+
+
+Centralized enumeration definitions for the game.  
+
+
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{Enums_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} \{ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da1e23852820b9154316c7c06e2b7ba051}{NORMAL}}
+, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602dab7426fb9c3932995306fceba2874d057}{FIRE}}
+, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da22fb77eba93786121faa55c581785893}{ICE}}
+ \}
+\begin{DoxyCompactList}\small\item\em Types of damage that can be applied in combat. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \{ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{IMMEDIATE\+\_\+\+PASS}}
+, \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a6f76c71d94d1409dfe6847c8d7a1b3e1}{SWAP\+\_\+\+REQUIRED}}
+, \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a7c7bde73bcbcb7e25853c0715c4d203d}{TRIGGER\+\_\+\+ON\+\_\+\+STAY}}
+, \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a9504dfedba96004cae68c7fbc11b5c67}{COMBAT\+\_\+\+DEPENDENT}}
+ \}
+\begin{DoxyCompactList}\small\item\em Types of interactions between game objects. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \{ \newline
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a8eee8e217391199668cbac89472ace53}{OBJECT}}
+, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a92b09d1635332c90ae8508618a174244}{ENEMY}}
+, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980af9c55990ee5893e66c504fc8ca35bf79}{ELEMENTAL}}
+, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a9f289f3d4248ba595abb5f08766165a9}{MAG}}
+, \newline
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ac04cf18b7606efb16ff9ecbca87825}{BAT}}
+, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a192633948703cf46924846d15ea7b5c1}{WEAPON}}
+, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7665821fee6cc3f7535933a177ebe0be}{ELMAGIC}}
+, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a566621a60d66ad699cff53f2d21b8d9a}{ELWEAPON}}
+, \newline
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a2c0898822ab3baf7f93bea86648adb26}{GOLD}}
+, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a948ea267d4a32b3d91b837b54298de0a}{RUBY}}
+, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7ce20399299146eae2f6c0e847de1f3b}{THORN}}
+, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a7f723c5fc350bac962b67157e70fff58}{GUN}}
+, \newline
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a1b7417bf9151374d7b062a64abd29425}{BOMB}}
+, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a0a6df5230f556851ce21cd18a9e6ac80}{DYNAMITE}}
+, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a6a492839f1a85f3ddb226750959f799a}{POTION}}
+, \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a5bdccd55677ef3fc449ed476ade69fb7}{CHEST}}
+, \newline
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855}{PLAYER}}
+ \}
+\begin{DoxyCompactList}\small\item\em Types of all game objects for identification and casting. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574e}{Chest\+Type}} \{ \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574eae0c09b20cdfdabe58874256eb0b97787}{BADCHEST}}
+, \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574ea7c0524e018f5a3d31da0ae59a08ff091}{GOODCHEST}}
+ \}
+\begin{DoxyCompactList}\small\item\em Types of chests determining loot quality. \end{DoxyCompactList}\item 
+enum class \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257}{Potion\+Type}} \{ \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a2a542f30a3c393aff9183c7b72f2b034}{POISON}}
+, \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a3a25f1406daa84785c1291a745018fae}{HEAL}}
+ \}
+\begin{DoxyCompactList}\small\item\em Types of potions determining their effect. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Centralized enumeration definitions for the game. 
+
+Contains all enum classes used throughout the game for type safety and consistent behavior across different game systems. 
+
+Definition in file \mbox{\hyperlink{Enums_8h_source}{Enums.\+h}}.
+
+
+
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{Enums_8h_af72d8dee5685ee47e824e92aa8be574e}\label{Enums_8h_af72d8dee5685ee47e824e92aa8be574e} 
+\index{Enums.h@{Enums.h}!ChestType@{ChestType}}
+\index{ChestType@{ChestType}!Enums.h@{Enums.h}}
+\doxysubsubsection{\texorpdfstring{ChestType}{ChestType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{Enums_8h_af72d8dee5685ee47e824e92aa8be574e}{Chest\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Types of chests determining loot quality. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BADCHEST@{BADCHEST}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!BADCHEST@{BADCHEST}}}\Hypertarget{Enums_8h_af72d8dee5685ee47e824e92aa8be574eae0c09b20cdfdabe58874256eb0b97787}\label{Enums_8h_af72d8dee5685ee47e824e92aa8be574eae0c09b20cdfdabe58874256eb0b97787} 
+BADCHEST&\doxylink{classChest}{Chest} containing harmful or dangerous items. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GOODCHEST@{GOODCHEST}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!GOODCHEST@{GOODCHEST}}}\Hypertarget{Enums_8h_af72d8dee5685ee47e824e92aa8be574ea7c0524e018f5a3d31da0ae59a08ff091}\label{Enums_8h_af72d8dee5685ee47e824e92aa8be574ea7c0524e018f5a3d31da0ae59a08ff091} 
+GOODCHEST&\doxylink{classChest}{Chest} containing beneficial items. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Enums_8h_source_l00069}{69}} of file \mbox{\hyperlink{Enums_8h_source}{Enums.\+h}}.
+
+\Hypertarget{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}\label{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d} 
+\index{Enums.h@{Enums.h}!DamageType@{DamageType}}
+\index{DamageType@{DamageType}!Enums.h@{Enums.h}}
+\doxysubsubsection{\texorpdfstring{DamageType}{DamageType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Types of damage that can be applied in combat. 
+
+Used for elemental damage systems and resistance calculations. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{NORMAL@{NORMAL}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!NORMAL@{NORMAL}}}\Hypertarget{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da1e23852820b9154316c7c06e2b7ba051}\label{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da1e23852820b9154316c7c06e2b7ba051} 
+NORMAL&Standard physical damage, no special properties. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{FIRE@{FIRE}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!FIRE@{FIRE}}}\Hypertarget{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602dab7426fb9c3932995306fceba2874d057}\label{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602dab7426fb9c3932995306fceba2874d057} 
+FIRE&Fire elemental damage, interacts with ice. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ICE@{ICE}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!ICE@{ICE}}}\Hypertarget{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da22fb77eba93786121faa55c581785893}\label{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602da22fb77eba93786121faa55c581785893} 
+ICE&Ice elemental damage, interacts with fire. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Enums_8h_source_l00020}{20}} of file \mbox{\hyperlink{Enums_8h_source}{Enums.\+h}}.
+
+\Hypertarget{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}\label{Enums_8h_a9a40fc7400eafce3fb17486772fdea35} 
+\index{Enums.h@{Enums.h}!InteractionType@{InteractionType}}
+\index{InteractionType@{InteractionType}!Enums.h@{Enums.h}}
+\doxysubsubsection{\texorpdfstring{InteractionType}{InteractionType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Types of interactions between game objects. 
+
+Defines how objects behave when player interacts with them. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{IMMEDIATE\_PASS@{IMMEDIATE\_PASS}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!IMMEDIATE\_PASS@{IMMEDIATE\_PASS}}}\Hypertarget{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}\label{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a} 
+IMMEDIATE\+\_\+\+PASS&Immediate effect when touched (items, gold) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{SWAP\_REQUIRED@{SWAP\_REQUIRED}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!SWAP\_REQUIRED@{SWAP\_REQUIRED}}}\Hypertarget{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a6f76c71d94d1409dfe6847c8d7a1b3e1}\label{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a6f76c71d94d1409dfe6847c8d7a1b3e1} 
+SWAP\+\_\+\+REQUIRED&Requires swapping positions (bombs, dynamite) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRIGGER\_ON\_STAY@{TRIGGER\_ON\_STAY}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!TRIGGER\_ON\_STAY@{TRIGGER\_ON\_STAY}}}\Hypertarget{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a7c7bde73bcbcb7e25853c0715c4d203d}\label{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a7c7bde73bcbcb7e25853c0715c4d203d} 
+TRIGGER\+\_\+\+ON\+\_\+\+STAY&Activates when player stays on tile (chests) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{COMBAT\_DEPENDENT@{COMBAT\_DEPENDENT}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!COMBAT\_DEPENDENT@{COMBAT\_DEPENDENT}}}\Hypertarget{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a9504dfedba96004cae68c7fbc11b5c67}\label{Enums_8h_a9a40fc7400eafce3fb17486772fdea35a9504dfedba96004cae68c7fbc11b5c67} 
+COMBAT\+\_\+\+DEPENDENT&Resolves through combat system (enemies) \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Enums_8h_source_l00032}{32}} of file \mbox{\hyperlink{Enums_8h_source}{Enums.\+h}}.
+
+\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980}\label{Enums_8h_a842c5e2e69277690b064bf363c017980} 
+\index{Enums.h@{Enums.h}!ObjectType@{ObjectType}}
+\index{ObjectType@{ObjectType}!Enums.h@{Enums.h}}
+\doxysubsubsection{\texorpdfstring{ObjectType}{ObjectType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Types of all game objects for identification and casting. 
+
+Used for type checking, object creation, and special behavior handling. \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OBJECT@{OBJECT}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!OBJECT@{OBJECT}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a8eee8e217391199668cbac89472ace53}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a8eee8e217391199668cbac89472ace53} 
+OBJECT&Base empty object. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ENEMY@{ENEMY}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!ENEMY@{ENEMY}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a92b09d1635332c90ae8508618a174244}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a92b09d1635332c90ae8508618a174244} 
+ENEMY&Basic enemy type. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELEMENTAL@{ELEMENTAL}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!ELEMENTAL@{ELEMENTAL}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980af9c55990ee5893e66c504fc8ca35bf79}\label{Enums_8h_a842c5e2e69277690b064bf363c017980af9c55990ee5893e66c504fc8ca35bf79} 
+ELEMENTAL&\doxylink{classElemental}{Elemental} enemy. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAG@{MAG}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!MAG@{MAG}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a9f289f3d4248ba595abb5f08766165a9}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a9f289f3d4248ba595abb5f08766165a9} 
+MAG&Magician enemy with regeneration. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BAT@{BAT}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!BAT@{BAT}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a7ac04cf18b7606efb16ff9ecbca87825}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a7ac04cf18b7606efb16ff9ecbca87825} 
+BAT&\doxylink{classBat}{Bat} enemy that drops potions. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WEAPON@{WEAPON}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!WEAPON@{WEAPON}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a192633948703cf46924846d15ea7b5c1}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a192633948703cf46924846d15ea7b5c1} 
+WEAPON&Basic weapon. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELMAGIC@{ELMAGIC}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!ELMAGIC@{ELMAGIC}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a7665821fee6cc3f7535933a177ebe0be}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a7665821fee6cc3f7535933a177ebe0be} 
+ELMAGIC&\doxylink{classElemental}{Elemental} magic wand with complex interactions. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ELWEAPON@{ELWEAPON}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!ELWEAPON@{ELWEAPON}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a566621a60d66ad699cff53f2d21b8d9a}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a566621a60d66ad699cff53f2d21b8d9a} 
+ELWEAPON&\doxylink{classElemental}{Elemental} weapon with charging. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GOLD@{GOLD}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!GOLD@{GOLD}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a2c0898822ab3baf7f93bea86648adb26}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a2c0898822ab3baf7f93bea86648adb26} 
+GOLD&\doxylink{classGold}{Gold} currency. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{RUBY@{RUBY}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!RUBY@{RUBY}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a948ea267d4a32b3d91b837b54298de0a}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a948ea267d4a32b3d91b837b54298de0a} 
+RUBY&Premium currency with bonuses. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{THORN@{THORN}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!THORN@{THORN}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a7ce20399299146eae2f6c0e847de1f3b}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a7ce20399299146eae2f6c0e847de1f3b} 
+THORN&Rotating directional trap. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{GUN@{GUN}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!GUN@{GUN}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a7f723c5fc350bac962b67157e70fff58}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a7f723c5fc350bac962b67157e70fff58} 
+GUN&\doxylink{classWeapon}{Weapon} emplacement trap. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BOMB@{BOMB}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!BOMB@{BOMB}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a1b7417bf9151374d7b062a64abd29425}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a1b7417bf9151374d7b062a64abd29425} 
+BOMB&Explosive (4-\/direction) \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DYNAMITE@{DYNAMITE}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!DYNAMITE@{DYNAMITE}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a0a6df5230f556851ce21cd18a9e6ac80}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a0a6df5230f556851ce21cd18a9e6ac80} 
+DYNAMITE&Row-\/based explosive. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POTION@{POTION}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!POTION@{POTION}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a6a492839f1a85f3ddb226750959f799a}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a6a492839f1a85f3ddb226750959f799a} 
+POTION&Consumable health/poison item. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{CHEST@{CHEST}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!CHEST@{CHEST}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a5bdccd55677ef3fc449ed476ade69fb7}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a5bdccd55677ef3fc449ed476ade69fb7} 
+CHEST&Loot container. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{PLAYER@{PLAYER}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!PLAYER@{PLAYER}}}\Hypertarget{Enums_8h_a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855}\label{Enums_8h_a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855} 
+PLAYER&\doxylink{classPlayer}{Player} character. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Enums_8h_source_l00045}{45}} of file \mbox{\hyperlink{Enums_8h_source}{Enums.\+h}}.
+
+\Hypertarget{Enums_8h_a0498a36b0134cfe65d23a41ff0662257}\label{Enums_8h_a0498a36b0134cfe65d23a41ff0662257} 
+\index{Enums.h@{Enums.h}!PotionType@{PotionType}}
+\index{PotionType@{PotionType}!Enums.h@{Enums.h}}
+\doxysubsubsection{\texorpdfstring{PotionType}{PotionType}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{Enums_8h_a0498a36b0134cfe65d23a41ff0662257}{Potion\+Type}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+Types of potions determining their effect. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{POISON@{POISON}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!POISON@{POISON}}}\Hypertarget{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a2a542f30a3c393aff9183c7b72f2b034}\label{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a2a542f30a3c393aff9183c7b72f2b034} 
+POISON&Damages the consumer. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{HEAL@{HEAL}!Enums.h@{Enums.h}}\index{Enums.h@{Enums.h}!HEAL@{HEAL}}}\Hypertarget{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a3a25f1406daa84785c1291a745018fae}\label{Enums_8h_a0498a36b0134cfe65d23a41ff0662257a3a25f1406daa84785c1291a745018fae} 
+HEAL&Heals the consumer. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{Enums_8h_source_l00078}{78}} of file \mbox{\hyperlink{Enums_8h_source}{Enums.\+h}}.
+

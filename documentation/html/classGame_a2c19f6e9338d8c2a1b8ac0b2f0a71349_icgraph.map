@@ -1,0 +1,14 @@
+<map id="Game::movecard" name="Game::movecard">
+<area shape="rect" id="Node000001" title="Moves an object in specified direction." alt="" coords="740,42,875,67"/>
+<area shape="rect" id="Node000002" href="$classGame.html#acaa2f6520fc4c5deeec2dd079ebeefea" title="Handles complex movement logic for grid shifting." alt="" coords="577,42,692,67"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="726,57,692,57,692,52,726,52"/>
+<area shape="rect" id="Node000003" href="$classGame.html#aaf59ec9035aa5b9cd8bd97c910284164" title="Handles combat&#45;dependent interactions (enemies)." alt="" coords="331,5,501,45"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="563,48,501,39,501,34,564,43"/>
+<area shape="rect" id="Node000006" href="$classGame.html#aa7e441af2bf58d6926635c1b6e5c6747" title="Handles immediate pass interactions (weapons, items, etc.)." alt="" coords="303,70,529,95"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="564,66,515,73,515,67,563,61"/>
+<area shape="rect" id="Node000004" href="$classGame.html#a28d97d9a41d73e279d0255587b3e21e7" title="Handles player input and triggers appropriate actions." alt="" coords="108,42,255,67"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="318,40,255,48,254,43,317,35"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,42,60,67"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="94,57,60,57,60,52,94,52"/>
+<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="296,71,255,66,255,61,296,66"/>
+</map>

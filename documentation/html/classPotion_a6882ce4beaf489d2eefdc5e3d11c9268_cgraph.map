@@ -1,0 +1,7 @@
+<map id="Potion::print" name="Potion::print">
+<area shape="rect" id="Node000001" title="Gets display information for the potion." alt="" coords="5,31,107,56"/>
+<area shape="rect" id="Node000002" href="$classPotion.html#abf4f6cc60914e8ac8dc7d2f0d2afac35" title="Gets the potion type." alt="" coords="155,5,317,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="106,34,141,29,142,34,107,39"/>
+<area shape="rect" id="Node000003" href="$classPotion.html#aa1cf3151691e85127c5ca61f6eb9ef60" title="Gets the potion&#39;s effect power." alt="" coords="170,55,302,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="107,47,157,54,156,59,106,53"/>
+</map>

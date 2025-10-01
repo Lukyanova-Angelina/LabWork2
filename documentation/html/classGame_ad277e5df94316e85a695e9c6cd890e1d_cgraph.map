@@ -1,0 +1,40 @@
+<map id="Game::handleTRIGGER_ON_STAY" name="Game::handleTRIGGER_ON_STAY">
+<area shape="rect" id="Node000001" title="Handles on&#45;stay trigger interactions (chests)." alt="" coords="5,146,176,186"/>
+<area shape="rect" id="Node000002" href="$classChest.html#a2fd12807b717e0c5165360fdd31eb344" title="Generates random loot based on chest type and game status." alt="" coords="741,43,895,68"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="176,147,224,138,499,96,727,64,728,69,500,101,224,143,177,152"/>
+<area shape="rect" id="Node000008" href="$classGame.html#adbe9a69a16dfb14821cc17f23aad440d" title="Handles damage events from objects." alt="" coords="224,153,435,179"/>
+<area shape="poly" id="edge7_Node000001_Node000008" title=" " alt="" coords="177,163,210,163,210,169,177,169"/>
+<area shape="rect" id="Node000017" href="$classObject.html#a16b6fa35fd87615a3afb4499356d2a0d" title="Returns the type of this object." alt="" coords="748,240,888,265"/>
+<area shape="poly" id="edge21_Node000001_Node000017" title=" " alt="" coords="177,180,224,187,504,221,734,243,734,249,504,227,224,193,176,185"/>
+<area shape="rect" id="Node000003" href="$classStatus.html#ab609d516c858ca28a44665742e4519f8" title="Generates loot from chest based on chest type." alt="" coords="959,55,1153,80"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="895,57,945,59,945,64,895,62"/>
+<area shape="rect" id="Node000006" href="$classChest.html#a6c89f699203941d71c7419be42325732" title="Gets the chest type." alt="" coords="979,5,1133,31"/>
+<area shape="poly" id="edge5_Node000002_Node000006" title=" " alt="" coords="895,41,965,30,966,35,896,46"/>
+<area shape="rect" id="Node000007" href="$classObject.html#ac94263cc1cd1fe7d0193f8400af2c1e4" title="Gets the current grid position." alt="" coords="983,104,1129,129"/>
+<area shape="poly" id="edge6_Node000002_Node000007" title=" " alt="" coords="869,65,993,98,992,103,867,71"/>
+<area shape="rect" id="Node000004" href="$classStatus.html#a1f60585ad759d8d780a039a2a5bddc71" title="Gets current player level." alt="" coords="1432,167,1559,192"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="1154,64,1266,73,1327,85,1385,102,1432,127,1471,155,1468,159,1429,131,1383,107,1325,90,1265,79,1153,69"/>
+<area shape="rect" id="Node000005" href="$classStatus.html#aeb32ff747b6ec9ddb7b95baf165999dd" title="Gets random value between 0 and 1." alt="" coords="1201,16,1384,41"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="1134,52,1201,41,1202,46,1135,57"/>
+<area shape="rect" id="Node000009" href="$classGame.html#a52331dc8166afc8a41bfa057a99631e1" title="Handles object death and replacement." alt="" coords="483,153,677,179"/>
+<area shape="poly" id="edge8_Node000008_Node000009" title=" " alt="" coords="435,172,469,172,469,178,435,178"/>
+<area shape="poly" id="edge19_Node000009_Node000008" title=" " alt="" coords="482,160,448,160,448,154,482,155"/>
+<area shape="rect" id="Node000010" href="$classStatus.html#a5839848d6c2f832789de5b3a0a058dab" title="Adds experience points and handles level ups." alt="" coords="762,191,874,216"/>
+<area shape="poly" id="edge9_Node000009_Node000010" title=" " alt="" coords="662,176,749,190,748,195,661,181"/>
+<area shape="rect" id="Node000015" href="$classBomb.html#a5aace3f4176e3ef80da7b80ae13a3126" title="Gets explosion damage amount." alt="" coords="748,92,888,117"/>
+<area shape="poly" id="edge16_Node000009_Node000015" title=" " alt="" coords="629,151,754,118,755,123,631,156"/>
+<area shape="rect" id="Node000016" href="$classObject.html#a5ea59dedbfdacd1c18e0a92a606fe2b7" title="Calculates target position for a movement direction." alt="" coords="725,141,911,167"/>
+<area shape="poly" id="edge17_Node000009_Node000016" title=" " alt="" coords="677,158,712,157,712,162,678,164"/>
+<area shape="poly" id="edge20_Node000009_Node000017" title=" " alt="" coords="610,176,726,226,751,234,749,239,724,231,608,181"/>
+<area shape="rect" id="Node000011" href="$classStatus.html#a6c4488c04843a79040c67d660ac1ac08" title="Gets XP required for next level." alt="" coords="961,216,1151,241"/>
+<area shape="poly" id="edge10_Node000010_Node000011" title=" " alt="" coords="875,207,948,214,947,220,874,212"/>
+<area shape="rect" id="Node000012" href="$classStatus.html#a7c1b69083a3d01cc7be0923c040b4895" title="Increases player level and updates progression." alt="" coords="994,167,1118,192"/>
+<area shape="poly" id="edge11_Node000010_Node000012" title=" " alt="" coords="874,195,980,184,981,190,875,200"/>
+<area shape="poly" id="edge12_Node000012_Node000004" title=" " alt="" coords="1118,189,1202,201,1293,206,1384,201,1432,193,1433,198,1384,206,1293,212,1201,206,1118,194"/>
+<area shape="rect" id="Node000013" href="$classStatus.html#a48c9085e3008c3f2108d7510386c39b7" title="Sets player level and updates loot table." alt="" coords="1229,117,1356,143"/>
+<area shape="poly" id="edge13_Node000012_Node000013" title=" " alt="" coords="1117,164,1217,143,1218,148,1118,169"/>
+<area shape="rect" id="Node000014" href="$classStatus.html#a6e5de977faeb21c93f44a2025a8b205b" title="Updates loot table weights based on current level." alt="" coords="1203,167,1382,192"/>
+<area shape="poly" id="edge14_Node000012_Node000014" title=" " alt="" coords="1118,177,1190,177,1190,182,1118,182"/>
+<area shape="poly" id="edge15_Node000014_Node000004" title=" " alt="" coords="1382,177,1418,177,1418,182,1382,182"/>
+<area shape="poly" id="edge18_Node000016_Node000007" title=" " alt="" coords="899,139,969,128,970,133,900,144"/>
+</map>

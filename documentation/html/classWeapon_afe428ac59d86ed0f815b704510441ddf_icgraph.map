@@ -1,0 +1,17 @@
+<map id="Weapon::getElement" name="Weapon::getElement">
+<area shape="rect" id="Node000001" title="Gets the elemental type of the weapon." alt="" coords="804,63,961,89"/>
+<area shape="rect" id="Node000002" href="$classGame.html#aaf59ec9035aa5b9cd8bd97c910284164" title="Handles combat&#45;dependent interactions (enemies)." alt="" coords="331,5,501,45"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="813,63,756,53,621,39,501,31,501,26,622,34,756,48,813,58"/>
+<area shape="rect" id="Node000005" href="$classCharacter.html#a899331777864cf087d745d6095039b75" title="Applies damage from a weapon." alt="" coords="579,63,755,89"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="790,79,755,79,755,73,790,73"/>
+<area shape="rect" id="Node000007" href="$classElemental.html#a4d942a61f73f0d363bb0f9fdd51a1026" title="Takes damage from weapon with elemental calculations." alt="" coords="577,113,756,138"/>
+<area shape="poly" id="edge8_Node000001_Node000007" title=" " alt="" coords="814,94,724,115,723,110,813,89"/>
+<area shape="rect" id="Node000003" href="$classGame.html#a28d97d9a41d73e279d0255587b3e21e7" title="Handles player input and triggers appropriate actions." alt="" coords="108,42,255,67"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="318,40,255,48,254,43,317,35"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,42,60,67"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,57,60,57,60,52,94,52"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="589,63,500,45,502,40,590,58"/>
+<area shape="rect" id="Node000006" href="$classGame.html#aa7e441af2bf58d6926635c1b6e5c6747" title="Handles immediate pass interactions (weapons, items, etc.)." alt="" coords="303,70,529,95"/>
+<area shape="poly" id="edge6_Node000005_Node000006" title=" " alt="" coords="565,81,530,82,530,77,565,76"/>
+<area shape="poly" id="edge7_Node000006_Node000003" title=" " alt="" coords="296,71,255,66,255,61,296,66"/>
+</map>

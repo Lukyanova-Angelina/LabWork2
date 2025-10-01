@@ -1,0 +1,9 @@
+<map id="Mag::update" name="Mag::update">
+<area shape="rect" id="Node000001" title="Updates magician state &#45; regenerates health." alt="" coords="5,55,108,80"/>
+<area shape="rect" id="Node000002" href="$classCharacter.html#a719cf393f4cdcc82a403f70732adee02" title="Gets current health points." alt="" coords="170,5,302,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="103,52,175,32,176,37,104,57"/>
+<area shape="rect" id="Node000003" href="$classCharacter.html#a6eedfaea70dc15a219b3dc8f646d3e23" title="Gets maximum health points." alt="" coords="156,55,316,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="108,65,143,65,143,70,108,70"/>
+<area shape="rect" id="Node000004" href="$classCharacter.html#a030786bca8ce703c96a275751b74b2fd" title="Sets current health points." alt="" coords="171,104,301,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="104,77,176,98,175,103,103,83"/>
+</map>

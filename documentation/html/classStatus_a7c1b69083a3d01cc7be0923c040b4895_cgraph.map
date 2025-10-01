@@ -1,0 +1,10 @@
+<map id="Status::LevelUp" name="Status::LevelUp">
+<area shape="rect" id="Node000001" title="Increases player level and updates progression." alt="" coords="5,25,129,50"/>
+<area shape="rect" id="Node000002" href="$classStatus.html#a1f60585ad759d8d780a039a2a5bddc71" title="Gets current player level." alt="" coords="404,25,531,50"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="112,22,177,9,267,3,356,9,409,19,408,24,356,15,267,8,178,15,113,27"/>
+<area shape="rect" id="Node000003" href="$classStatus.html#a48c9085e3008c3f2108d7510386c39b7" title="Sets player level and updates loot table." alt="" coords="203,25,330,50"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="130,35,190,35,190,40,130,40"/>
+<area shape="rect" id="Node000004" href="$classStatus.html#a6e5de977faeb21c93f44a2025a8b205b" title="Updates loot table weights based on current level." alt="" coords="177,74,356,99"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="120,48,202,68,201,73,119,53"/>
+<area shape="poly" id="edge4_Node000004_Node000002" title=" " alt="" coords="318,71,401,51,402,56,320,77"/>
+</map>

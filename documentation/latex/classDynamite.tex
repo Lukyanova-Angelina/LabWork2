@@ -1,0 +1,190 @@
+\doxysection{Dynamite Class Reference}
+\hypertarget{classDynamite}{}\label{classDynamite}\index{Dynamite@{Dynamite}}
+
+
+Explosive that damages entire row when activated.  
+
+
+
+
+{\ttfamily \#include $<$Dynamite.\+h$>$}
+
+
+
+Inheritance diagram for Dynamite\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{classDynamite__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for Dynamite\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=145pt]{classDynamite__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classDynamite_a1b5eb6ca2eaa5f0d7439782d6df9662c}{Dynamite}} (int pos, int amount)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classDynamite}{Dynamite} with specified damage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classDynamite_a1caa8e196929239c81137059063cb360}{print}} () const override
+\begin{DoxyCompactList}\small\item\em Gets display information for dynamite. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classDynamite_add365eae971de27b92012fe3e7a84731}{returntype}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the object type identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classBomb}{Bomb}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBomb_a2c5a249212a8fe9a8b40af66f1d376ff}{Bomb}} (int pos, int amount)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classBomb}{Bomb} with specified damage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classBomb_a77602c50c280ef8ae8c8f256dd0be202}{return\+Interaction\+Type}} () const override
+\begin{DoxyCompactList}\small\item\em Returns the interaction type. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBomb_a5aace3f4176e3ef80da7b80ae13a3126}{get\+Amount}} () const
+\begin{DoxyCompactList}\small\item\em Gets explosion damage amount. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBomb_a11c44513306bbb7b9abc37e1aecf0da9}{set\+Amount}} (int amount)
+\begin{DoxyCompactList}\small\item\em Sets explosion damage amount. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classBomb_a43c1ca638c7e6f1605ae2dcb72e49b88}{get\+Duration}} () const
+\begin{DoxyCompactList}\small\item\em Gets remaining duration until explosion. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBomb_a73c2f929e99b012e5338c8a0b75d958f}{set\+Duration}} (int dur)
+\begin{DoxyCompactList}\small\item\em Sets explosion duration. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBomb_a15851182c209713a5946f977a7fb24b8}{update}} () override
+\begin{DoxyCompactList}\small\item\em Updates bomb state -\/ decreases countdown. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBomb_ac1dd7e17fb778897865e170d43b3a255}{take\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Applies damage to bomb (reduces explosion power). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_a71da04043bdd83585112550c3e27a85d}{Object}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classObject}{Object} at the specified position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classObject_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. Removes any active damage callback. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classObject_ada211a17211c090c8a20c0893c6ec3a1}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Creates a copy of this object. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a746b108f37d54122539916373d6ad824}{set\+Position}} (int pos)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa893c9e84c6f0342507291ea2e50b30e}{move}} (int direction)
+\begin{DoxyCompactList}\small\item\em Moves the object in the specified direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classObject_a110b0235d69e91d6cd2684e54696f45b}{possibletomove}} (int direction)
+\begin{DoxyCompactList}\small\item\em Checks if movement in a direction is possible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7}{get\+Target\+Position}} (int direction) const
+\begin{DoxyCompactList}\small\item\em Calculates target position for a movement direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a569361cd11827f5d158b05537011d544}{get\+Target\+Direction}} (int pos2) const
+\begin{DoxyCompactList}\small\item\em Calculates direction to reach a target position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a65fb5ee0e5692e7158c266b92cdd2074}{set\+On\+Damage\+Callback}} (std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ callback)
+\begin{DoxyCompactList}\small\item\em Sets a callback function for damage events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a20141e220dafc6f225eebe800b0e9c41}{remove\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Removes the current damage callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{classObject}{Object}}}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{On\+Damage\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback for damage events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Explosive that damages entire row when activated. 
+
+Inherits from \doxylink{classBomb}{Bomb}. Explodes to damage all cells in the same row. 
+
+Definition at line \mbox{\hyperlink{Dynamite_8h_source_l00022}{22}} of file \mbox{\hyperlink{Dynamite_8h_source}{Dynamite.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classDynamite_a1b5eb6ca2eaa5f0d7439782d6df9662c}\label{classDynamite_a1b5eb6ca2eaa5f0d7439782d6df9662c} 
+\index{Dynamite@{Dynamite}!Dynamite@{Dynamite}}
+\index{Dynamite@{Dynamite}!Dynamite@{Dynamite}}
+\doxysubsubsection{\texorpdfstring{Dynamite()}{Dynamite()}}
+{\footnotesize\ttfamily Dynamite\+::\+Dynamite (\begin{DoxyParamCaption}\item[{int}]{pos,  }\item[{int}]{amount }\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classDynamite}{Dynamite} with specified damage. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Grid position. \\
+\hline
+{\em amount} & Explosion damage amount. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Dynamite_8cpp_source_l00009}{9}} of file \mbox{\hyperlink{Dynamite_8cpp_source}{Dynamite.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classDynamite_a1caa8e196929239c81137059063cb360}\label{classDynamite_a1caa8e196929239c81137059063cb360} 
+\index{Dynamite@{Dynamite}!print@{print}}
+\index{print@{print}!Dynamite@{Dynamite}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDisplayInfo}{Display\+Info}} Dynamite\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Gets display information for dynamite. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDisplayInfo}{Display\+Info} structure with dynamite visualization. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classBomb_ab3ab7b1d137e0565874279f79c76e36f}{Bomb}}.
+
+
+
+Definition at line \mbox{\hyperlink{Dynamite_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{Dynamite_8cpp_source}{Dynamite.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Bomb_8cpp_source_l00028}{Bomb\+::get\+Amount()}}, and \mbox{\hyperlink{Bomb_8cpp_source_l00035}{Bomb\+::get\+Duration()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=318pt]{classDynamite_a1caa8e196929239c81137059063cb360_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classDynamite_add365eae971de27b92012fe3e7a84731}\label{classDynamite_add365eae971de27b92012fe3e7a84731} 
+\index{Dynamite@{Dynamite}!returntype@{returntype}}
+\index{returntype@{returntype}!Dynamite@{Dynamite}}
+\doxysubsubsection{\texorpdfstring{returntype()}{returntype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Dynamite\+::returntype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Returns the object type identifier. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{Enums_8h_a842c5e2e69277690b064bf363c017980a0a6df5230f556851ce21cd18a9e6ac80}{Object\+Type\+::\+DYNAMITE} enum value. 
+\end{DoxyReturn}
+
+
+Reimplemented from \mbox{\hyperlink{classBomb_a7e0816b8cde7b836876f03c4a63a6e2e}{Bomb}}.
+
+
+
+Definition at line \mbox{\hyperlink{Dynamite_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{Dynamite_8cpp_source}{Dynamite.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a0a6df5230f556851ce21cd18a9e6ac80}{DYNAMITE}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{Dynamite_8h}{Dynamite.\+h}}\item 
+src/\mbox{\hyperlink{Dynamite_8cpp}{Dynamite.\+cpp}}\end{DoxyCompactItemize}

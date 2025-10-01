@@ -1,0 +1,7 @@
+<map id="Object::move" name="Object::move">
+<area shape="rect" id="Node000001" title="Moves the object in the specified direction." alt="" coords="5,31,115,56"/>
+<area shape="rect" id="Node000002" href="$classObject.html#ac94263cc1cd1fe7d0193f8400af2c1e4" title="Gets the current grid position." alt="" coords="163,5,308,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="115,33,149,28,149,33,115,38"/>
+<area shape="rect" id="Node000003" href="$classObject.html#a746b108f37d54122539916373d6ad824" title="Sets the object&#39;s grid position." alt="" coords="163,55,307,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="115,48,150,53,150,58,115,53"/>
+</map>

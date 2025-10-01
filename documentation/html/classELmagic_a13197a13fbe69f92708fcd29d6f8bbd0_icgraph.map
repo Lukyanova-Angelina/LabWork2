@@ -1,0 +1,9 @@
+<map id="ELmagic::getElement" name="ELmagic::getElement">
+<area shape="rect" id="Node000001" title="Gets the elemental type of the magic wand." alt="" coords="284,55,444,80"/>
+<area shape="rect" id="Node000002" href="$classELmagic.html#ac15606696d91b140f08abd19afa27df7" title="Calculates final damage with elemental interactions." alt="" coords="5,5,236,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="287,55,184,33,185,28,288,49"/>
+<area shape="rect" id="Node000003" href="$classELmagic.html#ae325dc96de1c4364aac56e4de0d37e0a" title="Gets display information including elemental type." alt="" coords="63,55,178,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="270,70,178,70,178,65,270,65"/>
+<area shape="rect" id="Node000004" href="$classElemental.html#a4d942a61f73f0d363bb0f9fdd51a1026" title="Takes damage from weapon with elemental calculations." alt="" coords="31,104,210,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="288,85,185,107,184,101,287,80"/>
+</map>

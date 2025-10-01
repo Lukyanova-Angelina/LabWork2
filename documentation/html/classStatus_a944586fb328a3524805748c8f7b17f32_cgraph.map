@@ -1,0 +1,11 @@
+<map id="Status::Status" name="Status::Status">
+<area shape="rect" id="Node000001" title="Constructs Status with initial values." alt="" coords="5,55,117,80"/>
+<area shape="rect" id="Node000002" href="$classStatus.html#ace370730dcc7c815668f9296dd39af76" title="Sets gold amount." alt="" coords="194,5,315,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="111,52,190,32,191,37,112,57"/>
+<area shape="rect" id="Node000003" href="$classStatus.html#a48c9085e3008c3f2108d7510386c39b7" title="Sets player level and updates loot table." alt="" coords="191,55,318,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="118,65,178,65,178,70,118,70"/>
+<area shape="rect" id="Node000004" href="$classStatus.html#a6e5de977faeb21c93f44a2025a8b205b" title="Updates loot table weights based on current level." alt="" coords="165,104,344,129"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="112,77,191,98,190,103,111,83"/>
+<area shape="rect" id="Node000005" href="$classStatus.html#a1f60585ad759d8d780a039a2a5bddc71" title="Gets current player level." alt="" coords="392,104,519,129"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="345,114,378,114,378,119,345,119"/>
+</map>

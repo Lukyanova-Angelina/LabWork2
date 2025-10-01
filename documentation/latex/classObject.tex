@@ -1,0 +1,639 @@
+\doxysection{Object Class Reference}
+\hypertarget{classObject}{}\label{classObject}\index{Object@{Object}}
+
+
+Abstract base class representing any entity in the game world.  
+
+
+
+
+{\ttfamily \#include $<$Object.\+h$>$}
+
+
+
+Inheritance diagram for Object\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classObject_a71da04043bdd83585112550c3e27a85d}{Object}} (int pos)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classObject}{Object} at the specified position. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classObject_ae8f5483f459e46687bd01e6f9977afd3}{\texorpdfstring{$\sim$}{\string~}\+Object}} ()
+\begin{DoxyCompactList}\small\item\em Virtual destructor for proper polymorphic destruction. Removes any active damage callback. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{structDisplayInfo}{Display\+Info}} \mbox{\hyperlink{classObject_ab79063b8627e3f798f3a01f278cf2190}{print}} () const
+\begin{DoxyCompactList}\small\item\em Display information for UI rendering. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} \mbox{\hyperlink{classObject_a16b6fa35fd87615a3afb4499356d2a0d}{returntype}} () const
+\begin{DoxyCompactList}\small\item\em Returns the type of this object. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} \mbox{\hyperlink{classObject_adbab575cfa08f2b354263d132f27c811}{return\+Interaction\+Type}} () const
+\begin{DoxyCompactList}\small\item\em Defines how this object interacts with others. \end{DoxyCompactList}\item 
+virtual std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ \mbox{\hyperlink{classObject_ada211a17211c090c8a20c0893c6ec3a1}{clone}} () const
+\begin{DoxyCompactList}\small\item\em Creates a copy of this object. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObject_a4abd48bacb1b004c8ac891597c831f77}{update}} ()
+\begin{DoxyCompactList}\small\item\em Updates object state (called each game step). Base implementation does nothing -\/ override for custom behavior. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the current grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a746b108f37d54122539916373d6ad824}{set\+Position}} (int pos)
+\begin{DoxyCompactList}\small\item\em Sets the object\textquotesingle{}s grid position. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_aa893c9e84c6f0342507291ea2e50b30e}{move}} (int direction)
+\begin{DoxyCompactList}\small\item\em Moves the object in the specified direction. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classObject_a110b0235d69e91d6cd2684e54696f45b}{possibletomove}} (int direction)
+\begin{DoxyCompactList}\small\item\em Checks if movement in a direction is possible. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7}{get\+Target\+Position}} (int direction) const
+\begin{DoxyCompactList}\small\item\em Calculates target position for a movement direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classObject_a569361cd11827f5d158b05537011d544}{get\+Target\+Direction}} (int pos2) const
+\begin{DoxyCompactList}\small\item\em Calculates direction to reach a target position. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classObject_ac886af1d32fa2370531cffcd7e5125fb}{take\+Damage}} (int dmg, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}} type)
+\begin{DoxyCompactList}\small\item\em Applies damage to the object. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a65fb5ee0e5692e7158c266b92cdd2074}{set\+On\+Damage\+Callback}} (std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ callback)
+\begin{DoxyCompactList}\small\item\em Sets a callback function for damage events. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classObject_a20141e220dafc6f225eebe800b0e9c41}{remove\+Callback}} ()
+\begin{DoxyCompactList}\small\item\em Removes the current damage callback. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ \mbox{\hyperlink{classObject_a0e95898b748af41296c57787c735afc9}{On\+Damage\+Callback}}
+\begin{DoxyCompactList}\small\item\em Callback for damage events. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract base class representing any entity in the game world. 
+
+Stores position on a 3x3 grid, provides movement capabilities, interaction handling, and a callback system for damage events. Serves as the foundation for all game entities. 
+
+Definition at line \mbox{\hyperlink{Object_8h_source_l00045}{45}} of file \mbox{\hyperlink{Object_8h_source}{Object.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classObject_a71da04043bdd83585112550c3e27a85d}\label{classObject_a71da04043bdd83585112550c3e27a85d} 
+\index{Object@{Object}!Object@{Object}}
+\index{Object@{Object}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{Object()}{Object()}}
+{\footnotesize\ttfamily Object\+::\+Object (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classObject}{Object} at the specified position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & Initial position on the 3x3 grid (0-\/8). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+\Hypertarget{classObject_ae8f5483f459e46687bd01e6f9977afd3}\label{classObject_ae8f5483f459e46687bd01e6f9977afd3} 
+\index{Object@{Object}!````~Object@{\texorpdfstring{$\sim$}{\string~}Object}}
+\index{````~Object@{\texorpdfstring{$\sim$}{\string~}Object}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{\texorpdfstring{$\sim$}{\string~}Object()}{\string~Object()}}
+{\footnotesize\ttfamily Object\+::\texorpdfstring{$\sim$}{\string~}\+Object (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Virtual destructor for proper polymorphic destruction. Removes any active damage callback. 
+
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Object_8cpp_source_l00138}{remove\+Callback()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classObject_ae8f5483f459e46687bd01e6f9977afd3_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classObject_ada211a17211c090c8a20c0893c6ec3a1}\label{classObject_ada211a17211c090c8a20c0893c6ec3a1} 
+\index{Object@{Object}!clone@{clone}}
+\index{clone@{clone}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{clone()}{clone()}}
+{\footnotesize\ttfamily std\+::unique\+\_\+ptr$<$ \mbox{\hyperlink{classObject}{Object}} $>$ Object\+::clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Creates a copy of this object. 
+
+\begin{DoxyReturn}{Returns}
+std\+::unique\+\_\+ptr$<$\+Object$>$ pointing to the cloned object. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classELmagic_aabe25a1af2cae108814343fc534feda2}{ELmagic}}, \mbox{\hyperlink{classELweapon_ac91ff7c3f86ef2953b8b6936b46a2d90}{ELweapon}}, and \mbox{\hyperlink{classWeapon_aa9cebf36b0e905bddee7666f0a5c39ae}{Weapon}}.
+
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+\Hypertarget{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4}\label{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4} 
+\index{Object@{Object}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily int Object\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the current grid position. 
+
+\begin{DoxyReturn}{Returns}
+Integer position (0-\/8) on the 3x3 grid. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Chest_8cpp_source_l00052}{Chest\+::generate\+Loot()}}, \mbox{\hyperlink{Object_8cpp_source_l00091}{get\+Target\+Direction()}}, \mbox{\hyperlink{Object_8cpp_source_l00067}{get\+Target\+Position()}}, \mbox{\hyperlink{Game_8cpp_source_l00190}{Game\+::gotodir()}}, \mbox{\hyperlink{Game_8cpp_source_l00439}{Game\+::handle\+COMBAT\+\_\+\+DEPENDENT()}}, \mbox{\hyperlink{Game_8cpp_source_l00239}{Game\+::handle\+IMMEDIATE\+\_\+\+PASS()}}, \mbox{\hyperlink{Game_8cpp_source_l00143}{Game\+::handle\+Input()}}, \mbox{\hyperlink{Game_8cpp_source_l00388}{Game\+::handle\+SWAP\+\_\+\+REQUIRED()}}, \mbox{\hyperlink{Object_8cpp_source_l00050}{move()}}, \mbox{\hyperlink{Object_8cpp_source_l00101}{possibletomove()}}, \mbox{\hyperlink{Bomb_8cpp_source_l00045}{Bomb\+::take\+Damage()}}, \mbox{\hyperlink{Gold_8cpp_source_l00041}{Gold\+::take\+Damage()}}, \mbox{\hyperlink{Object_8cpp_source_l00121}{take\+Damage()}}, \mbox{\hyperlink{Characters_8cpp_source_l00062}{Character\+::take\+Damage()}}, \mbox{\hyperlink{Potion_8cpp_source_l00071}{Potion\+::take\+Damage()}}, \mbox{\hyperlink{Thorn_8cpp_source_l00050}{Thorn\+::take\+Damage()}}, \mbox{\hyperlink{Weapon_8cpp_source_l00047}{Weapon\+::take\+Damage()}}, \mbox{\hyperlink{Characters_8cpp_source_l00042}{Character\+::take\+Damage()}}, and \mbox{\hyperlink{Elemental_8cpp_source_l00031}{Elemental\+::take\+Damage()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_ac94263cc1cd1fe7d0193f8400af2c1e4_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classObject_a569361cd11827f5d158b05537011d544}\label{classObject_a569361cd11827f5d158b05537011d544} 
+\index{Object@{Object}!getTargetDirection@{getTargetDirection}}
+\index{getTargetDirection@{getTargetDirection}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{getTargetDirection()}{getTargetDirection()}}
+{\footnotesize\ttfamily int Object\+::get\+Target\+Direction (\begin{DoxyParamCaption}\item[{int}]{pos2 }\end{DoxyParamCaption}) const}
+
+
+
+Calculates direction to reach a target position. 
+
+Calculates direction between two adjacent positions.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos2} & Target position to reach. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Direction (0=up, 1=right, 2=down, 3=left) or -\/1 if not adjacent.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em pos2} & Target position to reach. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Direction to move or -\/1 if positions are not adjacent. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00091}{91}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Object_8cpp_source_l00030}{get\+Position()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00439}{Game\+::handle\+COMBAT\+\_\+\+DEPENDENT()}}, and \mbox{\hyperlink{Game_8cpp_source_l00239}{Game\+::handle\+IMMEDIATE\+\_\+\+PASS()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_a569361cd11827f5d158b05537011d544_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_a569361cd11827f5d158b05537011d544_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7}\label{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7} 
+\index{Object@{Object}!getTargetPosition@{getTargetPosition}}
+\index{getTargetPosition@{getTargetPosition}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{getTargetPosition()}{getTargetPosition()}}
+{\footnotesize\ttfamily int Object\+::get\+Target\+Position (\begin{DoxyParamCaption}\item[{int}]{direction }\end{DoxyParamCaption}) const}
+
+
+
+Calculates target position for a movement direction. 
+
+Calculates target position for movement direction.
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Movement direction (0=up, 1=right, 2=down, 3=left). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Target position if valid, -\/1 if movement would go off-\/grid.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction to check (0=up, 1=right, 2=down, 3=left). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Target position or -\/1 if movement is invalid. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Object_8cpp_source_l00030}{get\+Position()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00190}{Game\+::gotodir()}}, \mbox{\hyperlink{Game_8cpp_source_l00239}{Game\+::handle\+IMMEDIATE\+\_\+\+PASS()}}, \mbox{\hyperlink{Game_8cpp_source_l00143}{Game\+::handle\+Input()}}, and \mbox{\hyperlink{Game_8cpp_source_l00559}{Game\+::handle\+Object\+Death()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_a5ea59dedbfdacd1c18e0a92a606fe2b7_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classObject_aa893c9e84c6f0342507291ea2e50b30e}\label{classObject_aa893c9e84c6f0342507291ea2e50b30e} 
+\index{Object@{Object}!move@{move}}
+\index{move@{move}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{move()}{move()}}
+{\footnotesize\ttfamily void Object\+::move (\begin{DoxyParamCaption}\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+Moves the object in the specified direction. 
+
+Handles movement within 3x3 grid boundaries.
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Movement direction (0=up, 1=right, 2=down, 3=left). Only moves if the movement is valid within grid boundaries.\\
+\hline
+{\em direction} & Movement direction (0=up, 1=right, 2=down, 3=left). \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00050}{50}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Object_8cpp_source_l00030}{get\+Position()}}, and \mbox{\hyperlink{Object_8cpp_source_l00034}{set\+Position()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=307pt]{classObject_aa893c9e84c6f0342507291ea2e50b30e_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classObject_a110b0235d69e91d6cd2684e54696f45b}\label{classObject_a110b0235d69e91d6cd2684e54696f45b} 
+\index{Object@{Object}!possibletomove@{possibletomove}}
+\index{possibletomove@{possibletomove}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{possibletomove()}{possibletomove()}}
+{\footnotesize\ttfamily bool Object\+::possibletomove (\begin{DoxyParamCaption}\item[{int}]{direction }\end{DoxyParamCaption})}
+
+
+
+Checks if movement in a direction is possible. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em direction} & Direction to check (0=up, 1=right, 2=down, 3=left). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if movement is valid, false otherwise. 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00101}{101}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Object_8cpp_source_l00030}{get\+Position()}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00190}{Game\+::gotodir()}}, and \mbox{\hyperlink{Game_8cpp_source_l00143}{Game\+::handle\+Input()}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_a110b0235d69e91d6cd2684e54696f45b_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_a110b0235d69e91d6cd2684e54696f45b_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classObject_ab79063b8627e3f798f3a01f278cf2190}\label{classObject_ab79063b8627e3f798f3a01f278cf2190} 
+\index{Object@{Object}!print@{print}}
+\index{print@{print}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structDisplayInfo}{Display\+Info}} Object\+::print (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Display information for UI rendering. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{structDisplayInfo}{Display\+Info} structure with object representation data. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBat_a48189124fd8b13e94cf7bd13bbffdf90}{Bat}}, \mbox{\hyperlink{classBomb_ab3ab7b1d137e0565874279f79c76e36f}{Bomb}}, \mbox{\hyperlink{classCharacter_aa450176031bc9781a158f77ee2fa505f}{Character}}, \mbox{\hyperlink{classChest_a24834bef6b2b7cbe52460a58d4700b2b}{Chest}}, \mbox{\hyperlink{classDynamite_a1caa8e196929239c81137059063cb360}{Dynamite}}, \mbox{\hyperlink{classElemental_a2dcd55023ea6c637ca8014bd66582912}{Elemental}}, \mbox{\hyperlink{classELmagic_ae325dc96de1c4364aac56e4de0d37e0a}{ELmagic}}, \mbox{\hyperlink{classELweapon_ab0ed30db19014801e5cd04e30f91623e}{ELweapon}}, \mbox{\hyperlink{classEnemy_a7c98914636edf5a718493d876475121a}{Enemy}}, \mbox{\hyperlink{classGold_a90468e3b228d335b60a093684a1ee008}{Gold}}, \mbox{\hyperlink{classGun_a283cd67227d10d0785e81e76621d9b70}{Gun}}, \mbox{\hyperlink{classMag_a84504aa4389bb32aa9f14f0a1a1d9b94}{Mag}}, \mbox{\hyperlink{classPlayer_a1b199d782d3671895519de7e7fadd30a}{Player}}, \mbox{\hyperlink{classPotion_a6882ce4beaf489d2eefdc5e3d11c9268}{Potion}}, \mbox{\hyperlink{classRuby_a10b7819f002c4e796c3c5daf7a10eb82}{Ruby}}, \mbox{\hyperlink{classThorn_a74ac7e457866eed6a931060f53e3353b}{Thorn}}, and \mbox{\hyperlink{classWeapon_a42f27519d8c5852b22a3e50b54dc4dcc}{Weapon}}.
+
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00017}{17}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Colors_8h_source_l00028}{Color\+::\+BLUE}}.
+
+\Hypertarget{classObject_a20141e220dafc6f225eebe800b0e9c41}\label{classObject_a20141e220dafc6f225eebe800b0e9c41} 
+\index{Object@{Object}!removeCallback@{removeCallback}}
+\index{removeCallback@{removeCallback}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{removeCallback()}{removeCallback()}}
+{\footnotesize\ttfamily void Object\+::remove\+Callback (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Removes the current damage callback. 
+
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00138}{138}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Object_8h_source_l00050}{On\+Damage\+Callback}}.
+
+
+
+Referenced by \mbox{\hyperlink{Object_8cpp_source_l00013}{\texorpdfstring{$\sim$}{\string~}\+Object()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=344pt]{classObject_a20141e220dafc6f225eebe800b0e9c41_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classObject_adbab575cfa08f2b354263d132f27c811}\label{classObject_adbab575cfa08f2b354263d132f27c811} 
+\index{Object@{Object}!returnInteractionType@{returnInteractionType}}
+\index{returnInteractionType@{returnInteractionType}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{returnInteractionType()}{returnInteractionType()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{Interaction\+Type}} Object\+::return\+Interaction\+Type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Defines how this object interacts with others. 
+
+\begin{DoxyReturn}{Returns}
+Interaction\+Type enum value specifying interaction behavior. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBat_a595c9b81db4769d1443cae8b76de0049}{Bat}}, \mbox{\hyperlink{classBomb_a77602c50c280ef8ae8c8f256dd0be202}{Bomb}}, \mbox{\hyperlink{classChest_a0e1c166093a009b4a736a65086a6b7ca}{Chest}}, \mbox{\hyperlink{classElemental_adc01a38adcc17544f37e072014e4077b}{Elemental}}, \mbox{\hyperlink{classELmagic_a16aaad9fe6c0614a0bb67b127a0641f2}{ELmagic}}, \mbox{\hyperlink{classELweapon_a4b895737ad933d332312a717bd830b8a}{ELweapon}}, \mbox{\hyperlink{classEnemy_a4e0da93b42c070ca9135a632e7a35ecf}{Enemy}}, \mbox{\hyperlink{classGold_a100059cf7b125252632206e0546feb5d}{Gold}}, \mbox{\hyperlink{classMag_a9801d1f331f6b4a5e1ed19a569631e1c}{Mag}}, \mbox{\hyperlink{classPotion_a34ea68a06f51ae03f8388533abd0213b}{Potion}}, \mbox{\hyperlink{classThorn_a5ac388d3c6d127d15f5158fea05f6b91}{Thorn}}, and \mbox{\hyperlink{classWeapon_a7ba43f56f6facbb19ddcab879e39630b}{Weapon}}.
+
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00042}{42}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35afc53d376c922fc3f5bd8212f2da5e15a}{IMMEDIATE\+\_\+\+PASS}}.
+
+\Hypertarget{classObject_a16b6fa35fd87615a3afb4499356d2a0d}\label{classObject_a16b6fa35fd87615a3afb4499356d2a0d} 
+\index{Object@{Object}!returntype@{returntype}}
+\index{returntype@{returntype}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{returntype()}{returntype()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{Object\+Type}} Object\+::returntype (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Returns the type of this object. 
+
+\begin{DoxyReturn}{Returns}
+Object\+Type enum value identifying the object type. 
+\end{DoxyReturn}
+
+
+Reimplemented in \mbox{\hyperlink{classBat_ac2f3dd9d274feed8023287177b1fc8b5}{Bat}}, \mbox{\hyperlink{classBomb_a7e0816b8cde7b836876f03c4a63a6e2e}{Bomb}}, \mbox{\hyperlink{classChest_a1a293cbef8fe5ba40d1baad21de4fcef}{Chest}}, \mbox{\hyperlink{classDynamite_add365eae971de27b92012fe3e7a84731}{Dynamite}}, \mbox{\hyperlink{classElemental_ac9e477707283a12b706d2c5e0f4fedec}{Elemental}}, \mbox{\hyperlink{classELmagic_ab244c591d04277be28249c0f48b51fe0}{ELmagic}}, \mbox{\hyperlink{classELweapon_adcf1d2a03ce4ff09a2cc39c8be9685be}{ELweapon}}, \mbox{\hyperlink{classEnemy_ad64a3a03fe351a6d59005015659079a3}{Enemy}}, \mbox{\hyperlink{classGold_aba91bb9d72e966d25f932e7a6534a7e9}{Gold}}, \mbox{\hyperlink{classGun_aeadd6070441f8850c5dce0685f85f8ef}{Gun}}, \mbox{\hyperlink{classMag_ab75e1afaec3553416df0e1be34d504e8}{Mag}}, \mbox{\hyperlink{classPlayer_a4691db09ca049520277e998ab743e96d}{Player}}, \mbox{\hyperlink{classPotion_a3b9d8ca2d94df0d8e845e73321b8259a}{Potion}}, \mbox{\hyperlink{classRuby_ae64ed8cfcef2201dcc1cd2cdde644618}{Ruby}}, \mbox{\hyperlink{classThorn_aedbf24d78ec21a801b3df8d22621d5fc}{Thorn}}, and \mbox{\hyperlink{classWeapon_ae898bfca17d4f4112c90fe28040f79ae}{Weapon}}.
+
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00038}{38}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a8eee8e217391199668cbac89472ace53}{OBJECT}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00439}{Game\+::handle\+COMBAT\+\_\+\+DEPENDENT()}}, \mbox{\hyperlink{Game_8cpp_source_l00239}{Game\+::handle\+IMMEDIATE\+\_\+\+PASS()}}, \mbox{\hyperlink{Game_8cpp_source_l00559}{Game\+::handle\+Object\+Death()}}, \mbox{\hyperlink{Game_8cpp_source_l00388}{Game\+::handle\+SWAP\+\_\+\+REQUIRED()}}, and \mbox{\hyperlink{Game_8cpp_source_l00411}{Game\+::handle\+TRIGGER\+\_\+\+ON\+\_\+\+STAY()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_a16b6fa35fd87615a3afb4499356d2a0d_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classObject_a65fb5ee0e5692e7158c266b92cdd2074}\label{classObject_a65fb5ee0e5692e7158c266b92cdd2074} 
+\index{Object@{Object}!setOnDamageCallback@{setOnDamageCallback}}
+\index{setOnDamageCallback@{setOnDamageCallback}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{setOnDamageCallback()}{setOnDamageCallback()}}
+{\footnotesize\ttfamily void Object\+::set\+On\+Damage\+Callback (\begin{DoxyParamCaption}\item[{std\+::function$<$ void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$}]{callback }\end{DoxyParamCaption})}
+
+
+
+Sets a callback function for damage events. 
+
+Sets callback function for damage events.
+
+
+\begin{DoxyParams}{Parameters}
+{\em callback} & Function to call when damage is taken. The callback receives (position, damage\+Type) parameters.\\
+\hline
+{\em callback} & Function to call when damage is taken. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00131}{131}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Object_8h_source_l00050}{On\+Damage\+Callback}}.
+
+
+
+Referenced by \mbox{\hyperlink{Game_8cpp_source_l00493}{Game\+::initialize\+Damage\+Callbacks()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classObject_a65fb5ee0e5692e7158c266b92cdd2074_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classObject_a746b108f37d54122539916373d6ad824}\label{classObject_a746b108f37d54122539916373d6ad824} 
+\index{Object@{Object}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Object\+::set\+Position (\begin{DoxyParamCaption}\item[{int}]{pos }\end{DoxyParamCaption})}
+
+
+
+Sets the object\textquotesingle{}s grid position. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & New position (0-\/8) on the 3x3 grid. \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00034}{34}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+Referenced by \mbox{\hyperlink{Object_8cpp_source_l00050}{move()}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{classObject_a746b108f37d54122539916373d6ad824_icgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classObject_ac886af1d32fa2370531cffcd7e5125fb}\label{classObject_ac886af1d32fa2370531cffcd7e5125fb} 
+\index{Object@{Object}!takeDamage@{takeDamage}}
+\index{takeDamage@{takeDamage}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{takeDamage()}{takeDamage()}}
+{\footnotesize\ttfamily void Object\+::take\+Damage (\begin{DoxyParamCaption}\item[{int}]{dmg,  }\item[{\mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}}}]{type }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Applies damage to the object. 
+
+Applies damage and triggers damage callback.
+
+
+\begin{DoxyParams}{Parameters}
+{\em dmg} & Amount of damage to apply. \\
+\hline
+{\em type} & Type of damage being applied. Triggers the On\+Damage\+Callback if set.\\
+\hline
+{\em dmg} & Amount of damage to apply. \\
+\hline
+{\em type} & Type of damage being applied. \\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented in \mbox{\hyperlink{classBomb_ac1dd7e17fb778897865e170d43b3a255}{Bomb}}, \mbox{\hyperlink{classGold_ac4d5688668fca8db54e549cf5060caee}{Gold}}, \mbox{\hyperlink{classCharacter_a1e60409a1566f987ae4aeab6fc769b22}{Character}}, \mbox{\hyperlink{classPotion_a7e254ba6621490d38f2f640e284a049b}{Potion}}, \mbox{\hyperlink{classThorn_a1145b88fe2bb63ad05bf9f10c62a57e3}{Thorn}}, and \mbox{\hyperlink{classWeapon_a6e0cca4f9b4581c5800732a3c0732786}{Weapon}}.
+
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00121}{121}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+References \mbox{\hyperlink{Object_8cpp_source_l00030}{get\+Position()}}, and \mbox{\hyperlink{Object_8h_source_l00050}{On\+Damage\+Callback}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=341pt]{classObject_ac886af1d32fa2370531cffcd7e5125fb_cgraph}
+\end{center}
+\end{figure}
+\Hypertarget{classObject_a4abd48bacb1b004c8ac891597c831f77}\label{classObject_a4abd48bacb1b004c8ac891597c831f77} 
+\index{Object@{Object}!update@{update}}
+\index{update@{update}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void Object\+::update (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Updates object state (called each game step). Base implementation does nothing -\/ override for custom behavior. 
+
+
+
+Reimplemented in \mbox{\hyperlink{classBomb_a15851182c209713a5946f977a7fb24b8}{Bomb}}, \mbox{\hyperlink{classMag_a347d597040e143424f71ac53966cc0ba}{Mag}}, and \mbox{\hyperlink{classThorn_a4aeae41abf17aa5bd99de37b300680d0}{Thorn}}.
+
+
+
+Definition at line \mbox{\hyperlink{Object_8cpp_source_l00115}{115}} of file \mbox{\hyperlink{Object_8cpp_source}{Object.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classObject_a0e95898b748af41296c57787c735afc9}\label{classObject_a0e95898b748af41296c57787c735afc9} 
+\index{Object@{Object}!OnDamageCallback@{OnDamageCallback}}
+\index{OnDamageCallback@{OnDamageCallback}!Object@{Object}}
+\doxysubsubsection{\texorpdfstring{OnDamageCallback}{OnDamageCallback}}
+{\footnotesize\ttfamily std\+::function$<$void(int, \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{Damage\+Type}})$>$ Object\+::\+On\+Damage\+Callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Callback for damage events. 
+
+
+
+Definition at line \mbox{\hyperlink{Object_8h_source_l00050}{50}} of file \mbox{\hyperlink{Object_8h_source}{Object.\+h}}.
+
+
+
+Referenced by \mbox{\hyperlink{Object_8cpp_source_l00138}{remove\+Callback()}}, \mbox{\hyperlink{Object_8cpp_source_l00131}{set\+On\+Damage\+Callback()}}, \mbox{\hyperlink{Bomb_8cpp_source_l00045}{Bomb\+::take\+Damage()}}, \mbox{\hyperlink{Gold_8cpp_source_l00041}{Gold\+::take\+Damage()}}, \mbox{\hyperlink{Object_8cpp_source_l00121}{take\+Damage()}}, \mbox{\hyperlink{Characters_8cpp_source_l00062}{Character\+::take\+Damage()}}, \mbox{\hyperlink{Potion_8cpp_source_l00071}{Potion\+::take\+Damage()}}, \mbox{\hyperlink{Thorn_8cpp_source_l00050}{Thorn\+::take\+Damage()}}, \mbox{\hyperlink{Weapon_8cpp_source_l00047}{Weapon\+::take\+Damage()}}, \mbox{\hyperlink{Characters_8cpp_source_l00042}{Character\+::take\+Damage()}}, and \mbox{\hyperlink{Elemental_8cpp_source_l00031}{Elemental\+::take\+Damage()}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+headers/\mbox{\hyperlink{Object_8h}{Object.\+h}}\item 
+src/\mbox{\hyperlink{Object_8cpp}{Object.\+cpp}}\end{DoxyCompactItemize}

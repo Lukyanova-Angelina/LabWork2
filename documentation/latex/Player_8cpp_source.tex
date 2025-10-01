@@ -1,0 +1,44 @@
+\doxysection{Player.\+cpp}
+\hypertarget{Player_8cpp_source}{}\label{Player_8cpp_source}\index{src/Player.cpp@{src/Player.cpp}}
+\mbox{\hyperlink{Player_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00008}00008\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Player_8h}{Player.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00009}00009\ }
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00010}\mbox{\hyperlink{classPlayer_aa8125835abff491dffa66fefdc2f06e0}{00010}}\ \mbox{\hyperlink{classPlayer_aa8125835abff491dffa66fefdc2f06e0}{Player::Player}}(\textcolor{keywordtype}{int}\ pos,\ std::string\ name,\ \textcolor{keywordtype}{int}\ hp,\ \textcolor{keywordtype}{int}\ maxhp):\ \mbox{\hyperlink{classCharacter}{Character}}(pos,\ name,\ hp,\ maxhp),\ \_weapon(nullptr)\ \{\}}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00012}\mbox{\hyperlink{classPlayer_a20d6c146fbb017830cf9d24ebf5419a1}{00012}}\ \mbox{\hyperlink{classPlayer_aa8125835abff491dffa66fefdc2f06e0}{Player::Player}}(\textcolor{keywordtype}{int}\ pos)}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00013}00013\ \ \ \ \ :\ \mbox{\hyperlink{classCharacter}{Character}}(pos,\ \textcolor{stringliteral}{"{}name"{}},\ 10,\ 10),\ \_weapon(nullptr)\ \{\}}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00014}00014\ }
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00015}\mbox{\hyperlink{classPlayer_a8ed544987af18de0e6b2932206bf1186}{00015}}\ \mbox{\hyperlink{classPlayer_a8ed544987af18de0e6b2932206bf1186}{Player::\string~Player}}()\{}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00016}00016\ \ \ \ \ \mbox{\hyperlink{classPlayer_ab32f4507f6ff61361d9cb6b79378a3e2}{removeWeapon}}();}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00017}00017\ \}}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00018}00018\ }
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00019}\mbox{\hyperlink{classPlayer_a2997e4db0b122b5bee957e45c1edcc49}{00019}}\ \mbox{\hyperlink{classWeapon}{Weapon}}*\ \mbox{\hyperlink{classPlayer_a2997e4db0b122b5bee957e45c1edcc49}{Player::getWeapon}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00020}00020\ \ \ \ \ \textcolor{keywordflow}{return}\ \_weapon.get();}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00021}00021\ \}}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00023}\mbox{\hyperlink{classPlayer_a08b794ac433d3fa6ca2f8aff03437ad9}{00023}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlayer_a08b794ac433d3fa6ca2f8aff03437ad9}{Player::setWeapon}}(std::unique\_ptr<Weapon>\ weapon)\ \{}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00024}00024\ \ \ \ \ \_weapon\ =\ std::move(weapon);}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00025}00025\ \}}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00026}00026\ }
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00027}\mbox{\hyperlink{classPlayer_ab32f4507f6ff61361d9cb6b79378a3e2}{00027}}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classPlayer_ab32f4507f6ff61361d9cb6b79378a3e2}{Player::removeWeapon}}()\ \{}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00028}00028\ \ \ \ \ \_weapon.reset();}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00029}00029\ \}}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00030}00030\ }
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00031}\mbox{\hyperlink{classPlayer_a1b199d782d3671895519de7e7fadd30a}{00031}}\ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classPlayer_a1b199d782d3671895519de7e7fadd30a}{Player::print}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00032}00032\ \ \ \ \ \textcolor{keywordflow}{return}\ \{}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}Player"{}},}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00034}00034\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}HP:"{}}\ +\ std::to\_string(\mbox{\hyperlink{classCharacter_a719cf393f4cdcc82a403f70732adee02}{getHP}}())\ +\ \textcolor{stringliteral}{"{}/"{}}\ +\ std::to\_string(\mbox{\hyperlink{classCharacter_a6eedfaea70dc15a219b3dc8f646d3e23}{getMaxHP}}()),}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00035}00035\ \ \ \ \ \ \ \ \ \textcolor{stringliteral}{"{}"{}}\ +\ (\_weapon\ ?\ \_weapon-\/>print().header\ +\ \textcolor{stringliteral}{"{}\ "{}}\ +\ std::to\_string(\_weapon-\/>getDamage())\ :\ \textcolor{stringliteral}{"{}"{}}),}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00036}00036\ \ \ \ \ \ \ \ \ \mbox{\hyperlink{namespaceColor_ad78a2985947b6bba7de20b94cd987808}{Color::GREEN}}}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00037}00037\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00038}00038\ \}}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00039}00039\ }
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00040}\mbox{\hyperlink{classPlayer_a4691db09ca049520277e998ab743e96d}{00040}}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classPlayer_a4691db09ca049520277e998ab743e96d}{Player::returntype}}()\textcolor{keyword}{\ const\ }\{}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00041}00041\ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980a07c80e2a355d91402a00d82b1fa13855}{ObjectType::PLAYER}};}
+\DoxyCodeLine{\Hypertarget{Player_8cpp_source_l00042}00042\ \}}
+
+\end{DoxyCode}

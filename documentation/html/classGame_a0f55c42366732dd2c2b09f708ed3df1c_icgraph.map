@@ -1,0 +1,5 @@
+<map id="Game::generate_game" name="Game::generate_game">
+<area shape="rect" id="Node000001" title="Generates initial game state with player and objects." alt="" coords="161,5,332,31"/>
+<area shape="rect" id="Node000002" href="$classGame.html#ad59df6562a58a614fda24622d3715b65" title="Constructs the game and initializes game state." alt="" coords="5,5,113,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="147,21,114,21,114,15,147,15"/>
+</map>

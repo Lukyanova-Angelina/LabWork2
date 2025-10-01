@@ -1,0 +1,9 @@
+<map id="Status::StepsUp" name="Status::StepsUp">
+<area shape="rect" id="Node000001" title="Increments step counter." alt="" coords="465,5,591,31"/>
+<area shape="rect" id="Node000002" href="$classGame.html#a79df6376b332d63c9eca0dcee30305c3" title="Updates game state (called each frame). Handles object updates, damage." alt="" coords="303,5,417,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="452,21,417,21,417,15,452,15"/>
+<area shape="rect" id="Node000003" href="$classGame.html#a28d97d9a41d73e279d0255587b3e21e7" title="Handles player input and triggers appropriate actions." alt="" coords="108,5,255,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="289,21,255,21,255,15,289,15"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,5,60,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="94,21,60,21,60,15,94,15"/>
+</map>

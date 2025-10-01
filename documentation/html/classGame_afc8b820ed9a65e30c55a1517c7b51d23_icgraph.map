@@ -1,0 +1,18 @@
+<map id="Game::generatecard" name="Game::generatecard">
+<area shape="rect" id="Node000001" title="Generates a new object at specified position." alt="" coords="796,39,951,64"/>
+<area shape="rect" id="Node000002" href="$classGame.html#a0f55c42366732dd2c2b09f708ed3df1c" title="Generates initial game state with player and objects." alt="" coords="577,9,748,35"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="782,41,748,37,749,31,783,36"/>
+<area shape="rect" id="Node000004" href="$classGame.html#acaa2f6520fc4c5deeec2dd079ebeefea" title="Handles complex movement logic for grid shifting." alt="" coords="605,63,720,88"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="782,64,720,72,720,66,782,59"/>
+<area shape="rect" id="Node000003" href="$classGame.html#ad59df6562a58a614fda24622d3715b65" title="Constructs the game and initializes game state." alt="" coords="362,5,470,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="563,23,470,22,470,16,564,18"/>
+<area shape="rect" id="Node000005" href="$classGame.html#aaf59ec9035aa5b9cd8bd97c910284164" title="Handles combat&#45;dependent interactions (enemies)." alt="" coords="331,55,501,95"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="591,78,501,78,501,73,591,73"/>
+<area shape="rect" id="Node000008" href="$classGame.html#aa7e441af2bf58d6926635c1b6e5c6747" title="Handles immediate pass interactions (weapons, items, etc.)." alt="" coords="303,120,529,145"/>
+<area shape="poly" id="edge7_Node000004_Node000008" title=" " alt="" coords="596,94,530,110,475,123,474,117,529,105,595,89"/>
+<area shape="rect" id="Node000006" href="$classGame.html#a28d97d9a41d73e279d0255587b3e21e7" title="Handles player input and triggers appropriate actions." alt="" coords="108,92,255,117"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="318,90,255,98,254,93,317,85"/>
+<area shape="rect" id="Node000007" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="5,92,60,117"/>
+<area shape="poly" id="edge6_Node000006_Node000007" title=" " alt="" coords="94,107,60,107,60,102,94,102"/>
+<area shape="poly" id="edge8_Node000008_Node000006" title=" " alt="" coords="296,121,255,116,255,111,296,116"/>
+</map>

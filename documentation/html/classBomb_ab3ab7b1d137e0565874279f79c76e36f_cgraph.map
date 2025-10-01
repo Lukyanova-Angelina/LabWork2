@@ -1,0 +1,7 @@
+<map id="Bomb::print" name="Bomb::print">
+<area shape="rect" id="Node000001" title="Gets display information for bomb." alt="" coords="5,31,104,56"/>
+<area shape="rect" id="Node000002" href="$classBomb.html#a5aace3f4176e3ef80da7b80ae13a3126" title="Gets explosion damage amount." alt="" coords="155,5,295,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,33,141,28,141,33,105,39"/>
+<area shape="rect" id="Node000003" href="$classBomb.html#a43c1ca638c7e6f1605ae2dcb72e49b88" title="Gets remaining duration until explosion." alt="" coords="152,55,297,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="105,48,138,52,138,58,104,53"/>
+</map>

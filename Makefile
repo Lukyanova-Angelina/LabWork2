@@ -1,7 +1,7 @@
 PROJECT=GAME
 IDIR=headers/
 CXX=g++
-CXXFLAGS =-I$(IDIR) -Wall -Wpedantic -Werror -std=c++17
+CXXFLAGS =-I$(IDIR) -Wall -Wpedantic -Werror -std=c++17 -g -fsanitize=address -fno-omit-frame-pointer
 LDFLAGS=-lgtest -lgtest_main -lpthread
 
 
@@ -9,7 +9,7 @@ TEST_DIR=tests
 SRC_DIR=src
 
 SRC_FILES=$(wildcard $(SRC_DIR)/*.cpp)
-TEST_FILES=$(wildcard $(TEST_DIR)/test*.cpp)
+TEST_FILES=$(wildcard $(TEST_DIR)/*Test.cpp)
 
 OBJ_FILES=$(SRC_FILES:.cpp=.o)
 TEST_OBJ_FILES=$(TEST_FILES:.cpp=.o)

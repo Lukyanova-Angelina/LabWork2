@@ -1,0 +1,36 @@
+\doxysection{Elemental.\+h}
+\hypertarget{Elemental_8h_source}{}\label{Elemental_8h_source}\index{headers/Elemental.h@{headers/Elemental.h}}
+\mbox{\hyperlink{Elemental_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00001}00001\ \textcolor{comment}{/*\ Lukyanova\ Angelina\ st128743@student.spbu.ru}}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00002}00002\ \textcolor{comment}{\ *\ Lab\ Work\ 2\ -\/\ Game}}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00003}00003\ \textcolor{comment}{\ */}}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00011}00011\ \textcolor{preprocessor}{\#ifndef\ ELEMENTAL\_H}}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00012}00012\ \textcolor{preprocessor}{\#define\ ELEMENTAL\_H}}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00013}00013\ }
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00014}00014\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{Enemy_8h}{Enemy.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00015}00015\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{ELmagic_8h}{ELmagic.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00016}00016\ }
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00024}\mbox{\hyperlink{classElemental}{00024}}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classElemental}{Elemental}}\ :\ \textcolor{keyword}{public}\ \mbox{\hyperlink{classEnemy}{Enemy}}\ \{}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00025}00025\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00026}00026\ \ \ \ \ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ \_Type;\ }
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00028}00028\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00035}00035\ \ \ \ \ \mbox{\hyperlink{classElemental}{Elemental}}(\textcolor{keywordtype}{int}\ pos,\ \textcolor{keywordtype}{int}\ hp,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type);}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00036}00036\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00041}00041\ \ \ \ \ \mbox{\hyperlink{structDisplayInfo}{DisplayInfo}}\ \mbox{\hyperlink{classElemental_a2dcd55023ea6c637ca8014bd66582912}{print}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00042}00042\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00047}00047\ \ \ \ \ \mbox{\hyperlink{Enums_8h_a842c5e2e69277690b064bf363c017980}{ObjectType}}\ \mbox{\hyperlink{classElemental_ac9e477707283a12b706d2c5e0f4fedec}{returntype}}()\textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00048}00048\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00053}00053\ \ \ \ \ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ \mbox{\hyperlink{classElemental_a798faa5fec5ca4d06b5322c82cf2e315}{getElement}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00054}00054\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00059}00059\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classElemental_a4d942a61f73f0d363bb0f9fdd51a1026}{takeDamage}}(\mbox{\hyperlink{classWeapon}{Weapon}}*\ o)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00060}00060\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00065}00065\ \ \ \ \ \mbox{\hyperlink{Enums_8h_a9a40fc7400eafce3fb17486772fdea35}{InteractionType}}\ \mbox{\hyperlink{classElemental_adc01a38adcc17544f37e072014e4077b}{returnInteractionType}}()\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00066}00066\ \ \ \ \ }
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00073}00073\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classElemental_a27b786fd729172e19918e952605eb5e3}{calculateFinalDamage}}(\textcolor{keywordtype}{int}\ dmg,\ \mbox{\hyperlink{Enums_8h_afce48e0416f4e1a1a8c79629bbbf602d}{DamageType}}\ type)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00074}00074\ \};}
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00075}00075\ }
+\DoxyCodeLine{\Hypertarget{Elemental_8h_source_l00076}00076\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
