@@ -9,7 +9,7 @@ TEST_DIR=tests
 SRC_DIR=src
 
 SRC_FILES=$(wildcard $(SRC_DIR)/*.cpp)
-TEST_FILES=$(wildcard $(TEST_DIR)/test*.cpp)
+TEST_FILES=$(wildcard $(TEST_DIR)/*Test.cpp)
 
 OBJ_FILES=$(SRC_FILES:.cpp=.o)
 TEST_OBJ_FILES=$(TEST_FILES:.cpp=.o)
